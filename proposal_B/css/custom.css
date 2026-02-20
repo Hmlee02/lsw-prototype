@@ -22,6 +22,19 @@
   --lsw-gray-700: #4b5563;
   --lsw-gray-900: #1a1f27;
 
+  /* Semantic Surface Colors - Light Mode Default */
+  --lsw-bg: #ffffff;
+  --lsw-surface: #ffffff;
+  --lsw-surface-variant: #f7f8fa;
+  --lsw-border: #eef0f4;
+  --lsw-text: #1a1f27;
+  --lsw-text-muted: #8a929e;
+  --lsw-text-dim: #4b5563;
+
+  /* Fixed Colors (for Hero section etc) */
+  --lsw-fixed-white: #ffffff;
+  --lsw-fixed-black: #000000;
+
   /* Typography */
   --lsw-body-size: 17px;
   --lsw-body-line-height: 1.7;
@@ -33,6 +46,35 @@
   /* Shadow */
   --lsw-shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
   --lsw-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Overrides */
+.dark-mode {
+  --lsw-bg: #0f172a;
+  --lsw-surface: #1e293b;
+  --lsw-surface-variant: #0f172a;
+  --lsw-border: #334155;
+  --lsw-text: #f1f5f9;
+  --lsw-text-muted: #94a3b8;
+  --lsw-text-dim: #cbd5e1;
+
+  /* Primary & Accent Adjustments */
+  --lsw-primary: #60a5fa;
+  --lsw-primary-dark: #3b82f6;
+  --lsw-primary-light: #1e293b;
+  --lsw-accent: #38bdf8;
+
+  /* Gray Scale Overrides */
+  --lsw-gray-100: #0f172a;
+  --lsw-gray-200: #334155;
+  --lsw-gray-300: #475569;
+  --lsw-gray-500: #64748b;
+  --lsw-gray-700: #94a3b8;
+  --lsw-gray-900: #f1f5f9;
+
+  /* Shadow Adjustments for Dark Mode */
+  --lsw-shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.3);
+  --lsw-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* ==========================================================================
@@ -47,8 +89,9 @@
 body {
   font-size: var(--lsw-body-size);
   line-height: var(--lsw-body-line-height);
-  color: var(--lsw-gray-900);
-  background-color: #ffffff;
+  color: var(--lsw-text);
+  background-color: var(--lsw-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .inner {
@@ -82,7 +125,7 @@ body {
   /* Note: Using a solid rich gradient if image is not preferred, but adding depth */
   background-size: cover;
   padding: 100px 0 90px;
-  color: #ffffff;
+  color: var(--lsw-fixed-white);
   position: relative;
   overflow: hidden;
 }
@@ -113,7 +156,7 @@ body {
   font-weight: 800;
   line-height: 1.3;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: var(--lsw-fixed-white);
   letter-spacing: -0.02em;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   word-break: keep-all;
@@ -168,9 +211,9 @@ body {
 }
 
 .lsw-search-tab__btn.active {
-  background: #ffffff;
+  background: var(--lsw-fixed-white);
   color: var(--lsw-primary);
-  border-color: #ffffff;
+  border-color: var(--lsw-fixed-white);
   font-weight: 700;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -193,7 +236,7 @@ body {
 .lsw-search-input-wrap:focus-within {
   transform: translateY(-2px);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
-  background: #ffffff;
+  background: var(--lsw-fixed-white);
 }
 
 .lsw-search-input {
@@ -224,7 +267,7 @@ body {
   align-items: center;
   gap: 8px;
   background: linear-gradient(135deg, var(--lsw-primary) 0%, var(--lsw-accent) 100%) !important;
-  color: #ffffff !important;
+  color: var(--lsw-fixed-white) !important;
   border-radius: 50px !important;
   padding: 16px 40px !important;
   font-size: 19px;
@@ -272,9 +315,9 @@ body {
 }
 
 .lsw-keyword-chip:hover {
-  background: #ffffff;
+  background: var(--lsw-fixed-white);
   color: var(--lsw-primary);
-  border-color: #ffffff;
+  border-color: var(--lsw-fixed-white);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -285,8 +328,8 @@ body {
 .lsw-law-category {
   padding: 0 0 60px;
   /* Pull up to overlap hero slightly? No, keep it clean below */
-  background-color: #ffffff;
-  border-bottom: 1px solid var(--lsw-gray-200);
+  background-color: var(--lsw-bg);
+  border-bottom: 1px solid var(--lsw-border);
   margin-top: -30px;
   /* Negative margin to pull up over hero */
   position: relative;
@@ -302,7 +345,7 @@ body {
   padding: 24px 32px;
   margin: 0;
   justify-content: space-between;
-  background: #ffffff;
+  background: var(--lsw-surface);
   border-radius: 24px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
@@ -411,7 +454,7 @@ body {
 }
 
 .lsw-section--bg {
-  background-color: #f8f9fc;
+  background-color: var(--lsw-surface-variant);
 }
 
 .lsw-section__title {
@@ -432,8 +475,8 @@ body {
 
 /* 카드 */
 .lsw-card {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  background: var(--lsw-surface);
+  border: 1px solid var(--lsw-border);
   border-radius: 24px;
   padding: 32px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
@@ -535,11 +578,11 @@ body {
   align-items: center;
   gap: 20px;
   padding: 24px;
-  background: #ffffff;
-  border: 1px solid var(--lsw-gray-200);
+  background: var(--lsw-surface);
+  border: 1px solid var(--lsw-border);
   border-radius: 16px;
   text-decoration: none;
-  color: var(--lsw-gray-900);
+  color: var(--lsw-text);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -784,13 +827,13 @@ body {
 .lsw-stats-banner__value {
   font-size: 36px;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--lsw-fixed-white);
   line-height: 1;
   letter-spacing: -0.02em;
 }
 
 .lsw-service-banner .krds-btn.border {
-  color: #ffffff;
+  color: var(--lsw-fixed-white);
   border-color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   padding: 14px 32px;
@@ -798,15 +841,15 @@ body {
 
 .lsw-service-banner .krds-btn.border:hover {
   background: rgba(255, 255, 255, 0.15);
-  border-color: #ffffff;
+  border-color: var(--lsw-fixed-white);
 }
 
 /* ==========================================================================
    11. 법령 세부 페이지 - 브레드크럼
    ========================================================================== */
 .lsw-breadcrumb-wrap {
-  background: var(--lsw-gray-100);
-  border-bottom: 1px solid var(--lsw-gray-200);
+  background: var(--lsw-surface-variant);
+  border-bottom: 1px solid var(--lsw-border);
   padding: 12px 0;
 }
 
@@ -819,9 +862,9 @@ body {
    12. 법령 세부 페이지 - 법령 헤더
    ========================================================================== */
 .lsw-law-header {
-  background: #ffffff;
+  background: var(--lsw-surface);
   padding: 40px 0 32px;
-  border-bottom: 1px solid var(--lsw-gray-200);
+  border-bottom: 1px solid var(--lsw-border);
 }
 
 .lsw-law-header__top {
@@ -845,7 +888,7 @@ body {
 .lsw-law-header__title {
   font-size: 34px;
   font-weight: 700;
-  color: var(--lsw-gray-900);
+  color: var(--lsw-text);
   margin-bottom: 20px;
   line-height: 1.3;
 }
@@ -856,7 +899,7 @@ body {
   flex-wrap: wrap;
   gap: 0;
   margin-bottom: 24px;
-  background: var(--lsw-gray-100);
+  background: var(--lsw-surface-variant);
   border-radius: 8px;
   padding: 16px 20px;
 }
@@ -906,8 +949,8 @@ body {
    13. 법령 세부 페이지 - 탭
    ========================================================================== */
 .lsw-law-tab-wrap {
-  background: #ffffff;
-  border-bottom: 1px solid var(--lsw-gray-200);
+  background: var(--lsw-surface);
+  border-bottom: 1px solid var(--lsw-border);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -924,8 +967,8 @@ body {
 .lsw-law-toc {
   width: 280px;
   flex-shrink: 0;
-  background: #ffffff;
-  border: 1px solid var(--lsw-gray-200);
+  background: var(--lsw-surface);
+  border: 1px solid var(--lsw-border);
   border-radius: 12px;
   overflow: hidden;
   position: sticky;
@@ -940,7 +983,7 @@ body {
   justify-content: space-between;
   padding: 16px 20px;
   background: var(--lsw-primary);
-  color: #ffffff;
+  color: var(--lsw-fixed-white);
   position: sticky;
   top: 0;
 }
@@ -948,7 +991,7 @@ body {
 .lsw-law-toc__title {
   font-size: 16px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--lsw-fixed-white);
   margin: 0;
 }
 
@@ -1001,8 +1044,8 @@ body {
 .lsw-law-content {
   flex: 1;
   min-width: 0;
-  background: #ffffff;
-  border: 1px solid var(--lsw-gray-200);
+  background: var(--lsw-surface);
+  border: 1px solid var(--lsw-border);
   border-radius: 12px;
 }
 
@@ -1012,8 +1055,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 12px 28px;
-  border-bottom: 1px solid var(--lsw-gray-200);
-  background: var(--lsw-gray-100);
+  border-bottom: 1px solid var(--lsw-border);
+  background: var(--lsw-surface-variant);
 }
 
 .lsw-law-content__toolbar-left,
@@ -1027,7 +1070,7 @@ body {
 .lsw-law-article-title h3 {
   font-size: 26px;
   font-weight: 700;
-  color: var(--lsw-gray-900);
+  color: var(--lsw-text);
   margin-bottom: 8px;
 }
 
@@ -1053,14 +1096,14 @@ body {
 .lsw-law-article__chapter {
   font-size: 18px;
   font-weight: 700;
-  color: var(--lsw-gray-900);
+  color: var(--lsw-text);
   margin: 28px 0 16px;
 }
 
 .lsw-law-article__section {
   font-size: 16px;
   font-weight: 600;
-  color: var(--lsw-gray-700);
+  color: var(--lsw-text-dim);
   margin: 24px 0 14px;
   padding-left: 12px;
   border-left: 3px solid var(--lsw-primary);
@@ -1074,7 +1117,7 @@ body {
 }
 
 .lsw-law-article__item:hover {
-  background: var(--lsw-gray-100);
+  background: var(--lsw-surface-variant);
 }
 
 .lsw-law-article__item-header {
@@ -1104,11 +1147,12 @@ body {
 .lsw-law-article__body {
   font-size: 17px;
   line-height: 1.8;
-  color: var(--lsw-gray-900);
+  color: var(--lsw-text);
 }
 
 .lsw-law-article__body p {
   margin-bottom: 10px;
+  color: var(--lsw-text);
 }
 
 .lsw-law-article__body p:last-child {
@@ -1157,8 +1201,8 @@ body {
 }
 
 .lsw-article-list {
-  background: #ffffff;
-  border: 1px solid var(--lsw-gray-200);
+  background: var(--lsw-surface);
+  border: 1px solid var(--lsw-border);
   border-radius: 12px;
   padding: 28px;
 }
@@ -1197,8 +1241,8 @@ body {
    17. 법령 세부 페이지 - 관련정보 탭
    ========================================================================== */
 .lsw-related-info {
-  background: #ffffff;
-  border: 1px solid var(--lsw-gray-200);
+  background: var(--lsw-surface);
+  border: 1px solid var(--lsw-border);
   border-radius: 12px;
   padding: 32px;
 }
@@ -1255,8 +1299,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 80px 40px;
-  background: #ffffff;
-  border: 1px solid var(--lsw-gray-200);
+  background: var(--lsw-surface);
+  border: 1px solid var(--lsw-border);
   border-radius: 12px;
   color: var(--lsw-gray-500);
   font-size: 16px;
@@ -1425,49 +1469,29 @@ body {
    22. 다크 모드 지원 (prefers-color-scheme)
    ========================================================================== */
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #111827;
-    color: #e5e7eb;
-  }
+  body:not(.light-mode) {
+    --lsw-bg: #0f172a;
+    --lsw-surface: #1e293b;
+    --lsw-surface-variant: #0f172a;
+    --lsw-border: #334155;
+    --lsw-text: #f1f5f9;
+    --lsw-text-muted: #94a3b8;
+    --lsw-text-dim: #cbd5e1;
 
-  .lsw-search-box,
-  .lsw-card,
-  .lsw-law-content,
-  .lsw-law-toc,
-  .lsw-related-info,
-  .lsw-article-list {
-    background-color: #1f2937;
-    border-color: #374151;
-  }
+    --lsw-primary: #60a5fa;
+    --lsw-primary-dark: #3b82f6;
+    --lsw-primary-light: #1e293b;
+    --lsw-accent: #38bdf8;
 
-  .lsw-law-header {
-    background: #1f2937;
-  }
+    --lsw-gray-100: #0f172a;
+    --lsw-gray-200: #334155;
+    --lsw-gray-300: #475569;
+    --lsw-gray-500: #64748b;
+    --lsw-gray-700: #94a3b8;
+    --lsw-gray-900: #f1f5f9;
 
-  .lsw-law-meta {
-    background: #111827;
-  }
-
-  .lsw-law-article__body,
-  .lsw-law-article__item-header {
-    color: #e5e7eb;
-  }
-
-  .lsw-list__item,
-  .lsw-related-list__item {
-    color: #d1d5db;
-    border-bottom-color: #374151;
-  }
-
-  .lsw-section--bg,
-  .lsw-law-body {
-    background: #111827;
-  }
-
-  .lsw-law-content__toolbar,
-  .lsw-law-content__nav {
-    background: #111827;
-    border-color: #374151;
+    --lsw-shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.3);
+    --lsw-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -1614,7 +1638,7 @@ body {
 }
 
 #krds-header.is-scrolled {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--lsw-shadow-md);
 }
 
 #krds-header.header-hidden {
@@ -2028,8 +2052,8 @@ body {
   top: 70px;
   max-height: calc(100vh - 100px);
   overflow-y: auto;
-  background: #fff;
-  border: 1px solid var(--lsw-gray-200);
+  background: var(--lsw-surface);
+  border: 1px solid var(--lsw-border);
   border-radius: 16px;
   padding: 0;
 }
@@ -2048,16 +2072,16 @@ body {
   align-items: baseline;
   justify-content: space-between;
   padding: 20px 20px 14px;
-  border-bottom: 1px solid var(--lsw-gray-100);
+  border-bottom: 1px solid var(--lsw-border);
   position: sticky;
   top: 0;
-  background: #fff;
+  background: var(--lsw-surface);
   z-index: 1;
 }
 
 .proposal-b .lsw-lnb__title {
   font-weight: 700;
-  color: var(--lsw-gray-900);
+  color: var(--lsw-text);
 }
 
 .proposal-b .lsw-lnb__count {
@@ -2085,7 +2109,7 @@ body {
   text-overflow: ellipsis;
   word-break: keep-all;
   padding: 9px 20px;
-  color: var(--lsw-gray-700);
+  color: var(--lsw-text-dim);
   text-decoration: none;
   line-height: 1.4;
   transition: background 0.15s, color 0.15s;
@@ -2093,8 +2117,8 @@ body {
 }
 
 .proposal-b .lsw-lnb__link:hover {
-  background: var(--lsw-gray-50);
-  color: var(--lsw-gray-900);
+  background: var(--lsw-surface-variant);
+  color: var(--lsw-text);
 }
 
 .proposal-b .lsw-lnb__link.is-active {
@@ -2111,13 +2135,13 @@ body {
   align-items: flex-end;
   margin-bottom: 32px;
   padding-bottom: 24px;
-  border-bottom: 2px solid var(--lsw-gray-900);
+  border-bottom: 2px solid var(--lsw-text);
 }
 
 .proposal-b .lsw-law-article-title h3 {
   font-size: 32px;
   font-weight: 800;
-  color: var(--lsw-gray-900);
+  color: var(--lsw-text);
   margin: 0 0 12px;
   line-height: 1.2;
   letter-spacing: -0.04em;
@@ -2177,9 +2201,9 @@ body {
   height: 34px;
   padding: 0;
   border-radius: 50%;
-  border: 1px solid var(--lsw-gray-200);
-  background: #fff;
-  color: var(--lsw-gray-700);
+  border: 1px solid var(--lsw-border);
+  background: var(--lsw-surface);
+  color: var(--lsw-text-dim);
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 
@@ -2226,7 +2250,7 @@ body {
 
 .proposal-b .lsw-toolbar-tab.active {
   background: var(--lsw-primary);
-  color: #fff;
+  color: var(--lsw-fixed-white);
   font-weight: 700;
 }
 
@@ -2257,10 +2281,10 @@ body {
   top: calc(100% + 6px);
   left: 0;
   min-width: 130px;
-  background: #fff;
-  border: 1px solid var(--lsw-gray-200);
+  background: var(--lsw-surface);
+  border: 1px solid var(--lsw-border);
   border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+  box-shadow: var(--lsw-shadow-md);
   padding: 6px;
   z-index: 200;
   list-style: none;
@@ -2300,13 +2324,13 @@ body {
   margin-bottom: 60px;
   text-align: left;
   padding-bottom: 40px;
-  border-bottom: 3px solid var(--lsw-gray-900);
+  border-bottom: 3px solid var(--lsw-text);
 }
 
 .proposal-b .lsw-law-article-title h3 {
   font-size: 48px;
   font-weight: 800;
-  color: var(--lsw-gray-900);
+  color: var(--lsw-text);
   margin-bottom: 16px;
   letter-spacing: -0.05em;
 }
@@ -2315,7 +2339,7 @@ body {
 .proposal-b .lsw-law-article__part {
   font-size: 28px;
   font-weight: 800;
-  color: var(--lsw-gray-900);
+  color: var(--lsw-text);
   margin: 80px 0 40px;
   padding-left: 20px;
   border-left: 8px solid var(--lsw-primary);
@@ -2352,14 +2376,14 @@ body {
 .proposal-b .lsw-law-article__body {
   font-size: 20px;
   line-height: 2;
-  color: #111111;
+  color: var(--lsw-text);
 }
 
 /* 4. 헤더 및 탭 메뉴 - 풀스크린 통합 디자인 */
 .proposal-b .lsw-law-header {
-  background: #ffffff;
+  background: var(--lsw-surface);
   padding: 40px 0 40px;
-  border-bottom: 1px solid var(--lsw-gray-100);
+  border-bottom: 1px solid var(--lsw-border);
 }
 
 .proposal-b .lsw-law-header__title {
@@ -2403,16 +2427,15 @@ body {
   padding: 24px 40px !important;
 }
 
-/* 5. 플로팅 툴바 - 인터랙티브 컨트롤 */
 .proposal-b .lsw-law-content__toolbar {
   margin-bottom: 40px;
   padding: 20px 32px;
-  background: #ffffff;
-  border: 1px solid var(--lsw-gray-200);
+  background: var(--lsw-surface);
+  border: 1px solid var(--lsw-border);
   border-radius: 16px;
   position: sticky;
   z-index: 50;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--lsw-shadow-sm);
 }
 
 /* 사이드바 활성화 상태 */
@@ -2471,8 +2494,8 @@ body {
   left: 130px;
   z-index: 1000 !important;
   min-width: 280px;
-  background: #ffffff;
-  border: 1px solid var(--lsw-gray-200);
+  background: var(--lsw-surface);
+  border: 1px solid var(--lsw-border);
   border-radius: 12px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
   overflow: visible;
@@ -2512,12 +2535,11 @@ body {
   background: var(--lsw-primary-light);
 }
 
-/* 드롭다운 실행 버튼 스타일 보강 */
 .proposal-b .lsw-version-btn {
   border: 2px solid var(--lsw-primary) !important;
   border-radius: 50px !important;
   padding: 10px 24px !important;
-  background: #ffffff !important;
+  background: var(--lsw-surface) !important;
   height: auto !important;
   font-weight: 700 !important;
   color: var(--lsw-primary) !important;
@@ -2548,4 +2570,22 @@ body {
   mask-size: contain;
   -webkit-mask-image: url('../../assets/krds/img/component/icon/ico_scrap.svg');
   mask-image: url('../../assets/krds/img/component/icon/ico_scrap.svg');
+}
+
+/* ico-theme: 커스텀 다크모드/라이트모드 전환 아이콘 (Contrast Circle) */
+.svg-icon.ico-theme {
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: contain;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-2V4c4.418 0 8 3.582 8 8s-3.582 8-8 8z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-2V4c4.418 0 8 3.582 8 8s-3.582 8-8 8z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  transition: transform 0.4s ease;
+}
+
+.dark-mode .svg-icon.ico-theme {
+  transform: rotate(180deg);
 }

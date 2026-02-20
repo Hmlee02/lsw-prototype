@@ -924,6 +924,54 @@
 				link.setAttribute('title', link.textContent.trim());
 			});
 		})();
+
+		// ── 다크모드 (Dark Mode) ──
+		(function () {
+			const themeBtn = document.getElementById('btn-dark-mode');
+			if (!themeBtn) return;
+
+			const themeText = themeBtn.querySelector('span');
+
+			// 테마 적용 함수
+			const applyTheme = (theme) => {
+				if (theme === 'dark') {
+					document.body.classList.add('dark-mode');
+					document.body.classList.remove('light-mode');
+					document.documentElement.setAttribute('data-krds-mode', 'high-contrast'); // KRDS 고대비 모드 활성화 (다크모드 대응)
+					if (themeText) themeText.textContent = '라이트모드';
+				} else {
+					document.body.classList.remove('dark-mode');
+					document.body.classList.add('light-mode');
+					document.documentElement.removeAttribute('data-krds-mode'); // KRDS 고대비 모드 비활성화
+					if (themeText) themeText.textContent = '다크모드';
+				}
+			};
+
+			// 초기 테마 설정
+			const savedTheme = localStorage.getItem('lsw-theme');
+			const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+			if (savedTheme) {
+				applyTheme(savedTheme);
+			} else if (systemDark) {
+				applyTheme('dark');
+			}
+
+			// 버튼 클릭 이벤트
+			themeBtn.addEventListener('click', () => {
+				const isDark = document.body.classList.contains('dark-mode');
+				const newTheme = isDark ? 'light' : 'dark';
+				applyTheme(newTheme);
+				localStorage.setItem('lsw-theme', newTheme);
+			});
+
+			// 시스템 테마 변경 감지
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+				if (!localStorage.getItem('lsw-theme')) {
+					applyTheme(e.matches ? 'dark' : 'light');
+				}
+			});
+		})();
 	</script>
 </body>
 
