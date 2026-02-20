@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/proposal_B/law-detail.html"
+    }
+  ]
+}
