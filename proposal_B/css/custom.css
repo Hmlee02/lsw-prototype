@@ -1,14 +1,14 @@
 /* ==========================================================================
-   국가법령정보센터 프로토타입 커스텀 CSS
+   �??법령?�보?�터 ?�로?��???커스?� CSS
    LSW Prototype Custom Stylesheet
-   KRDS 디자인 시스템 기반 / KWCAG 2.2 준수
+   KRDS ?�자???�스??기반 / KWCAG 2.2 준??
    ========================================================================== */
 
 /* ==========================================================================
-   1. CSS 변수 (Design Tokens)
+   1. CSS 변??(Design Tokens)
    ========================================================================== */
 :root {
-  /* Primary Colors - 법제처 브랜드 (남색 계열) */
+  /* Primary Colors - 법제�?브랜??(?�색 계열) */
   --lsw-primary: #003791;
   --lsw-primary-dark: #002568;
   --lsw-primary-light: #e8eef8;
@@ -36,7 +36,7 @@
 }
 
 /* ==========================================================================
-   2. 기본 스타일 초기화 및 공통
+   2. 기본 ?��???초기??�?공통
    ========================================================================== */
 *,
 *::before,
@@ -58,7 +58,7 @@ body {
 }
 
 /* ==========================================================================
-   3. 로고 스타일
+   3. 로고 ?��???
    ========================================================================== */
 .lsw-logo-text {
   display: inline-block;
@@ -71,7 +71,7 @@ body {
 
 
 /* ==========================================================================
-   4. 메인 페이지 - HERO 검색 영역
+   4. 메인 ?�이지 - HERO 검???�역
    ========================================================================== */
 .lsw-hero {
   /* Richer Gradient & Pattern Overlay */
@@ -127,7 +127,7 @@ body {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* 검색 박스 - Glassmorphism */
+/* 검??박스 - Glassmorphism */
 .lsw-hero__search {
   max-width: 860px;
   margin: 0 auto;
@@ -239,7 +239,7 @@ body {
   box-shadow: 0 6px 20px rgba(29, 100, 216, 0.5);
 }
 
-/* 추천 키워드 (Smart Search) */
+/* 추천 ?�워??(Smart Search) */
 .lsw-hero__keywords {
   display: flex;
   align-items: center;
@@ -280,7 +280,7 @@ body {
 }
 
 /* ==========================================================================
-   5. 메인 페이지 - 법령 유형 바로가기
+   5. 메인 ?�이지 - 법령 ?�형 바로가�?
    ========================================================================== */
 .lsw-law-category {
   padding: 0 0 60px;
@@ -361,33 +361,33 @@ body {
   transform: scale(1.1) rotate(-3deg);
 }
 
-/* 아이콘 임시 이모지 대체 */
+/* ?�이�??�시 ?�모지 ?��?*/
 .lsw-ico-constitution::after {
-  content: '🏛';
+  content: '?��';
 }
 
 .lsw-ico-law::after {
-  content: '📜';
+  content: '?��';
 }
 
 .lsw-ico-presidential::after {
-  content: '📋';
+  content: '?��';
 }
 
 .lsw-ico-prime::after {
-  content: '📄';
+  content: '?��';
 }
 
 .lsw-ico-local::after {
-  content: '🏘';
+  content: '?��';
 }
 
 .lsw-ico-admin::after {
-  content: '📑';
+  content: '?��';
 }
 
 .lsw-ico-treaty::after {
-  content: '🌐';
+  content: '?��';
 }
 
 .lsw-law-category__name {
@@ -404,7 +404,7 @@ body {
 }
 
 /* ==========================================================================
-   6. 공통 섹션 스타일
+   6. 공통 ?�션 ?��???
    ========================================================================== */
 .lsw-section {
   padding: 80px 0;
@@ -422,7 +422,7 @@ body {
   letter-spacing: -0.02em;
 }
 
-/* 2단 컬럼 레이아웃 */
+/* 2??컬럼 ?�이?�웃 */
 .lsw-twin-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -476,7 +476,7 @@ body {
 }
 
 /* ==========================================================================
-   7. 목록 스타일
+   7. 목록 ?��???
    ========================================================================== */
 .lsw-list {
   list-style: none;
@@ -697,7 +697,7 @@ body {
 }
 
 /* ==========================================================================
-   9. 통계 배너
+   9. ?�계 배너
    ========================================================================== */
 .lsw-stats-banner {
   background: linear-gradient(135deg, #1a1f27 0%, #2c3e50 100%);
@@ -802,7 +802,7 @@ body {
 }
 
 /* ==========================================================================
-   11. 법령 세부 페이지 - 브레드크럼
+   11. 법령 ?��? ?�이지 - 브레?�크??
    ========================================================================== */
 .lsw-breadcrumb-wrap {
   background: var(--lsw-gray-100);
@@ -816,7 +816,7 @@ body {
 }
 
 /* ==========================================================================
-   12. 법령 세부 페이지 - 법령 헤더
+   12. 법령 ?��? ?�이지 - 법령 ?�더
    ========================================================================== */
 .lsw-law-header {
   background: #ffffff;
@@ -850,7 +850,7 @@ body {
   line-height: 1.3;
 }
 
-/* 법령 메타정보 */
+/* 법령 메�??�보 */
 .lsw-law-meta {
   display: flex;
   flex-wrap: wrap;
@@ -886,7 +886,7 @@ body {
   margin: 0;
 }
 
-/* 버전 선택 */
+/* 버전 ?�택 */
 .lsw-law-header__version {
   display: flex;
   align-items: center;
@@ -903,7 +903,7 @@ body {
 }
 
 /* ==========================================================================
-   13. 법령 세부 페이지 - 탭
+   13. 법령 ?��? ?�이지 - ??
    ========================================================================== */
 .lsw-law-tab-wrap {
   background: #ffffff;
@@ -914,13 +914,13 @@ body {
 }
 
 /* ==========================================================================
-   14. 법령 세부 페이지 - 본문 레이아웃
+   14. 법령 ?��? ?�이지 - 본문 ?�이?�웃
    ========================================================================== */
 .lsw-law-body {
   padding: 32px 0 60px;
 }
 
-/* 목차 사이드바 */
+/* 목차 ?�이?�바 */
 .lsw-law-toc {
   width: 280px;
   flex-shrink: 0;
@@ -956,7 +956,7 @@ body {
   padding: 12px 0;
 }
 
-/* 목차 리스트 */
+/* 목차 리스??*/
 .lsw-toc-list {
   list-style: none;
   padding: 0;
@@ -997,7 +997,7 @@ body {
   color: var(--lsw-gray-500);
 }
 
-/* 법령 본문 콘텐츠 영역 */
+/* 법령 본문 콘텐�??�역 */
 .lsw-law-content {
   flex: 1;
   min-width: 0;
@@ -1006,7 +1006,7 @@ body {
   border-radius: 12px;
 }
 
-/* 도구 바 */
+/* ?�구 �?*/
 .lsw-law-content__toolbar {
   display: flex;
   align-items: center;
@@ -1023,7 +1023,7 @@ body {
   gap: 8px;
 }
 
-/* 법령 본문 상단 제목 */
+/* 법령 본문 ?�단 ?�목 */
 .lsw-law-article-title h3 {
   font-size: 26px;
   font-weight: 700;
@@ -1115,7 +1115,7 @@ body {
   margin-bottom: 0;
 }
 
-/* 조문 하단 이동 네비게이션 */
+/* 조문 ?�단 ?�동 ?�비게이??*/
 .lsw-law-content__nav {
   display: flex;
   align-items: flex-end;
@@ -1138,7 +1138,7 @@ body {
 }
 
 /* ==========================================================================
-   15. 법령 세부 페이지 - 연혁 탭
+   15. 법령 ?��? ?�이지 - ?�혁 ??
    ========================================================================== */
 .lsw-history {
   padding: 20px 0;
@@ -1150,7 +1150,7 @@ body {
 }
 
 /* ==========================================================================
-   16. 법령 세부 페이지 - 조문별 보기
+   16. 법령 ?��? ?�이지 - 조문�?보기
    ========================================================================== */
 .lsw-law-layout--article {
   display: block;
@@ -1194,7 +1194,7 @@ body {
 }
 
 /* ==========================================================================
-   17. 법령 세부 페이지 - 관련정보 탭
+   17. 법령 ?��? ?�이지 - 관?�정�???
    ========================================================================== */
 .lsw-related-info {
   background: #ffffff;
@@ -1247,7 +1247,7 @@ body {
 }
 
 /* ==========================================================================
-   18. 빈 콘텐츠 상태
+   18. �?콘텐�??�태
    ========================================================================== */
 .lsw-no-content {
   display: flex;
@@ -1264,7 +1264,7 @@ body {
 }
 
 /* ==========================================================================
-   19. 반응형 - 태블릿 (1024px 이하)
+   19. 반응??- ?�블�?(1024px ?�하)
    ========================================================================== */
 @media (max-width: 1024px) {
   .lsw-hero__title {
@@ -1302,7 +1302,7 @@ body {
 }
 
 /* ==========================================================================
-   20. 반응형 - 모바일 (768px 이하)
+   20. 반응??- 모바??(768px ?�하)
    ========================================================================== */
 @media (max-width: 768px) {
   :root {
@@ -1403,7 +1403,7 @@ body {
 }
 
 /* ==========================================================================
-   21. 반응형 - 소형 모바일 (480px 이하)
+   21. 반응??- ?�형 모바??(480px ?�하)
    ========================================================================== */
 @media (max-width: 480px) {
   .lsw-law-category__item {
@@ -1422,7 +1422,7 @@ body {
 }
 
 /* ==========================================================================
-   22. 다크 모드 지원 (prefers-color-scheme)
+   22. ?�크 모드 지??(prefers-color-scheme)
    ========================================================================== */
 @media (prefers-color-scheme: dark) {
   body {
@@ -1472,7 +1472,7 @@ body {
 }
 
 /* ==========================================================================
-   23. 인쇄 스타일
+   23. ?�쇄 ?��???
    ========================================================================== */
 @media print {
 
@@ -1559,7 +1559,7 @@ body {
   height: var(--krds-icon--size-large);
   background-color: transparent !important;
   forced-color-adjust: none;
-  background-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_flag.svg');
+  background-image: url('../../assets/krds/img/component/icon/ico_flag.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1761,8 +1761,8 @@ body {
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url('../node_modules/krds-uiux/resources/img/component/icon/ico_sch.svg');
-  mask-image: url('../node_modules/krds-uiux/resources/img/component/icon/ico_sch.svg');
+  -webkit-mask-image: url('../assets/krds/img/component/icon/ico_sch.svg');
+  mask-image: url('../assets/krds/img/component/icon/ico_sch.svg');
 }
 
 #krds-header .header-container .btn-navi.login::before {
@@ -1772,8 +1772,8 @@ body {
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url('../node_modules/krds-uiux/resources/img/component/icon/ico_login.svg');
-  mask-image: url('../node_modules/krds-uiux/resources/img/component/icon/ico_login.svg');
+  -webkit-mask-image: url('../assets/krds/img/component/icon/ico_login.svg');
+  mask-image: url('../assets/krds/img/component/icon/ico_login.svg');
 }
 
 #krds-header .header-container .btn-navi.join::before {
@@ -1783,8 +1783,8 @@ body {
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url('../node_modules/krds-uiux/resources/img/component/icon/ico_join.svg');
-  mask-image: url('../node_modules/krds-uiux/resources/img/component/icon/ico_join.svg');
+  -webkit-mask-image: url('../assets/krds/img/component/icon/ico_join.svg');
+  mask-image: url('../assets/krds/img/component/icon/ico_join.svg');
 }
 
 #krds-header .header-container .btn-navi.my::before {
@@ -1794,8 +1794,8 @@ body {
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url('../node_modules/krds-uiux/resources/img/component/icon/ico_my.svg');
-  mask-image: url('../node_modules/krds-uiux/resources/img/component/icon/ico_my.svg');
+  -webkit-mask-image: url('../assets/krds/img/component/icon/ico_my.svg');
+  mask-image: url('../assets/krds/img/component/icon/ico_my.svg');
 }
 
 #krds-header .header-container .btn-navi.all::before {
@@ -1805,11 +1805,11 @@ body {
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url('../node_modules/krds-uiux/resources/img/component/icon/ico_all.svg');
-  mask-image: url('../node_modules/krds-uiux/resources/img/component/icon/ico_all.svg');
+  -webkit-mask-image: url('../assets/krds/img/component/icon/ico_all.svg');
+  mask-image: url('../assets/krds/img/component/icon/ico_all.svg');
 }
 
-/* 스크롤 동작 */
+/* ?�크�??�작 */
 #wrap[class*=scroll] #krds-header:not(.sample) {
   position: relative;
   border-bottom: 0.1rem solid var(--krds-header--utility-color-divider);
@@ -1855,7 +1855,7 @@ body {
 }
 
 [data-krds-mode=high-contrast] #krds-header .header-container .logo a {
-  background-image: url('../node_modules/krds-uiux/resources/img/component/icon/ico_logo_krds_high_contrast.svg');
+  background-image: url('../assets/krds/img/component/icon/ico_logo_krds_high_contrast.svg');
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1880,7 +1880,7 @@ body {
   }
 
   [data-krds-mode=theme] #krds-header .header-container .logo a {
-    background-image: url('../node_modules/krds-uiux/resources/img/component/icon/ico_logo_krds_high_contrast.svg');
+    background-image: url('../assets/krds/img/component/icon/ico_logo_krds_high_contrast.svg');
   }
 }
 
@@ -1897,8 +1897,8 @@ body {
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_angle.svg');
-  mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_angle.svg');
+  -webkit-mask-image: url('../../assets/krds/img/component/icon/ico_angle.svg');
+  mask-image: url('../../assets/krds/img/component/icon/ico_angle.svg');
   background-color: var(--krds-main-menu--main-trigger-color-text);
   transition: var(--krds-transition-base);
   transform: rotate(0deg);
@@ -1916,8 +1916,8 @@ body {
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_angle.svg');
-  mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_angle.svg');
+  -webkit-mask-image: url('../../assets/krds/img/component/icon/ico_angle.svg');
+  mask-image: url('../../assets/krds/img/component/icon/ico_angle.svg');
   content: "";
   flex-shrink: 0;
   transition: var(--krds-transition-base);
@@ -1931,8 +1931,8 @@ body {
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_more.svg');
-  mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_more.svg');
+  -webkit-mask-image: url('../../assets/krds/img/component/icon/ico_more.svg');
+  mask-image: url('../../assets/krds/img/component/icon/ico_more.svg');
   transform: rotate(0);
 }
 
@@ -1943,11 +1943,11 @@ body {
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_go.svg');
-  mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_go.svg');
+  -webkit-mask-image: url('../../assets/krds/img/component/icon/ico_go.svg');
+  mask-image: url('../../assets/krds/img/component/icon/ico_go.svg');
 }
 
-/* 푸터 로고 background-image 제거 */
+/* ?�터 로고 background-image ?�거 */
 #krds-footer .f-logo {
   background-image: none !important;
   width: auto;
@@ -1957,7 +1957,7 @@ body {
    26. Proposal B - Premium Law Reader Experience (Full-Screen Focus)
    ========================================================================== */
 
-/* 1. 레이아웃 고도화 - 풀스크린 몰입형 환경 */
+/* 1. ?�이?�웃 고도??- ?�?�크�?몰입???�경 */
 .proposal-b #main-content {
   background-color: transparent;
 }
@@ -1967,7 +1967,7 @@ body {
   padding-bottom: 80px;
 }
 
-/* 법령 본문 영역의 모든 주요 요소를 풀스크린으로 확장 */
+/* 법령 본문 ?�역??모든 주요 ?�소�??�?�크린으�??�장 */
 .proposal-b .inner,
 .proposal-b .lsw-law-body .inner,
 .proposal-b .lsw-law-tab-wrap .inner,
@@ -1987,7 +1987,7 @@ body {
   width: 100%;
 }
 
-/* 2. 사이드바(목차) 스타일링 - 좌측 슬림 고정 인덱스 */
+/* 2. ?�이?�바(목차) ?��??�링 - 좌측 ?�림 고정 ?�덱??*/
 .proposal-b .lsw-law-toc {
   width: 240px;
   flex-shrink: 0;
@@ -2020,7 +2020,7 @@ body {
   border-bottom: 1px solid var(--lsw-gray-100);
 }
 
-/* 2-1. 법령 목록 LNB 사이드바 */
+/* 2-1. 법령 목록 LNB ?�이?�바 */
 .proposal-b .lsw-lnb {
   width: 280px;
   flex-shrink: 0;
@@ -2079,7 +2079,7 @@ body {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
-  /* 표준 속성 추가 */
+  /* ?��? ?�성 추�? */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2104,7 +2104,7 @@ body {
   border-left-color: var(--lsw-primary);
 }
 
-/* 2-2. 법령 제목 및 연혁 */
+/* 2-2. 법령 ?�목 �??�혁 */
 .proposal-b .lsw-law-article-title {
   display: flex;
   justify-content: space-between;
@@ -2138,7 +2138,7 @@ body {
 }
 
 
-/* 3. 본문 콘텐츠 - 가로 너비 완전 확장 및 가독성 튜닝 */
+/* 3. 본문 콘텐�?- 가�??�비 ?�전 ?�장 �?가?�성 ?�닝 */
 .proposal-b .lsw-law-content {
   flex: 1;
   max-width: none;
@@ -2150,7 +2150,7 @@ body {
   box-shadow: none;
 }
 
-/* 4. 툴바 레이아웃 */
+/* 4. ?�바 ?�이?�웃 */
 .proposal-b .lsw-law-content__toolbar {
   display: flex;
   align-items: center;
@@ -2168,7 +2168,7 @@ body {
   gap: 6px;
 }
 
-/* 아이콘 전용 소형 버튼 */
+/* ?�이�??�용 ?�형 버튼 */
 .proposal-b .lsw-icon-btn {
   display: inline-flex;
   align-items: center;
@@ -2195,7 +2195,7 @@ body {
   background-color: currentColor;
 }
 
-/* 5. 툴바 탭 버튼 */
+/* 5. ?�바 ??버튼 */
 .proposal-b .lsw-toolbar-tabs {
   display: flex;
   align-items: center;
@@ -2230,7 +2230,7 @@ body {
   font-weight: 700;
 }
 
-/* 구분선 */
+/* 구분??*/
 .proposal-b .lsw-toolbar-divider {
   display: inline-block;
   width: 1px;
@@ -2240,18 +2240,18 @@ body {
   flex-shrink: 0;
 }
 
-/* 더보기 드롭다운 래퍼 */
+/* ?�보�??�롭?�운 ?�퍼 */
 .proposal-b .lsw-toolbar-more {
   position: relative;
 }
 
-/* 더보기 버튼 열린 상태 */
+/* ?�보�?버튼 ?�린 ?�태 */
 .proposal-b .lsw-toolbar-more__trigger[aria-expanded="true"] {
   background: var(--lsw-gray-100);
   color: var(--lsw-gray-900);
 }
 
-/* 드롭다운 메뉴 */
+/* ?�롭?�운 메뉴 */
 .proposal-b .lsw-toolbar-more__menu {
   position: absolute;
   top: calc(100% + 6px);
@@ -2311,7 +2311,7 @@ body {
   letter-spacing: -0.05em;
 }
 
-/* 조문 섹션 디자인 */
+/* 조문 ?�션 ?�자??*/
 .proposal-b .lsw-law-article__part {
   font-size: 28px;
   font-weight: 800;
@@ -2330,7 +2330,7 @@ body {
   border-bottom: 1px solid var(--lsw-gray-200);
 }
 
-/* 개별 조문 스타일 - 프리미엄 가독성 패키지 */
+/* 개별 조문 ?��???- ?�리미엄 가?�성 ?�키지 */
 .proposal-b .lsw-law-article__item {
   margin-bottom: 32px;
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -2355,7 +2355,7 @@ body {
   color: #111111;
 }
 
-/* 4. 헤더 및 탭 메뉴 - 풀스크린 통합 디자인 */
+/* 4. ?�더 �???메뉴 - ?�?�크�??�합 ?�자??*/
 .proposal-b .lsw-law-header {
   background: #ffffff;
   padding: 40px 0 40px;
@@ -2403,7 +2403,7 @@ body {
   padding: 24px 40px !important;
 }
 
-/* 5. 플로팅 툴바 - 인터랙티브 컨트롤 */
+/* 5. ?�로???�바 - ?�터?�티�?컨트�?*/
 .proposal-b .lsw-law-content__toolbar {
   margin-bottom: 40px;
   padding: 20px 32px;
@@ -2415,7 +2415,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
-/* 사이드바 활성화 상태 */
+/* ?�이?�바 ?�성???�태 */
 .proposal-b .lsw-law-toc .lnb-item .lnb-btn.active {
   background: var(--lsw-primary-light);
   color: var(--lsw-primary);
@@ -2423,7 +2423,7 @@ body {
   font-weight: 800;
 }
 
-/* 반응형 모바일 최적화 */
+/* 반응??모바??최적??*/
 @media (max-width: 1023px) {
   .proposal-b .inner {
     padding-left: 20px !important;
@@ -2446,7 +2446,7 @@ body {
   }
 }
 
-/* 6. 드롭다운(연혁선택) 고도화 및 z-index 해결 */
+/* 6. ?�롭?�운(?�혁?�택) 고도??�?z-index ?�결 */
 .proposal-b .lsw-law-header__version {
   display: flex;
   align-items: center;
@@ -2512,7 +2512,7 @@ body {
   background: var(--lsw-primary-light);
 }
 
-/* 드롭다운 실행 버튼 스타일 보강 */
+/* ?�롭?�운 ?�행 버튼 ?��???보강 */
 .proposal-b .lsw-version-btn {
   border: 2px solid var(--lsw-primary) !important;
   border-radius: 50px !important;
@@ -2535,10 +2535,10 @@ body {
 }
 
 /* ==========================================================================
-   커스텀 SVG 아이콘 (KRDS output.css에 없는 클래스 보완)
+   커스?� SVG ?�이�?(KRDS output.css???�는 ?�래??보완)
    ========================================================================== */
 
-/* ico-bookmark: KRDS의 ico_scrap.svg 대체 사용 */
+/* ico-bookmark: KRDS??ico_scrap.svg ?��??�용 */
 .svg-icon.ico-bookmark {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center center;
@@ -2546,6 +2546,6 @@ body {
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_scrap.svg');
-  mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_scrap.svg');
+  -webkit-mask-image: url('../../assets/krds/img/component/icon/ico_scrap.svg');
+  mask-image: url('../../assets/krds/img/component/icon/ico_scrap.svg');
 }

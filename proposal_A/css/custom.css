@@ -1,14 +1,14 @@
 /* ==========================================================================
-   국가법령정보센터 프로토타입 커스텀 CSS (Proposal A)
+   �??법령?�보?�터 ?�로?��???커스?� CSS (Proposal A)
    LSW Prototype Custom Stylesheet
-   KRDS 디자인 시스템 기반 / KWCAG 2.2 준수
+   KRDS ?�자???�스??기반 / KWCAG 2.2 준??
    ========================================================================== */
 
 /* ==========================================================================
-   1. CSS 변수 (Design Tokens)
+   1. CSS 변??(Design Tokens)
    ========================================================================== */
 :root {
-    /* Primary Colors - 법제처 브랜드 (남색 계열) */
+    /* Primary Colors - 법제�?브랜??(?�색 계열) */
     --lsw-primary: #003791;
     --lsw-primary-dark: #002568;
     --lsw-primary-light: #e8eef8;
@@ -36,7 +36,7 @@
 }
 
 /* ==========================================================================
-   2. 기본 스타일 초기화 및 공통
+   2. 기본 ?��???초기??�?공통
    ========================================================================== */
 *,
 *::before,
@@ -167,7 +167,7 @@ button {
     background-image: none !important;
 }
 
-/* GNB 드롭다운 - 화면 전체 너비로 확장 */
+/* GNB ?�롭?�운 - ?�면 ?�체 ?�비�??�장 */
 .krds-main-menu .gnb-toggle-wrap {
     left: 50% !important;
     transform: translateX(-50%) !important;
@@ -175,11 +175,11 @@ button {
 }
 
 /* ==========================================================================
-   누락된 svg-icon 아이콘 정의
-   (common.css에 미정의 → 흰 박스 오류 수정)
+   ?�락??svg-icon ?�이�??�의
+   (common.css??미정??????박스 ?�류 ?�정)
    ========================================================================== */
 
-/* ico-download: ico_download.svg 사용 */
+/* ico-download: ico_download.svg ?�용 */
 .svg-icon.ico-download {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
@@ -187,11 +187,11 @@ button {
     mask-repeat: no-repeat;
     mask-position: center center;
     mask-size: contain;
-    -webkit-mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_download.svg');
-    mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_download.svg');
+    -webkit-mask-image: url('../../assets/krds/img/component/icon/ico_download.svg');
+    mask-image: url('../../assets/krds/img/component/icon/ico_download.svg');
 }
 
-/* ico-bookmark: ico_scrap.svg 대체 사용 */
+/* ico-bookmark: ico_scrap.svg ?��??�용 */
 .svg-icon.ico-bookmark {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
@@ -199,11 +199,11 @@ button {
     mask-repeat: no-repeat;
     mask-position: center center;
     mask-size: contain;
-    -webkit-mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_scrap.svg');
-    mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_scrap.svg');
+    -webkit-mask-image: url('../../assets/krds/img/component/icon/ico_scrap.svg');
+    mask-image: url('../../assets/krds/img/component/icon/ico_scrap.svg');
 }
 
-/* ico-theme: 달 모양 아이콘 (다크모드 전환용) */
+/* ico-theme: ??모양 ?�이�?(?�크모드 ?�환?? */
 .svg-icon.ico-theme {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
@@ -215,7 +215,7 @@ button {
     mask-image: url('../img/ico_moon.svg');
 }
 
-/* ico-audio: ico_volume.svg 사용 */
+/* ico-audio: ico_volume.svg ?�용 */
 .svg-icon.ico-audio {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
@@ -223,8 +223,8 @@ button {
     mask-repeat: no-repeat;
     mask-position: center center;
     mask-size: contain;
-    -webkit-mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_volume.svg');
-    mask-image: url('../../node_modules/krds-uiux/resources/img/component/icon/ico_volume.svg');
+    -webkit-mask-image: url('../../assets/krds/img/component/icon/ico_volume.svg');
+    mask-image: url('../../assets/krds/img/component/icon/ico_volume.svg');
 }
 
 /* ==========================================================================
@@ -1023,20 +1023,20 @@ footer#krds-footer {
     gap: 12px;
 }
 
-/* 법령 헤더 - 연혁보기 드롭다운 스타일 */
+/* 법령 ?�더 - ?�혁보기 ?�롭?�운 ?��???*/
 .lsw-version-btn {
     min-width: 240px;
-    /* 버튼 자체의 너비 확보 */
+    /* 버튼 ?�체???�비 ?�보 */
     justify-content: space-between;
 }
 
 .lsw-version-btn+.drop-menu {
     min-width: 100%;
-    /* 버튼 너비 이상 */
+    /* 버튼 ?�비 ?�상 */
     width: max-content;
-    /* 내용에 따라 확장 */
+    /* ?�용???�라 ?�장 */
     z-index: 1000;
-    /* 높은 z-index */
+    /* ?��? z-index */
 }
 
 .lsw-law-meta__item dt {
@@ -1092,7 +1092,7 @@ footer#krds-footer {
     position: sticky;
     top: 80px;
     z-index: 10;
-    /* gnb-backdrop dim(z-index:60) 아래로 내려가도록 */
+    /* gnb-backdrop dim(z-index:60) ?�래�??�려가?�록 */
 }
 
 /* Law Layout (Body) */
@@ -1100,7 +1100,7 @@ footer#krds-footer {
     padding: 40px 0 80px;
 }
 
-/* 목차 사이드바 (KRDS Side Navigation) */
+/* 목차 ?�이?�바 (KRDS Side Navigation) */
 .lsw-law-toc {
     position: sticky;
     top: 20px;
@@ -1324,7 +1324,7 @@ footer#krds-footer {
 
 /* ==========================================================================
    10. Law Detail Page Overrides
-   index.html의 scroll-snap 레이아웃이 law-detail에 영향 주지 않도록 해제
+   index.html??scroll-snap ?�이?�웃??law-detail???�향 주�? ?�도�??�제
    ========================================================================== */
 html.page-law-detail,
 html.page-law-detail body {
@@ -1343,7 +1343,7 @@ body.page-law-detail .lsw-section {
     min-height: auto;
 }
 
-/* 사이드바 + 본문 레이아웃 보강 */
+/* ?�이?�바 + 본문 ?�이?�웃 보강 */
 .lsw-law-layout {
     display: flex;
     align-items: flex-start;
@@ -1363,18 +1363,18 @@ body.page-law-detail .lsw-section {
     border-bottom: 1px solid var(--lsw-gray-200);
 }
 
-/* 브레드크럼 영역 */
+/* 브레?�크???�역 */
 .lsw-breadcrumb-wrap {
     padding-top: 40px;
-    /* 헤더 static 변경으로 패딩 축소 */
+    /* ?�더 static 변경으�??�딩 축소 */
 }
 
-/* 헤더 스크롤 처리 */
+/* ?�더 ?�크�?처리 */
 #krds-header {
     position: relative !important;
 }
 
-/* KRDS 브레드크럼 노드 스타일 보강 */
+/* KRDS 브레?�크???�드 ?��???보강 */
 .krds-breadcrumb-wrap .breadcrumb li .txt {
     color: var(--lsw-gray-700);
     text-decoration: none;
@@ -1384,7 +1384,7 @@ body.page-law-detail .lsw-section {
     transition: all 0.2s;
 }
 
-/* 법령 본문 article 섹션 기본 스타일 보강 */
+/* 법령 본문 article ?�션 기본 ?��???보강 */
 .lsw-law-article__section {
     font-size: 18px;
     font-weight: 700;
@@ -1393,7 +1393,7 @@ body.page-law-detail .lsw-section {
     margin: 32px 0 20px;
 }
 
-/* TOC 헤더 */
+/* TOC ?�더 */
 .lsw-law-toc__header {
     display: flex;
     justify-content: space-between;
@@ -1407,7 +1407,7 @@ body.page-law-detail .lsw-section {
     margin: 0;
 }
 
-/* TOC 토글 기능 */
+/* TOC ?��? 기능 */
 .lsw-law-toc.is-collapsed .lsw-law-toc__body {
     display: none;
 }
@@ -1420,14 +1420,14 @@ body.page-law-detail .lsw-section {
     transition: transform 0.3s ease;
 }
 
-/* 푸터 로고 background-image 제거 */
+/* ?�터 로고 background-image ?�거 */
 #krds-footer .f-logo {
     background-image: none !important;
 }
 
-/* ===== As-is 법령 상세 추가 스타일 ===== */
+/* ===== As-is 법령 ?�세 추�? ?��???===== */
 
-/* 탭 전체 너비 확장 */
+/* ???�체 ?�비 ?�장 */
 .lsw-law-tab-wrap {
     width: 100%;
 }
@@ -1458,7 +1458,7 @@ body.page-law-detail .lsw-section {
     justify-content: center;
 }
 
-/* 조문선택 드롭다운 */
+/* 조문?�택 ?�롭?�운 */
 .lsw-article-select {
     min-width: 180px;
     max-width: 240px;
@@ -1469,7 +1469,7 @@ body.page-law-detail .lsw-section {
     background: #fff;
 }
 
-/* 본문 필터 아이콘 바 */
+/* 본문 ?�터 ?�이�?�?*/
 .lsw-law-content__filters {
     display: flex;
     flex-wrap: wrap;
@@ -1532,7 +1532,7 @@ body.page-law-detail .lsw-section {
     background-color: #a080c0;
 }
 
-/* 조문별 참조 아이콘 */
+/* 조문�?참조 ?�이�?*/
 .lsw-ref-icon {
     display: inline-flex;
     align-items: center;
@@ -1600,21 +1600,21 @@ body.page-law-detail .lsw-section {
     clip-path: none !important;
 }
 
-/* 조문 헤더 좌측 레이아웃 */
+/* 조문 ?�더 좌측 ?�이?�웃 */
 .lsw-law-article__item-left {
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-/* 개정이력 텍스트 */
+/* 개정?�력 ?�스??*/
 .lsw-law-article__amendment {
     color: var(--lsw-gray-500, #888);
     font-size: 13px;
     margin-top: 8px;
 }
 
-/* 법령 제목 하단 소관부처 */
+/* 법령 ?�목 ?�단 ?��?부�?*/
 .lsw-law-article-title__ministry {
     color: var(--lsw-gray-600, #666);
     font-size: 14px;
@@ -1622,7 +1622,7 @@ body.page-law-detail .lsw-section {
     text-align: center;
 }
 
-/* TOC depth4 스타일 */
+/* TOC depth4 ?��???*/
 .lsw-toc-list__depth4 {
     padding-left: 16px;
 }
@@ -1639,14 +1639,14 @@ body.page-law-detail .lsw-section {
     color: var(--lsw-primary, #1a5cbc);
 }
 
-/* 툴바 right 버튼 간격 */
+/* ?�바 right 버튼 간격 */
 .lsw-law-content__toolbar-right {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-/* 보조 기능 버튼 바 (as-is 11개 항목) */
+/* 보조 기능 버튼 �?(as-is 11�???��) */
 .lsw-law-content__utils {
     display: flex;
     flex-wrap: wrap;
@@ -1683,7 +1683,7 @@ body.page-law-detail .lsw-section {
     z-index: 100 !important;
 }
 
-/* 도움말 열기 버튼 (Floating) */
+/* ?��?�??�기 버튼 (Floating) */
 .btn-help-panel.expand {
     position: fixed;
     right: 20px;
@@ -1691,7 +1691,7 @@ body.page-law-detail .lsw-section {
     z-index: 90;
 }
 
-/* 도움말 닫기 버튼 (Inside Panel) */
+/* ?��?�??�기 버튼 (Inside Panel) */
 .btn-help-panel.fold {
     position: absolute;
     top: 20px;
