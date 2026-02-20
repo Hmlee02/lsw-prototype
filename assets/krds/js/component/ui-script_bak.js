@@ -1,6 +1,6 @@
 "use strict";
 
-// ?덈룄???ъ씠利?泥댄겕
+// 윈도우 사이즈 체크
 const windowSize = {
   winSize: null,
   breakPoint: 1024,
@@ -14,7 +14,7 @@ const windowSize = {
   },
 };
 
-// ?ㅽ겕濡?諛⑺뼢 泥댄겕
+// 스크롤 방향 체크
 const scrollManager = {
   _scrollY: 0,
   _scrollH: 0,
@@ -74,7 +74,7 @@ const common = {
         } else if (!event.shiftKey && document.activeElement === lastFocusableElement) {
           event.preventDefault();
           firstFocusableElement.focus();
-          // 紐⑤떖 ?ㅽ뵂 ??泥?珥덉젏 ??갑???쒖뼱(modal-content媛 泥レ큹?먯씠 ?꾨땲硫??ъ슜 ?덊빐????
+          // 모달 오픈 후 첫 초점 역방향 제어(modal-content가 첫초점이 아니면 사용 안해도 됨)
         } else if (event.key === "Tab" && event.shiftKey && document.activeElement === trap) {
           event.preventDefault();
           lastFocusableElement.focus();
@@ -91,13 +91,13 @@ const krds_mainMenuPC = {
 
     if (!gnbMenu) return;
 
-    // gnb ?띿꽦?ㅼ젙
-    gnbMenu.setAttribute("aria-label", "硫붿씤 硫붾돱");
+    // gnb 속성설정
+    gnbMenu.setAttribute("aria-label", "메인 메뉴");
 
-    // dimed ?붿냼瑜??ㅼ젙, 湲곗〈 dimed媛 ?놁쓣 寃쎌슦 ?앹꽦
+    // dimed 요소를 설정, 기존 dimed가 없을 경우 생성
     this.backdrop = document.querySelector(".gnb-backdrop") || this.createBackdrop();
 
-    // 二?硫붾돱 諛??쒕툕 硫붾돱???몃━嫄곕? ?ㅼ젙?섍퀬, 媛??몃━嫄곗뿉 ?대깽?몃? ?곌껐
+    // 주 메뉴 및 서브 메뉴의 트리거를 설정하고, 각 트리거에 이벤트를 연결
     const mainTriggers = gnbMenu.querySelectorAll(".gnb-main-trigger");
     const subTriggers = gnbMenu.querySelectorAll(".gnb-sub-trigger:not(.is-link)");
     mainTriggers.forEach((mainTrigger) => this.setupMainTrigger(mainTrigger));
@@ -113,7 +113,7 @@ const krds_mainMenuPC = {
       mainTrigger.setAttribute("aria-haspopup", "true");
       toggleWrap.setAttribute("id", uniqueIdx);
 
-      // ?섏쐞 硫붾돱 ?ㅼ젙
+      // 하위 메뉴 설정
       const mainList = toggleWrap.querySelector(".gnb-main-list");
       if (mainList?.getAttribute("data-has-submenu") === "true") {
         const subTriggers = mainList.querySelectorAll(".gnb-sub-trigger");
@@ -178,7 +178,7 @@ const krds_mainMenuPC = {
     // this.backdrop.style.display = isOpen ? "block" : "none";
   },
   adjustSubMenuHeight(target) {
-    // ?쒕툕 硫붾돱 ?믪씠瑜??쒖꽦 硫붾돱??留욎떠 議곗젙
+    // 서브 메뉴 높이를 활성 메뉴에 맞춰 조정
     const activeSubList = target.querySelector(".gnb-sub-list.active");
     const height = activeSubList?.scrollHeight || 0;
     target.style.minHeight = `${height}px`;
@@ -202,27 +202,27 @@ const krds_mainMenuPC = {
     this.toggleScrollbar(false);
   },
   attachEvents(mainTriggers, subTriggers) {
-    // krds-main-menu ?몃? ?대┃???リ린
+    // krds-main-menu 외부 클릭시 닫기
     document.addEventListener("click", ({ target }) => {
       if (!target.closest(".krds-main-menu")) this.closeMainMenu();
     });
 
-    // 諛깅뱶濡??대┃ ??硫붾돱 ?リ린
+    // 백드롭 클릭 시 메뉴 닫기
     // this.backdrop.addEventListener("click", () => this.closeMainMenu());
 
-    // ESC ?ㅻ? ?뚮윭 硫붾돱瑜??リ굅?? TAB ?ㅻ줈 珥덉젏??硫붾돱 ?몃?濡??대룞?덉쓣 ??硫붾돱 ?リ린
+    // ESC 키를 눌러 메뉴를 닫거나, TAB 키로 초점이 메뉴 외부로 이동했을 때 메뉴 닫기
     document.addEventListener("keyup", (event) => {
       if (event.code === "Escape" || !event.target.closest(".krds-main-menu")) {
         this.closeMainMenu();
       }
     });
 
-    // 硫붿씤 硫붾돱 ?몃━嫄??ㅼ젙
+    // 메인 메뉴 트리거 설정
     mainTriggers.forEach((mainTrigger) => {
       mainTrigger.addEventListener("click", () => this.toggleMainMenu(mainTrigger));
     });
 
-    // ?쒕툕 硫붾돱 ?몃━嫄??ㅼ젙
+    // 서브 메뉴 트리거 설정
     subTriggers.forEach((subTrigger) => {
       subTrigger.addEventListener("click", () => this.toggleSubMenu(subTrigger));
     });
@@ -238,7 +238,7 @@ const krds_mainMenuPC = {
       const parent = element.closest("li")?.[sibling];
       return parent ? parent.querySelector("[data-trigger]") : null;
     };
-    // Home, End, 諛⑺뼢?ㅻ? ?듯빐 硫붾돱 ??ぉ 媛꾩쓽 ?대룞??泥섎━
+    // Home, End, 방향키를 통해 메뉴 항목 간의 이동을 처리
     document.addEventListener("keydown", (event) => {
       const target = event.target;
       if (target.getAttribute("data-trigger")) {
@@ -284,14 +284,14 @@ const krds_mainMenuMobile = {
       mobileGnb.style.display = "none";
     }
 
-    // gnb ?몃? ?대┃ 泥섎━
+    // gnb 외부 클릭 처리
     mobileGnb.addEventListener("click", (event) => {
       if (!event.target.closest(".gnb-wrap")) {
         mobileGnb.querySelector(".gnb-wrap").focus();
       }
     });
 
-    // ?묎렐???ㅼ젙(tab)
+    // 접근성 설정(tab)
     this.setupAriaAttributes(mobileGnb);
 
     this.attachEvents(mobileGnb);
@@ -309,7 +309,7 @@ const krds_mainMenuMobile = {
         item.setAttribute("aria-controls", item.getAttribute("href").substring(1));
         item.setAttribute("id", `tab-${idx}`);
 
-        // gnb-main-trigger ?대┃???대떦 ?꾩튂濡??ㅽ겕濡?
+        // gnb-main-trigger 클릭시 해당 위치로 스크롤
         item.addEventListener("click", (event) => {
           event.preventDefault();
           const id = item.getAttribute("aria-controls");
@@ -340,7 +340,7 @@ const krds_mainMenuMobile = {
     this.setupAnchorScroll(mobileGnb);
     this.setupAnchorLinks(mobileGnb);
 
-    // 諛섏쓳??泥섎━
+    // 반응형 처리
     window.addEventListener("resize", () => {
       const isPC = windowSize.getWinSize() === "pc";
       if (isPC) this.closeMainMenu(mobileGnb);
@@ -357,7 +357,7 @@ const krds_mainMenuMobile = {
     // openGnb.setAttribute("aria-expanded", "true");
     // header.style.zIndex = "1000";
 
-    // active 硫붾돱濡??ㅽ겕濡??대룞
+    // active 메뉴로 스크롤 이동
     const activeTrigger = document.querySelector(".gnb-main-trigger.active");
     if (activeTrigger) {
       const id = activeTrigger.getAttribute("aria-controls");
@@ -373,17 +373,17 @@ const krds_mainMenuMobile = {
       document.body.classList.add("is-gnb-mobile");
     }, 100);
 
-    // transition 醫낅즺???ㅽ뻾
+    // transition 종료후 실행
     mobileGnb.addEventListener("transitionend", function onTransitionEnd() {
       navContainer.focus();
       mobileGnb.removeEventListener("transitionend", onTransitionEnd);
 
-      // inert ?ㅼ젙
+      // inert 설정
       document.querySelector("#krds-header .header-in").setAttribute("inert", "");
       document.getElementById("container")?.setAttribute("inert", "");
       document.getElementById("footer")?.setAttribute("inert", "");
       
-      // ?ъ빱???몃옪 ?ㅼ젙
+      // 포커스 트랩 설정
       common.focusTrap(mobileGnb);
     });
 
@@ -398,12 +398,12 @@ const krds_mainMenuMobile = {
     // openGnb.setAttribute("aria-expanded", "false");
     // header.style.zIndex = "";
 
-    // inert ?ㅼ젙
+    // inert 설정
     document.querySelector("#krds-header .header-in").removeAttribute("inert");
     document.getElementById("container")?.removeAttribute("inert");
     document.getElementById("footer")?.removeAttribute("inert");
     
-    // transition 醫낅즺???ㅽ뻾
+    // transition 종료후 실행
     mobileGnb.addEventListener("transitionend", function onTransitionEnd() {
       openGnb.focus();
       mobileGnb.removeEventListener("transitionend", onTransitionEnd);
@@ -450,7 +450,7 @@ const krds_mainMenuMobile = {
     // gnb-mobile-type1(headerTabArea: gnb-tab-nav)
     let lastBodyScrollY = 0;
 
-    if (!headerTabArea) return; // ?붿냼媛 ?놁쓣 寃쎌슦 ?⑥닔 醫낅즺
+    if (!headerTabArea) return; // 요소가 없을 경우 함수 종료
 
     gnbBody.addEventListener("scroll", (event) => {
       const bodyScrollY = event.target.scrollTop;
@@ -551,7 +551,7 @@ const krds_mainMenuMobile = {
     prevButton.addEventListener("click", depth4Close);
     closeButton.addEventListener("click", depth4Close);
 
-    // ?ъ빱???몃옪 ?ㅼ젙
+    // 포커스 트랩 설정
     common.focusTrap(target);
   },
   resetAnchorMenu() {
@@ -583,11 +583,11 @@ const krds_sideNavigation = {
     const uniqueIdx = `lnbmenu-${Math.random().toString(36).substring(2, 9)}`;
     const navSubmenu = navButton.nextElementSibling;
 
-    // aria ?ㅼ젙
+    // aria 설정
     navButton.setAttribute("aria-controls", uniqueIdx);
     navButton.setAttribute("aria-expanded", navButton.classList.contains("active"));
 
-    // ?쒕툕硫붾돱 id ?ㅼ젙 諛?popup 泥섎━
+    // 서브메뉴 id 설정 및 popup 처리
     if (navButton.classList.contains("lnb-toggle-popup")) {
       navButton.setAttribute("aria-haspopup", "true");
     }
@@ -602,8 +602,8 @@ const krds_sideNavigation = {
       toggleButton.addEventListener("click", () => {
         const expand = toggleButton.getAttribute("aria-expanded") !== "true";
         
-        //this.toggleMenu(toggleButton, expand); ?대┃ ???대떦 踰꾪듉留??쒖꽦???곹깭濡?蹂寃쎈릺???대떦 ?대깽??二쇱꽍泥섎━.
-        //this.closeSiblingMenus(toggleButton);  ?대┃ ???대떦 踰꾪듉留??쒖꽦???곹깭濡?蹂寃쎈릺???대떦 ?대깽??二쇱꽍泥섎━.
+        //this.toggleMenu(toggleButton, expand); 클릭 시 해당 버튼만 활성화 상태로 변경되어 해당 이벤트 주석처리.
+        //this.closeSiblingMenus(toggleButton);  클릭 시 해당 버튼만 활성화 상태로 변경되어 해당 이벤트 주석처리.
         this.setActiveNav(toggleButton, expand);
       });
     });
@@ -619,7 +619,7 @@ const krds_sideNavigation = {
     const popupToggleButtons = document.querySelectorAll(".lnb-toggle-popup");
     const popupSubmenus = document.querySelectorAll(".lnb-submenu-lv2");
 
-    // ?앹뾽 ?좉? 踰꾪듉
+    // 팝업 토글 버튼
     popupToggleButtons.forEach((button) => {
       button.addEventListener("click", () => {
         const popupSubmenu = button.nextElementSibling;
@@ -640,10 +640,10 @@ const krds_sideNavigation = {
       });
     });
 
-    // ?쒕툕 硫붾돱媛 ?ъ빱?ㅻ? ?껋쑝硫?鍮꾪솢?깊솕
+    // 서브 메뉴가 포커스를 잃으면 비활성화
     popupSubmenus.forEach((popupSubmenu) => {
       popupSubmenu.addEventListener("focusout", (event) => {
-        // ?ъ빱?ㅺ? ?쒕툕硫붾돱 諛뽰쑝濡??섍컮?붿? ?뺤씤
+        // 포커스가 서브메뉴 밖으로 나갔는지 확인
         if (!popupSubmenu.contains(event.relatedTarget)) {
           popupSubmenu.classList.remove("active");
 
@@ -660,7 +660,7 @@ const krds_sideNavigation = {
         }
       });
 
-      // lnb-btn-tit ?대┃ ???쒕툕硫붾돱 ?リ린
+      // lnb-btn-tit 클릭 시 서브메뉴 닫기
       const subMenuTitleButton = popupSubmenu.querySelector(".lnb-btn-tit");
       subMenuTitleButton?.addEventListener("click", () => {
         lastClickedButton?.focus();
@@ -683,7 +683,7 @@ const krds_sideNavigation = {
     });
   },
   setActiveCurrentPage() {
-    // ?쒖꽦?붾맂 ?섏씠吏瑜?李얜뒗 ??媛쒕컻 ?섍꼍??留욊쾶 ?섏젙)
+    // 활성화된 페이지를 찾는 예(개발 환경에 맞게 수정)
     const currentPage = window.location.pathname.split("/").slice(-1)[0].replace(".html", "");
     const lnbLinks = document.querySelectorAll(".krds-side-navigation .lnb-link");
     lnbLinks.forEach((link) => {
@@ -693,7 +693,7 @@ const krds_sideNavigation = {
         link.closest(".lnb-item").querySelector(".lnb-toggle")?.classList.add("active");
         link.closest(".lnb-item").querySelector(".lnb-toggle")?.setAttribute("aria-expanded", "true");
         link.closest("li").classList.add("active");
-        // ?묎렐???꾩옱 ?섏씠吏 ?쒖떆 aria-current
+        // 접근성 현재 페이지 표시 aria-current
         link.setAttribute("aria-current", "page");
       }
     });
@@ -714,28 +714,28 @@ const krds_tab = {
     this.layerTabArea.forEach((tabArea) => {
       const layerTabs = tabArea.querySelectorAll(".tab > ul > li");
 
-      // ???ㅼ젙
+      // 탭 설정
       layerTabs.forEach((tab) => {
-        // ?대? ?대깽?멸? ?곌껐????쓣 嫄대꼫?
+        // 이미 이벤트가 연결된 탭을 건너뜀
         if (!tab.dataset.listenerAttached) {
-          // ?곌껐?????⑤꼸 李얘린
+          // 연결된 탭 패널 찾기
           const control = tab.getAttribute("aria-controls");
           const selectedTabPanel = document.getElementById(control);
 
-          // aria ?ㅼ젙
+          // aria 설정
           tab.setAttribute("aria-selected", "false");
           tab.setAttribute("role", "tab");
           selectedTabPanel.setAttribute("role", "tabpanel");
 
-          // 珥덇린 active ?ㅼ젙
+          // 초기 active 설정
           if (tab.classList.contains("active")) {
             if (!tab.querySelector("button .sr-only")) {
               tab.setAttribute("aria-selected", "true");
-              tab.querySelector("button").append(this.createAccText()); // 珥덉젏??踰꾪듉?대씪 aria-selected ?泥??띿뒪???꾩슂
+              tab.querySelector("button").append(this.createAccText()); // 초점이 버튼이라 aria-selected 대체 텍스트 필요
             }
           }
 
-          // ?대┃ ?대깽??
+          // 클릭 이벤트
           tab.addEventListener("click", () => {
             const closestTabs = tab.closest(".krds-tab-area.layer > .tab").querySelectorAll("li");
             const closestTabPanels = tab.closest(".krds-tab-area.layer").querySelectorAll(":scope > .tab-conts-wrap > .tab-conts");
@@ -748,10 +748,10 @@ const krds_tab = {
             selectedTabPanel.classList.add("active");
           });
 
-          // ?ㅻ낫???대깽??
+          // 키보드 이벤트
           this.setupKeyboardNavigation(tab);
 
-          // ?대깽?멸? 異붽?????쓣 ?쒖떆
+          // 이벤트가 추가된 탭을 표시
           tab.dataset.listenerAttached = "true";
         }
       });
@@ -760,14 +760,14 @@ const krds_tab = {
   createAccText() {
     const tabAccTag = document.createElement("i");
     tabAccTag.classList.add("sr-only");
-    tabAccTag.textContent = "?좏깮??;
+    tabAccTag.textContent = "선택됨";
     return tabAccTag;
   },
   resetTabs(closestTabs, closestTabPanels) {
     closestTabs.forEach((tab) => {
       tab.classList.remove("active");
       tab.setAttribute("aria-selected", "false");
-      // ?泥??띿뒪????젣
+      // 대체 텍스트 삭제
       const srOnly = tab.querySelector(".sr-only");
       if (srOnly) tab.querySelector("button").removeChild(srOnly);
     });
@@ -802,7 +802,7 @@ const krds_accordion = {
   },
   accordionToggle(button, accordionItems, accordionType, currentItem) {
     const isExpanded = button.getAttribute("aria-expanded") === "true";
-    // singleOpen ??낆씪 寃쎌슦, ?ㅻⅨ ??ぉ ?リ린
+    // singleOpen 타입일 경우, 다른 항목 닫기
     if (accordionType !== "multiOpen" && !currentItem.classList.contains("active")) {
       accordionItems.forEach((otherItem) => {
         const otherButton = otherItem.querySelector(".btn-accordion");
@@ -811,7 +811,7 @@ const krds_accordion = {
         otherItem.classList.remove("active");
       });
     }
-    // ?꾩옱 ??ぉ ?곹깭 ?좉?
+    // 현재 항목 상태 토글
     button.setAttribute("aria-expanded", !isExpanded);
     button.classList.toggle("active", !isExpanded);
     currentItem.classList.toggle("active", !isExpanded);
@@ -825,24 +825,24 @@ const krds_accordion = {
       const accordionType = accordionContainer.dataset.type || "singleOpen";
       const isOpen = accordionContainer.classList.contains("is-open");
 
-      // ?묎렐???띿꽦 珥덇린媛??ㅼ젙
+      // 접근성 속성 초기값 설정
       this.setupAriaAttributes(button, accordionContent, idx);
 
-      // 珥덇린 ?ㅽ뵂 ?곹깭 ?ㅼ젙
+      // 초기 오픈 상태 설정
       if (isOpen || currentItem.classList.contains("active")) {
         button.setAttribute("aria-expanded", "true");
         button.classList.add("active");
         currentItem.classList.add("active");
       }
 
-      // ?몃뱾??怨좎젙 諛????
+      // 핸들러 고정 및 저장
       let toggleHandler = this.accordionHandlers.get(button);
       if (!toggleHandler) {
         toggleHandler = this.accordionToggle.bind(this, button, accordionItems, accordionType, currentItem);
         this.accordionHandlers.set(button, toggleHandler);
       }
 
-      // 湲곗〈 ?대깽??由ъ뒪???쒓굅 諛??덈줈 ?깅줉
+      // 기존 이벤트 리스너 제거 및 새로 등록
       button.removeEventListener("click", toggleHandler);
       button.addEventListener("click", toggleHandler);
     });
@@ -872,14 +872,14 @@ const krds_modal = {
     this.setupTriggers();
   },
   setupTriggers() {
-    // 紐⑤떖 ?닿린 ?대깽???ㅼ젙
+    // 모달 열기 이벤트 설정
     this.modalOpenTriggers.forEach((trigger) => {
       trigger.addEventListener("click", (event) => {
         event.preventDefault();
         const modalId = trigger.getAttribute("data-target");
 
         if (modalId) {
-          // aria ?ㅼ젙
+          // aria 설정
           trigger.setAttribute("data-modal-id", modalId);
           trigger.classList.add("modal-opened");
           trigger.setAttribute("tabindex", "-1");
@@ -888,7 +888,7 @@ const krds_modal = {
         }
       });
     });
-    // 紐⑤떖 ?リ린 ?대깽???ㅼ젙
+    // 모달 닫기 이벤트 설정
     this.modalCloseTriggers.forEach((trigger) => {
       trigger.addEventListener("click", (event) => {
         event.preventDefault();
@@ -914,26 +914,26 @@ const krds_modal = {
     modalBack.classList.add("in");
     // modalTitle.setAttribute("tabindex", "0");
 
-    // modal-conts ?ㅽ겕濡??쇰븣 tabindex 泥섎━
+    // modal-conts 스크롤 일때 tabindex 처리
     if (modalConts.scrollHeight > modalConts.clientHeight) {
       modalConts.setAttribute("tabindex", "0");
     } else {
       modalConts.removeAttribute("tabindex");
     }
 
-    // css transition ?쒕젅??
+    // css transition 딜레이
     setTimeout(() => {
       modalElement.classList.add("in");
     }, 150);
     
-    //?대┛ ?앹뾽李??ъ빱??
+    //열린 팝업창 포커스
     const focusables = modalElement.querySelectorAll(`a, button, [tabindex="0"], input, textarea, select`);
     setTimeout(() => {
       // modalTitle.focus();
       focusables[0].focus();
     }, 350);
 
-    // ESC 紐⑤떖 ?リ린
+    // ESC 모달 닫기
     dialogElement.addEventListener(
       "keydown",
       (event) => {
@@ -944,7 +944,7 @@ const krds_modal = {
       { once: true }
     );
 
-    // 紐⑤떖 ?몃? ?대┃ 泥섎━ ?몃뱾???뺤쓽 諛????
+    // 모달 외부 클릭 처리 핸들러 정의 및 저장
     if (!this.outsideClickHandlers[id]) {
       this.outsideClickHandlers[id] = (event) => {
         if (!event.target.closest(".modal-content")) {
@@ -956,17 +956,17 @@ const krds_modal = {
         }
       };
     }
-    // ?대깽??由ъ뒪???쒓굅 ???ㅼ떆 ?깅줉
+    // 이벤트 리스너 제거 후 다시 등록
     modalElement.removeEventListener("click", this.outsideClickHandlers[id]);
     modalElement.addEventListener("click", this.outsideClickHandlers[id]);
 
-    // ?ъ빱???몃옪 ?ㅼ젙
+    // 포커스 트랩 설정
     common.focusTrap(dialogElement);
 
-    // 2媛??댁긽??紐⑤떖???대젮 ?덈뒗 寃쎌슦 z-index ?낅뜲?댄듃
+    // 2개 이상의 모달이 열려 있는 경우 z-index 업데이트
     this.updateZIndex(modalElement);
 
-    // inert ?ㅼ젙
+    // inert 설정
     document.getElementById("wrap")?.setAttribute("inert", "");
   },
   closeModal(id) {
@@ -977,20 +977,20 @@ const krds_modal = {
     modalElement.classList.remove("in");
     modalBack.classList.remove("in");
 
-    // css transition ?쒕젅??
+    // css transition 딜레이
     setTimeout(() => {
       modalElement.classList.remove("shown");
     }, 350);
 
-    // 留덉?留?紐⑤떖???ロ옄 ???섏씠吏 ?ㅽ겕濡?蹂듭썝
+    // 마지막 모달이 닫힐 때 페이지 스크롤 복원
     if (openModals.length < 2) {
       document.querySelector("body").classList.remove("scroll-no");
     }
     
-    // inert ?ㅼ젙
+    // inert 설정
     document.getElementById("wrap")?.removeAttribute("inert");
 
-    // 紐⑤떖???댁뿀??踰꾪듉?쇰줈 ?ъ빱??蹂듦?
+    // 모달을 열었던 버튼으로 포커스 복귀
     this.returnFocusToTrigger(id);
   },
   updateZIndex(modalElement) {
@@ -1033,7 +1033,7 @@ const krds_contextualHelp = {
       button.setAttribute("aria-expanded", "false");
       tooltipPopover.setAttribute("role", "tooltip");
 
-      // tooltipWrap???ъ??섏씠 ?놁쓣??湲곕낯媛??ㅼ젙
+      // tooltipWrap에 포지션이 없을때 기본값 설정
       if (tooltipContainer && tooltipContainer.classList.length === 1) {
         tooltipContainer.classList.add("top", "left");
       }
@@ -1049,7 +1049,7 @@ const krds_contextualHelp = {
         this.adjustTooltipPosition(tooltipContainer, tooltipPopover);
       });
 
-      // ESC ?リ린
+      // ESC 닫기
       document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" || event.key === "Esc") {
           this.closeAllTooltips();
@@ -1136,22 +1136,22 @@ const krds_tooltip = {
 
       if (!tooltipText || disabled) return;
 
-      // ID 遺??
+      // ID 부여
       const uniqueIdx = `tooltip-popover-${index}${Math.random().toString(36).substring(2, 9)}`;
       item.setAttribute("aria-labelledby", uniqueIdx);
 
-      // TooltipPopover ?앹꽦
+      // TooltipPopover 생성
       const tooltipBtnText = item.innerText;
       const tooltipPopover = this.createTooltipPopover(uniqueIdx, tooltipBtnText, tooltipText);
       item.parentNode.insertBefore(tooltipPopover, item.nextSibling);
 
-      // Show/Hide ?⑥닔 ?뺤쓽
+      // Show/Hide 함수 정의
       const showTooltip = () => this.showTooltip(item, tooltipPopover);
 
-      // ?대깽???깅줉
+      // 이벤트 등록
       this.registerEvents(item, showTooltip);
 
-      // ESC ?リ린
+      // ESC 닫기
       document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" || event.key === "Esc") {
           this.closeAllTooltips();
@@ -1204,7 +1204,7 @@ const krds_tooltip = {
     });
   },
   calculateTooltipPosition(item, tooltipPopover) {
-    // ?댄똻怨?湲곗? ?붿냼 媛꾧꺽
+    // 툴팁과 기준 요소 간격
     const tooltipGap = 12;
     const { clientHeight: tooltipHeight, clientWidth: tooltipWidth } = tooltipPopover;
     const { top: itemTop, left: itemLeft, right: itemRight, height: itemHeight, width: itemWidth } = item.getBoundingClientRect();
@@ -1218,25 +1218,25 @@ const krds_tooltip = {
 
     if (isVertical) {
       if (itemTop + itemHeight > halfWindowHeight) {
-        tooltipTop = itemTop - tooltipHeight - tooltipGap; // ?꾩そ
+        tooltipTop = itemTop - tooltipHeight - tooltipGap; // 위쪽
         tooltipPopover.classList.add("top");
       } else {
-        tooltipTop = itemTop + itemHeight + tooltipGap; // ?꾨옒履?
+        tooltipTop = itemTop + itemHeight + tooltipGap; // 아래쪽
         tooltipPopover.classList.add("bottom");
       }
-      // 醫뚯슦 ?꾩튂
+      // 좌우 위치
       if (itemLeft + itemWidth > halfWindowWidth) {
-        tooltipLeft = itemRight - tooltipWidth; // ?ㅻⅨ履??뺣젹
+        tooltipLeft = itemRight - tooltipWidth; // 오른쪽 정렬
         tooltipPopover.classList.add("right");
-        // ?붾㈃ ?ㅻⅨ履??ъ쑀 怨듦컙??異⑸텇????媛?대뜲 ?뺣젹
+        // 화면 오른쪽 여유 공간이 충분할 때 가운데 정렬
         if (window.innerWidth - (itemLeft + itemWidth) > tooltipWidth / 2) {
           tooltipLeft = itemLeft + (itemWidth - tooltipWidth) / 2;
           tooltipPopover.classList.remove("right");
         }
       } else {
-        // ?붾㈃ ?쇱そ ?ъ쑀 怨듦컙??異⑸텇????媛?대뜲 ?뺣젹
+        // 화면 왼쪽 여유 공간이 충분할 때 가운데 정렬
         tooltipLeft = itemLeft + (itemWidth - tooltipWidth) / 2;
-        // ?쇱そ 怨듦컙 遺議???蹂댁젙
+        // 왼쪽 공간 부족 시 보정
         if (tooltipLeft < 0) {
           tooltipLeft = itemLeft;
           tooltipPopover.classList.add("left");
@@ -1245,13 +1245,13 @@ const krds_tooltip = {
         }
       }
     } else {
-      // 媛濡쒗삎 ?댄똻
+      // 가로형 툴팁
       tooltipTop = itemTop + (itemHeight - tooltipHeight) / 2;
       if (itemLeft + itemWidth > halfWindowWidth) {
-        tooltipLeft = itemLeft - tooltipWidth - tooltipGap; // ?쇱そ
+        tooltipLeft = itemLeft - tooltipWidth - tooltipGap; // 왼쪽
         tooltipPopover.classList.add("right");
       } else {
-        tooltipLeft = itemRight + tooltipGap; // ?ㅻⅨ履?
+        tooltipLeft = itemRight + tooltipGap; // 오른쪽
         tooltipPopover.classList.remove("right");
       }
     }
@@ -1268,7 +1268,7 @@ const krds_tooltip = {
   },
 };
 
-/*** * krds_calendar * ***/ // *btn-set-date: aria-pressed > aria-selected 蹂寃??댁빞???곸쐞 ?띿꽦??媛숈씠)
+/*** * krds_calendar * ***/ // *btn-set-date: aria-pressed > aria-selected 변경 해야함(상위 속성도 같이)
 const krds_calendar = {
   datePickerArea: null,
   activeDateSelector: null,
@@ -1284,14 +1284,14 @@ const krds_calendar = {
     this.toggleDateSelector();
     this.actionDatePicker();
 
-    // ui ?숈옉 ?뺤씤???뚯뒪??肄붾뱶
+    // ui 동작 확인용 테스트 코드
     this.example();
   },
   setupDatePicker() {
     this.datePickerArea.forEach((datePicker) => {
       datePicker.querySelector(".calendar-wrap").setAttribute("tabindex", "0");
 
-      // ?묎렐??珥덇린媛??ㅼ젙
+      // 접근성 초기값 설정
       datePicker.querySelectorAll(".calendar-tbl td").forEach((cell) => {
         const dateButton = cell.querySelector(".btn-set-date");
         if (!dateButton) return;
@@ -1299,10 +1299,10 @@ const krds_calendar = {
           dateButton.setAttribute("aria-pressed", "true");
         }
         if (cell.classList.contains("day-event")) {
-          dateButton.setAttribute("aria-label", `${dateButton.innerText} ?쇱젙?덉쓬`);
+          dateButton.setAttribute("aria-label", `${dateButton.innerText} 일정있음`);
         }
         if (cell.classList.contains("today")) {
-          dateButton.setAttribute("aria-label", `${dateButton.innerText} ?ㅻ뒛`);
+          dateButton.setAttribute("aria-label", `${dateButton.innerText} 오늘`);
         }
       });
     });
@@ -1320,15 +1320,15 @@ const krds_calendar = {
       button.addEventListener("click", () => this.openDatePicker(button));
     });
 
-    // ???대룞 ?リ린
+    // 탭 이동 닫기
     this.datePickerArea.forEach((datePicker) => {
-      // 留덉?留?踰꾪듉??blur????datepicker ?リ린(?ъ빱???몃옪???ъ슜?섏? ?딆쓣???곸슜)
+      // 마지막 버튼이 blur될 때 datepicker 닫기(포커스 트랩을 사용하지 않을때 적용)
       // const lastActionButton = datePicker.querySelector(".calendar-btn-wrap .krds-btn:last-child");
       // if (lastActionButton) {
       //   lastActionButton.addEventListener("blur", () => this.closeAllDatePickers());
       // }
 
-      // calendar-select??留덉?留?踰꾪듉??blur?????좏깮湲??リ린
+      // calendar-select의 마지막 버튼이 blur될 때 선택기 닫기
       datePicker.querySelectorAll(".calendar-select").forEach((select) => {
         const lastSelectButton = select.querySelector(".sel > li:last-child > button");
         if (lastSelectButton) {
@@ -1340,19 +1340,19 @@ const krds_calendar = {
     });
   },
   openDatePicker(button) {
-    // ?대젮?덈뜕 ?щ젰 紐⑤몢 ?リ린
+    // 열려있던 달력 모두 닫기
     this.closeAllDatePickers();
 
     const currentDatePicker = button.closest(".calendar-conts").querySelector(".krds-calendar-area");
     currentDatePicker.classList.add("active");
 
-    // ?묎렐??
+    // 접근성
     button.setAttribute("aria-expanded", "true");
 
-    // ?ъ빱???몃옪 ?ㅼ젙
+    // 포커스 트랩 설정
     common.focusTrap(currentDatePicker);
 
-    // ?ъ빱???대룞
+    // 포커스 이동
     setTimeout(() => {
       currentDatePicker.querySelector(".calendar-wrap").focus();
     }, 50);
@@ -1375,7 +1375,7 @@ const krds_calendar = {
       this.resetDateSelector();
     });
 
-    // ?묎렐??
+    // 접근성
     const datePickerButtons = document.querySelectorAll(".form-btn-datepicker");
     datePickerButtons.forEach((button) => {
       button.setAttribute("aria-expanded", "false");
@@ -1434,7 +1434,7 @@ const krds_calendar = {
         target.closest(".calendar-drop-down").querySelector("button").innerHTML = target.innerHTML;
       }
 
-      // ui ?숈옉 ?뺤씤???뚯뒪??肄붾뱶
+      // ui 동작 확인용 테스트 코드
       this.example();
     }
   },
@@ -1443,11 +1443,11 @@ const krds_calendar = {
       const selectToggleButtons = datePicker.querySelectorAll(".calendar-drop-down .btn-cal-switch");
       const selectOptions = datePicker.querySelectorAll(".calendar-select .sel button");
 
-      // 怨듯넻 ?대깽??泥섎━
+      // 공통 이벤트 처리
       const handleBtnClick = (event, selectMenu) => {
         const layer = selectMenu;
 
-        // ?대? ?쒖꽦?붾맂 ?덉씠???リ린
+        // 이미 활성화된 레이어 닫기
         if (this.activeDateSelector === layer) {
           layer.classList.remove("active");
           this.setupDateComboBox("reset");
@@ -1455,19 +1455,19 @@ const krds_calendar = {
           return;
         }
 
-        // ?꾩옱 ?대젮 ?덈뒗 ?덉씠?닿? ?덉쑝硫??レ쓬
+        // 현재 열려 있는 레이어가 있으면 닫음
         if (this.activeDateSelector) {
           this.activeDateSelector.classList.remove("active");
           this.setupDateComboBox("reset");
         }
 
-        // ?대┃??踰꾪듉???대떦?섎뒗 ?덉씠???닿린
+        // 클릭한 버튼에 해당하는 레이어 열기
         layer.classList.add("active");
         this.setupDateComboBox("reset", event.target);
         this.activeDateSelector = layer;
       };
 
-      // ??됲꽣 ?ㅼ젙
+      // 셀렉터 설정
       selectToggleButtons.forEach((toggle) => {
         toggle.addEventListener("click", (event) => {
           const selectMenu = event.target.closest(".calendar-drop-down").querySelector(".calendar-select");
@@ -1475,20 +1475,20 @@ const krds_calendar = {
         });
       });
 
-      // ?꾨룄, ???좏깮
+      // 년도, 월 선택
       selectOptions.forEach((option) => {
         option.addEventListener("click", (event) => {
           this.resetDateSelector();
           this.setupDateComboBox("change", event.target);
 
-          // ?ъ빱???대룞
+          // 포커스 이동
           setTimeout(() => {
             option.closest(".calendar-drop-down").querySelector(".btn-cal-switch")?.focus();
           }, 50);
         });
       });
 
-      // esc ?リ린
+      // esc 닫기
       datePicker.addEventListener("keydown", (event) => {
         if (event.code === "Escape") {
           this.resetDateSelector();
@@ -1506,7 +1506,7 @@ const krds_calendar = {
       });
     });
   },
-  // ui ?숈옉 ?뺤씤???뚯뒪??肄붾뱶
+  // ui 동작 확인용 테스트 코드
   example() {
     this.datePickerArea.forEach((datePicker) => {
       const year = datePicker.querySelector(".calendar-switch-wrap .year").innerText.slice(0, -1);
@@ -1518,10 +1518,10 @@ const krds_calendar = {
       let clickCount = 0;
       let startTd = null;
 
-      // 罹≪뀡 ?ㅼ젙
-      caption.innerHTML = `${year}??${month}??;
+      // 캡션 설정
+      caption.innerHTML = `${year}년 ${month}월`;
 
-      // ?뚯뒪?몄슜 (?ㅼ젣 援ы쁽?먯꽌???좎쭨 諛곗뿴??諛쏆븘 泥섎━??
+      // 테스트용 (실제 구현에서는 날짜 배열을 받아 처리함)
       tblCells.forEach((cell) => {
         const day = cell.querySelector(".btn-set-date").innerText.padStart(2, "0");
         let [numberYear, numberMonth] = [parseFloat(year), parseFloat(month)];
@@ -1545,9 +1545,9 @@ const krds_calendar = {
 
       // action
       const accReset = (action, btn, type) => {
-        // ?명뭼 ?⑥씪
+        // 인풋 단일
         const targetInput = btn.closest(".calendar-conts").querySelector("input.datepicker.cal");
-        // ?명뭼 遺꾪븷
+        // 인풋 분할
         const targetInputStart = btn.closest(".calendar-conts").querySelector(".input-group.range.set li:first-child input.datepicker");
         const targetInputEnd = btn.closest(".calendar-conts").querySelector(".input-group.range.set li:last-child input.datepicker");
 
@@ -1555,10 +1555,10 @@ const krds_calendar = {
           if (targetInput) {
             targetInput.setAttribute("type", "text");
             const target = action.innerText;
-            if (target === "?ㅻ뒛") {
+            if (target === "오늘") {
               accSet();
             }
-            if (target === "?뺤씤") {
+            if (target === "확인") {
               if (type === "single") {
                 const value = action.closest(".krds-calendar-area").querySelector("td.period.start.end").getAttribute("data-date");
                 targetInput.value = value;
@@ -1572,10 +1572,10 @@ const krds_calendar = {
             targetInputStart.setAttribute("type", "text");
             targetInputEnd.setAttribute("type", "text");
             const target = action.innerText;
-            if (target === "?ㅻ뒛") {
+            if (target === "오늘") {
               accSet();
             }
-            if (target === "?뺤씤") {
+            if (target === "확인") {
               const value1 = action.closest(".krds-calendar-area").querySelector("td.period.start")?.getAttribute("data-date");
               const value2 = action.closest(".krds-calendar-area").querySelector("td.period.end")?.getAttribute("data-date") || "";
               targetInputStart.value = value1;
@@ -1583,7 +1583,7 @@ const krds_calendar = {
             }
           }
         });
-        // 怨듯넻 ?묎렐??
+        // 공통 접근성
         const accSet = () => {
           const prevItems = action.closest(".krds-calendar-area").querySelectorAll(".period");
           prevItems.forEach((prev) => {
@@ -1597,7 +1597,7 @@ const krds_calendar = {
 
       // btn-set-date
       tblCellBtns.forEach((btn) => {
-        // disabled ?ㅼ젙
+        // disabled 설정
         if (btn.closest("td.new, td.old")) {
           btn.setAttribute("disabled", "true");
         }
@@ -1621,13 +1621,13 @@ const krds_calendar = {
         } else {         
           btn.addEventListener("click", () => {
             const currentTd = btn.closest("td");
-            // ?꾩옱 td???좎쭨
+            // 현재 td의 날짜
             const currentDate = new Date(currentTd.getAttribute("data-date"));
-            // ??踰덉㎏ ?대┃???? ?쒖옉?좎쭨 ?댁쟾 ?대㈃ 珥덇린??
+            // 두 번째 클릭일 때, 시작날짜 이전 이면 초기화
             if (startTd) {
               const startDate = new Date(startTd.getAttribute("data-date"));
               if (currentDate < startDate) {
-                console.log("?쒖옉?좎쭨 ?댁쟾? ?좏깮?????놁뒿?덈떎.");
+                console.log("시작날짜 이전은 선택할 수 없습니다.");
                 startTd = null;
                 clickCount = 0;
                 // return;
@@ -1687,7 +1687,7 @@ const krds_inPageNavigation = {
     this.updateActiveSection();
   },
   observeListChanges() {
-    // in-page-navigation-list 蹂寃???setupAnchorScroll ?몄텧
+    // in-page-navigation-list 변경 시 setupAnchorScroll 호출
     const quickList = document.querySelector(".krds-in-page-navigation-type .in-page-navigation-list");
     if (!quickList) return;
     const observer = new MutationObserver(() => {
@@ -1726,7 +1726,7 @@ const krds_inPageNavigation = {
       behavior: "smooth",
     });
 
-    // enter 珥덉젏 ?대룞
+    // enter 초점 이동
     if (event.type === "keydown") {
       const focusable = target.querySelector(".sec-tit");
 
@@ -1748,7 +1748,7 @@ const krds_inPageNavigation = {
     let sectionArea = [];
     const activeTab = document.querySelector(".tab-conts:not(.sample).active");
 
-    // ??씠 ?꾨땺?뚯? ??씪??sectionArea ?ㅼ젙
+    // 탭이 아닐때와 탭일때 sectionArea 설정
     if (activeTab) {
       const id = activeTab.getAttribute("id");
       const dataTrue = activeTab.getAttribute("data-quick-nav");
@@ -1759,9 +1759,9 @@ const krds_inPageNavigation = {
       sectionArea = document.querySelectorAll(".scroll-check .section-link");
     }
 
-    //?섏씠吏 ?ㅽ겕濡??????ㅻ퉬寃뚯씠???대떦硫붾돱 active
+    //페이지 스크롤 시 퀵 네비게이션 해당메뉴 active
     if (sectionArea.length > 0) {
-      const topHeight = Math.ceil(winHeight / 5); // ?덈룄?곗쓽 20%
+      const topHeight = Math.ceil(winHeight / 5); // 윈도우의 20%
       const firstSecTop = sectionArea[0].offsetTop;
       const scrollBottom = window.scrollY + winHeight;
       const scrollHeight = document.body.scrollHeight;
@@ -1773,14 +1773,14 @@ const krds_inPageNavigation = {
         const firstAnchor = document.querySelector(".krds-in-page-navigation-area .in-page-navigation-list li:first-of-type a");
         const lastAnchor = document.querySelector(".krds-in-page-navigation-area .in-page-navigation-list li:last-of-type a");
         if (scrollBottom >= scrollHeight) {
-          // ?ㅽ겕濡ㅼ씠 ?섏씠吏 ?앹뿉 ?꾨떖?덉쓣 ??
+          // 스크롤이 페이지 끝에 도달했을 때
           this.setActiveIndicator(lastAnchor);
         }
         else if (window.scrollY <= firstSecTop) {
-          // ?ㅽ겕濡ㅼ씠 泥ル쾲吏??뱀뀡蹂대떎 ?꾩뿉 ?덉쓣??
+          // 스크롤이 첫번째 섹션보다 위에 있을때
           this.setActiveIndicator(firstAnchor);
         } else if (window.scrollY > sectionTop && window.scrollY <= sectionTop + sectionHeight) {
-          // ?꾩옱 ?뱀뀡???덉쓣 ??
+          // 현재 섹션에 있을 때
           this.setActiveIndicator(navLink);
         }
       });
@@ -1838,7 +1838,7 @@ const krds_helpPanel = {
       }
     };
 
-    // bn-hidden: ?ㅻ뜑 諛곕꼫 ?④?, scroll-down: ?ㅻ뜑 ?④?
+    // bn-hidden: 헤더 배너 숨김, scroll-down: 헤더 숨김
     if (document.body.classList.contains("bn-hidden")) {
       if (document.querySelector("#wrap").classList.contains("scroll-down")) {
         applyPadding("0");
@@ -1897,12 +1897,12 @@ const krds_helpPanel = {
         }, 50);
       }
 
-      // ?꾩??⑤꼸? ?섏씠吏???쒓컻留??덇퀬 而⑦듃濡ㅽ븯??踰꾪듉? ?щ윭媛쒖씪??
+      // 도움패널은 페이지에 한개만 있고 컨트롤하는 버튼은 여러개일때
       this.executeButton.forEach((btn) => {
         btn.setAttribute("aria-expanded", "true");
       });
 
-      // inner媛 flexible??寃쎌슦
+      // inner가 flexible인 경우
       if (innerContainer.classList.contains("help-panel-flexible")) {
         innerContainer.classList.add("help-panel-expanded");
       }
@@ -1917,16 +1917,16 @@ const krds_helpPanel = {
       if (this.lastFocusedButton) {
         this.lastFocusedButton.focus();
       } else {
-        // 泥섏쓬 遺???ㅽ뵂?쇰븣 吏??踰꾪듉?쇰줈 ?ъ빱???대룞
+        // 처음 부터 오픈일때 지정 버튼으로 포커스 이동
         document.querySelector(".btn-help-panel.expand").focus();
       }
 
-      // ?꾩??⑤꼸? ?섏씠吏???쒓컻留??덇퀬 而⑦듃濡ㅽ븯??踰꾪듉? ?щ윭媛쒖씪??
+      // 도움패널은 페이지에 한개만 있고 컨트롤하는 버튼은 여러개일때
       this.executeButton.forEach((btn) => {
         btn.setAttribute("aria-expanded", "false");
       });
 
-      // inner媛 flexible??寃쎌슦
+      // inner가 flexible인 경우
       if (innerContainer.classList.contains("help-panel-flexible")) {
         innerContainer.classList.remove("help-panel-expanded");
       }
@@ -1959,18 +1959,18 @@ const krds_disclosure = {
       const disclosureContent = disclosure.querySelector(".expand-wrap");
       const uniqueIdx = `disclosure-${Math.random().toString(36).substring(2, 9)}`;
 
-      // ?덉쇅 泥섎━: disclosureButton ?놁씠 active ?곹깭瑜?吏곸젒 ?ㅼ젙?섏뿬 ?뺤옣 ?곹깭瑜??쒖뼱?섎뒗 寃쎌슦
+      // 예외 처리: disclosureButton 없이 active 상태를 직접 설정하여 확장 상태를 제어하는 경우
       if (!disclosureButton) return;
 
-      // aria ?띿꽦 ?ㅼ젙
+      // aria 속성 설정
       disclosureButton.setAttribute("aria-expanded", "false");
       disclosureButton.setAttribute("aria-controls", uniqueIdx);
       disclosureContent.setAttribute("id", uniqueIdx);
-      // disclosureContent.setAttribute("aria-hidden", "true"); // ?꾩떆: disclosure ?댁슜???쇰?留??몄텧?섎뒗 寃쎌슦
+      // disclosureContent.setAttribute("aria-hidden", "true"); // 임시: disclosure 내용이 일부만 노출되는 경우
       disclosureContent.setAttribute("inert", "");
       if (disclosure.classList.contains("active")) {
         disclosureButton.setAttribute("aria-expanded", "true");
-        // disclosureContent.setAttribute("aria-hidden", "false"); // ?꾩떆: disclosure ?댁슜???쇰?留??몄텧?섎뒗 寃쎌슦
+        // disclosureContent.setAttribute("aria-hidden", "false"); // 임시: disclosure 내용이 일부만 노출되는 경우
         disclosureContent.removeAttribute("inert");
       }
 
@@ -1985,7 +1985,7 @@ const krds_disclosure = {
     disclosure.classList.toggle("active", !isExpanded);
     disclosureButton.setAttribute("aria-expanded", !isExpanded);
 
-    // disclosureContent.setAttribute("aria-hidden", isExpanded); // ?꾩떆: disclosure ?댁슜???쇰?留??몄텧?섎뒗 寃쎌슦
+    // disclosureContent.setAttribute("aria-hidden", isExpanded); // 임시: disclosure 내용이 일부만 노출되는 경우
     if (isExpanded) {
       disclosureContent.setAttribute("inert", "");
     } else {
@@ -2005,7 +2005,7 @@ const krds_adjustContentScale = {
 
     if (!scaleButtons.length) return;
 
-    // root 蹂?섏뿉???ㅼ???媛믪쓣 媛?몄삤湲?
+    // root 변수에서 스케일 값을 가져오기
     const root = document.querySelector(":root");
     const rootStyles = getComputedStyle(root);
     const zoomSmall = rootStyles.getPropertyValue("--krds-zoom-small").trim();
@@ -2030,7 +2030,7 @@ const krds_adjustContentScale = {
               item.querySelector(".sr-only").innerHTML = "";
             });
             defaultSize.classList.add("active");
-            defaultSize.querySelector(".sr-only").innerHTML = "?좏깮??;
+            defaultSize.querySelector(".sr-only").innerHTML = "선택됨";
             this.scaleValue(zoomMedium);
             break;
           case "lg":
@@ -2150,7 +2150,7 @@ const krds_dropEvent = {
     items.forEach((item) => {
       item.innerHTML += `<span class="sr-only"></span>`;
       if (item.classList.contains("active")) {
-        item.querySelector(".sr-only").innerHTML = "?좏깮??;
+        item.querySelector(".sr-only").innerHTML = "선택됨";
       }
 
       item.addEventListener("click", () => {
@@ -2181,14 +2181,14 @@ const krds_dropEvent = {
 
     selectedItem.classList.add("active");
     selectedItem.setAttribute("aria-selected", "true");
-    selectedItem.querySelector(".sr-only").innerText = "?좏깮??;
+    selectedItem.querySelector(".sr-only").innerText = "선택됨";
   },
   openDropdown(button, menu) {
     menu.style.display = "block";
     button.classList.add("active");
     button.setAttribute("aria-expanded", "true");
 
-    // ?щ갚???곕씪 ?꾩튂 議곗젙
+    // 여백에 따라 위치 조정
     const menuRect = menu.getBoundingClientRect();
     const windowWidth = window.innerWidth;
     if (menuRect.left < 0) {
@@ -2208,7 +2208,7 @@ const krds_dropEvent = {
     });
   },
   setupFocusOutEvent() {
-    // ESC ?リ린
+    // ESC 닫기
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" || event.key === "Esc") {
         this.closeAllDropdowns();
@@ -2216,20 +2216,20 @@ const krds_dropEvent = {
       }
     });
 
-    // ?쒕∼?ㅼ슫 ?몃? ?대┃ ???リ린
+    // 드롭다운 외부 클릭 시 닫기
     document.addEventListener("click", (event) => {
       if (!event.target.closest(".krds-drop-wrap")) {
         this.closeAllDropdowns();
       }
     });
 
-    // ?쒕∼?ㅼ슫 ?ъ빱???꾩썐 泥섎━
+    // 드롭다운 포커스 아웃 처리
     this.dropButtons.forEach((button) => {
       const menu = button.nextElementSibling;
 
       if (!menu) return;
 
-      // ?쒕∼?ㅼ슫 硫붾돱???ъ빱???꾩썐 泥섎━
+      // 드롭다운 메뉴의 포커스 아웃 처리
       menu.addEventListener("focusout", (event) => {
         const isFocusInside = menu.contains(event.relatedTarget) || button.contains(event.relatedTarget);
         if (!isFocusInside) {
@@ -2237,7 +2237,7 @@ const krds_dropEvent = {
         }
       });
 
-      // 踰꾪듉???ъ빱???꾩썐 泥섎━
+      // 버튼의 포커스 아웃 처리
       button.addEventListener("focusout", (event) => {
         const isFocusInside = menu.contains(event.relatedTarget) || button.contains(event.relatedTarget);
         if (!isFocusInside) {
@@ -2248,7 +2248,7 @@ const krds_dropEvent = {
   },
 };
 
-/*** * krds_chkBox 諛뺤뒪??泥댄겕諛뺤뒪 ?곹깭???곕Ⅸ ?붿옄??蹂寃?* ***/
+/*** * krds_chkBox 박스형 체크박스 상태에 따른 디자인 변경 * ***/
 const krds_chkBox = {
   init() {
     const box = document.querySelectorAll(".chk-group-wrap");
@@ -2317,7 +2317,7 @@ const krds_chkBox = {
     this.formChipFocus();
   },
   formChipFocus() {
-    // form_chip ?쇰븣 ?ъ빱??泥섎━
+    // form_chip 일때 포커스 처리
     const formChip = document.querySelectorAll(".krds-form-chip");
 
     if (!formChip.length) return;
@@ -2336,7 +2336,7 @@ const krds_chkBox = {
   },
 };
 
-/*** * krds_fileUpload ?뚯씪 ?낅줈??: drag ?꾩떆 * ***/
+/*** * krds_fileUpload 파일 업로드 : drag 임시 * ***/
 const krds_fileUpload = {
   init() {
     const fileUploads = document.querySelectorAll(".file-upload");
@@ -2367,7 +2367,7 @@ const krds_fileUpload = {
   },
 };
 
-/*** * nuriToggleEvent ?꾨━吏??좉? ?대깽???꾩옱???ъ슜 ????* ***/
+/*** * nuriToggleEvent 누리집 토글 이벤트 현재는 사용 안 함 * ***/
 const nuriToggleEvent = {
   init() {
     const _toggleBtns = document.querySelectorAll("#krds-masthead .toggle-btn");
@@ -2379,7 +2379,7 @@ const nuriToggleEvent = {
         const $srEl = $btnAct.target.querySelector(".sr-only");
 
         if (!$target.classList.contains("active")) {
-          $srEl.innerText = "?ロ옒";
+          $srEl.innerText = "닫힘";
           $target.classList.add("active");
           $targetBody.classList.add("active");
           $targetBody.style.height = `${_targetBodyH}px`;
@@ -2390,7 +2390,7 @@ const nuriToggleEvent = {
             }
           });
         } else {
-          $srEl.innerText = "?대┝";
+          $srEl.innerText = "열림";
           $target.classList.remove("active");
           $targetBody.classList.remove("active");
           $targetBody.style.height = "";
@@ -2400,9 +2400,9 @@ const nuriToggleEvent = {
   },
 };
 
-// 珥덇린 ?대깽??
+// 초기 이벤트
 window.addEventListener("DOMContentLoaded", () => {
-  // ?덈룄???ъ씠利?泥댄겕
+  // 윈도우 사이즈 체크
   windowSize.setWinSize();
 
   krds_mainMenuPC.init();
@@ -2429,7 +2429,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// ?ㅽ겕濡??대깽??
+// 스크롤 이벤트
 window.addEventListener("scroll", () => {
   scrollManager.updateScrollValues();
   scrollManager.handleScrollDirection();
@@ -2439,7 +2439,7 @@ window.addEventListener("scroll", () => {
   krds_helpPanel.init();
 });
 
-// 由ъ궗?댁쫰 ?대깽??
+// 리사이즈 이벤트
 window.addEventListener("resize", () => {
   windowSize.setWinSize();
   krds_helpPanel.init();

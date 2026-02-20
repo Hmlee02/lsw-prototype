@@ -1,13 +1,6 @@
 # Dependencies
 node_modules/
 
-# Root files (excluded)
-/index.html
-/cors_server.py
-/.stylelintignore
-/package.json
-/package-lock.json
-
 # Docs
 docs/
 

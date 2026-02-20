@@ -1,14 +1,14 @@
 /* ==========================================================================
-   援??踰뺣졊?뺣낫?쇳꽣 ?꾨줈?좏???而ㅼ뒪? CSS (Proposal A)
+   국가법령정보센터 프로토타입 커스텀 CSS (Proposal A)
    LSW Prototype Custom Stylesheet
-   KRDS ?붿옄???쒖뒪??湲곕컲 / KWCAG 2.2 以??
+   KRDS 디자인 시스템 기반 / KWCAG 2.2 준수
    ========================================================================== */
 
 /* ==========================================================================
-   1. CSS 蹂??(Design Tokens)
+   1. CSS 변수 (Design Tokens)
    ========================================================================== */
 :root {
-    /* Primary Colors - 踰뺤젣泥?釉뚮옖??(?⑥깋 怨꾩뿴) */
+    /* Primary Colors - 법제처 브랜드 (남색 계열) */
     --lsw-primary: #003791;
     --lsw-primary-dark: #002568;
     --lsw-primary-light: #e8eef8;
@@ -36,7 +36,7 @@
 }
 
 /* ==========================================================================
-   2. 湲곕낯 ?ㅽ???珥덇린??諛?怨듯넻
+   2. 기본 스타일 초기화 및 공통
    ========================================================================== */
 *,
 *::before,
@@ -167,7 +167,7 @@ button {
     background-image: none !important;
 }
 
-/* GNB ?쒕∼?ㅼ슫 - ?붾㈃ ?꾩껜 ?덈퉬濡??뺤옣 */
+/* GNB 드롭다운 - 화면 전체 너비로 확장 */
 .krds-main-menu .gnb-toggle-wrap {
     left: 50% !important;
     transform: translateX(-50%) !important;
@@ -175,11 +175,11 @@ button {
 }
 
 /* ==========================================================================
-   ?꾨씫??svg-icon ?꾩씠肄??뺤쓽
-   (common.css??誘몄젙??????諛뺤뒪 ?ㅻ쪟 ?섏젙)
+   누락된 svg-icon 아이콘 정의
+   (common.css에 미정의 → 흰 박스 오류 수정)
    ========================================================================== */
 
-/* ico-download: ico_download.svg ?ъ슜 */
+/* ico-download: ico_download.svg 사용 */
 .svg-icon.ico-download {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
@@ -191,7 +191,7 @@ button {
     mask-image: url('../../assets/krds/img/component/icon/ico_download.svg');
 }
 
-/* ico-bookmark: ico_scrap.svg ?泥??ъ슜 */
+/* ico-bookmark: ico_scrap.svg 대체 사용 */
 .svg-icon.ico-bookmark {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
@@ -203,7 +203,7 @@ button {
     mask-image: url('../../assets/krds/img/component/icon/ico_scrap.svg');
 }
 
-/* ico-theme: ??紐⑥뼇 ?꾩씠肄?(?ㅽ겕紐⑤뱶 ?꾪솚?? */
+/* ico-theme: 달 모양 아이콘 (다크모드 전환용) */
 .svg-icon.ico-theme {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
@@ -215,7 +215,7 @@ button {
     mask-image: url('../img/ico_moon.svg');
 }
 
-/* ico-audio: ico_volume.svg ?ъ슜 */
+/* ico-audio: ico_volume.svg 사용 */
 .svg-icon.ico-audio {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
@@ -1023,20 +1023,20 @@ footer#krds-footer {
     gap: 12px;
 }
 
-/* 踰뺣졊 ?ㅻ뜑 - ?고쁺蹂닿린 ?쒕∼?ㅼ슫 ?ㅽ???*/
+/* 법령 헤더 - 연혁보기 드롭다운 스타일 */
 .lsw-version-btn {
     min-width: 240px;
-    /* 踰꾪듉 ?먯껜???덈퉬 ?뺣낫 */
+    /* 버튼 자체의 너비 확보 */
     justify-content: space-between;
 }
 
 .lsw-version-btn+.drop-menu {
     min-width: 100%;
-    /* 踰꾪듉 ?덈퉬 ?댁긽 */
+    /* 버튼 너비 이상 */
     width: max-content;
-    /* ?댁슜???곕씪 ?뺤옣 */
+    /* 내용에 따라 확장 */
     z-index: 1000;
-    /* ?믪? z-index */
+    /* 높은 z-index */
 }
 
 .lsw-law-meta__item dt {
@@ -1092,7 +1092,7 @@ footer#krds-footer {
     position: sticky;
     top: 80px;
     z-index: 10;
-    /* gnb-backdrop dim(z-index:60) ?꾨옒濡??대젮媛?꾨줉 */
+    /* gnb-backdrop dim(z-index:60) 아래로 내려가도록 */
 }
 
 /* Law Layout (Body) */
@@ -1100,7 +1100,7 @@ footer#krds-footer {
     padding: 40px 0 80px;
 }
 
-/* 紐⑹감 ?ъ씠?쒕컮 (KRDS Side Navigation) */
+/* 목차 사이드바 (KRDS Side Navigation) */
 .lsw-law-toc {
     position: sticky;
     top: 20px;
@@ -1324,7 +1324,7 @@ footer#krds-footer {
 
 /* ==========================================================================
    10. Law Detail Page Overrides
-   index.html??scroll-snap ?덉씠?꾩썐??law-detail???곹뼢 二쇱? ?딅룄濡??댁젣
+   index.html의 scroll-snap 레이아웃이 law-detail에 영향 주지 않도록 해제
    ========================================================================== */
 html.page-law-detail,
 html.page-law-detail body {
@@ -1343,7 +1343,7 @@ body.page-law-detail .lsw-section {
     min-height: auto;
 }
 
-/* ?ъ씠?쒕컮 + 蹂몃Ц ?덉씠?꾩썐 蹂닿컯 */
+/* 사이드바 + 본문 레이아웃 보강 */
 .lsw-law-layout {
     display: flex;
     align-items: flex-start;
@@ -1363,18 +1363,18 @@ body.page-law-detail .lsw-section {
     border-bottom: 1px solid var(--lsw-gray-200);
 }
 
-/* 釉뚮젅?쒗겕???곸뿭 */
+/* 브레드크럼 영역 */
 .lsw-breadcrumb-wrap {
     padding-top: 40px;
-    /* ?ㅻ뜑 static 蹂寃쎌쑝濡??⑤뵫 異뺤냼 */
+    /* 헤더 static 변경으로 패딩 축소 */
 }
 
-/* ?ㅻ뜑 ?ㅽ겕濡?泥섎━ */
+/* 헤더 스크롤 처리 */
 #krds-header {
     position: relative !important;
 }
 
-/* KRDS 釉뚮젅?쒗겕???몃뱶 ?ㅽ???蹂닿컯 */
+/* KRDS 브레드크럼 노드 스타일 보강 */
 .krds-breadcrumb-wrap .breadcrumb li .txt {
     color: var(--lsw-gray-700);
     text-decoration: none;
@@ -1384,7 +1384,7 @@ body.page-law-detail .lsw-section {
     transition: all 0.2s;
 }
 
-/* 踰뺣졊 蹂몃Ц article ?뱀뀡 湲곕낯 ?ㅽ???蹂닿컯 */
+/* 법령 본문 article 섹션 기본 스타일 보강 */
 .lsw-law-article__section {
     font-size: 18px;
     font-weight: 700;
@@ -1393,7 +1393,7 @@ body.page-law-detail .lsw-section {
     margin: 32px 0 20px;
 }
 
-/* TOC ?ㅻ뜑 */
+/* TOC 헤더 */
 .lsw-law-toc__header {
     display: flex;
     justify-content: space-between;
@@ -1407,7 +1407,7 @@ body.page-law-detail .lsw-section {
     margin: 0;
 }
 
-/* TOC ?좉? 湲곕뒫 */
+/* TOC 토글 기능 */
 .lsw-law-toc.is-collapsed .lsw-law-toc__body {
     display: none;
 }
@@ -1420,14 +1420,14 @@ body.page-law-detail .lsw-section {
     transition: transform 0.3s ease;
 }
 
-/* ?명꽣 濡쒓퀬 background-image ?쒓굅 */
+/* 푸터 로고 background-image 제거 */
 #krds-footer .f-logo {
     background-image: none !important;
 }
 
-/* ===== As-is 踰뺣졊 ?곸꽭 異붽? ?ㅽ???===== */
+/* ===== As-is 법령 상세 추가 스타일 ===== */
 
-/* ???꾩껜 ?덈퉬 ?뺤옣 */
+/* 탭 전체 너비 확장 */
 .lsw-law-tab-wrap {
     width: 100%;
 }
@@ -1458,7 +1458,7 @@ body.page-law-detail .lsw-section {
     justify-content: center;
 }
 
-/* 議곕Ц?좏깮 ?쒕∼?ㅼ슫 */
+/* 조문선택 드롭다운 */
 .lsw-article-select {
     min-width: 180px;
     max-width: 240px;
@@ -1469,7 +1469,7 @@ body.page-law-detail .lsw-section {
     background: #fff;
 }
 
-/* 蹂몃Ц ?꾪꽣 ?꾩씠肄?諛?*/
+/* 본문 필터 아이콘 바 */
 .lsw-law-content__filters {
     display: flex;
     flex-wrap: wrap;
@@ -1532,7 +1532,7 @@ body.page-law-detail .lsw-section {
     background-color: #a080c0;
 }
 
-/* 議곕Ц蹂?李몄“ ?꾩씠肄?*/
+/* 조문별 참조 아이콘 */
 .lsw-ref-icon {
     display: inline-flex;
     align-items: center;
@@ -1584,7 +1584,7 @@ body.page-law-detail .lsw-section {
     background-color: #a080c0;
 }
 
-/* 議곕Ц 泥댄겕諛뺤뒪 */
+/* 조문 체크박스 */
 .lsw-law-article__item-left .lsw-article-check,
 .lsw-article-check {
     width: 16px !important;
@@ -1600,21 +1600,21 @@ body.page-law-detail .lsw-section {
     clip-path: none !important;
 }
 
-/* 議곕Ц ?ㅻ뜑 醫뚯륫 ?덉씠?꾩썐 */
+/* 조문 헤더 좌측 레이아웃 */
 .lsw-law-article__item-left {
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-/* 媛쒖젙?대젰 ?띿뒪??*/
+/* 개정이력 텍스트 */
 .lsw-law-article__amendment {
     color: var(--lsw-gray-500, #888);
     font-size: 13px;
     margin-top: 8px;
 }
 
-/* 踰뺣졊 ?쒕ぉ ?섎떒 ?뚭?遺泥?*/
+/* 법령 제목 하단 소관부처 */
 .lsw-law-article-title__ministry {
     color: var(--lsw-gray-600, #666);
     font-size: 14px;
@@ -1622,7 +1622,7 @@ body.page-law-detail .lsw-section {
     text-align: center;
 }
 
-/* TOC depth4 ?ㅽ???*/
+/* TOC depth4 스타일 */
 .lsw-toc-list__depth4 {
     padding-left: 16px;
 }
@@ -1639,14 +1639,14 @@ body.page-law-detail .lsw-section {
     color: var(--lsw-primary, #1a5cbc);
 }
 
-/* ?대컮 right 踰꾪듉 媛꾧꺽 */
+/* 툴바 right 버튼 간격 */
 .lsw-law-content__toolbar-right {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-/* 蹂댁“ 湲곕뒫 踰꾪듉 諛?(as-is 11媛???ぉ) */
+/* 보조 기능 버튼 바 (as-is 11개 항목) */
 .lsw-law-content__utils {
     display: flex;
     flex-wrap: wrap;
@@ -1683,7 +1683,7 @@ body.page-law-detail .lsw-section {
     z-index: 100 !important;
 }
 
-/* ?꾩?留??닿린 踰꾪듉 (Floating) */
+/* 도움말 열기 버튼 (Floating) */
 .btn-help-panel.expand {
     position: fixed;
     right: 20px;
@@ -1691,7 +1691,7 @@ body.page-law-detail .lsw-section {
     z-index: 90;
 }
 
-/* ?꾩?留??リ린 踰꾪듉 (Inside Panel) */
+/* 도움말 닫기 버튼 (Inside Panel) */
 .btn-help-panel.fold {
     position: absolute;
     top: 20px;
