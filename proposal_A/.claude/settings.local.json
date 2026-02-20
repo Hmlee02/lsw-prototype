@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -V:*)",
+      "Bash(py -3 -V:*)",
+      "Bash(node --version:*)",
+      "Bash(python:*)"
+    ]
+  }
+}
