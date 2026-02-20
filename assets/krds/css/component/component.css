@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-/* 버튼 / 링크 */
-/* icon 버튼 사이즈 */
+/* 踰꾪듉 / 留곹겕 */
+/* icon 踰꾪듉 ?ъ씠利?*/
 .krds-btn {
   --krds-button--size-height-xsmall: var(--krds-size-height-5);
   --krds-button--padding-x-xsmall: var(--krds-padding-4);
@@ -206,7 +206,7 @@
   --krds-button--color-link-border-disabled: var(--krds-light-color-border-transparency);
   --krds-button--color-link-text: var(--krds-light-color-link-default);
   --krds-button--color-link-text-disabled: var(--krds-light-color-text-disabled);
-  /* icon 버튼 (텍스트 없음) */
+  /* icon 踰꾪듉 (?띿뒪???놁쓬) */
 }
 
 .krds-btn {
@@ -847,7 +847,7 @@
   --krds-button--color-link-border-disabled: var(--krds-high-contrast-color-border-transparency);
   --krds-button--color-link-text: var(--krds-high-contrast-color-link-default);
   --krds-button--color-link-text-disabled: var(--krds-high-contrast-color-text-disabled);
-  /* icon 버튼 (텍스트 없음) */
+  /* icon 踰꾪듉 (?띿뒪???놁쓬) */
 }
 
 [data-krds-mode=high-contrast] .krds-btn {
@@ -1186,7 +1186,7 @@
     --krds-button--color-link-border-disabled: var(--krds-high-contrast-color-border-transparency);
     --krds-button--color-link-text: var(--krds-high-contrast-color-link-default);
     --krds-button--color-link-text-disabled: var(--krds-high-contrast-color-text-disabled);
-    /* icon 버튼 (텍스트 없음) */
+    /* icon 踰꾪듉 (?띿뒪???놁쓬) */
   }
 
   [data-krds-mode=theme] .krds-btn {
@@ -1488,7 +1488,7 @@
   width: 100%;
 }
 
-/* 탭 */
+/* ??*/
 .krds-tab-area {
   display: flex;
   align-items: flex-start;
@@ -1781,7 +1781,7 @@
   }
 }
 
-/* 표 */
+/* ??*/
 .krds-table-wrap {
   --krds-table--data-thead-th-padding: var(--krds-padding-3);
   --krds-table--data-thead-th-padding-sides: var(--krds-padding-6);
@@ -1892,7 +1892,7 @@
   }
 }
 
-/* 텍스트 목록 */
+/* ?띿뒪??紐⑸줉 */
 .krds-info-list {
   --krds-info-list--depth1-list-margin-top: 0;
   --krds-info-list--depth2-list-margin-top: var(--krds-gap-5);
@@ -2033,7 +2033,7 @@
   }
 }
 
-/* 모달 */
+/* 紐⑤떖 */
 .krds-modal {
   --krds-modal--size-large: 76rem;
   --krds-modal--size-medium: 56rem;
@@ -2467,7 +2467,7 @@
   }
 }
 
-/* 도움 패널 */
+/* ?꾩? ?⑤꼸 */
 .krds-help-panel {
   --krds-help-panel--pc-width: 39rem;
   --krds-help-panel--mobile-width: calc(100vw - 3rem);
@@ -2701,7 +2701,7 @@
   right: 4rem;
 }
 
-/* 도움패널 flexible 레이아웃 */
+/* ?꾩??⑤꼸 flexible ?덉씠?꾩썐 */
 #container .help-panel-flexible {
   --krds-help-panel--width: 39rem;
   transition: var(--krds-transition-base);
@@ -2841,7 +2841,7 @@
   }
 }
 
-/* 아코디언 */
+/* ?꾩퐫?붿뼵 */
 .krds-accordion {
   --krds-accordion--list-margin-y: var(--krds-padding-2);
   --krds-accordion--padding: var(--krds-padding-8);
@@ -3033,7 +3033,7 @@
   }
 }
 
-/* 스피너 */
+/* ?ㅽ뵾??*/
 .krds-spinner {
   --krds-spinner--layout-gap: var(--krds-number-5);
   --krds-spinner--pc-font-size: var(--krds-pc-font-size-body-small);
@@ -3114,7 +3114,7 @@
   }
 }
 
-/* 맥락적 도움말 */
+/* 留λ씫???꾩?留?*/
 .krds-contextual-help {
   --krds-contextual-help--action-btn-radius: var(--krds-radius-small2);
   --krds-contextual-help--action-pc-font-size: var(--krds-pc-font-size-body-small);
@@ -3327,7 +3327,7 @@
   }
 }
 
-/* 툴팁 */
+/* ?댄똻 */
 .krds-tooltip-popover {
   --krds-tooltip--popover-radius: var(--krds-radius-small3);
   --krds-tooltip--popover-radius-box: var(--krds-radius-xlarge2);
@@ -3457,7 +3457,7 @@
   }
 }
 
-/* 파일 업로드 */
+/* ?뚯씪 ?낅줈??*/
 .krds-file-upload {
   --krds-file-upload--gap: var(--krds-gap-7);
   --krds-file-upload--file-total-y: .3rem;
@@ -3776,7 +3776,7 @@
   }
 }
 
-/* 코치마크 */
+/* 肄붿튂留덊겕 */
 .krds-coach-mark {
   --krds-coach-mark--popover-max-width: 36rem;
   --krds-coach-mark--popover-padding: var(--krds-padding-8);
@@ -3936,7 +3936,7 @@
   }
 }
 
-/* 디스클로저 */
+/* ?붿뒪?대줈? */
 .krds-disclosure {
   --krds-disclosure--gap: 1.4rem;
   --krds-disclosure--button-icon-size: var(--krds-icon--size-medium);
@@ -4058,7 +4058,7 @@
   }
 }
 
-/* 건너뛰기 링크 */
+/* 嫄대꼫?곌린 留곹겕 */
 #krds-skip-link {
   --krds-skip-link--pc-font-size: var(--krds-pc-font-size-body-small);
   --krds-skip-link--mobile-font-size: var(--krds-mobile-font-size-body-small);
@@ -4118,7 +4118,7 @@
   }
 }
 
-/* 공식 배너 */
+/* 怨듭떇 諛곕꼫 */
 #krds-masthead {
   --krds-masthead--color-surface: var(--krds-light-color-surface-secondary-subtler);
   --krds-masthead--inner-gap-y: var(--krds-gap-2);
@@ -4215,7 +4215,7 @@
   }
 }
 
-/* 헤더 */
+/* ?ㅻ뜑 */
 #krds-header {
   --krds-header--utility-gap: var(--krds-gap-4);
   --krds-header--container-gap: var(--krds-gap-2);
@@ -4422,7 +4422,7 @@
   mask-image: url(../../img/component/icon/ico_all.svg);
 }
 
-/* 스크롤 동작 */
+/* ?ㅽ겕濡??숈옉 */
 #wrap[class*=scroll] #krds-header:not(.sample) {
   position: relative;
   border-bottom: 0.1rem solid var(--krds-header--utility-color-divider);
@@ -4560,7 +4560,7 @@
   }
 }
 
-/* 메인 메뉴 */
+/* 硫붿씤 硫붾돱 */
 /* gnb pc */
 .krds-main-menu {
   --krds-main-menu--main-trigger-size-height: var(--krds-size-height-8);
@@ -5618,7 +5618,7 @@
 }
 
 .krds-main-menu-mobile .gnb-wrap .gnb-body .gnb-menu .submenu-wrap .gnb-sub-list .depth3-wrap .depth3-trigger::before {
-  content: "•";
+  content: "??;
 }
 
 .krds-main-menu-mobile .gnb-wrap .gnb-body .gnb-menu .submenu-wrap .gnb-sub-list .depth3-wrap .depth3-trigger:focus {
@@ -5711,7 +5711,7 @@
 }
 
 .krds-main-menu-mobile .gnb-wrap .gnb-body .gnb-menu .submenu-wrap .depth4-wrap .depth4-body .depth4-ul a::before {
-  content: "•";
+  content: "??;
   font-weight: var(--krds-font-weight-regular);
 }
 
@@ -6066,7 +6066,7 @@
   }
 }
 
-/* 푸터 */
+/* ?명꽣 */
 #krds-footer {
   position: relative;
   z-index: 50;
@@ -6671,7 +6671,7 @@
   }
 }
 
-/* 운영기관 식별자 */
+/* ?댁쁺湲곌? ?앸퀎??*/
 .krds-identifier {
   display: flex;
   align-items: center;
@@ -6738,7 +6738,7 @@
   }
 }
 
-/* 사이드 메뉴 */
+/* ?ъ씠??硫붾돱 */
 .krds-side-navigation {
   --krds-side-navigation--padding: var(--krds-padding-10);
   --krds-side-navigation--title-padding-x: var(--krds-padding-3);
@@ -6872,7 +6872,7 @@
 }
 
 .krds-side-navigation .lnb-list .lnb-item .lnb-submenu .lnb-btn::before {
-  content: "•";
+  content: "??;
 }
 
 .krds-side-navigation .lnb-list .lnb-item .lnb-submenu .lnb-btn.selected {
@@ -7058,7 +7058,7 @@
   }
 }
 
-/* 구조화 목록 */
+/* 援ъ“??紐⑸줉 */
 .krds-structured-list {
   --krds-structured-list--tag-color-text: var(--krds-light-color-text-basic);
   --krds-structured-list--tag-color-text-visited: var(--krds-light-color-link-visited);
@@ -7700,7 +7700,7 @@
   }
 }
 
-/* 긴급 공지  */
+/* 湲닿툒 怨듭?  */
 .krds-critical-alerts {
   --krds-critical-alerts--size-max-width: 84.6rem;
   --krds-critical-alerts--gap: var(--krds-number-6);
@@ -7914,7 +7914,7 @@
   }
 }
 
-/* 콘텐츠 내 탐색 */
+/* 肄섑뀗痢????먯깋 */
 .krds-in-page-navigation-type {
   --krds-in-page-navigation--width: 16rem;
   --krds-in-page-navigation--gap: var(--krds-gap-5);
@@ -8489,7 +8489,7 @@
   }
 }
 
-/* 페이지네이션 */
+/* ?섏씠吏?ㅼ씠??*/
 .krds-pagination {
   --krds-pagination--color-text: var(--krds-light-color-text-subtle);
   --krds-pagination--color-text-active: var(--krds-light-color-text-inverse-static);
@@ -8745,7 +8745,7 @@
   }
 }
 
-/* 브레드크럼 */
+/* 釉뚮젅?쒗겕??*/
 .krds-breadcrumb-wrap {
   --krds-breadcrumb--padding-x: var(--krds-padding-2);
   --krds-breadcrumb--margin-bottom: var(--krds-pc-gap-layout-breadcrumb-h1);
@@ -9019,7 +9019,7 @@
   }
 }
 
-/* 단계 표시기 */
+/* ?④퀎 ?쒖떆湲?*/
 .krds-step-wrap {
   --krds-step--layout-gap: var(--krds-number-18);
   --krds-step--step-font-size: var(--krds-pc-font-size-body-xsmall);
@@ -9238,7 +9238,7 @@
   }
 }
 
-/* 배지 */
+/* 諛곗? */
 .krds-badge {
   display: inline-flex;
   align-items: center;
@@ -10114,7 +10114,7 @@
   }
 }
 
-/* form 레이아웃 */
+/* form ?덉씠?꾩썐 */
 .fieldset {
   display: flex;
   align-items: flex-start;
@@ -10602,7 +10602,7 @@
   }
 }
 
-/* 검색 폼 */
+/* 寃????*/
 .sch-form-wrap {
   display: flex;
   align-items: center;
@@ -10657,7 +10657,7 @@
     width: 100%;
   }
 
-  /* 검색 폼 */
+  /* 寃????*/
   .sch-form-wrap {
     flex-direction: column;
     align-items: flex-start;
@@ -10674,7 +10674,7 @@
   }
 }
 
-/* 입력 필드 / 텍스트 영역 */
+/* ?낅젰 ?꾨뱶 / ?띿뒪???곸뿭 */
 .krds-input {
   --krds-input--color-surface: var(--krds-light-color-input-surface);
   --krds-input--color-surface-readonly: var(--krds-light-color-input-surface-disabled);
@@ -10919,7 +10919,7 @@ textarea.krds-input {
   flex: none;
 }
 
-/* 날짜선택 */
+/* ?좎쭨?좏깮 */
 .calendar-input {
   --krds-input--color-surface: var(--krds-light-color-input-surface);
   position: relative;
@@ -10944,7 +10944,7 @@ textarea.krds-input {
 }
 
 [data-krds-mode=high-contrast] {
-  /* 날짜선택 */
+  /* ?좎쭨?좏깮 */
 }
 
 [data-krds-mode=high-contrast] .krds-input {
@@ -10977,7 +10977,7 @@ textarea.krds-input {
 
 @media (prefers-color-scheme: dark) {
   [data-krds-mode=theme] {
-    /* 날짜선택 */
+    /* ?좎쭨?좏깮 */
   }
 
   [data-krds-mode=theme] .krds-input {
@@ -11009,7 +11009,7 @@ textarea.krds-input {
   }
 }
 
-/* 셀렉트 */
+/* ??됲듃 */
 .krds-form-select {
   --krds-form-select--color-background: var(--krds-light-color-input-surface);
   --krds-form-select--color-background-readonly: var(--krds-light-color-input-surface-disabled);
@@ -11474,7 +11474,7 @@ textarea.krds-input {
   }
 }
 
-/* 라디오 버튼 / 체크박스 */
+/* ?쇰뵒??踰꾪듉 / 泥댄겕諛뺤뒪 */
 input[type=radio],
 input[type=checkbox] {
   position: absolute !important;
@@ -12315,7 +12315,7 @@ label {
   }
 }
 
-/* 라디오 버튼 / 체크박스 chip */
+/* ?쇰뵒??踰꾪듉 / 泥댄겕諛뺤뒪 chip */
 .krds-form-chip {
   --krds-form-chip--color-text: var(--krds-light-color-text-basic);
   --krds-form-chip--color-text-checked: var(--krds-light-color-text-primary);
@@ -12656,7 +12656,7 @@ label {
   }
 }
 
-/* 토글 스위치 */
+/* ?좉? ?ㅼ쐞移?*/
 .krds-form-toggle-switch {
   --krds-form-toggle-switch--color-text: var(--krds-light-color-text-basic);
   --krds-form-toggle-switch--color-text-disabled: var(--krds-light-color-text-disabled);
@@ -12886,7 +12886,7 @@ label {
   }
 }
 
-/* 달력 */
+/* ?щ젰 */
 .krds-calendar-area {
   --krds-calendar--radius: var(--krds-radius-xlarge2);
   --krds-calendar--head-pc-font-size: var(--krds-pc-font-size-heading-xsmall);
@@ -13232,7 +13232,7 @@ label {
   bottom: -38%;
   left: 50%;
   transform: translateX(-50%);
-  content: "이벤트";
+  content: "?대깽??;
   font-size: 1rem;
   font-weight: var(--krds-font-weight-bold);
 }
@@ -13444,7 +13444,7 @@ label {
   }
 }
 
-/* 화면 크기 조정 */
+/* ?붾㈃ ?ш린 議곗젙 */
 /* krds-drop-wrap */
 .krds-drop-wrap {
   --krds-resize--list-icon-radius: var(--krds-radius-small2);
@@ -13549,7 +13549,7 @@ label {
   }
 }
 
-/* 언어 변경 */
+/* ?몄뼱 蹂寃?*/
 .krds-drop-wrap {
   --krds-language--top-title-color: var(--krds-light-color-text-secondary);
   --krds-language--top-title-sub-color: var(--krds-light-color-text-subtle);

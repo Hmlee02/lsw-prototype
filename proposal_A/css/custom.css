@@ -1,14 +1,14 @@
 /* ==========================================================================
-   �??법령?�보?�터 ?�로?��???커스?� CSS (Proposal A)
+   援??踰뺣졊?뺣낫?쇳꽣 ?꾨줈?좏???而ㅼ뒪? CSS (Proposal A)
    LSW Prototype Custom Stylesheet
-   KRDS ?�자???�스??기반 / KWCAG 2.2 준??
+   KRDS ?붿옄???쒖뒪??湲곕컲 / KWCAG 2.2 以??
    ========================================================================== */
 
 /* ==========================================================================
-   1. CSS 변??(Design Tokens)
+   1. CSS 蹂??(Design Tokens)
    ========================================================================== */
 :root {
-    /* Primary Colors - 법제�?브랜??(?�색 계열) */
+    /* Primary Colors - 踰뺤젣泥?釉뚮옖??(?⑥깋 怨꾩뿴) */
     --lsw-primary: #003791;
     --lsw-primary-dark: #002568;
     --lsw-primary-light: #e8eef8;
@@ -36,7 +36,7 @@
 }
 
 /* ==========================================================================
-   2. 기본 ?��???초기??�?공통
+   2. 湲곕낯 ?ㅽ???珥덇린??諛?怨듯넻
    ========================================================================== */
 *,
 *::before,
@@ -167,7 +167,7 @@ button {
     background-image: none !important;
 }
 
-/* GNB ?�롭?�운 - ?�면 ?�체 ?�비�??�장 */
+/* GNB ?쒕∼?ㅼ슫 - ?붾㈃ ?꾩껜 ?덈퉬濡??뺤옣 */
 .krds-main-menu .gnb-toggle-wrap {
     left: 50% !important;
     transform: translateX(-50%) !important;
@@ -175,11 +175,11 @@ button {
 }
 
 /* ==========================================================================
-   ?�락??svg-icon ?�이�??�의
-   (common.css??미정??????박스 ?�류 ?�정)
+   ?꾨씫??svg-icon ?꾩씠肄??뺤쓽
+   (common.css??誘몄젙??????諛뺤뒪 ?ㅻ쪟 ?섏젙)
    ========================================================================== */
 
-/* ico-download: ico_download.svg ?�용 */
+/* ico-download: ico_download.svg ?ъ슜 */
 .svg-icon.ico-download {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
@@ -191,7 +191,7 @@ button {
     mask-image: url('../../assets/krds/img/component/icon/ico_download.svg');
 }
 
-/* ico-bookmark: ico_scrap.svg ?��??�용 */
+/* ico-bookmark: ico_scrap.svg ?泥??ъ슜 */
 .svg-icon.ico-bookmark {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
@@ -203,7 +203,7 @@ button {
     mask-image: url('../../assets/krds/img/component/icon/ico_scrap.svg');
 }
 
-/* ico-theme: ??모양 ?�이�?(?�크모드 ?�환?? */
+/* ico-theme: ??紐⑥뼇 ?꾩씠肄?(?ㅽ겕紐⑤뱶 ?꾪솚?? */
 .svg-icon.ico-theme {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
@@ -215,7 +215,7 @@ button {
     mask-image: url('../img/ico_moon.svg');
 }
 
-/* ico-audio: ico_volume.svg ?�용 */
+/* ico-audio: ico_volume.svg ?ъ슜 */
 .svg-icon.ico-audio {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
@@ -1023,20 +1023,20 @@ footer#krds-footer {
     gap: 12px;
 }
 
-/* 법령 ?�더 - ?�혁보기 ?�롭?�운 ?��???*/
+/* 踰뺣졊 ?ㅻ뜑 - ?고쁺蹂닿린 ?쒕∼?ㅼ슫 ?ㅽ???*/
 .lsw-version-btn {
     min-width: 240px;
-    /* 버튼 ?�체???�비 ?�보 */
+    /* 踰꾪듉 ?먯껜???덈퉬 ?뺣낫 */
     justify-content: space-between;
 }
 
 .lsw-version-btn+.drop-menu {
     min-width: 100%;
-    /* 버튼 ?�비 ?�상 */
+    /* 踰꾪듉 ?덈퉬 ?댁긽 */
     width: max-content;
-    /* ?�용???�라 ?�장 */
+    /* ?댁슜???곕씪 ?뺤옣 */
     z-index: 1000;
-    /* ?��? z-index */
+    /* ?믪? z-index */
 }
 
 .lsw-law-meta__item dt {
@@ -1092,7 +1092,7 @@ footer#krds-footer {
     position: sticky;
     top: 80px;
     z-index: 10;
-    /* gnb-backdrop dim(z-index:60) ?�래�??�려가?�록 */
+    /* gnb-backdrop dim(z-index:60) ?꾨옒濡??대젮媛?꾨줉 */
 }
 
 /* Law Layout (Body) */
@@ -1100,7 +1100,7 @@ footer#krds-footer {
     padding: 40px 0 80px;
 }
 
-/* 목차 ?�이?�바 (KRDS Side Navigation) */
+/* 紐⑹감 ?ъ씠?쒕컮 (KRDS Side Navigation) */
 .lsw-law-toc {
     position: sticky;
     top: 20px;
@@ -1324,7 +1324,7 @@ footer#krds-footer {
 
 /* ==========================================================================
    10. Law Detail Page Overrides
-   index.html??scroll-snap ?�이?�웃??law-detail???�향 주�? ?�도�??�제
+   index.html??scroll-snap ?덉씠?꾩썐??law-detail???곹뼢 二쇱? ?딅룄濡??댁젣
    ========================================================================== */
 html.page-law-detail,
 html.page-law-detail body {
@@ -1343,7 +1343,7 @@ body.page-law-detail .lsw-section {
     min-height: auto;
 }
 
-/* ?�이?�바 + 본문 ?�이?�웃 보강 */
+/* ?ъ씠?쒕컮 + 蹂몃Ц ?덉씠?꾩썐 蹂닿컯 */
 .lsw-law-layout {
     display: flex;
     align-items: flex-start;
@@ -1363,18 +1363,18 @@ body.page-law-detail .lsw-section {
     border-bottom: 1px solid var(--lsw-gray-200);
 }
 
-/* 브레?�크???�역 */
+/* 釉뚮젅?쒗겕???곸뿭 */
 .lsw-breadcrumb-wrap {
     padding-top: 40px;
-    /* ?�더 static 변경으�??�딩 축소 */
+    /* ?ㅻ뜑 static 蹂寃쎌쑝濡??⑤뵫 異뺤냼 */
 }
 
-/* ?�더 ?�크�?처리 */
+/* ?ㅻ뜑 ?ㅽ겕濡?泥섎━ */
 #krds-header {
     position: relative !important;
 }
 
-/* KRDS 브레?�크???�드 ?��???보강 */
+/* KRDS 釉뚮젅?쒗겕???몃뱶 ?ㅽ???蹂닿컯 */
 .krds-breadcrumb-wrap .breadcrumb li .txt {
     color: var(--lsw-gray-700);
     text-decoration: none;
@@ -1384,7 +1384,7 @@ body.page-law-detail .lsw-section {
     transition: all 0.2s;
 }
 
-/* 법령 본문 article ?�션 기본 ?��???보강 */
+/* 踰뺣졊 蹂몃Ц article ?뱀뀡 湲곕낯 ?ㅽ???蹂닿컯 */
 .lsw-law-article__section {
     font-size: 18px;
     font-weight: 700;
@@ -1393,7 +1393,7 @@ body.page-law-detail .lsw-section {
     margin: 32px 0 20px;
 }
 
-/* TOC ?�더 */
+/* TOC ?ㅻ뜑 */
 .lsw-law-toc__header {
     display: flex;
     justify-content: space-between;
@@ -1407,7 +1407,7 @@ body.page-law-detail .lsw-section {
     margin: 0;
 }
 
-/* TOC ?��? 기능 */
+/* TOC ?좉? 湲곕뒫 */
 .lsw-law-toc.is-collapsed .lsw-law-toc__body {
     display: none;
 }
@@ -1420,14 +1420,14 @@ body.page-law-detail .lsw-section {
     transition: transform 0.3s ease;
 }
 
-/* ?�터 로고 background-image ?�거 */
+/* ?명꽣 濡쒓퀬 background-image ?쒓굅 */
 #krds-footer .f-logo {
     background-image: none !important;
 }
 
-/* ===== As-is 법령 ?�세 추�? ?��???===== */
+/* ===== As-is 踰뺣졊 ?곸꽭 異붽? ?ㅽ???===== */
 
-/* ???�체 ?�비 ?�장 */
+/* ???꾩껜 ?덈퉬 ?뺤옣 */
 .lsw-law-tab-wrap {
     width: 100%;
 }
@@ -1458,7 +1458,7 @@ body.page-law-detail .lsw-section {
     justify-content: center;
 }
 
-/* 조문?�택 ?�롭?�운 */
+/* 議곕Ц?좏깮 ?쒕∼?ㅼ슫 */
 .lsw-article-select {
     min-width: 180px;
     max-width: 240px;
@@ -1469,7 +1469,7 @@ body.page-law-detail .lsw-section {
     background: #fff;
 }
 
-/* 본문 ?�터 ?�이�?�?*/
+/* 蹂몃Ц ?꾪꽣 ?꾩씠肄?諛?*/
 .lsw-law-content__filters {
     display: flex;
     flex-wrap: wrap;
@@ -1532,7 +1532,7 @@ body.page-law-detail .lsw-section {
     background-color: #a080c0;
 }
 
-/* 조문�?참조 ?�이�?*/
+/* 議곕Ц蹂?李몄“ ?꾩씠肄?*/
 .lsw-ref-icon {
     display: inline-flex;
     align-items: center;
@@ -1584,7 +1584,7 @@ body.page-law-detail .lsw-section {
     background-color: #a080c0;
 }
 
-/* 조문 체크박스 */
+/* 議곕Ц 泥댄겕諛뺤뒪 */
 .lsw-law-article__item-left .lsw-article-check,
 .lsw-article-check {
     width: 16px !important;
@@ -1600,21 +1600,21 @@ body.page-law-detail .lsw-section {
     clip-path: none !important;
 }
 
-/* 조문 ?�더 좌측 ?�이?�웃 */
+/* 議곕Ц ?ㅻ뜑 醫뚯륫 ?덉씠?꾩썐 */
 .lsw-law-article__item-left {
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-/* 개정?�력 ?�스??*/
+/* 媛쒖젙?대젰 ?띿뒪??*/
 .lsw-law-article__amendment {
     color: var(--lsw-gray-500, #888);
     font-size: 13px;
     margin-top: 8px;
 }
 
-/* 법령 ?�목 ?�단 ?��?부�?*/
+/* 踰뺣졊 ?쒕ぉ ?섎떒 ?뚭?遺泥?*/
 .lsw-law-article-title__ministry {
     color: var(--lsw-gray-600, #666);
     font-size: 14px;
@@ -1622,7 +1622,7 @@ body.page-law-detail .lsw-section {
     text-align: center;
 }
 
-/* TOC depth4 ?��???*/
+/* TOC depth4 ?ㅽ???*/
 .lsw-toc-list__depth4 {
     padding-left: 16px;
 }
@@ -1639,14 +1639,14 @@ body.page-law-detail .lsw-section {
     color: var(--lsw-primary, #1a5cbc);
 }
 
-/* ?�바 right 버튼 간격 */
+/* ?대컮 right 踰꾪듉 媛꾧꺽 */
 .lsw-law-content__toolbar-right {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-/* 보조 기능 버튼 �?(as-is 11�???��) */
+/* 蹂댁“ 湲곕뒫 踰꾪듉 諛?(as-is 11媛???ぉ) */
 .lsw-law-content__utils {
     display: flex;
     flex-wrap: wrap;
@@ -1683,7 +1683,7 @@ body.page-law-detail .lsw-section {
     z-index: 100 !important;
 }
 
-/* ?��?�??�기 버튼 (Floating) */
+/* ?꾩?留??닿린 踰꾪듉 (Floating) */
 .btn-help-panel.expand {
     position: fixed;
     right: 20px;
@@ -1691,7 +1691,7 @@ body.page-law-detail .lsw-section {
     z-index: 90;
 }
 
-/* ?��?�??�기 버튼 (Inside Panel) */
+/* ?꾩?留??リ린 踰꾪듉 (Inside Panel) */
 .btn-help-panel.fold {
     position: absolute;
     top: 20px;
