@@ -2201,7 +2201,7 @@ body {
 .proposal-b .lsw-icon-btn .svg-icon {
   width: 18px;
   height: 18px;
-  background-color: currentColor;
+  background-color: var(--lsw-text-dim);
 }
 
 /* 5. 툴바 탭 버튼 */
