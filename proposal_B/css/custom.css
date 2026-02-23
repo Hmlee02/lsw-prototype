@@ -2414,7 +2414,7 @@ body {
   border: 1px solid var(--lsw-border);
   border-radius: 16px;
   position: sticky;
-  z-index: 50;
+  z-index: 40;
   box-shadow: var(--lsw-shadow-sm);
 }
 
@@ -2587,6 +2587,7 @@ body.large-text-mode .lsw-law-article__body {
 body.large-text-mode .lsw-lnb__link {
   font-size: 18px;
 }
+
 
 body.large-text-mode #btn-large-text {
   background-color: var(--lsw-primary) !important;
@@ -3331,6 +3332,31 @@ body.large-text-mode .lsw-law-article__chapter h4 {
   .lsw-law-article__item-title-group {
     gap: 0;
   }
+
+  body.large-text-mode {
+    --lsw-body-size: 20px;
+  }
+
+  body.large-text-mode .lsw-law-article-title h3 {
+    font-size: 30px;
+  }
+
+  body.large-text-mode .lsw-law-article__num {
+    font-size: 20px;
+  }
+
+  body.large-text-mode .lsw-law-article__body {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  body.large-text-mode .lsw-lnb__link {
+    font-size: 16px;
+  }
+
+  body.large-text-mode .lsw-law-article__chapter h4 {
+    font-size: 24px;
+  }
 }
 
 /* ==========================================================================
@@ -3350,7 +3376,6 @@ body.large-text-mode .lsw-law-article__chapter h4 {
   }
 
   .proposal-b .lsw-law-tab-wrap .btn-tab {
-    font-size: 13px;
     padding: 10px 10px !important;
   }
 
