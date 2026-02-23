@@ -3,11 +3,18 @@ node_modules/
 
 # Docs
 docs/
+.claude/
+.vscode/
 
 # Python
 __pycache__/
 *.pyc
+*.py
 
 # OS
 .DS_Store
 Thumbs.db
+
+.stylelintignore
+package-lock.json
+package.json

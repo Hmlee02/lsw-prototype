@@ -371,11 +371,23 @@
 						data-quick-nav="false">
 						<div class="lsw-law-layout">
 
-							<!-- 법령 목록 사이드바 (LNB) -->
-							<aside class="lsw-lnb" id="law-lnb" aria-label="법률 법령 목록">
+							<!-- 모바일 LNB 토글 버튼 -->
+						<button type="button" class="lsw-lnb-toggle" id="btn-lnb-toggle"
+							aria-expanded="false" aria-controls="law-lnb">
+							<i class="svg-icon ico-list" aria-hidden="true"></i>
+							<span>법령 목록</span>
+						</button>
+						<!-- 모바일 LNB 오버레이 -->
+						<div class="lsw-lnb-overlay" id="lnb-overlay"></div>
+
+						<!-- 법령 목록 사이드바 (LNB) -->
+						<aside class="lsw-lnb" id="law-lnb" aria-label="법률 법령 목록">
 								<div class="lsw-lnb__header">
 									<h3 class="lsw-lnb__title">법률</h3>
 									<span class="lsw-lnb__count">총 1,823건</span>
+									<button type="button" class="lsw-lnb__close" id="btn-lnb-close" aria-label="법령 목록 닫기">
+										<i class="svg-icon ico-popup-close" aria-hidden="true"></i>
+									</button>
 								</div>
 								<nav class="lsw-lnb__nav">
 									<ul class="lsw-lnb__list">
@@ -485,33 +497,52 @@
 									</div>
 								</div>
 
+								<!-- 법령 구분 배지 -->
+								<div class="lsw-law-badges">
+									<div class="lsw-law-badge is-case"><span class="lsw-law-badge__type">판</span>판례
+									</div>
+									<div class="lsw-law-badge is-history"><span class="lsw-law-badge__type">연</span>연혁
+									</div>
+									<div class="lsw-law-badge is-rule"><span class="lsw-law-badge__type">행</span>위임행정규칙
+									</div>
+									<div class="lsw-law-badge is-regulation"><span
+											class="lsw-law-badge__type">규</span>규제</div>
+									<div class="lsw-law-badge is-life"><span class="lsw-law-badge__type">생</span>생활법령
+									</div>
+									<div class="lsw-law-badge is-view"><span class="lsw-law-badge__type">한</span>한눈보기
+									</div>
+								</div>
+
 								<!-- 법령 제목 및 연혁 -->
 								<div class="lsw-law-article-title">
 									<div class="lsw-law-article-title__text">
 										<h3>인공지능 발전과 신뢰 기반 조성 등에 관한 기본법</h3>
-										<p class="lsw-law-article-title__num">
-											[법률 제21311호, 2026. 1. 20., 일부개정, 2026. 1. 22. 시행]
-										</p>
-									</div>
-									<div class="lsw-law-info__version">
-										<span class="lsw-law-header__version-label">연혁보기</span>
-										<div class="krds-drop-wrap">
-											<button type="button"
-												class="krds-btn medium border drop-btn lsw-version-btn">
-												현행 (2026.01.22 시행) <i class="svg-icon ico-toggle"></i>
-											</button>
-											<div class="drop-menu">
-												<div class="drop-in">
-													<ul class="drop-list">
-														<li><button type="button" class="item-link active">현행
-																(2023.08.08 시행)</button></li>
-														<li><button type="button" class="item-link">2021.05.18
-																시행</button></li>
-														<li><button type="button" class="item-link">2018.12.24
-																시행</button></li>
-														<li><button type="button" class="item-link">2016.06.30
-																시행</button></li>
-													</ul>
+										<div
+											style="display: flex; justify-content: space-between; align-items: center;">
+											<p class="lsw-law-article-title__num">
+												[법률 제21311호, 2026. 1. 20., 일부개정, 2026. 1. 22. 시행]
+											</p>
+											<div class="lsw-law-info__version">
+												<span class="lsw-law-header__version-label">연혁보기</span>
+												<div class="krds-drop-wrap">
+													<button type="button"
+														class="krds-btn medium border drop-btn lsw-version-btn">
+														현행 (2026.01.22 시행) <i class="svg-icon ico-toggle"></i>
+													</button>
+													<div class="drop-menu">
+														<div class="drop-in">
+															<ul class="drop-list">
+																<li><button type="button" class="item-link active">현행
+																		(2023.08.08 시행)</button></li>
+																<li><button type="button" class="item-link">2021.05.18
+																		시행</button></li>
+																<li><button type="button" class="item-link">2018.12.24
+																		시행</button></li>
+																<li><button type="button" class="item-link">2016.06.30
+																		시행</button></li>
+															</ul>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -529,12 +560,20 @@
 
 										<div class="lsw-law-article__item" id="article-1">
 											<div class="lsw-law-article__item-header">
-												<span class="lsw-law-article__num">제1조(목적)</span>
+												<div class="lsw-law-article__item-title-group">
+													<span class="lsw-law-article__num">제1조(목적)</span>
+													<div class="lsw-law-article__item-badges">
+														<span class="lsw-law-badge is-case" title="판례"><span
+																class="lsw-law-badge__type">판</span></span>
+														<span class="lsw-law-badge is-history" title="연혁"><span
+																class="lsw-law-badge__type">연</span></span>
+													</div>
+												</div>
 												<div class="lsw-law-article__item-actions">
-													<button type="button" class="krds-btn xsmall text"
+													<button type="button" class="krds-btn medium text"
 														title="조문 링크 복사"><i class="svg-icon ico-link"
 															aria-hidden="true"></i></button>
-													<button type="button" class="krds-btn xsmall text" title="조문 북마크"><i
+													<button type="button" class="krds-btn medium text" title="조문 북마크"><i
 															class="svg-icon ico-bookmark"
 															aria-hidden="true"></i></button>
 												</div>
@@ -551,12 +590,18 @@
 
 										<div class="lsw-law-article__item" id="article-2">
 											<div class="lsw-law-article__item-header">
-												<span class="lsw-law-article__num">제2조(정의)</span>
+												<div class="lsw-law-article__item-title-group">
+													<span class="lsw-law-article__num">제2조(정의)</span>
+													<div class="lsw-law-article__item-badges">
+														<span class="lsw-law-badge is-rule" title="위임행정규칙"><span
+																class="lsw-law-badge__type">행</span></span>
+													</div>
+												</div>
 												<div class="lsw-law-article__item-actions">
-													<button type="button" class="krds-btn xsmall text"
+													<button type="button" class="krds-btn medium text"
 														title="조문 링크 복사"><i class="svg-icon ico-link"
 															aria-hidden="true"></i></button>
-													<button type="button" class="krds-btn xsmall text" title="조문 북마크"><i
+													<button type="button" class="krds-btn medium text" title="조문 북마크"><i
 															class="svg-icon ico-bookmark"
 															aria-hidden="true"></i></button>
 												</div>
@@ -619,12 +664,20 @@
 
 										<div class="lsw-law-article__item" id="article-3">
 											<div class="lsw-law-article__item-header">
-												<span class="lsw-law-article__num">제3조(기본원칙 및 국가 등의 책무)</span>
+												<div class="lsw-law-article__item-title-group">
+													<span class="lsw-law-article__num">제3조(기본원칙 및 국가 등의 책무)</span>
+													<div class="lsw-law-article__item-badges">
+														<span class="lsw-law-badge is-regulation" title="규제"><span
+																class="lsw-law-badge__type">규</span></span>
+														<span class="lsw-law-badge is-life" title="생활법령"><span
+																class="lsw-law-badge__type">생</span></span>
+													</div>
+												</div>
 												<div class="lsw-law-article__item-actions">
-													<button type="button" class="krds-btn xsmall text"
+													<button type="button" class="krds-btn medium text"
 														title="조문 링크 복사"><i class="svg-icon ico-link"
 															aria-hidden="true"></i></button>
-													<button type="button" class="krds-btn xsmall text" title="조문 북마크"><i
+													<button type="button" class="krds-btn medium text" title="조문 북마크"><i
 															class="svg-icon ico-bookmark"
 															aria-hidden="true"></i></button>
 												</div>
@@ -650,10 +703,10 @@
 											<div class="lsw-law-article__item-header">
 												<span class="lsw-law-article__num">제4조(적용범위)</span>
 												<div class="lsw-law-article__item-actions">
-													<button type="button" class="krds-btn xsmall text"
+													<button type="button" class="krds-btn medium text"
 														title="조문 링크 복사"><i class="svg-icon ico-link"
 															aria-hidden="true"></i></button>
-													<button type="button" class="krds-btn xsmall text" title="조문 북마크"><i
+													<button type="button" class="krds-btn medium text" title="조문 북마크"><i
 															class="svg-icon ico-bookmark"
 															aria-hidden="true"></i></button>
 												</div>
@@ -672,10 +725,10 @@
 											<div class="lsw-law-article__item-header">
 												<span class="lsw-law-article__num">제5조(다른 법률과의 관계)</span>
 												<div class="lsw-law-article__item-actions">
-													<button type="button" class="krds-btn xsmall text"
+													<button type="button" class="krds-btn medium text"
 														title="조문 링크 복사"><i class="svg-icon ico-link"
 															aria-hidden="true"></i></button>
-													<button type="button" class="krds-btn xsmall text" title="조문 북마크"><i
+													<button type="button" class="krds-btn medium text" title="조문 북마크"><i
 															class="svg-icon ico-bookmark"
 															aria-hidden="true"></i></button>
 												</div>
@@ -699,10 +752,10 @@
 											<div class="lsw-law-article__item-header">
 												<span class="lsw-law-article__num">제6조(인공지능 기본계획의 수립)</span>
 												<div class="lsw-law-article__item-actions">
-													<button type="button" class="krds-btn xsmall text"
+													<button type="button" class="krds-btn medium text"
 														title="조문 링크 복사"><i class="svg-icon ico-link"
 															aria-hidden="true"></i></button>
-													<button type="button" class="krds-btn xsmall text" title="조문 북마크"><i
+													<button type="button" class="krds-btn medium text" title="조문 북마크"><i
 															class="svg-icon ico-bookmark"
 															aria-hidden="true"></i></button>
 												</div>
@@ -741,10 +794,10 @@
 											<div class="lsw-law-article__item-header">
 												<span class="lsw-law-article__num">제7조(국가인공지능전략위원회)</span>
 												<div class="lsw-law-article__item-actions">
-													<button type="button" class="krds-btn xsmall text"
+													<button type="button" class="krds-btn medium text"
 														title="조문 링크 복사"><i class="svg-icon ico-link"
 															aria-hidden="true"></i></button>
-													<button type="button" class="krds-btn xsmall text" title="조문 북마크"><i
+													<button type="button" class="krds-btn medium text" title="조문 북마크"><i
 															class="svg-icon ico-bookmark"
 															aria-hidden="true"></i></button>
 												</div>
@@ -783,10 +836,10 @@
 												<span class="lsw-law-article__num">부칙 &lt;법률 제21311호, 2026. 1.
 													20.&gt;</span>
 												<div class="lsw-law-article__item-actions">
-													<button type="button" class="krds-btn xsmall text"
+													<button type="button" class="krds-btn medium text"
 														title="조문 링크 복사"><i class="svg-icon ico-link"
 															aria-hidden="true"></i></button>
-													<button type="button" class="krds-btn xsmall text" title="조문 북마크"><i
+													<button type="button" class="krds-btn medium text" title="조문 북마크"><i
 															class="svg-icon ico-bookmark"
 															aria-hidden="true"></i></button>
 												</div>
@@ -1059,6 +1112,51 @@
 			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
 				if (!localStorage.getItem('lsw-theme')) {
 					applyTheme(e.matches ? 'dark' : 'light');
+				}
+			});
+		})();
+
+		// ── 모바일 LNB 드로어 토글 ──
+		(function () {
+			const toggleBtn = document.getElementById('btn-lnb-toggle');
+			const closeBtn = document.getElementById('btn-lnb-close');
+			const overlay = document.getElementById('lnb-overlay');
+			const lnb = document.getElementById('law-lnb');
+			if (!toggleBtn || !lnb) return;
+
+			const openLnb = () => {
+				lnb.classList.add('is-open');
+				if (overlay) overlay.classList.add('is-active');
+				toggleBtn.setAttribute('aria-expanded', 'true');
+				document.body.style.overflow = 'hidden';
+			};
+
+			const closeLnb = () => {
+				lnb.classList.remove('is-open');
+				if (overlay) overlay.classList.remove('is-active');
+				toggleBtn.setAttribute('aria-expanded', 'false');
+				document.body.style.overflow = '';
+			};
+
+			toggleBtn.addEventListener('click', () => {
+				const isOpen = lnb.classList.contains('is-open');
+				isOpen ? closeLnb() : openLnb();
+			});
+
+			if (closeBtn) closeBtn.addEventListener('click', closeLnb);
+			if (overlay) overlay.addEventListener('click', closeLnb);
+
+			// ESC 키로 닫기
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'Escape' && lnb.classList.contains('is-open')) {
+					closeLnb();
+				}
+			});
+
+			// 화면 리사이즈 시 드로어 상태 정리
+			window.addEventListener('resize', () => {
+				if (window.innerWidth > 1023 && lnb.classList.contains('is-open')) {
+					closeLnb();
 				}
 			});
 		})();
