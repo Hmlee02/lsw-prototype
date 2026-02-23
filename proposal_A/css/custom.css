@@ -587,6 +587,40 @@ footer#krds-footer {
     word-break: keep-all;
 }
 
+/* 법령 유형 아이콘 문자 정의 */
+.lsw-ico-constitution::after {
+    content: '헌';
+}
+
+.lsw-ico-law::after {
+    content: '법';
+}
+
+.lsw-ico-presidential::after {
+    content: '령';
+}
+
+.lsw-ico-prime::after {
+    content: '부';
+}
+
+.lsw-ico-local::after {
+    content: '자';
+}
+
+.lsw-ico-admin::after {
+    content: '행';
+}
+
+.lsw-ico-treaty::after {
+    content: '조';
+}
+
+.lsw-ico-case::after {
+    content: '판';
+}
+
+
 /* ==========================================================================
    6. Info Section (Recent & Board)
    ========================================================================== */
@@ -895,6 +929,24 @@ footer#krds-footer {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* 통계 영역 아이콘 문자 정의 */
+.lsw-ico-stat-law::after {
+    content: '⚖️';
+}
+
+.lsw-ico-stat-update::after {
+    content: '🔄';
+}
+
+.lsw-ico-stat-notice::after {
+    content: '🔔';
+}
+
+.lsw-ico-stat-visit::after {
+    content: '👥';
+}
+
 
 /* ==========================================================================
    8. Ministry & Related

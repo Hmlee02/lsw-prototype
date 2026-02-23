@@ -406,31 +406,31 @@ body {
 
 /* 아이콘 표시 이모지 대체 */
 .lsw-ico-constitution::after {
-  content: '?룢';
+  content: '헌';
 }
 
 .lsw-ico-law::after {
-  content: '?뱶';
+  content: '법';
 }
 
 .lsw-ico-presidential::after {
-  content: '?뱥';
+  content: '령';
 }
 
 .lsw-ico-prime::after {
-  content: '?뱞';
+  content: '부';
 }
 
 .lsw-ico-local::after {
-  content: '?룜';
+  content: '자';
 }
 
 .lsw-ico-admin::after {
-  content: '?뱫';
+  content: '행';
 }
 
 .lsw-ico-treaty::after {
-  content: '?뙋';
+  content: '조';
 }
 
 .lsw-law-category__name {
@@ -811,6 +811,22 @@ body {
 .lsw-stat-icon i {
   font-size: 36px;
   font-style: normal;
+}
+
+.lsw-ico-stat-law::after {
+  content: '⚖️';
+}
+
+.lsw-ico-stat-update::after {
+  content: '🔄';
+}
+
+.lsw-ico-stat-notice::after {
+  content: '🔔';
+}
+
+.lsw-ico-stat-visit::after {
+  content: '👥';
 }
 
 .lsw-stat-text {
@@ -1963,7 +1979,7 @@ body {
   mask-image: url('../../assets/krds/img/component/icon/ico_go.svg');
 }
 
-/* ?명꽣 濡쒓퀬 background-image ?쒓굅 */
+/* 푸터 로고 background-image 제거 */
 #krds-footer .f-logo {
   background-image: none !important;
   width: auto;
