@@ -1,8 +1,9 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/",
-      "destination": "/proposal_B/law-detail.html"
+      "destination": "/proposal_B/law-detail.html",
+      "permanent": false
     }
   ]
 }
