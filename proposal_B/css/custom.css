@@ -473,13 +473,15 @@ body {
 /* 2단 컬럼 레이아웃 */
 .lsw-twin-col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 32px;
   align-items: start;
 }
 
 /* 카드 */
 .lsw-card {
+  width: 100%;
+  min-width: 0;
   background: var(--lsw-surface);
   border: 1px solid var(--lsw-border);
   border-radius: 24px;
@@ -498,6 +500,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-width: 0;
   margin-bottom: 24px;
   padding-bottom: 0;
   border-bottom: none;
@@ -1585,7 +1588,7 @@ body {
   }
 
   .lsw-twin-col {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .lsw-section {
@@ -1736,6 +1739,91 @@ body {
   .lsw-search-btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --lsw-body-size: 15px;
+  }
+
+  .inner {
+    padding: 0 12px;
+  }
+
+  #krds-header .header-container .btn-navi {
+    font-size: 12px;
+    padding: 2px 4px 0;
+  }
+
+  .lsw-hero__title {
+    font-size: 20px;
+  }
+
+  .lsw-hero__desc {
+    font-size: 14px;
+  }
+
+  .lsw-search-tab {
+    gap: 6px;
+    padding: 0 4px;
+  }
+
+  .lsw-search-tab__btn {
+    font-size: 13px;
+    padding: 10px 10px;
+  }
+
+  .lsw-search-input {
+    font-size: 14px !important;
+    padding: 10px 12px !important;
+  }
+
+  .lsw-search-btn {
+    font-size: 15px;
+    padding: 11px 14px !important;
+  }
+
+  .lsw-law-category__list {
+    gap: 6px;
+    padding: 12px;
+  }
+
+  .lsw-law-category__item {
+    flex: 0 0 calc(50% - 3px);
+    padding: 12px 6px;
+  }
+
+  .lsw-law-category__name {
+    font-size: 12px;
+  }
+
+  .lsw-card {
+    padding: 16px;
+  }
+
+  .lsw-section--bg .lsw-card .tab.line .btn-tab {
+    font-size: 12px;
+    padding: 0 4px;
+  }
+
+  .lsw-board-item {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .lsw-board-item__date {
+    width: 54px;
+    height: 54px;
+  }
+
+  .lsw-board-item__date .day {
+    font-size: 20px;
+  }
+
+  .lsw-list__item {
+    gap: 10px;
+    padding: 12px 8px;
   }
 }
 
@@ -3663,5 +3751,29 @@ body.large-text-mode .lsw-law-article__chapter h4 {
   .proposal-b .lsw-version-btn {
     font-size: 12px !important;
     padding: 6px 12px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .proposal-b .lsw-law-header__title {
+    font-size: 18px;
+  }
+
+  .proposal-b .lsw-law-article__num {
+    font-size: 14px;
+  }
+
+  .proposal-b .lsw-law-article__body {
+    font-size: 15px;
+  }
+
+  .proposal-b .lsw-law-tab-wrap .btn-tab {
+    padding: 8px 8px !important;
+    font-size: 13px;
+  }
+
+  .proposal-b .lsw-version-btn {
+    font-size: 11px !important;
+    padding: 6px 10px !important;
   }
 }
