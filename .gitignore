@@ -18,3 +18,5 @@ Thumbs.db
 .stylelintignore
 package-lock.json
 package.json
+*.pptx
+slide_imgs/

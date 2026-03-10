@@ -7,6 +7,9 @@
 	<title>현행법령 - 국가법령정보센터</title>
 	<link rel="stylesheet" href="../assets/krds/css/common/common.css">
 	<link rel="stylesheet" href="../assets/krds/css/component/component.css">
+	<!-- UIKit 3 -->
+	<link href="https://cdn.jsdelivr.net/npm/uikit@3/dist/css/uikit.min.css" rel="stylesheet">
+	<!-- Custom (최우선) -->
 	<link rel="stylesheet" href="./css/custom.css">
 </head>
 
@@ -42,18 +45,18 @@
 						<ul class="utility-list">
 							<li>
 								<a href="#" class="krds-btn small text" target="_blank" title="새 창 열기">
-									법제처 <i class="svg-icon ico-go"></i>
+									법제처 <i class="lsw-icon" data-lucide="external-link"></i>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="krds-btn small text" target="_blank" title="새 창 열기">
-									생활법령정보 <i class="svg-icon ico-go"></i>
+									생활법령정보 <i class="lsw-icon" data-lucide="external-link"></i>
 								</a>
 							</li>
 							<li>
 								<div class="krds-drop-wrap krds-resize">
 									<button type="button" class="krds-btn small text drop-btn">
-										글자크기 <i class="svg-icon ico-toggle"></i>
+										글자크기 <i class="lsw-icon" data-lucide="panel-left"></i>
 									</button>
 									<div class="drop-menu">
 										<div class="drop-in">
@@ -65,7 +68,7 @@
 											</ul>
 											<div class="drop-bottom">
 												<button type="button" class="krds-btn medium text">
-													<i class="svg-icon ico-reset"></i> 초기화
+													<i class="lsw-icon" data-lucide="rotate-ccw"></i> 초기화
 												</button>
 											</div>
 										</div>
@@ -75,7 +78,7 @@
 							<li>
 								<div class="krds-drop-wrap">
 									<button type="button" class="krds-btn small text drop-btn">
-										관련사이트 <i class="svg-icon ico-toggle"></i>
+										관련사이트 <i class="lsw-icon" data-lucide="panel-left"></i>
 									</button>
 									<div class="drop-menu">
 										<div class="drop-in">
@@ -298,7 +301,7 @@
 		<div class="gnb-wrap">
 			<div class="gnb-header">
 				<div class="gnb-login">
-					<button type="button" class="krds-btn large text"><i class="svg-icon ico-log"></i> 로그인을
+					<button type="button" class="krds-btn large text"><i class="lsw-icon" data-lucide="log-in"></i> 로그인을
 						해주세요</button>
 				</div>
 				<div class="gnb-service-menu">
@@ -310,7 +313,7 @@
 					<input type="text" class="krds-input" placeholder="법령명, 조문 내용 등을 검색해 보세요" title="법령 통합 검색 입력">
 					<button type="button" class="krds-btn medium icon ico-search">
 						<span class="sr-only">검색</span>
-						<i class="svg-icon ico-sch"></i>
+						<i class="lsw-icon" data-lucide="search"></i>
 					</button>
 				</div>
 			</div>
@@ -372,7 +375,7 @@
 			</div>
 			<button type="button" class="krds-btn medium icon" id="close-nav">
 				<span class="sr-only">전체메뉴 닫기</span>
-				<i class="svg-icon ico-popup-close"></i>
+				<i class="lsw-icon" data-lucide="x"></i>
 			</button>
 		</div>
 	</div>
@@ -419,7 +422,7 @@
 					<span class="lsw-law-header__version-label">연혁보기</span>
 					<div class="krds-drop-wrap">
 						<button type="button" class="krds-btn medium border drop-btn lsw-version-btn">
-							현행 (2026.01.01 시행) <i class="svg-icon ico-toggle"></i>
+							현행 (2026.01.01 시행) <i class="lsw-icon" data-lucide="panel-left"></i>
 						</button>
 						<div class="drop-menu">
 							<div class="drop-in">
@@ -440,132 +443,12 @@
 
 		<!-- 탭 네비게이션 -->
 		<div class="lsw-law-tab-wrap">
-			<div class="inner">
-				<div class="krds-tab-area layer">
-					<div class="tab line full">
-						<ul role="tablist">
-							<li id="tab_law_01" role="tab" aria-selected="false" aria-controls="panel_law_01">
-								<button type="button" class="btn-tab">법령명</button>
-							</li>
-							<li id="tab_law_02" role="tab" aria-selected="true" aria-controls="panel_law_02"
-								class="active">
-								<button type="button" class="btn-tab">법령본문<i class="sr-only created">
-										선택됨</i></button>
-							</li>
-							<li id="tab_law_03" role="tab" aria-selected="false" aria-controls="panel_law_03">
-								<button type="button" class="btn-tab">조문내용</button>
-							</li>
-							<li id="tab_law_04" role="tab" aria-selected="false" aria-controls="panel_law_04">
-								<button type="button" class="btn-tab">조문제목</button>
-							</li>
-							<li id="tab_law_05" role="tab" aria-selected="false" aria-controls="panel_law_05">
-								<button type="button" class="btn-tab">부칙</button>
-							</li>
-							<li id="tab_law_06" role="tab" aria-selected="false" aria-controls="panel_law_06">
-								<button type="button" class="btn-tab">제정·개정문</button>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
 
-			<!-- Help Panel -->
-			<button type="button" class="krds-btn small tertiary btn-help-panel expand btn-help-exec"><i
-					class="svg-icon ico-fold"></i> 보조 기능</button>
-			<div class="krds-help-panel">
-				<div class="help-panel-wrap">
-					<button type="button" class="krds-btn small tertiary btn-help-panel fold btn-help-exec"><i
-							class="svg-icon ico-fold"></i> 접어두기</button>
-					<div class="help-conts-area">
-						<!-- 탭 -->
-						<div class="krds-tab-area layer">
-							<!-- tab list -->
-							<div class="tab line">
-								<ul role="tablist">
-									<li id="helperTab01" role="tab" aria-selected="true"
-										aria-controls="helperTabpanel01" class="active">
-										<button type="button" class="btn-tab">법령 정보 <i
-												class="sr-only created">선택됨</i></button>
-									</li>
-									<li id="helperTab02" role="tab" aria-selected="false"
-										aria-controls="helperTabpanel02">
-										<button type="button" class="btn-tab">편의 기능</button>
-									</li>
-								</ul>
-							</div>
-							<!-- //tab list -->
-
-							<!-- tab contents -->
-							<div class="tab-conts-wrap">
-								<!-- 탭1: 법령 정보 -->
-								<section id="helperTabpanel01" role="tabpanel" aria-labelledby="helperTab01"
-									class="tab-conts active">
-									<h3 class="sr-only">법령 정보</h3>
-									<div class="help-conts-area-inner">
-										<div class="conts-area help-conts">
-											<div class="conts-wrap">
-												<h4 class="help-title">기본 정보</h4>
-												<ul class="link-list">
-													<li><a href="#" class="krds-btn xsmall link basic">본문 <i
-																class="svg-icon ico-angle right"></i></a></li>
-													<li><a href="#" class="krds-btn xsmall link basic">제정·개정이유 <i
-																class="svg-icon ico-angle right"></i></a></li>
-													<li><a href="#" class="krds-btn xsmall link basic">연혁 <i
-																class="svg-icon ico-angle right"></i></a></li>
-													<li><a href="#" class="krds-btn xsmall link basic">법령체계도 <i
-																class="svg-icon ico-angle right"></i></a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="conts-area related-service">
-											<div class="conts-wrap">
-												<h4 class="help-title">비교 서비스</h4>
-												<ul class="link-list">
-													<li><a href="#" class="krds-btn xsmall link basic">3단비교 <i
-																class="svg-icon ico-angle right"></i></a></li>
-													<li><a href="#" class="krds-btn xsmall link basic">신구법비교 <i
-																class="svg-icon ico-angle right"></i></a></li>
-													<li><a href="#" class="krds-btn xsmall link basic">법령비교 <i
-																class="svg-icon ico-angle right"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</section>
-
-								<!-- 탭2: 편의 기능 -->
-								<section id="helperTabpanel02" role="tabpanel" aria-labelledby="helperTab02"
-									class="tab-conts">
-									<h3 class="sr-only">편의 기능</h3>
-									<div class="help-conts-area-inner">
-										<div class="conts-area help-conts">
-											<div class="conts-wrap">
-												<h4 class="help-title">활용 및 지원</h4>
-												<ul class="link-list">
-													<li><a href="#" class="krds-btn xsmall link basic">생활법령정보 <i
-																class="svg-icon ico-angle right"></i></a></li>
-													<li><a href="#" class="krds-btn xsmall link basic">원문다운로드 <i
-																class="svg-icon ico-angle right"></i></a></li>
-													<li>
-														<a href="#" class="krds-btn xsmall link basic">
-															음성지원
-															<i class="svg-icon ico-volume"></i>
-														</a>
-													</li>
-													<li><a href="#" class="krds-btn xsmall link basic">점자뷰어 <i
-																class="svg-icon ico-angle right"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</section>
-							</div>
-							<!-- //tab contents -->
-						</div>
-						<!-- //탭 -->
-					</div>
-				</div>
-			</div>
+			<!-- 상단영역 토글 버튼 -->
+		<button type="button" class="btn-area-toggle" id="btn-area-toggle" aria-expanded="true" aria-label="상단영역 접기">
+			<i class="lsw-icon lsw-area-toggle-icon" data-lucide="chevrons-up-down"></i>
+			<span class="btn-area-toggle__label">상단영역닫기</span>
+		</button>
 		</div>
 		<!-- //탭 네비게이션 -->
 
@@ -584,6 +467,18 @@
 							<aside class="lsw-law-toc" id="law-toc" aria-label="법령 목차">
 								<nav class="krds-side-navigation">
 									<h2 class="lnb-tit">목차</h2>
+									<!-- 뷰 선택 -->
+									<div class="lsw-toc-view-select">
+										<label for="law-view-select" class="lsw-toc-view-label">보기</label>
+										<select id="law-view-select" class="lsw-view-select" aria-label="법령 보기 선택">
+											<option value="panel_law_01" selected>법령명</option>
+											<option value="panel_law_02">법령본문</option>
+											<option value="panel_law_03">조문내용</option>
+											<option value="panel_law_04">조문제목</option>
+											<option value="panel_law_05">부칙</option>
+											<option value="panel_law_06">제정·개정문</option>
+										</select>
+									</div>
 									<ul class="lnb-list" role="menubar">
 										<li class="lnb-item active" role="none">
 											<button type="button" class="lnb-btn lnb-toggle active" role="menuitem"
@@ -647,17 +542,17 @@
 									<div class="lsw-law-content__toolbar-right">
 										<button type="button" class="krds-btn small border">화면내검색</button>
 										<button type="button" class="krds-btn small border" title="공유하기">
-											<i class="svg-icon ico-share" aria-hidden="true"></i>
+											<i class="lsw-icon" data-lucide="share-2" aria-hidden="true"></i>
 										</button>
 										<button type="button" class="krds-btn small border" title="관심법령추가">
-											<i class="svg-icon ico-bookmark" aria-hidden="true"></i>
+											<i class="lsw-icon" data-lucide="bookmark" aria-hidden="true"></i>
 										</button>
 										<button type="button" class="krds-btn small border" title="한자">漢</button>
 										<button type="button" class="krds-btn small border" title="저장">
-											<i class="svg-icon ico-download" aria-hidden="true"></i>
+											<i class="lsw-icon" data-lucide="download" aria-hidden="true"></i>
 										</button>
 										<button type="button" class="krds-btn small border" title="인쇄">
-											<i class="svg-icon ico-print" aria-hidden="true"></i>
+											<i class="lsw-icon" data-lucide="printer" aria-hidden="true"></i>
 										</button>
 									</div>
 								</div>
@@ -1073,7 +968,7 @@
 								<div class="lsw-law-content__nav">
 									<div class="lsw-law-content__nav-prev">
 										<a href="#" class="krds-btn medium border">
-											<i class="svg-icon ico-angle left" aria-hidden="true"></i> 제17조
+											<i class="lsw-icon" data-lucide="chevron-left" aria-hidden="true"></i> 제17조
 										</a>
 										<span class="lsw-law-content__nav-label">이전 조문</span>
 									</div>
@@ -1083,7 +978,7 @@
 									<div class="lsw-law-content__nav-next">
 										<span class="lsw-law-content__nav-label">다음 조문</span>
 										<a href="#" class="krds-btn medium border">
-											제19조 <i class="svg-icon ico-angle right" aria-hidden="true"></i>
+											제19조 <i class="lsw-icon" data-lucide="chevron-right" aria-hidden="true"></i>
 										</a>
 									</div>
 								</div>
@@ -1254,7 +1149,7 @@
 					<!-- ===== 탭4: 별표·서식 ===== -->
 					<section id="panel_law_04" aria-labelledby="tab_law_04" class="tab-conts" data-quick-nav="false">
 						<div class="lsw-no-content">
-							<i class="svg-icon ico-notice" aria-hidden="true"></i>
+							<i class="lsw-icon" data-lucide="info" aria-hidden="true"></i>
 							<p>별표·서식이 없는 법령입니다.</p>
 						</div>
 					</section>
@@ -1320,7 +1215,308 @@
 	</main>
 	<!-- //main -->
 
+	<!-- ============================================================
+		 법령상세정보 패널 (우측 고정 패널)
+	============================================================ -->
+	<aside class="lsw-law-info-panel is-open" id="law-info-panel" aria-label="법령상세정보 패널">
+		<div class="lsw-law-info-panel__inner">
 
+			<!-- 패널 헤더 -->
+			<div class="lsw-law-info-panel__hd">
+				<h2 class="lsw-law-info-panel__title">법령상세정보</h2>
+				<button type="button" class="lsw-law-info-panel__close" id="btn-panel-close" aria-label="패널 닫기">
+					<i class="lsw-icon" data-lucide="x"></i>
+				</button>
+			</div>
+
+			<!-- 검색 -->
+			<div class="lsw-law-info-panel__search">
+				<input type="text" class="lsw-panel-search__input" placeholder="조문 검색" aria-label="조문 검색">
+				<button type="button" class="lsw-panel-search__btn" aria-label="검색">검색</button>
+			</div>
+
+			<!-- 마스터-디테일 패널 뷰 -->
+			<div class="lsw-panel-views" id="panel-views">
+
+				<!-- 마스터: 네비게이션 목록 -->
+				<nav class="lsw-panel-view lsw-panel-nav-view lsw-law-info-panel__nav" aria-label="법령 상세 메뉴">
+					<ul class="lsw-info-nav__list">
+						<li>
+							<button type="button" class="lsw-info-nav__btn is-active" data-nav="content">
+								<span class="lsw-info-nav__num">1</span>
+								<span class="lsw-info-nav__label">본문</span>
+								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="lsw-info-nav__btn" data-nav="reason">
+								<span class="lsw-info-nav__num">2</span>
+								<span class="lsw-info-nav__label">제정·개정이유</span>
+								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="lsw-info-nav__btn" data-nav="history">
+								<span class="lsw-info-nav__num">3</span>
+								<span class="lsw-info-nav__label">연혁</span>
+								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="lsw-info-nav__btn" data-nav="3step">
+								<span class="lsw-info-nav__num">4</span>
+								<span class="lsw-info-nav__label">3단비교</span>
+								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="lsw-info-nav__btn" data-nav="newold">
+								<span class="lsw-info-nav__num">5</span>
+								<span class="lsw-info-nav__label">신구법비교</span>
+								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="lsw-info-nav__btn" data-nav="system">
+								<span class="lsw-info-nav__num">6</span>
+								<span class="lsw-info-nav__label">법령체계도</span>
+								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="lsw-info-nav__btn lsw-info-nav__btn--compare" data-nav="compare" id="btn-nav-compare">
+								<span class="lsw-info-nav__num">7</span>
+								<span class="lsw-info-nav__label">법령비교</span>
+								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="lsw-info-nav__btn" data-nav="audio">
+								<span class="lsw-info-nav__num">8</span>
+								<span class="lsw-info-nav__label">음성지원</span>
+								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="lsw-info-nav__btn" data-nav="braille">
+								<span class="lsw-info-nav__num">9</span>
+								<span class="lsw-info-nav__label">점자뷰어</span>
+								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
+							</button>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- 디테일: 콘텐츠 영역 -->
+				<div class="lsw-panel-view lsw-panel-detail-view" id="panel-detail-view" aria-live="polite">
+					<div class="lsw-panel-detail-hd">
+						<button type="button" class="lsw-panel-back" id="btn-panel-back" aria-label="목록으로 돌아가기">
+							<i class="lsw-icon" data-lucide="chevron-left"></i>
+						</button>
+						<span class="lsw-panel-detail-label" id="panel-detail-label">본문</span>
+					</div>
+					<div class="lsw-panel-detail-body" id="panel-detail-body">
+						<!-- 콘텐츠가 여기에 주입됩니다 -->
+					</div>
+				</div>
+
+			</div>
+
+
+			<!-- 패널 하단 액션 -->
+			<div class="lsw-law-info-panel__ft">
+				<button type="button" class="lsw-panel-ft-btn" id="btn-interest-law">
+					<i class="lsw-icon" data-lucide="bookmark"></i>
+					<span>관심법령 등록</span>
+				</button>
+			</div>
+		</div>
+	</aside>
+
+	<!-- 패널 열기 버튼 (패널 닫혔을 때 표시) -->
+	<button type="button" class="lsw-law-info-panel-open" id="btn-panel-open" aria-label="법령상세정보 열기" hidden>
+		<i class="lsw-icon" data-lucide="chevrons-up-down"></i>
+		<span>법령상세정보</span>
+	</button>
+
+	<!-- 플로팅 액션 버튼 -->
+	<div class="lsw-floating-actions" id="lsw-floating-actions">
+		<button type="button" class="lsw-fab lsw-fab--interest" id="btn-fab-interest">
+			<i class="lsw-icon" data-lucide="bookmark"></i>
+			<span>관심법령</span>
+		</button>
+		<button type="button" class="lsw-fab lsw-fab--compare" id="btn-fab-compare">
+			<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+				<path d="M2 4h5v8H2zM9 4h5v8H9z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+				<path d="M7 8h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+			<span>비교하기</span>
+		</button>
+	</div>
+
+	<!-- ============================================================
+		 법령비교 오버레이
+	============================================================ -->
+	<div class="lsw-compare-overlay" id="compare-overlay" role="dialog" aria-modal="true" aria-label="법령비교" hidden>
+		<div class="lsw-compare-wrap">
+
+			<!-- 비교 헤더 -->
+			<div class="lsw-compare-hd">
+				<div class="lsw-compare-hd__left">
+					<h2 class="lsw-compare-title">법령비교</h2>
+					<p class="lsw-compare-desc">두 법령을 나란히 비교합니다.</p>
+				</div>
+				<div class="lsw-compare-hd__right">
+					<img src="../image/h_logo1.png" alt="국가법령정보센터" class="lsw-compare-logo">
+					<button type="button" class="lsw-compare-close" id="btn-compare-close" aria-label="법령비교 닫기">
+						<i class="lsw-icon" data-lucide="x"></i>
+					</button>
+				</div>
+			</div>
+
+			<!-- 모바일 전용 탭 -->
+			<div class="lsw-compare-mob-tabs" role="tablist" aria-label="비교 패널 선택">
+				<button class="lsw-compare-mob-tab is-active" role="tab" aria-selected="true" data-target="left">현행 법령</button>
+				<button class="lsw-compare-mob-tab" role="tab" aria-selected="false" data-target="right">비교 법령</button>
+			</div>
+
+			<!-- 비교 본문 (2컬럼 / 모바일 슬라이드) -->
+			<div class="lsw-compare-body">
+
+				<!-- 좌측 패널 -->
+				<div class="lsw-compare-panel lsw-compare-panel--left">
+					<div class="lsw-compare-panel__search-area">
+						<div class="lsw-compare-filter">
+							<span class="lsw-compare-filter__label">법령선택</span>
+							<label class="lsw-compare-radio"><input type="radio" name="law-type-left" checked> 법령</label>
+							<label class="lsw-compare-radio"><input type="radio" name="law-type-left"> 행정규칙</label>
+							<label class="lsw-compare-radio"><input type="radio" name="law-type-left"> 자치법규</label>
+							<span class="lsw-compare-filter__sep"></span>
+							<span class="lsw-compare-filter__label">현행선택</span>
+							<label class="lsw-compare-radio"><input type="radio" name="era-left" checked> 현행</label>
+							<label class="lsw-compare-radio"><input type="radio" name="era-left"> 연혁</label>
+						</div>
+						<div class="lsw-compare-search">
+							<span class="lsw-compare-search__label">법령명</span>
+							<input type="text" class="lsw-compare-search__input" value="10·27법난 피해자의 명예회복 등에 관한 법률" aria-label="법령명 입력">
+							<button type="button" class="lsw-compare-search__btn">검색</button>
+						</div>
+						<div class="lsw-compare-result-info">총 <strong>2</strong>건</div>
+						<div class="lsw-compare-list">
+							<table class="lsw-compare-table">
+								<caption class="sr-only">좌측 법령 목록</caption>
+								<thead>
+									<tr>
+										<th>법령명</th>
+										<th>공포번호</th>
+										<th>공포일자</th>
+										<th>시행일자</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="is-selected">
+										<td><a href="#">10·27법난 피해자의 명예회복 등에 관한 법률 시행령</a></td>
+										<td>제35811호</td>
+										<td>2025. 10. 1.</td>
+										<td>2025. 10. 1.</td>
+									</tr>
+									<tr>
+										<td><a href="#">10·27법난 피해자의 명예회복 등에 관한 법률</a></td>
+										<td>제19592호</td>
+										<td>2023. 8. 8.</td>
+										<td>2023. 8. 8.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="lsw-compare-panel__text">
+						<div class="lsw-compare-panel__text-inner">
+							<div class="lsw-compare-law-meta">
+								<p><span class="lsw-ref-icon lsw-ref--pan">판</span> <span class="lsw-ref-icon lsw-ref--yeon">연</span> <span class="lsw-ref-icon lsw-ref--wi">위</span> <span class="lsw-ref-icon lsw-ref--gyu">규</span> <span class="lsw-ref-icon lsw-ref--saeng">생</span> 한눈보기</p>
+							</div>
+							<h3 class="lsw-compare-law-title">10·27법난 피해자의 명예회복 등에 관한 법률 <span class="lsw-compare-law-abbr">(약칭: 10·27법난법)</span></h3>
+							<p class="lsw-compare-law-notice">[시행 2023. 8. 8.] [법률 제19592호, 2023. 8. 8., 타법개정]</p>
+							<p class="lsw-compare-law-dept">문화체육관광부(종무1담당관), 044-203-2314</p>
+							<div class="lsw-compare-law-body">
+								<p class="lsw-compare-law-article"><strong>제1조(목적)</strong> 이 법은 10·27법난과 관련하여 피해를 입은 사람과 불교계의 명예를 회복시켜줌으로써 인권신장과 국민화합에 이바지함을 목적으로 한다. &lt;개정 2023. 8. 8.&gt;</p>
+								<p class="lsw-compare-law-article"><strong>제2조(정의)</strong> 이 법에서 사용하는 용어의 정의는 다음과 같다. &lt;개정 2023. 8. 8.&gt;</p>
+								<ol class="lsw-compare-law-ol">
+									<li>"10·27법난"이란 1980년 10월 계엄사령부의 합동수사본부 합동수사단이 불교계 정화를 명분으로 대한불교 조계종의 승려 및 불교 관련자들을 강제로 연행·수사하고, 포고령 위반 수배자 및 불순분자를 검거한다는 구실로 군·경 합동으로 전국의 사찰 및 암자 등을 수색한 사건을 말한다.</li>
+									<li>"피해자"란 10·27법난으로 인하여 사망한 사람 또는 부상 및 장애를 입은 사람을 말한다.</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 구분선 -->
+				<div class="lsw-compare-divider" aria-hidden="true"></div>
+
+				<!-- 우측 패널 -->
+				<div class="lsw-compare-panel lsw-compare-panel--right">
+					<div class="lsw-compare-panel__search-area">
+						<div class="lsw-compare-filter">
+							<span class="lsw-compare-filter__label">법령선택</span>
+							<label class="lsw-compare-radio"><input type="radio" name="law-type-right" checked> 법령</label>
+							<label class="lsw-compare-radio"><input type="radio" name="law-type-right"> 행정규칙</label>
+							<label class="lsw-compare-radio"><input type="radio" name="law-type-right"> 자치법규</label>
+							<span class="lsw-compare-filter__sep"></span>
+							<span class="lsw-compare-filter__label">현행선택</span>
+							<label class="lsw-compare-radio"><input type="radio" name="era-right" checked> 현행</label>
+							<label class="lsw-compare-radio"><input type="radio" name="era-right"> 연혁</label>
+						</div>
+						<div class="lsw-compare-search">
+							<span class="lsw-compare-search__label">법령명</span>
+							<input type="text" class="lsw-compare-search__input" placeholder="법령명 검색" aria-label="법령명 입력">
+							<button type="button" class="lsw-compare-search__btn">검색</button>
+						</div>
+						<div class="lsw-compare-result-info">총 <strong>6,110</strong>건</div>
+						<div class="lsw-compare-list">
+							<table class="lsw-compare-table">
+								<caption class="sr-only">우측 법령 목록</caption>
+								<thead>
+									<tr>
+										<th>법령명</th>
+										<th>공포번호</th>
+										<th>공포일자</th>
+										<th>시행일자</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="is-new">
+										<td><a href="#">자유무역협정의 이행을 위한 관세법의 특례에 관한 법률 시행령</a></td>
+										<td>제36017호</td>
+										<td>2026. 1. 6.</td>
+										<td>미정</td>
+									</tr>
+									<tr class="is-new">
+										<td><a href="#">전기안전관리법 시행규칙</a></td>
+										<td>제415호</td>
+										<td>2021. 4. 1.</td>
+										<td>2028. 4. 1.</td>
+									</tr>
+									<tr class="is-new">
+										<td><a href="#">전기·전자제품 및 자동차의 자원순환에 관한 법률 시행령</a></td>
+										<td>제35467호</td>
+										<td>2025. 4. 22.</td>
+										<td>2028. 1. 1.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="lsw-compare-panel__text lsw-compare-panel__text--empty">
+						<div class="lsw-compare-empty">
+							<i class="lsw-icon" data-lucide="info" aria-hidden="true"></i>
+							<p>비교할 법령을 선택해 주세요.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
 
 	<footer id="krds-footer">
 		<div class="foot-quick">
@@ -1346,10 +1542,9 @@
 				</div>
 				<div class="f-link">
 					<div class="link-go">
-						<a href="#" class="krds-btn medium text">법제처 소개 <i class="svg-icon ico-angle right"></i></a>
-						<a href="#" class="krds-btn medium text">이용약관 <i class="svg-icon ico-angle right"></i></a>
-						<a href="#" class="krds-btn medium text" target="_blank" title="새 창 열기">웹 접근성 안내 <i
-								class="svg-icon ico-go"></i></a>
+						<a href="#" class="krds-btn medium text">법제처 소개 <i class="lsw-icon" data-lucide="chevron-right"></i></a>
+						<a href="#" class="krds-btn medium text">이용약관 <i class="lsw-icon" data-lucide="chevron-right"></i></a>
+						<a href="#" class="krds-btn medium text" target="_blank" title="새 창 열기">웹 접근성 안내 <i class="lsw-icon" data-lucide="external-link"></i></a>
 					</div>
 				</div>
 			</div>
@@ -1368,51 +1563,337 @@
 	<!-- //footer -->
 
 	<script src="../assets/krds/js/component/ui-script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3/dist/js/uikit-icons.min.js"></script>
+	<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			const tocToggleBtn = document.querySelector('.lsw-toc-toggle');
-			const lawToc = document.getElementById('law-toc');
-			const tocBody = document.getElementById('toc-body');
+	document.addEventListener('DOMContentLoaded', function () {
 
-			if (tocToggleBtn && lawToc && tocBody) {
-				tocToggleBtn.addEventListener('click', function () {
-					lawToc.classList.toggle('is-collapsed');
-					const isCollapsed = lawToc.classList.contains('is-collapsed');
+		/* -------------------------------------------------------
+		   1. 목차 사이드바 토글
+		------------------------------------------------------- */
+		const tocToggleBtn = document.querySelector('.lsw-toc-toggle');
+		const lawToc = document.getElementById('law-toc');
+		if (tocToggleBtn && lawToc) {
+			tocToggleBtn.addEventListener('click', function () {
+				lawToc.classList.toggle('is-collapsed');
+				const isCollapsed = lawToc.classList.contains('is-collapsed');
+				tocToggleBtn.setAttribute('aria-expanded', !isCollapsed);
+				const spanText = tocToggleBtn.querySelector('.sr-only');
+				if (spanText) spanText.textContent = isCollapsed ? '목차 펼치기' : '목차 접기';
+			});
+		}
 
-					// Update ARIA
-					tocToggleBtn.setAttribute('aria-expanded', !isCollapsed);
+		/* -------------------------------------------------------
+		   1-b. 뷰 선택 select -> 탭 패널 전환
+		------------------------------------------------------- */
+		const lawViewSelect = document.getElementById("law-view-select");
+		const allTabPanels  = document.querySelectorAll(".tab-conts");
 
-					// Update Text
-					const spanText = tocToggleBtn.querySelector('.sr-only');
-					if (spanText) {
-						spanText.textContent = isCollapsed ? '목차 펼치기' : '목차 접기';
-					}
+		function switchLawPanel(panelId) {
+			allTabPanels.forEach(function (panel) {
+				panel.classList.toggle("active", panel.id === panelId);
+			});
+			var toc = document.getElementById("law-toc");
+			if (toc) toc.style.display = (panelId === "panel_law_01") ? "" : "none";
+		}
 
-					// Icon rotation is handled by CSS based on parent class
+		if (lawViewSelect) {
+			lawViewSelect.addEventListener("change", function () {
+				switchLawPanel(this.value);
+			});
+		}
+
+		/* -------------------------------------------------------
+		   2. 상단영역 닫기 / 열기 토글
+		------------------------------------------------------- */
+		const btnAreaToggle = document.getElementById('btn-area-toggle');
+		const header = document.getElementById('krds-header');
+		const masthead = document.getElementById('krds-masthead');
+		if (btnAreaToggle) {
+			btnAreaToggle.addEventListener('click', function () {
+				const isExpanded = this.getAttribute('aria-expanded') === 'true';
+				const label = this.querySelector('.btn-area-toggle__label');
+				if (isExpanded) {
+					// 헤더 접기
+					if (header) header.classList.add('is-header-hidden');
+					if (masthead) masthead.classList.add('is-header-hidden');
+					document.documentElement.classList.add('header-collapsed');
+					this.setAttribute('aria-expanded', 'false');
+					this.setAttribute('aria-label', '상단영역 펼치기');
+					if (label) label.textContent = '상단영역열기';
+				} else {
+					// 헤더 펼치기
+					if (header) header.classList.remove('is-header-hidden');
+					if (masthead) masthead.classList.remove('is-header-hidden');
+					document.documentElement.classList.remove('header-collapsed');
+					this.setAttribute('aria-expanded', 'true');
+					this.setAttribute('aria-label', '상단영역 접기');
+					if (label) label.textContent = '상단영역닫기';
+				}
+			});
+		}
+
+		/* -------------------------------------------------------
+		   3. 법령상세정보 패널 열기 / 닫기
+		------------------------------------------------------- */
+		const infoPanel = document.getElementById('law-info-panel');
+		const btnPanelClose = document.getElementById('btn-panel-close');
+		const btnPanelOpen = document.getElementById('btn-panel-open');
+
+		function closeInfoPanel() {
+			if (!infoPanel) return;
+			infoPanel.classList.remove('is-open');
+			infoPanel.classList.add('is-closed');
+			document.documentElement.classList.remove('law-panel-open');
+			if (btnPanelOpen) btnPanelOpen.hidden = false;
+		}
+		function openInfoPanel() {
+			if (!infoPanel) return;
+			infoPanel.classList.add('is-open');
+			infoPanel.classList.remove('is-closed');
+			document.documentElement.classList.add('law-panel-open');
+			if (btnPanelOpen) btnPanelOpen.hidden = true;
+		}
+		if (btnPanelClose) btnPanelClose.addEventListener('click', closeInfoPanel);
+		if (btnPanelOpen) btnPanelOpen.addEventListener('click', openInfoPanel);
+
+		/* -------------------------------------------------------
+		   4. 패널 마스터-디테일 네비게이션
+		------------------------------------------------------- */
+		const panelViews      = document.getElementById('panel-views');
+		const panelDetailView = document.getElementById('panel-detail-view');
+		const panelDetailLabel= document.getElementById('panel-detail-label');
+		const panelDetailBody = document.getElementById('panel-detail-body');
+		const btnPanelBack    = document.getElementById('btn-panel-back');
+		const navBtns         = document.querySelectorAll('.lsw-info-nav__btn');
+
+		function getPanelContent(nav) {
+			const contents = {
+				content: `<p class="pa-panel-intro">현재 법령의 조문 본문입니다.</p>
+<ul class="pa-article-list">
+  <li><span class="pa-art-num">제1조</span><span class="pa-art-title">(목적)</span><p>이 법은 행정 절차를 규정함을 목적으로 한다.</p></li>
+  <li><span class="pa-art-num">제2조</span><span class="pa-art-title">(정의)</span><p>이 법에서 사용하는 용어의 뜻은 다음과 같다.</p></li>
+  <li><span class="pa-art-num">제3조</span><span class="pa-art-title">(적용 범위)</span><p>이 법은 모든 행정기관의 처분에 적용한다.</p></li>
+</ul>`,
+				reason: `<p class="pa-panel-intro">제정·개정이유를 확인합니다.</p>
+<div class="pa-reason-item">
+  <span class="pa-reason-date">2024.01.09</span>
+  <h4>일부개정</h4>
+  <p>디지털 전환에 따른 행정 효율화를 위해 관련 조항을 정비하고 신기술 적용 근거를 마련하였습니다.</p>
+</div>
+<div class="pa-reason-item">
+  <span class="pa-reason-date">2022.06.10</span>
+  <h4>전부개정</h4>
+  <p>법령 체계 정비 및 용어 통일을 위해 전부개정하였습니다.</p>
+</div>`,
+				history: `<p class="pa-panel-intro">법령 연혁 목록입니다.</p>
+<ul class="pa-history-list">
+  <li><span class="pa-history-date">2024.01.09</span><span class="pa-history-type amendment">일부개정</span></li>
+  <li><span class="pa-history-date">2022.06.10</span><span class="pa-history-type full">전부개정</span></li>
+  <li><span class="pa-history-date">2019.03.19</span><span class="pa-history-type amendment">일부개정</span></li>
+  <li><span class="pa-history-date">2015.07.24</span><span class="pa-history-type enact">제정</span></li>
+</ul>`,
+				'3step': `<p class="pa-panel-intro">구법·현행·개정안을 3단으로 비교합니다.</p>
+<div class="pa-3step-wrap">
+  <div class="pa-3step-col"><h5>구법</h5><p>제1조(목적) 이 법은 행정 절차를 규정함을 목적으로 한다.</p></div>
+  <div class="pa-3step-col pa-3step-col--cur"><h5>현행</h5><p>제1조(목적) 이 법은 행정 절차를 개선하고 규정함을 목적으로 한다.</p></div>
+  <div class="pa-3step-col pa-3step-col--new"><h5>개정안</h5><p>제1조(목적) 이 법은 디지털 전환을 지원하고 행정 절차를 규정함을 목적으로 한다.</p></div>
+</div>`,
+				newold: `<p class="pa-panel-intro">신·구 조문 대비표입니다.</p>
+<table class="pa-newold-table">
+  <thead><tr><th>현행</th><th>개정안</th></tr></thead>
+  <tbody>
+    <tr><td>제1조(목적) 이 법은 행정 절차를 규정함을 목적으로 한다.</td><td>제1조(목적) 이 법은 <ins>디지털 전환을 지원하고</ins> 행정 절차를 규정함을 목적으로 한다.</td></tr>
+    <tr><td>제2조(정의) 이 법에서 사용하는 용어의 뜻은 다음과 같다.</td><td>제2조(정의) 이 법에서 사용하는 용어의 뜻은 다음과 같다.</td></tr>
+  </tbody>
+</table>`,
+				system: `<p class="pa-panel-intro">법령 체계도입니다.</p>
+<div class="pa-system-tree">
+  <div class="pa-sys-node pa-sys-root">헌법</div>
+  <div class="pa-sys-children">
+    <div class="pa-sys-node pa-sys-law">현행 법령</div>
+    <div class="pa-sys-children">
+      <div class="pa-sys-node pa-sys-sub">시행령</div>
+      <div class="pa-sys-node pa-sys-sub">시행규칙</div>
+    </div>
+  </div>
+</div>`,
+				compare: `<p class="pa-panel-intro">법령비교 오버레이를 통해 다른 법령과 비교합니다.</p>
+<button type="button" class="pa-open-compare-btn" id="btn-detail-compare">법령비교 오버레이 열기</button>`,
+				audio: `<p class="pa-panel-intro">현재 법령의 음성 지원 서비스입니다.</p>
+<div class="pa-audio-player">
+  <div class="pa-audio-info"><span>법령 전체 낭독</span></div>
+  <div class="pa-audio-controls">
+    <button type="button" class="pa-audio-btn" aria-label="뒤로">&#9664;&#9664;</button>
+    <button type="button" class="pa-audio-btn pa-audio-btn--play" aria-label="재생">&#9654;</button>
+    <button type="button" class="pa-audio-btn" aria-label="앞으로">&#9654;&#9654;</button>
+  </div>
+  <div class="pa-audio-speed">
+    <span>재생속도</span>
+    <button type="button" class="pa-speed-btn is-active">1x</button>
+    <button type="button" class="pa-speed-btn">1.5x</button>
+    <button type="button" class="pa-speed-btn">2x</button>
+  </div>
+</div>`,
+				braille: `<p class="pa-panel-intro">점자 뷰어 서비스입니다.</p>
+<div class="pa-braille-wrap">
+  <div class="pa-braille-preview" aria-label="점자 미리보기">⠏⠗⠑⠧⠊⠑⠺ ⠃⠗⠁⠊⠇⠇⠑</div>
+  <div class="pa-braille-actions">
+    <button type="button" class="pa-braille-btn">점자 파일 다운로드</button>
+  </div>
+</div>`
+			};
+			return contents[nav] || '<p class="pa-panel-intro">준비 중입니다.</p>';
+		}
+
+		function showPanelDetail(nav, label) {
+			if (!panelViews || !panelDetailLabel || !panelDetailBody) return;
+			panelDetailLabel.textContent = label;
+			panelDetailBody.innerHTML = getPanelContent(nav);
+			panelViews.classList.add('show-detail');
+			// 법령비교 오버레이 버튼 연결
+			const btnDetailCompare = document.getElementById('btn-detail-compare');
+			if (btnDetailCompare) {
+				btnDetailCompare.addEventListener('click', function () {
+					if (typeof openCompare === 'function') openCompare();
 				});
+			}
+			// 음성 재생 버튼 토글
+			const playBtn = panelDetailBody.querySelector('.pa-audio-btn--play');
+			if (playBtn) {
+				playBtn.addEventListener('click', function () {
+					const isPlaying = this.textContent.trim() === '\u23F8';
+					this.textContent = isPlaying ? '\u25B6' : '\u23F8';
+					this.setAttribute('aria-label', isPlaying ? '재생' : '일시정지');
+				});
+			}
+			// 재생속도 버튼
+			const speedBtns = panelDetailBody.querySelectorAll('.pa-speed-btn');
+			speedBtns.forEach(function (sb) {
+				sb.addEventListener('click', function () {
+					speedBtns.forEach(function (x) { x.classList.remove('is-active'); });
+					this.classList.add('is-active');
+				});
+			});
+		}
+
+		function hidePanelDetail() {
+			if (!panelViews) return;
+			panelViews.classList.remove('show-detail');
+		}
+
+		navBtns.forEach(function (btn) {
+			btn.addEventListener('click', function () {
+				const nav   = this.dataset.nav;
+				const label = this.querySelector('.lsw-info-nav__label').textContent;
+				navBtns.forEach(function (b) { b.classList.remove('is-active'); });
+				this.classList.add('is-active');
+				showPanelDetail(nav, label);
+			});
+		});
+
+		if (btnPanelBack) {
+			btnPanelBack.addEventListener('click', hidePanelDetail);
+		}
+
+		/* -------------------------------------------------------
+		   5. 법령비교 오버레이 열기 / 닫기
+		------------------------------------------------------- */
+		const compareOverlay = document.getElementById('compare-overlay');
+		const btnNavCompare = document.getElementById('btn-nav-compare');
+		const btnFabCompare = document.getElementById('btn-fab-compare');
+		const btnCompareClose = document.getElementById('btn-compare-close');
+
+		function openCompare() {
+			if (!compareOverlay) return;
+			compareOverlay.hidden = false;
+			document.body.classList.add('compare-overlay-open');
+			btnCompareClose && btnCompareClose.focus();
+		}
+		function closeCompare() {
+			if (!compareOverlay) return;
+			compareOverlay.hidden = true;
+			document.body.classList.remove('compare-overlay-open');
+		}
+		if (btnNavCompare) btnNavCompare.addEventListener('click', openCompare);
+		if (btnFabCompare) btnFabCompare.addEventListener('click', openCompare);
+		if (btnCompareClose) btnCompareClose.addEventListener('click', closeCompare);
+
+		// ESC키로 닫기
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape' && compareOverlay && !compareOverlay.hidden) closeCompare();
+		});
+
+		/* -------------------------------------------------------
+		   6. 플로팅 버튼 - 관심법령 토글
+		------------------------------------------------------- */
+		const btnFabInterest = document.getElementById('btn-fab-interest');
+		if (btnFabInterest) {
+			btnFabInterest.addEventListener('click', function () {
+				this.classList.toggle('is-active');
+				const label = this.querySelector('span');
+				if (this.classList.contains('is-active')) {
+					if (label) label.textContent = '관심법령 해제';
+					this.setAttribute('aria-label', '관심법령 해제');
+				} else {
+					if (label) label.textContent = '관심법령';
+					this.setAttribute('aria-label', '관심법령 등록');
+				}
+			});
+		}
+
+		/* -------------------------------------------------------
+		   7. 초기 상태: 패널 열림 상태로 시작 (모바일 제외)
+		------------------------------------------------------- */
+		if (window.innerWidth > 1024) {
+			document.documentElement.classList.add('law-panel-open');
+		}
+
+		/* -------------------------------------------------------
+		   8. 태블릿·모바일: 딤 배경 클릭 → 패널 닫기
+		------------------------------------------------------- */
+		document.body.addEventListener('click', function (e) {
+			if (
+				window.innerWidth <= 1024 &&
+				document.documentElement.classList.contains('law-panel-open') &&
+				infoPanel &&
+				!infoPanel.contains(e.target) &&
+				!e.target.closest('.lsw-law-info-panel-open')
+			) {
+				closeInfoPanel();
 			}
 		});
 
-		// Help Panel Toggle Logic
-		document.addEventListener('DOMContentLoaded', function () {
-			const helpPanel = document.querySelector('.krds-help-panel');
-			const btnExpand = document.querySelector('.btn-help-panel.expand');
-			const btnFold = document.querySelector('.btn-help-panel.fold');
+		/* -------------------------------------------------------
+		   9. 모바일: 비교 오버레이 탭 전환
+		------------------------------------------------------- */
+		const compareMobTabs = document.querySelectorAll('.lsw-compare-mob-tab');
+		const panelLeft  = document.querySelector('.lsw-compare-panel--left');
+		const panelRight = document.querySelector('.lsw-compare-panel--right');
 
-			if (helpPanel && btnExpand && btnFold) {
-				btnExpand.addEventListener('click', function () {
-					helpPanel.classList.add('expand');
-					document.documentElement.classList.add('help-panel-expanded');
-					btnExpand.style.display = 'none';
+		compareMobTabs.forEach(function (tab) {
+			tab.addEventListener('click', function () {
+				const target = this.dataset.target;
+				compareMobTabs.forEach(function (t) {
+					t.classList.remove('is-active');
+					t.setAttribute('aria-selected', 'false');
 				});
+				this.classList.add('is-active');
+				this.setAttribute('aria-selected', 'true');
 
-				btnFold.addEventListener('click', function () {
-					helpPanel.classList.remove('expand');
-					document.documentElement.classList.remove('help-panel-expanded');
-					btnExpand.style.display = 'inline-flex';
-				});
-			}
+				if (target === 'right') {
+					panelLeft  && panelLeft.classList.add('is-mob-hidden');
+					panelRight && panelRight.classList.add('is-mob-active');
+				} else {
+					panelLeft  && panelLeft.classList.remove('is-mob-hidden');
+					panelRight && panelRight.classList.remove('is-mob-active');
+				}
+			});
 		});
+
+		lucide.createIcons();
+	});
 	</script>
 </body>
 
