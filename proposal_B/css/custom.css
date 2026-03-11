@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    국가법령정보센터 프로토타입 커스텀 CSS
    LSW Prototype Custom Stylesheet
    KRDS 디자인 시스템 기반 / KWCAG 2.2 준수
@@ -103,6 +103,10 @@ body {
   max-width: var(--lsw-inner-max);
   margin: 0 auto;
   padding: var(--lsw-inner-pad);
+}
+
+#krds-header .header-container {
+  background-color: var(--lsw-surface);
 }
 
 /* ==========================================================================
@@ -969,7 +973,7 @@ body {
   ==========================================================================*/
 .lsw-law-header {
   background: var(--lsw-surface);
-  padding: 40px 0 32px;
+  padding: 40px 0 20px;
   border-bottom: 1px solid var(--lsw-border);
 }
 
@@ -2052,6 +2056,7 @@ body {
   align-items: normal;
   justify-content: flex-start;
   flex-direction: column;
+
 }
 
 @media (min-width: 1024px) {
@@ -2086,10 +2091,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url('../../image/h_logo1.png');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image: none;
 }
 
 #krds-header .header-container .logo a img {
@@ -2240,7 +2242,7 @@ body {
 }
 
 [data-krds-mode=high-contrast] #krds-header .header-container .logo a {
-  background-image: url('../../assets/krds/img/component/icon/ico_logo_krds_high_contrast.svg');
+  background-image: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2338,15 +2340,12 @@ body {
   width: auto;
 }
 
-/* ==========================================================================
-   26. Proposal B - Premium Law Reader Experience (Full-Screen Focus)
-   ========================================================================== */
+/* 데스크톱 몰입형 환경 */
+.proposal-b #main-content {
+  max-width: var(--krds-contents-wrap-size);
+  margin: 0 auto;
+}
 
-/* ==========================================================================
-   26. Proposal B - Premium Law Reader Experience (Full-Screen Focus)
-   ========================================================================== */
-
-/* 1. 레이아웃 고도화 - 데스크톱 몰입형 환경 */
 .proposal-b #krds-header {
   background-color: transparent;
 }
@@ -2362,8 +2361,6 @@ body {
 .proposal-b .lsw-breadcrumb-wrap .inner,
 .proposal-b .lsw-law-header .inner {
   max-width: 100% !important;
-  padding-left: 40px !important;
-  padding-right: 40px !important;
   margin: 0 !important;
 }
 
@@ -2551,8 +2548,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 34px !important;
+  height: 34px !important;
   padding: 0;
   border-radius: 50%;
   border: 1px solid var(--lsw-border);
@@ -2568,8 +2565,8 @@ body {
 }
 
 .proposal-b .lsw-icon-btn .svg-icon {
-  width: 18px;
-  height: 18px;
+  width: 18px !important;
+  height: 18px !important;
   background-color: var(--lsw-text-dim);
 }
 
@@ -2731,7 +2728,6 @@ body {
 /* 4. 헤더 및 탭 메뉴 - 데스크톱 통합 디자인 */
 .proposal-b .lsw-law-header {
   background: var(--lsw-surface);
-  padding: 40px 0 40px;
   border-bottom: 1px solid var(--lsw-border);
 }
 

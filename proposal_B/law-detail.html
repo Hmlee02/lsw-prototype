@@ -20,127 +20,328 @@
 	</div>
 	<!-- //건너뛰기 링크 -->
 
-	
 
-	<!-- header -->
-	<header uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; top: 0; animation: uk-animation-slide-top">
-		<nav class="uk-navbar-container uk-navbar-transparent uk-background-default uk-box-shadow-small" uk-navbar>
-			<div class="uk-navbar-left uk-margin-left">
-				<a class="uk-navbar-item uk-logo" href="./index.html">
-					<img src="../image/h_logo1.png" alt="국가법령정보센터" style="height: 32px;">
-				</a>
-			</div>
 
-			<div class="uk-navbar-center uk-visible@m">
-				<ul class="uk-navbar-nav">
-					<li>
-						<a href="#">법령</a>
-						<div class="uk-navbar-dropdown" uk-dropdown="pos: bottom-center; mode: hover; offset: 0; boundary: !nav; boundary-align: true; stretch: x; duration: 200; animation: uk-animation-slide-bottom-small">
-							<div class="uk-container uk-container-expand uk-flex uk-flex-center">
-								<ul class="uk-nav uk-navbar-dropdown-nav">
-									<li class="uk-nav-header uk-text-bold uk-text-large uk-margin-small-bottom">현행법령</li>
-									<li><a href="#">헌법</a></li>
-									<li><a href="#">법률</a></li>
-									<li><a href="#">대통령령</a></li>
-									<li><a href="#">총리령</a></li>
-									<li><a href="#">부령</a></li>
-								</ul>
-								<ul class="uk-nav uk-navbar-dropdown-nav uk-margin-large-left">
-									<li class="uk-nav-header uk-text-bold uk-text-large uk-margin-small-bottom">자치법규</li>
-									<li><a href="#">조례</a></li>
-									<li><a href="#">규칙</a></li>
-								</ul>
-								<ul class="uk-nav uk-navbar-dropdown-nav uk-margin-large-left">
-									<li class="uk-nav-header uk-text-bold uk-text-large uk-margin-small-bottom">조약</li>
-									<li><a href="#">양자조약</a></li>
-									<li><a href="#">다자조약</a></li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li>
-						<a href="#">행정규칙</a>
-						<div class="uk-navbar-dropdown" uk-dropdown="pos: bottom-center; mode: hover; offset: 0; boundary: !nav; boundary-align: true; stretch: x; duration: 200; animation: uk-animation-slide-bottom-small">
-							<div class="uk-container uk-container-expand uk-flex uk-flex-center">
-								<ul class="uk-nav uk-navbar-dropdown-nav">
-									<li class="uk-nav-header uk-text-bold uk-text-large uk-margin-small-bottom">행정규칙</li>
-									<li><a href="#">훈령</a></li>
-									<li><a href="#">예규</a></li>
-									<li><a href="#">고시</a></li>
-									<li><a href="#">공고</a></li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li>
-						<a href="#">판례/해석</a>
-						<div class="uk-navbar-dropdown" uk-dropdown="pos: bottom-center; mode: hover; offset: 0; boundary: !nav; boundary-align: true; stretch: x; duration: 200; animation: uk-animation-slide-bottom-small">
-							<div class="uk-container uk-container-expand uk-flex uk-flex-center">
-								<ul class="uk-nav uk-navbar-dropdown-nav">
-									<li class="uk-nav-header uk-text-bold uk-text-large uk-margin-small-bottom">판례</li>
-									<li><a href="#">헌법재판소 결정례</a></li>
-									<li><a href="#">대법원 판례</a></li>
-								</ul>
-								<ul class="uk-nav uk-navbar-dropdown-nav uk-margin-large-left">
-									<li class="uk-nav-header uk-text-bold uk-text-large uk-margin-small-bottom">법령해석</li>
-									<li><a href="#">법령해석례</a></li>
-									<li><a href="#">법령해석 신청</a></li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li>
-						<a href="#">입법예고</a>
-						<div class="uk-navbar-dropdown" uk-dropdown="pos: bottom-center; mode: hover; offset: 0; boundary: !nav; boundary-align: true; stretch: x; duration: 200; animation: uk-animation-slide-bottom-small">
-							<div class="uk-container uk-container-expand uk-flex uk-flex-center">
-								<ul class="uk-nav uk-navbar-dropdown-nav">
-									<li class="uk-nav-header uk-text-bold uk-text-large uk-margin-small-bottom">입법예고</li>
-									<li><a href="#">입법예고 목록</a></li>
-									<li><a href="#">의견제출 현황</a></li>
-								</ul>
-							</div>
-						</div>
-					</li>
-				</ul>
+	<!-- masthead -->
+	<div id="krds-masthead">
+		<div class="toggle-wrap">
+			<div class="toggle-head">
+				<div class="inner">
+					<span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+				</div>
 			</div>
-
-			<div class="uk-navbar-right uk-margin-right">
-				<ul class="uk-navbar-nav">
-					<li class="uk-visible@m"><a href="#" class="uk-text-small">로그인</a></li>
-					<li class="uk-visible@m"><a href="#" class="uk-text-small">회원가입</a></li>
-					<li>
-						<a class="uk-navbar-toggle" href="#" uk-search-icon aria-label="통합검색"></a>
-					</li>
-					<li class="uk-hidden@m">
-						<a class="uk-navbar-toggle" href="#mobile-nav" uk-toggle uk-navbar-toggle-icon aria-label="전체메뉴"></a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</header>
-	
-	<!-- 모바일 오프캔버스 메뉴 -->
-	<div id="mobile-nav" uk-offcanvas="overlay: true">
-		<div class="uk-offcanvas-bar">
-			<button class="uk-offcanvas-close" type="button" uk-close></button>
-			<ul class="uk-nav uk-nav-default">
-				<li class="uk-nav-header">법령</li>
-				<li><a href="#">현행법령</a></li>
-				<li><a href="#">자치법규</a></li>
-				<li class="uk-nav-divider"></li>
-				<li class="uk-nav-header">행정규칙</li>
-				<li><a href="#">훈령</a></li>
-				<li><a href="#">예규</a></li>
-			</ul>
 		</div>
 	</div>
+	<!-- //masthead -->
+
+	<!-- header -->
+	<header id="krds-header">
+		<div class="header-in">
+			<div class="header-container">
+				<div class="inner">
+					<div class="header-utility">
+						<ul class="utility-list">
+							<li><a href="#" class="krds-btn small text" target="_blank" title="새 창 열기">법제처 <i
+										class="svg-icon ico-go"></i></a></li>
+							<li><a href="#" class="krds-btn small text" target="_blank" title="새 창 열기">생활법령정보 <i
+										class="svg-icon ico-go"></i></a></li>
+							<li>
+								<div class="krds-drop-wrap krds-resize">
+									<button type="button" class="krds-btn small text drop-btn">글자크기 <i
+											class="svg-icon ico-toggle"></i></button>
+									<div class="drop-menu">
+										<div class="drop-in">
+											<ul class="drop-list">
+												<li><button type="button" class="item-link sm">작게</button></li>
+												<li><button type="button" class="item-link md active">보통</button></li>
+												<li><button type="button" class="item-link lg">크게</button></li>
+												<li><button type="button" class="item-link xlg">아주 크게</button></li>
+											</ul>
+											<div class="drop-bottom">
+												<button type="button" class="krds-btn medium text"><i
+														class="svg-icon ico-reset"></i> 초기화</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="krds-drop-wrap">
+									<button type="button" class="krds-btn small text drop-btn">관련사이트 <i
+											class="svg-icon ico-toggle"></i></button>
+									<div class="drop-menu">
+										<div class="drop-in">
+											<ul class="drop-list">
+												<li><a href="#" class="item-link ico-go" target="_blank"
+														title="새 창 열림">법제처</a></li>
+												<li><a href="#" class="item-link ico-go" target="_blank"
+														title="새 창 열림">대한민국 전자관보</a></li>
+												<li><a href="#" class="item-link ico-go" target="_blank"
+														title="새 창 열림">세계법제정보센터</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="header-branding">
+						<h1 class="logo">
+							<a href="./index.html"><img src="../image/h_logo1.png" alt="국가법령정보센터"></a>
+						</h1>
+						<div class="header-actions">
+							<button type="button" class="btn-navi sch" title="통합검색 레이어">통합검색</button>
+							<a href="#" class="btn-navi login">로그인</a>
+							<button type="button" class="btn-navi join">회원가입</button>
+							<button type="button" class="btn-navi all" aria-controls="mobile-nav">전체메뉴</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="krds-main-menu">
+				<div class="inner">
+					<ul class="gnb-menu">
+						<!-- 법령정보별 -->
+						<li>
+							<button type="button" class="gnb-main-trigger" data-trigger="gnb">법령정보별</button>
+							<div class="gnb-toggle-wrap">
+								<div class="gnb-main-list" data-has-submenu="true">
+									<ul>
+										<li>
+											<button type="button" class="gnb-sub-trigger"
+												data-trigger="gnb">법령정보별</button>
+											<div class="gnb-sub-list">
+												<div class="gnb-sub-content">
+													<h2 class="sub-title">법령정보별</h2>
+													<ul>
+														<li><a href="#">세부메뉴1</a></li>
+														<li><a href="#">세부메뉴2</a></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- 생애주기별 -->
+						<li>
+							<button type="button" class="gnb-main-trigger" data-trigger="gnb">생애주기별</button>
+							<div class="gnb-toggle-wrap">
+								<div class="gnb-main-list" data-has-submenu="true">
+									<ul>
+										<li>
+											<button type="button" class="gnb-sub-trigger"
+												data-trigger="gnb">생애주기별</button>
+											<div class="gnb-sub-list">
+												<div class="gnb-sub-content">
+													<h2 class="sub-title">생애주기별</h2>
+													<ul>
+														<li><a href="#">영유아/아동</a></li>
+														<li><a href="#">청소년/청년</a></li>
+														<li><a href="#">중장년/노년</a></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- 주제별 -->
+						<li>
+							<button type="button" class="gnb-main-trigger" data-trigger="gnb">주제별</button>
+							<div class="gnb-toggle-wrap">
+								<div class="gnb-main-list" data-has-submenu="true">
+									<ul>
+										<li>
+											<button type="button" class="gnb-sub-trigger"
+												data-trigger="gnb">주제별</button>
+											<div class="gnb-sub-list">
+												<div class="gnb-sub-content">
+													<h2 class="sub-title">주제별</h2>
+													<ul>
+														<li><a href="#">부동산/건축</a></li>
+														<li><a href="#">조세/금융</a></li>
+														<li><a href="#">노동/환경</a></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- 입법예고 -->
+						<li>
+							<button type="button" class="gnb-main-trigger" data-trigger="gnb">입법예고</button>
+							<div class="gnb-toggle-wrap">
+								<div class="gnb-main-list" data-has-submenu="true">
+									<ul>
+										<li>
+											<button type="button" class="gnb-sub-trigger"
+												data-trigger="gnb">입법예고</button>
+											<div class="gnb-sub-list">
+												<div class="gnb-sub-content">
+													<h2 class="sub-title">입법예고</h2>
+													<ul>
+														<li><a href="#">입법예고 목록</a></li>
+														<li><a href="#">의견제출 현황</a></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- 법령지식 -->
+						<li>
+							<button type="button" class="gnb-main-trigger" data-trigger="gnb">법령지식</button>
+							<div class="gnb-toggle-wrap">
+								<div class="gnb-main-list" data-has-submenu="true">
+									<ul>
+										<li>
+											<button type="button" class="gnb-sub-trigger"
+												data-trigger="gnb">법령지식</button>
+											<div class="gnb-sub-list">
+												<div class="gnb-sub-content">
+													<h2 class="sub-title">법령지식</h2>
+													<ul>
+														<li><a href="#">법령용어</a></li>
+														<li><a href="#">법령체계도</a></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- 정보마당 -->
+						<li>
+							<button type="button" class="gnb-main-trigger" data-trigger="gnb">정보마당</button>
+							<div class="gnb-toggle-wrap">
+								<div class="gnb-main-list" data-has-submenu="true">
+									<ul>
+										<li>
+											<button type="button" class="gnb-sub-trigger"
+												data-trigger="gnb">정보마당</button>
+											<div class="gnb-sub-list">
+												<div class="gnb-sub-content">
+													<h2 class="sub-title">정보마당</h2>
+													<ul>
+														<li><a href="#">공지사항</a></li>
+														<li><a href="#">자주묻는질문</a></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<!-- 메인메뉴 : 모바일 -->
+		<div id="mobile-nav" class="krds-main-menu-mobile">
+			<div class="gnb-wrap">
+				<div class="gnb-header">
+					<div class="gnb-login">
+						<button type="button" class="krds-btn large text"><i class="svg-icon ico-log"></i> 로그인을
+							해주세요</button>
+					</div>
+					<div class="gnb-service-menu">
+						<a href="#" class="link">법제처</a>
+						<a href="#" class="link">생활법령정보</a>
+						<a href="#" class="link">대한민국 전자관보</a>
+					</div>
+					<div class="sch-input">
+						<input type="text" class="krds-input" placeholder="법령명, 조문 내용 등을 검색해 보세요" title="법령 통합 검색 입력">
+						<button type="button" class="krds-btn medium icon ico-search">
+							<span class="sr-only">검색</span>
+							<i class="svg-icon ico-sch"></i>
+						</button>
+					</div>
+				</div>
+				<div class="gnb-body">
+					<div class="gnb-menu">
+						<div class="menu-wrap">
+							<ul>
+								<li><a href="#mGnb-anchor1" class="gnb-main-trigger">법령정보별</a></li>
+								<li><a href="#mGnb-anchor2" class="gnb-main-trigger">생애주기별</a></li>
+								<li><a href="#mGnb-anchor3" class="gnb-main-trigger">주제별</a></li>
+								<li><a href="#mGnb-anchor4" class="gnb-main-trigger">입법예고</a></li>
+								<li><a href="#mGnb-anchor5" class="gnb-main-trigger">법령지식</a></li>
+								<li><a href="#mGnb-anchor6" class="gnb-main-trigger">정보마당</a></li>
+							</ul>
+						</div>
+						<div class="submenu-wrap">
+							<div class="gnb-sub-list" id="mGnb-anchor1">
+								<h2 class="sub-title">법령정보별</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">세부메뉴1</a></li>
+									<li><a href="#" class="gnb-sub-trigger">세부메뉴2</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor2">
+								<h2 class="sub-title">생애주기별</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">영유아/아동</a></li>
+									<li><a href="#" class="gnb-sub-trigger">청소년/청년</a></li>
+									<li><a href="#" class="gnb-sub-trigger">중장년/노년</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor3">
+								<h2 class="sub-title">주제별</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">부동산/건축</a></li>
+									<li><a href="#" class="gnb-sub-trigger">조세/금융</a></li>
+									<li><a href="#" class="gnb-sub-trigger">노동/환경</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor4">
+								<h2 class="sub-title">입법예고</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">입법예고 목록</a></li>
+									<li><a href="#" class="gnb-sub-trigger">의견제출 현황</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor5">
+								<h2 class="sub-title">법령지식</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">법령용어</a></li>
+									<li><a href="#" class="gnb-sub-trigger">법령체계도</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor6">
+								<h2 class="sub-title">정보마당</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">공지사항</a></li>
+									<li><a href="#" class="gnb-sub-trigger">자주묻는질문</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="krds-btn medium icon" id="close-nav">
+					<span class="sr-only">전체메뉴 닫기</span>
+					<i class="svg-icon ico-popup-close"></i>
+				</button>
+			</div>
+		</div>
+		<!-- //메인메뉴 : 모바일 -->
+	</header>
 	<!-- //header -->
 
 	<!-- main -->
 	<main id="main-content">
 
 		<!-- 브레드크럼 -->
-		<!-- <div class="lsw-breadcrumb-wrap">
+		<div class="lsw-breadcrumb-wrap">
 			<div class="inner">
 				<nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
 					<ol class="breadcrumb">
@@ -151,7 +352,7 @@
 					</ol>
 				</nav>
 			</div>
-		</div> -->
+		</div>
 		<!-- //브레드크럼 -->
 
 		<!-- 섹션 헤더 -->
@@ -205,20 +406,21 @@
 						<div class="lsw-law-layout">
 
 							<!-- 모바일 LNB 토글 버튼 -->
-						<button type="button" class="lsw-lnb-toggle" id="btn-lnb-toggle"
-							aria-expanded="false" aria-controls="law-lnb">
-							<i class="svg-icon ico-list" aria-hidden="true"></i>
-							<span>법령 목록</span>
-						</button>
-						<!-- 모바일 LNB 오버레이 -->
-						<div class="lsw-lnb-overlay" id="lnb-overlay"></div>
+							<button type="button" class="lsw-lnb-toggle" id="btn-lnb-toggle" aria-expanded="false"
+								aria-controls="law-lnb">
+								<i class="svg-icon ico-list" aria-hidden="true"></i>
+								<span>법령 목록</span>
+							</button>
+							<!-- 모바일 LNB 오버레이 -->
+							<div class="lsw-lnb-overlay" id="lnb-overlay"></div>
 
-						<!-- 법령 목록 사이드바 (LNB) -->
-						<aside class="lsw-lnb" id="law-lnb" aria-label="법률 법령 목록">
+							<!-- 법령 목록 사이드바 (LNB) -->
+							<aside class="lsw-lnb" id="law-lnb" aria-label="법률 법령 목록">
 								<div class="lsw-lnb__header">
 									<h3 class="lsw-lnb__title">법률</h3>
 									<span class="lsw-lnb__count">총 1,823건</span>
-									<button type="button" class="lsw-lnb__close" id="btn-lnb-close" aria-label="법령 목록 닫기">
+									<button type="button" class="lsw-lnb__close" id="btn-lnb-close"
+										aria-label="법령 목록 닫기">
 										<i class="svg-icon ico-popup-close" aria-hidden="true"></i>
 									</button>
 								</div>
@@ -312,11 +514,11 @@
 										</button>
 									</div>
 									<div class="lsw-law-content__toolbar-right">
-										<button type="button" class="krds-btn small icon border lsw-icon-btn" title="URL 복사"
-											aria-label="URL 복사"><i class="svg-icon ico-link"
+										<button type="button" class="krds-btn small icon border lsw-icon-btn"
+											title="URL 복사" aria-label="URL 복사"><i class="svg-icon ico-link"
 												aria-hidden="true"></i></button>
-										<button type="button" class="krds-btn small icon border lsw-icon-btn" title="스크랩"
-											aria-label="스크랩"><i class="svg-icon ico-scrap"
+										<button type="button" class="krds-btn small icon border lsw-icon-btn"
+											title="스크랩" aria-label="스크랩"><i class="svg-icon ico-scrap"
 												aria-hidden="true"></i></button>
 										<button type="button" class="krds-btn small icon border lsw-icon-btn" title="공유"
 											aria-label="공유"><i class="svg-icon ico-share"
@@ -324,8 +526,8 @@
 										<button type="button" class="krds-btn small icon border lsw-icon-btn" title="인쇄"
 											aria-label="인쇄"><i class="svg-icon ico-print"
 												aria-hidden="true"></i></button>
-										<button type="button" class="krds-btn small icon border lsw-icon-btn" title="다운로드"
-											aria-label="다운로드"><i class="svg-icon ico-down"
+										<button type="button" class="krds-btn small icon border lsw-icon-btn"
+											title="다운로드" aria-label="다운로드"><i class="svg-icon ico-down"
 												aria-hidden="true"></i></button>
 									</div>
 								</div>
@@ -768,25 +970,42 @@
 	<!-- //main -->
 
 	<!-- footer -->
-	<!-- <!-- footer -->
-	<footer class="uk-section uk-section-xsmall uk-background-muted uk-margin-large-top" style="border-top: 1px solid #e5e5e5;">
-		<div class="uk-container">
-			<ul class="uk-subnav uk-subnav-divider uk-text-small uk-margin-small-bottom uk-flex-center">
-				<li><a href="#" class="uk-text-primary">법제처안내</a></li>
-				<li><a href="#">법령해석요청안내</a></li>
-				<li><a href="#" class="uk-text-bold">개인정보처리방침</a></li>
-				<li><a href="#">저작권정책</a></li>
-				<li><a href="#">뷰어다운로드</a></li>
-				<li><a href="#">오픈API</a></li>
-				<li><a href="#">RSS</a></li>
-				<li><a href="#">본인정보이용내역안내</a></li>
-			</ul>
-			<div class="uk-flex uk-flex-middle uk-flex-center uk-margin-top uk-margin-bottom">
-				<img src="../image/h_logo1.png" alt="국가법령정보센터" style="height: 25px; filter: grayscale(100%) opacity(0.5);" class="uk-margin-medium-right">
-				<div class="uk-text-meta uk-text-small">
-					(30102) 세종특별자치시 도움4로 13 법제처 <br>
-					대표전화: 1899-0012 (평일 09시~18시) | 법령 해석 문의: 044-200-6802 <br>
-					© Ministry of Government Legislation. All rights reserved.
+	<footer id="krds-footer">
+		<div class="foot-quick">
+			<div class="inner">
+				<button type="button" class="link" title="관련사이트 레이어">법제처</button>
+				<button type="button" class="link" title="관련사이트 레이어">대한민국 전자관보</button>
+				<button type="button" class="link" title="관련사이트 레이어">세계법제정보센터</button>
+				<button type="button" class="link" title="관련사이트 레이어">생활법령정보</button>
+			</div>
+		</div>
+		<div class="inner">
+			<div class="f-logo">
+				<img src="../image/h_logo1.png" alt="국가법령정보센터">
+			</div>
+			<div class="f-cnt">
+				<div class="f-info">
+					<p class="info-addr">(30102) 세종특별자치시 도움4로 13 법제처</p>
+					<ul class="info-cs">
+						<li><strong class="strong">대표전화 1899-0012</strong><span class="span">(평일 09시~18시)</span></li>
+						<li><strong class="strong">법령 해석 문의 044-200-6802</strong></li>
+					</ul>
+				</div>
+				<div class="f-link">
+					<div class="link-go">
+						<a href="#" class="krds-btn medium text">법제처 소개 <i class="svg-icon ico-angle right"></i></a>
+						<a href="#" class="krds-btn medium text">이용약관 <i class="svg-icon ico-angle right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="f-btm">
+				<div class="f-btm-text">
+					<div class="f-menu">
+						<a href="#" class="point">개인정보처리방침</a>
+						<a href="#">저작권 정책</a>
+						<a href="#">오픈API 이용약관</a>
+					</div>
+					<p class="f-copy">© Ministry of Government Legislation. All rights reserved.</p>
 				</div>
 			</div>
 		</div>
