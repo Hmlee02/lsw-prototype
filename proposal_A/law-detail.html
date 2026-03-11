@@ -328,6 +328,72 @@
 	<button class="btn-open-lf" id="btn-open-lf">법령목록</button>
 	<div class="lf-backdrop" id="lf-backdrop"></div>
 
+	<div class="law-header-wrap">
+		<div class="law-header-inner">
+			<div class="lta">
+				<h1 class="ltm">인공지능 발전과 신뢰 기반 조성 등에 관한 기본법 <small>( 약칭: 인공지능기본법 )</small></h1>
+				<div class="lti">[시행 2026. 7. 21.] [법률 제21311호, 2026. 1. 20., 일부개정] <span class="ltb">현재시행법령확인</span>
+				</div>
+				<div class="ltd">과학기술정보통신부(<span class="kw">인공지능</span>안전신뢰정책과), 044-202-6293</div>
+			</div>
+			<div class="ct">
+				<button class="cb p">본문</button><button class="cb">제정·개정이유</button><button class="cb">연혁</button><button
+					class="cb">신구법비교</button><button class="cb">법령체계도</button><button class="cb">법령비교</button><button
+					class="cb" id="btn-compare-open">⚖️ 법령 비교</button><button
+					class="cb ac">음성지원</button><button class="cb ac">점자뷰어</button>
+				<div class="sp"></div><select class="cs" aria-label="조문선택">
+				</select>
+				<button class="cb" id="btn-page-search" aria-label="본문 검색">
+					🔍 본문검색
+				</button>
+			</div>
+			<div class="csb"><a href="#">📋 판례</a><a href="#">📜 연혁</a><a href="#">📑 위임행정규칙</a><a href="#">⚖ 규제</a><a
+					href="#">📖 생활법령</a><a href="#">👁 한눈보기</a></div>
+			<!-- 법령 개요 -->
+			<div class="law-summary">
+				<div class="law-summary__header">
+					<span class="law-summary__icon">ⓘ</span>
+					<strong>법령 개요</strong>
+				</div>
+				<div class="law-summary__grid">
+					<div class="law-summary__item">
+						<span class="law-summary__label">소관부처</span>
+						<span class="law-summary__value">과학기술정보통신부</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">공포번호</span>
+						<span class="law-summary__value">제21311호</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">공포일 / 제정일</span>
+						<span class="law-summary__value">2026.01.20</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">시행일</span>
+						<span class="law-summary__value">2026.07.21</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">법령유형</span>
+						<span class="law-summary__value">법률</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">상위법률</span>
+						<span class="law-summary__value link">-</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">조문 수</span>
+						<span class="law-summary__value">50개 조문 (6장)</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">조회수</span>
+						<span class="law-summary__value">312,847회</span>
+					</div>
+				</div>
+			</div>
+			<!-- //법령 개요 -->
+		</div>
+	</div>
+
 	<div class="mn">
 		<aside class="lf">
 			<div class="lh">
@@ -402,64 +468,6 @@
 		</aside>
 
 		<main class="rt">
-			<div class="lta">
-				<h1 class="ltm">인공지능 발전과 신뢰 기반 조성 등에 관한 기본법 <small>( 약칭: 인공지능기본법 )</small></h1>
-				<div class="lti">[시행 2026. 7. 21.] [법률 제21311호, 2026. 1. 20., 일부개정] <span class="ltb">현재시행법령확인</span>
-				</div>
-				<div class="ltd">과학기술정보통신부(<span class="kw">인공지능</span>안전신뢰정책과), 044-202-6293</div>
-			</div>
-			<div class="ct">
-				<button class="cb p">본문</button><button class="cb">제정·개정이유</button><button class="cb">연혁</button><button
-					class="cb">신구법비교</button><button class="cb">법령체계도</button><button class="cb">법령비교</button><button
-					class="cb ac">음성지원</button><button class="cb ac">점자뷰어</button>
-				<div class="sp"></div><select class="cs" aria-label="조문선택">
-					<option>조문선택</option>
-				</select><button class="cb" style="font-size:11px">화면내검색</button>
-			</div>
-			<div class="csb"><a href="#">📋 판례</a><a href="#">📜 연혁</a><a href="#">📑 위임행정규칙</a><a href="#">⚖ 규제</a><a
-					href="#">📖 생활법령</a><a href="#">👁 한눈보기</a></div>
-			<!-- 법령 개요 -->
-			<div class="law-summary">
-				<div class="law-summary__header">
-					<span class="law-summary__icon">ⓘ</span>
-					<strong>법령 개요</strong>
-				</div>
-				<div class="law-summary__grid">
-					<div class="law-summary__item">
-						<span class="law-summary__label">소관부처</span>
-						<span class="law-summary__value">과학기술정보통신부</span>
-					</div>
-					<div class="law-summary__item">
-						<span class="law-summary__label">공포번호</span>
-						<span class="law-summary__value">제21311호</span>
-					</div>
-					<div class="law-summary__item">
-						<span class="law-summary__label">공포일 / 제정일</span>
-						<span class="law-summary__value">2026.01.20</span>
-					</div>
-					<div class="law-summary__item">
-						<span class="law-summary__label">시행일</span>
-						<span class="law-summary__value">2026.07.21</span>
-					</div>
-					<div class="law-summary__item">
-						<span class="law-summary__label">법령유형</span>
-						<span class="law-summary__value">법률</span>
-					</div>
-					<div class="law-summary__item">
-						<span class="law-summary__label">상위법률</span>
-						<span class="law-summary__value link">-</span>
-					</div>
-					<div class="law-summary__item">
-						<span class="law-summary__label">조문 수</span>
-						<span class="law-summary__value">50개 조문 (6장)</span>
-					</div>
-					<div class="law-summary__item">
-						<span class="law-summary__label">조회수</span>
-						<span class="law-summary__value">312,847회</span>
-					</div>
-				</div>
-			</div>
-			<!-- //법령 개요 -->
 			<div class="lbd">
 				<h2 class="ch">제1장 총칙</h2>
 				<div class="ar"><input type="checkbox" class="ack">
@@ -610,6 +618,53 @@
 	</div>
 
 	<script src="../assets/krds/js/component/ui-script.js"></script>
+	<!-- 비교 모달 영역 -->
+	<div class="cmp-dim" id="cmp-dim"></div>
+	<div class="cmp-bs" id="cmp-bs">
+		<div class="cmp-bs-hd">
+			<div class="cmp-bs-tit-wrap">
+				<h3 class="cmp-bs-tit"><span style="color:#2f55e5;margin-right:4px;">⚖️</span>법령 비교하기</h3>
+				<span class="cmp-bs-desc">최대 3개의 법령을 선택하여 비교할 수 있습니다</span>
+			</div>
+			<div class="cmp-bs-actions-top">
+				<button class="cmp-btn-compare" id="cmp-exec-btn" disabled>
+					<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px; vertical-align:middle;"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+					비교 시작
+				</button>
+				<button class="cmp-bs-close" id="cmp-bs-close">✕</button>
+			</div>
+		</div>
+		<div class="cmp-bs-bd">
+			<div class="cmp-bs-add-row">
+				<select class="cmp-sel" id="cmp-sel">
+					<option value="">비교할 법령을 여기에 선택하세요...</option>
+				</select>
+				<button class="cmp-btn-add" id="cmp-add-btn">추가</button>
+			</div>
+			<div class="cmp-slot-container" id="cmp-slot-container">
+				<!-- Slots visually updated here via JS -->
+				<div class="cmp-slot empty"><span>+</span><p>법령 추가</p></div>
+				<div class="cmp-slot empty"><span>+</span><p>법령 추가</p></div>
+				<div class="cmp-slot empty"><span>+</span><p>법령 추가</p></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 비교 결과 모달 -->
+	<div class="cmp-modal" id="cmp-modal">
+		<div class="cmp-modal-inner">
+			<div class="cmp-modal-hd">
+				<h3><span style="color:#2f55e5;margin-right:8px;">⚖️</span>법령 상세 비교 <span id="cmp-modal-count" style="font-size:15px;color:var(--text-light);font-weight:500;margin-left:8px;">(2개 법령 비교 중)</span></h3>
+				<button class="cmp-modal-close" id="cmp-modal-close">✕</button>
+			</div>
+			<div class="cmp-modal-bd">
+				<div class="cmp-grid" id="cmp-grid">
+					<!-- 결과 출력 -->
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script>
 		document.querySelectorAll('.cb').forEach(b => { b.addEventListener('click', function () { this.parentElement.querySelectorAll('.cb').forEach(s => s.classList.remove('a', 'active', 'p')); this.classList.add('a', 'p') }) });
 		document.querySelectorAll('.li').forEach(i => { i.addEventListener('click', function () { document.querySelectorAll('.li').forEach(x => x.classList.remove('a')); this.classList.add('a') }) });
@@ -664,6 +719,268 @@
 					btnLargeText.textContent = 'A+';
 					btnLargeText.title = '큰 글씨 모드';
 				}
+			});
+		}
+
+		// Article Select Population and Scroll
+		const articleSelect = document.querySelector('.cs');
+		const articles = document.querySelectorAll('.acc .an');
+		
+		if (articleSelect && articles.length > 0) {
+			articles.forEach((article, index) => {
+				// Assign ID to the article container for anchor linking
+				const articleId = 'article-' + (index + 1);
+				const articleContainer = article.closest('.ar');
+				if (articleContainer && !articleContainer.id) {
+					articleContainer.id = articleId;
+				}
+				
+				// Create and append option
+				const option = document.createElement('option');
+				option.value = articleId;
+				// Extract only the article text (e.g., '제1조(목적)')
+				option.textContent = article.textContent;
+				articleSelect.appendChild(option);
+			});
+			
+			// Handle selection change
+			articleSelect.addEventListener('change', (e) => {
+				const targetId = e.target.value;
+				if (targetId && targetId !== '조문선택') {
+					const targetElement = document.getElementById(targetId);
+					if (targetElement) {
+						targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+						
+						// Temporary highlight effect
+						targetElement.style.transition = 'background-color 0.3s';
+						targetElement.style.backgroundColor = 'var(--b10)';
+						
+						setTimeout(() => {
+							targetElement.style.backgroundColor = '';
+						}, 1000);
+					}
+				}
+			});
+		}
+
+		// Page Native Search Fallback
+		const btnPageSearch = document.getElementById('btn-page-search');
+		if (btnPageSearch) {
+			btnPageSearch.addEventListener('click', () => {
+				const keyword = prompt('화면에서 찾을 단어를 입력하세요:\n(브라우저 기본 검색(Ctrl+F)을 사용하시면 더 편리합니다.)');
+				if (keyword) {
+					// Use native window.find for basic highlighting
+					// Depending on browser support, it will scroll and highlight
+					window.find(keyword);
+				}
+			});
+		}
+
+		// Law Compare Logic
+		const btnCompareOpen = document.getElementById('btn-compare-open');
+		const cmpDim = document.getElementById('cmp-dim');
+		const cmpBs = document.getElementById('cmp-bs');
+		const cmpBsClose = document.getElementById('cmp-bs-close');
+		const cmpSel = document.getElementById('cmp-sel');
+		const cmpAddBtn = document.getElementById('cmp-add-btn');
+		const cmpExecBtn = document.getElementById('cmp-exec-btn');
+		const cmpModal = document.getElementById('cmp-modal');
+		const cmpModalClose = document.getElementById('cmp-modal-close');
+		const cmpGrid = document.getElementById('cmp-grid');
+
+		let selectedCompareLaws = [];
+		
+		// Dummy data for mockup
+		const lawDataMap = {
+			"law1": {
+				type: "대통령령", typeClass: "light",
+				status: "현행", statusClass: "type",
+				meta: "제35298호",
+				title: "인공지능 발전과 신뢰 기반 조성 등에 관한 기본법 시행령",
+				enTitle: "Enforcement Decree of the Framework Act on AI Development",
+				deptInfo: "과학기술정보통신부 · 38개 조문",
+				dept: "과학기술정보통신부", enfDate: "2026.07.21", artCount: "38개",
+				articles: [
+					{ num: "제1조", title: "목적", content: "이 영은 「인공지능 발전과 신뢰기반 조성 등에 관한 기본법」에서 위임된 사항과 그 시행에 필요한 사항을 규정함을 목적으로 한다." },
+					{ num: "제2조", title: "정의", content: "이 영에서 사용하는 용어의 뜻은 법 제2조에 따른다. 다만 특별한 규정이 없으면 일반적인 통념을 따른다." },
+					{ num: "제3조", title: "기본계획의 수립", content: "과학기술정보통신부장관은 법 제5조에 따른 인공지능 발전 기본계획을 3년마다 수립하여야 한다." }
+				]
+			},
+			"law2": {
+				type: "법률", typeClass: "light",
+				status: "현행", statusClass: "type",
+				meta: "제18361호",
+				title: "지능정보화 기본법",
+				enTitle: "Framework Act on Intelligent Informationization",
+				deptInfo: "과학기술정보통신부 · 67개 조문",
+				dept: "과학기술정보통신부", enfDate: "2026.01.01", artCount: "67개",
+				articles: [
+					{ num: "제1조", title: "목적", content: "이 법은 지능정보사회의 기반을 조성하고 이를 고도화함으로써 국민의 삶의 질을 향상시키고 국가경제의 건전한 발전에 이바지함을 목적으로 한다." },
+					{ num: "제2조", title: "정의", content: "이 법에서 사용하는 용어의 뜻은 다음과 같다. 1. '지능정보기술'이란 인공지능과 데이터가 결합된 기술을 말한다." },
+					{ num: "제3조", title: "국가 등의 책무", content: "국가와 지방자치단체는 지능정보사회의 기반을 조성하기 위하여 필요한 시책을 마련하여야 한다." }
+				]
+			},
+			"law3": {
+				type: "법률", typeClass: "light",
+				status: "현행", statusClass: "type",
+				meta: "제19234호",
+				title: "개인정보 보호법",
+				enTitle: "Personal Information Protection Act",
+				deptInfo: "개인정보보호위원회 · 88개 조문",
+				dept: "개인정보보호위원회", enfDate: "2025.10.15", artCount: "88개",
+				articles: [
+					{ num: "제1조", title: "목적", content: "이 법은 개인정보의 처리 및 보호에 관한 사항을 정함으로써 개인의 자유와 권리를 보호하고, 나아가 개인의 존엄과 가치를 구현함을 목적으로 한다." },
+					{ num: "제2조", title: "정의", content: "이 법에서 사용하는 용어의 뜻은 다음과 같다. 1. '개인정보'란 살아 있는 개인에 관한 정보로서 성명, 주민등록번호 및 영상 등을 통하여 개인을 알아볼 수 있는 다음 각 목의 어느 하나에 해당하는 정보를 말한다." },
+					{ num: "제3조", title: "개인정보 보호 원칙", content: "개인정보처리자는 개인정보의 처리 목적을 명확하게 하여야 하고 그 목적에 필요한 범위에서 최소한의 개인정보만을 적법하고 정당하게 수집하여야 한다." }
+				]
+			}
+		};
+
+		if (btnCompareOpen && cmpSel) {
+			// Populate options for bottom sheet
+			Object.entries(lawDataMap).forEach(([id, data]) => {
+				const opt = document.createElement('option');
+				opt.value = id;
+				opt.textContent = data.title;
+				cmpSel.appendChild(opt);
+			});
+
+			// Open Bottom Sheet
+			btnCompareOpen.addEventListener('click', () => {
+				cmpDim.classList.add('open');
+				cmpBs.classList.add('open');
+			});
+
+			// Close Bottom Sheet
+			cmpBsClose.addEventListener('click', () => {
+				cmpDim.classList.remove('open');
+				cmpBs.classList.remove('open');
+			});
+			cmpDim.addEventListener('click', () => {
+				cmpDim.classList.remove('open');
+				cmpBs.classList.remove('open');
+				cmpModal.classList.remove('open');
+			});
+
+			// Add Law to list
+			cmpAddBtn.addEventListener('click', () => {
+				const val = cmpSel.value;
+				if (!val) return alert('법령을 선택해주세요.');
+				
+				if (selectedCompareLaws.includes(val)) {
+					return alert('이미 추가된 법령입니다.');
+				}
+
+				if (selectedCompareLaws.length >= 3) {
+					return alert('최대 3개까지만 비교할 수 있습니다.');
+				}
+
+				selectedCompareLaws.push(val);
+				renderCompareList();
+			});
+
+			const cmpSlotContainer = document.getElementById('cmp-slot-container');
+
+			function renderCompareList() {
+				cmpSlotContainer.innerHTML = '';
+				
+				for(let i=0; i<3; i++) {
+					const id = selectedCompareLaws[i];
+					const slot = document.createElement('div');
+					
+					if(id) {
+						const data = lawDataMap[id];
+						slot.className = 'cmp-slot filled';
+						slot.innerHTML = `
+							<div class="cmp-slot-badges">
+								<span class="cmp-badge ${data.typeClass}">${data.type}</span>
+								<span class="cmp-badge ${data.statusClass}">${data.status}</span>
+								<span style="font-size:12px;color:var(--text-light);align-self:center;margin-left:auto;">${data.meta}</span>
+							</div>
+							<div class="cmp-slot-tit">${data.title}</div>
+							<div class="cmp-slot-meta">${data.deptInfo}</div>
+							<button class="cmp-rm-btn" data-id="${id}">✕</button>
+						`;
+					} else {
+						slot.className = 'cmp-slot empty';
+						slot.innerHTML = `<span>+</span><p>법령 추가</p>`;
+					}
+					cmpSlotContainer.appendChild(slot);
+				}
+
+				cmpExecBtn.disabled = selectedCompareLaws.length < 2;
+
+				// bind remove event
+				cmpSlotContainer.querySelectorAll('.cmp-rm-btn').forEach(btn => {
+					btn.addEventListener('click', (e) => {
+						const removeId = e.currentTarget.getAttribute('data-id');
+						selectedCompareLaws = selectedCompareLaws.filter(lid => lid !== removeId);
+						renderCompareList();
+					});
+				});
+
+				cmpAddBtn.disabled = selectedCompareLaws.length >= 3;
+			}
+
+			// Execute Compare
+			cmpExecBtn.addEventListener('click', () => {
+				// close bs
+				cmpBs.classList.remove('open');
+				// show modal
+				cmpModal.classList.add('open');
+				document.getElementById('cmp-modal-count').textContent = `(${selectedCompareLaws.length}개 법령 비교 중)`;
+				
+				// render grid columns
+				cmpGrid.innerHTML = '';
+				
+				selectedCompareLaws.forEach(id => {
+					const data = lawDataMap[id];
+					const col = document.createElement('div');
+					col.className = 'cmp-col';
+
+					// 1. Info Card
+					const infoCard = document.createElement('div');
+					infoCard.className = 'cmp-info-card';
+					infoCard.innerHTML = `
+						<div class="cmp-slot-badges">
+							<span class="cmp-badge ${data.typeClass}">${data.type}</span>
+							<span class="cmp-badge ${data.statusClass}">${data.status}</span>
+							<span style="font-size:12px;color:var(--text-light);margin-left:4px;">${data.meta}</span>
+						</div>
+						<h4>${data.title}</h4>
+						<span class="en-tit">${data.enTitle}</span>
+						<dl class="cmp-info-grid">
+							<dt>소관부처</dt><dd>${data.dept}</dd>
+							<dt>시행일</dt><dd>${data.enfDate}</dd>
+							<dt>조문 수</dt><dd>${data.artCount}</dd>
+						</dl>
+					`;
+					col.appendChild(infoCard);
+
+					// 2. Article Cards (iterating through mock articles to simulate vertical sync)
+					data.articles.forEach(art => {
+						const arCard = document.createElement('div');
+						arCard.className = 'cmp-ar-card';
+						arCard.innerHTML = `
+							<div class="cmp-ar-card-hd">
+								<span class="cmp-ar-badge">${art.num}</span>
+								<span class="cmp-ar-tit">${art.title}</span>
+							</div>
+							<div class="cmp-ar-bd">
+								${art.content}
+							</div>
+						`;
+						col.appendChild(arCard);
+					});
+					
+					cmpGrid.appendChild(col);
+				});
+			});
+
+			// Close Modal
+			cmpModalClose.addEventListener('click', () => {
+				cmpModal.classList.remove('open');
+				cmpDim.classList.remove('open'); // close overlay behind it
 			});
 		}
 	</script>
