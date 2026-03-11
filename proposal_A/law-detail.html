@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko" class="page-law-detail">
 
 <head>
@@ -7,19 +7,14 @@
 	<title>현행법령 - 국가법령정보센터</title>
 	<link rel="stylesheet" href="../assets/krds/css/common/common.css">
 	<link rel="stylesheet" href="../assets/krds/css/component/component.css">
-	<!-- UIKit 3 -->
-	<link href="https://cdn.jsdelivr.net/npm/uikit@3/dist/css/uikit.min.css" rel="stylesheet">
-	<!-- Custom (최우선) -->
-	<link rel="stylesheet" href="./css/custom.css">
+	<link rel="stylesheet" href="./css/custom.css?v=3">
 </head>
 
-<body class="page-law-detail">
-
+<body>
 	<!-- 건너뛰기 링크 -->
 	<div id="krds-skip-link">
 		<a href="#main-content">본문 바로가기</a>
 		<a href="#krds-header">주요메뉴 바로가기</a>
-		<a href="#law-toc">목차 바로가기</a>
 	</div>
 	<!-- //건너뛰기 링크 -->
 
@@ -38,26 +33,18 @@
 	<!-- header -->
 	<header id="krds-header">
 		<div class="header-in">
-			<!-- 헤더 상단 유틸리티 -->
 			<div class="header-container">
 				<div class="inner">
 					<div class="header-utility">
 						<ul class="utility-list">
-							<li>
-								<a href="#" class="krds-btn small text" target="_blank" title="새 창 열기">
-									법제처 <i class="lsw-icon" data-lucide="external-link"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="krds-btn small text" target="_blank" title="새 창 열기">
-									생활법령정보 <i class="lsw-icon" data-lucide="external-link"></i>
-								</a>
-							</li>
+							<li><a href="#" class="krds-btn small text" target="_blank" title="새 창 열기">법제처 <i
+										class="svg-icon ico-go"></i></a></li>
+							<li><a href="#" class="krds-btn small text" target="_blank" title="새 창 열기">생활법령정보 <i
+										class="svg-icon ico-go"></i></a></li>
 							<li>
 								<div class="krds-drop-wrap krds-resize">
-									<button type="button" class="krds-btn small text drop-btn">
-										글자크기 <i class="lsw-icon" data-lucide="panel-left"></i>
-									</button>
+									<button type="button" class="krds-btn small text drop-btn">글자크기 <i
+											class="svg-icon ico-toggle"></i></button>
 									<div class="drop-menu">
 										<div class="drop-in">
 											<ul class="drop-list">
@@ -67,9 +54,8 @@
 												<li><button type="button" class="item-link xlg">아주 크게</button></li>
 											</ul>
 											<div class="drop-bottom">
-												<button type="button" class="krds-btn medium text">
-													<i class="lsw-icon" data-lucide="rotate-ccw"></i> 초기화
-												</button>
+												<button type="button" class="krds-btn medium text"><i
+														class="svg-icon ico-reset"></i> 초기화</button>
 											</div>
 										</div>
 									</div>
@@ -77,9 +63,8 @@
 							</li>
 							<li>
 								<div class="krds-drop-wrap">
-									<button type="button" class="krds-btn small text drop-btn">
-										관련사이트 <i class="lsw-icon" data-lucide="panel-left"></i>
-									</button>
+									<button type="button" class="krds-btn small text drop-btn">관련사이트 <i
+											class="svg-icon ico-toggle"></i></button>
 									<div class="drop-menu">
 										<div class="drop-in">
 											<ul class="drop-list">
@@ -98,9 +83,7 @@
 					</div>
 					<div class="header-branding">
 						<h1 class="logo">
-							<a href="./index.html">
-								<img src="../image/h_logo1.png" alt="국가법령정보센터">
-							</a>
+							<a href="./index.html"><img src="../image/h_logo1.png" alt="국가법령정보센터"></a>
 						</h1>
 						<div class="header-actions">
 							<button type="button" class="btn-navi sch" title="통합검색 레이어">통합검색</button>
@@ -111,55 +94,23 @@
 					</div>
 				</div>
 			</div>
-			<!-- //헤더 상단 유틸리티 -->
-
-			<!-- 메인메뉴 : 데스크탑 -->
 			<nav class="krds-main-menu">
 				<div class="inner">
 					<ul class="gnb-menu">
-						<!-- 법령 -->
+						<!-- 법령정보별 -->
 						<li>
-							<button type="button" class="gnb-main-trigger" data-trigger="gnb">법령</button>
+							<button type="button" class="gnb-main-trigger" data-trigger="gnb">법령정보별</button>
 							<div class="gnb-toggle-wrap">
 								<div class="gnb-main-list" data-has-submenu="true">
 									<ul>
 										<li>
-											<button type="button" class="gnb-sub-trigger"
-												data-trigger="gnb">현행법령</button>
+											<button type="button" class="gnb-sub-trigger" data-trigger="gnb">법령정보별</button>
 											<div class="gnb-sub-list">
 												<div class="gnb-sub-content">
-													<h2 class="sub-title">현행법령</h2>
+													<h2 class="sub-title">법령정보별</h2>
 													<ul>
-														<li><a href="#">헌법</a></li>
-														<li><a href="#">법률</a></li>
-														<li><a href="#">대통령령</a></li>
-														<li><a href="#">총리령</a></li>
-														<li><a href="#">부령</a></li>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li>
-											<button type="button" class="gnb-sub-trigger"
-												data-trigger="gnb">자치법규</button>
-											<div class="gnb-sub-list">
-												<div class="gnb-sub-content">
-													<h2 class="sub-title">자치법규</h2>
-													<ul>
-														<li><a href="#">조례</a></li>
-														<li><a href="#">규칙</a></li>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li>
-											<button type="button" class="gnb-sub-trigger" data-trigger="gnb">조약</button>
-											<div class="gnb-sub-list">
-												<div class="gnb-sub-content">
-													<h2 class="sub-title">조약</h2>
-													<ul>
-														<li><a href="#">양자조약</a></li>
-														<li><a href="#">다자조약</a></li>
+														<li><a href="#">세부메뉴1</a></li>
+														<li><a href="#">세부메뉴2</a></li>
 													</ul>
 												</div>
 											</div>
@@ -168,23 +119,21 @@
 								</div>
 							</div>
 						</li>
-						<!-- 행정규칙 -->
+						<!-- 생애주기별 -->
 						<li>
-							<button type="button" class="gnb-main-trigger" data-trigger="gnb">행정규칙</button>
+							<button type="button" class="gnb-main-trigger" data-trigger="gnb">생애주기별</button>
 							<div class="gnb-toggle-wrap">
 								<div class="gnb-main-list" data-has-submenu="true">
 									<ul>
 										<li>
-											<button type="button" class="gnb-sub-trigger"
-												data-trigger="gnb">행정규칙</button>
+											<button type="button" class="gnb-sub-trigger" data-trigger="gnb">생애주기별</button>
 											<div class="gnb-sub-list">
 												<div class="gnb-sub-content">
-													<h2 class="sub-title">행정규칙</h2>
+													<h2 class="sub-title">생애주기별</h2>
 													<ul>
-														<li><a href="#">훈령</a></li>
-														<li><a href="#">예규</a></li>
-														<li><a href="#">고시</a></li>
-														<li><a href="#">공고</a></li>
+														<li><a href="#">영유아/아동</a></li>
+														<li><a href="#">청소년/청년</a></li>
+														<li><a href="#">중장년/노년</a></li>
 													</ul>
 												</div>
 											</div>
@@ -193,33 +142,21 @@
 								</div>
 							</div>
 						</li>
-						<!-- 판례/해석 -->
+						<!-- 주제별 -->
 						<li>
-							<button type="button" class="gnb-main-trigger" data-trigger="gnb">판례/해석</button>
+							<button type="button" class="gnb-main-trigger" data-trigger="gnb">주제별</button>
 							<div class="gnb-toggle-wrap">
 								<div class="gnb-main-list" data-has-submenu="true">
 									<ul>
 										<li>
-											<button type="button" class="gnb-sub-trigger" data-trigger="gnb">판례</button>
+											<button type="button" class="gnb-sub-trigger" data-trigger="gnb">주제별</button>
 											<div class="gnb-sub-list">
 												<div class="gnb-sub-content">
-													<h2 class="sub-title">판례</h2>
+													<h2 class="sub-title">주제별</h2>
 													<ul>
-														<li><a href="#">헌법재판소 결정례</a></li>
-														<li><a href="#">대법원 판례</a></li>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li>
-											<button type="button" class="gnb-sub-trigger"
-												data-trigger="gnb">법령해석</button>
-											<div class="gnb-sub-list">
-												<div class="gnb-sub-content">
-													<h2 class="sub-title">법령해석</h2>
-													<ul>
-														<li><a href="#">법령해석례</a></li>
-														<li><a href="#">법령해석 신청</a></li>
+														<li><a href="#">부동산/건축</a></li>
+														<li><a href="#">조세/금융</a></li>
+														<li><a href="#">노동/환경</a></li>
 													</ul>
 												</div>
 											</div>
@@ -235,8 +172,7 @@
 								<div class="gnb-main-list" data-has-submenu="true">
 									<ul>
 										<li>
-											<button type="button" class="gnb-sub-trigger"
-												data-trigger="gnb">입법예고</button>
+											<button type="button" class="gnb-sub-trigger" data-trigger="gnb">입법예고</button>
 											<div class="gnb-sub-list">
 												<div class="gnb-sub-content">
 													<h2 class="sub-title">입법예고</h2>
@@ -251,34 +187,20 @@
 								</div>
 							</div>
 						</li>
-						<!-- 법령정보 서비스 -->
+						<!-- 법령지식 -->
 						<li>
-							<button type="button" class="gnb-main-trigger" data-trigger="gnb">법령정보 서비스</button>
+							<button type="button" class="gnb-main-trigger" data-trigger="gnb">법령지식</button>
 							<div class="gnb-toggle-wrap">
 								<div class="gnb-main-list" data-has-submenu="true">
 									<ul>
 										<li>
-											<button type="button" class="gnb-sub-trigger"
-												data-trigger="gnb">오픈API</button>
+											<button type="button" class="gnb-sub-trigger" data-trigger="gnb">법령지식</button>
 											<div class="gnb-sub-list">
 												<div class="gnb-sub-content">
-													<h2 class="sub-title">오픈API</h2>
+													<h2 class="sub-title">법령지식</h2>
 													<ul>
-														<li><a href="#">API 목록</a></li>
-														<li><a href="#">API 신청</a></li>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li>
-											<button type="button" class="gnb-sub-trigger"
-												data-trigger="gnb">법령통계</button>
-											<div class="gnb-sub-list">
-												<div class="gnb-sub-content">
-													<h2 class="sub-title">법령통계</h2>
-													<ul>
-														<li><a href="#">법령 현황 통계</a></li>
-														<li><a href="#">입법동향</a></li>
+														<li><a href="#">법령용어</a></li>
+														<li><a href="#">법령체계도</a></li>
 													</ul>
 												</div>
 											</div>
@@ -287,1237 +209,358 @@
 								</div>
 							</div>
 						</li>
-					</ul>
-				</div>
+						<!-- 정보마당 -->
+						<li>
+							<button type="button" class="gnb-main-trigger" data-trigger="gnb">정보마당</button>
+							<div class="gnb-toggle-wrap">
+								<div class="gnb-main-list" data-has-submenu="true">
+									<ul>
+										<li>
+											<button type="button" class="gnb-sub-trigger" data-trigger="gnb">정보마당</button>
+											<div class="gnb-sub-list">
+												<div class="gnb-sub-content">
+													<h2 class="sub-title">정보마당</h2>
+													<ul>
+														<li><a href="#">공지사항</a></li>
+														<li><a href="#">자주묻는질문</a></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul></div>
 			</nav>
-			<!-- //메인메뉴 : 데스크탑 -->
 		</div>
 
-	</header>
-	<!-- //header -->
-
-	<!-- 메인메뉴 : 모바일 -->
-	<div id="container" class="help-panel-flexible krds-main-menu-mobile">
-		<div class="gnb-wrap">
-			<div class="gnb-header">
-				<div class="gnb-login">
-					<button type="button" class="krds-btn large text"><i class="lsw-icon" data-lucide="log-in"></i> 로그인을
-						해주세요</button>
-				</div>
-				<div class="gnb-service-menu">
-					<a href="#" class="link">법제처</a>
-					<a href="#" class="link">생활법령정보</a>
-					<a href="#" class="link">대한민국 전자관보</a>
-				</div>
-				<div class="sch-input">
-					<input type="text" class="krds-input" placeholder="법령명, 조문 내용 등을 검색해 보세요" title="법령 통합 검색 입력">
-					<button type="button" class="krds-btn medium icon ico-search">
-						<span class="sr-only">검색</span>
-						<i class="lsw-icon" data-lucide="search"></i>
-					</button>
-				</div>
-			</div>
-			<div class="gnb-body">
-				<div class="gnb-menu">
-					<div class="menu-wrap">
-						<ul>
-							<li><a href="#mGnb-anchor1" class="gnb-main-trigger">법령</a></li>
-							<li><a href="#mGnb-anchor2" class="gnb-main-trigger">행정규칙</a></li>
-							<li><a href="#mGnb-anchor3" class="gnb-main-trigger">판례/해석</a></li>
-							<li><a href="#mGnb-anchor4" class="gnb-main-trigger">입법예고</a></li>
-							<li><a href="#mGnb-anchor5" class="gnb-main-trigger">법령정보 서비스</a></li>
-						</ul>
+		<!-- 메인메뉴 : 모바일 -->
+		<div id="mobile-nav" class="krds-main-menu-mobile">
+			<div class="gnb-wrap">
+				<div class="gnb-header">
+					<div class="gnb-login">
+						<button type="button" class="krds-btn large text"><i class="svg-icon ico-log"></i> 로그인을
+							해주세요</button>
 					</div>
-					<div class="submenu-wrap">
-						<div class="gnb-sub-list" id="mGnb-anchor1">
-							<h2 class="sub-title">법령</h2>
-							<ul>
-								<li><a href="#" class="gnb-sub-trigger">헌법</a></li>
-								<li><a href="#" class="gnb-sub-trigger">법률</a></li>
-								<li><a href="#" class="gnb-sub-trigger">대통령령</a></li>
-								<li><a href="#" class="gnb-sub-trigger">총리령·부령</a></li>
-								<li><a href="#" class="gnb-sub-trigger">자치법규</a></li>
-								<li><a href="#" class="gnb-sub-trigger">조약</a></li>
-							</ul>
-						</div>
-						<div class="gnb-sub-list" id="mGnb-anchor2">
-							<h2 class="sub-title">행정규칙</h2>
-							<ul>
-								<li><a href="#" class="gnb-sub-trigger">훈령</a></li>
-								<li><a href="#" class="gnb-sub-trigger">예규</a></li>
-								<li><a href="#" class="gnb-sub-trigger">고시</a></li>
-							</ul>
-						</div>
-						<div class="gnb-sub-list" id="mGnb-anchor3">
-							<h2 class="sub-title">판례/해석</h2>
-							<ul>
-								<li><a href="#" class="gnb-sub-trigger">헌법재판소 결정례</a></li>
-								<li><a href="#" class="gnb-sub-trigger">대법원 판례</a></li>
-								<li><a href="#" class="gnb-sub-trigger">법령해석례</a></li>
-							</ul>
-						</div>
-						<div class="gnb-sub-list" id="mGnb-anchor4">
-							<h2 class="sub-title">입법예고</h2>
-							<ul>
-								<li><a href="#" class="gnb-sub-trigger">입법예고 목록</a></li>
-								<li><a href="#" class="gnb-sub-trigger">의견제출 현황</a></li>
-							</ul>
-						</div>
-						<div class="gnb-sub-list" id="mGnb-anchor5">
-							<h2 class="sub-title">법령정보 서비스</h2>
-							<ul>
-								<li><a href="#" class="gnb-sub-trigger">오픈API</a></li>
-								<li><a href="#" class="gnb-sub-trigger">법령통계</a></li>
-							</ul>
-						</div>
+					<div class="gnb-service-menu">
+						<a href="#" class="link">법제처</a>
+						<a href="#" class="link">생활법령정보</a>
+						<a href="#" class="link">대한민국 전자관보</a>
 					</div>
-				</div>
-			</div>
-			<button type="button" class="krds-btn medium icon" id="close-nav">
-				<span class="sr-only">전체메뉴 닫기</span>
-				<i class="lsw-icon" data-lucide="x"></i>
-			</button>
-		</div>
-	</div>
-	<!-- //메인메뉴 : 모바일 -->
-
-	<!-- main -->
-	<main id="main-content">
-
-		<!-- 브레드크럼 -->
-		<div class="lsw-breadcrumb-wrap">
-			<div class="inner">
-				<nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
-					<ol class="breadcrumb">
-						<li class="home"><a href="./index.html" class="txt">홈</a></li>
-						<li><a href="#" class="txt">법령</a></li>
-						<li><span class="txt" aria-current="page">현행법령</span></li>
-					</ol>
-				</nav>
-			</div>
-		</div>
-		<!-- //브레드크럼 -->
-
-		<!-- 법령 헤더 정보 -->
-		<div class="lsw-law-header">
-			<div class="inner">
-				<div class="lsw-law-header__top">
-					<div class="lsw-law-header__badges">
-						<span class="krds-badge bg-primary">법률</span>
-						<span class="krds-badge bg-light-success">현행</span>
-					</div>
-
-				</div>
-
-				<h2 class="lsw-law-header__title">현행법령</h2>
-				<!-- <p class="lsw-law-header__subtitle">
-					[시행 2026. 1. 1.] [법률 제20432호, 2024. 9. 20., 일부개정]
-				</p>
-				<p class="lsw-law-header__ministry">
-					법무부(법무심의관실), 02-2110-3164
-				</p> -->
-
-				<!-- 버전 선택 -->
-				<div class="lsw-law-header__version">
-					<span class="lsw-law-header__version-label">연혁보기</span>
-					<div class="krds-drop-wrap">
-						<button type="button" class="krds-btn medium border drop-btn lsw-version-btn">
-							현행 (2026.01.01 시행) <i class="lsw-icon" data-lucide="panel-left"></i>
+					<div class="sch-input">
+						<input type="text" class="krds-input" placeholder="법령명, 조문 내용 등을 검색해 보세요" title="법령 통합 검색 입력">
+						<button type="button" class="krds-btn medium icon ico-search">
+							<span class="sr-only">검색</span>
+							<i class="svg-icon ico-sch"></i>
 						</button>
-						<div class="drop-menu">
-							<div class="drop-in">
-								<ul class="drop-list">
-									<li><button type="button" class="item-link active">현행 (2026.01.01 시행)</button></li>
-									<li><button type="button" class="item-link">2025.03.01 시행</button></li>
-									<li><button type="button" class="item-link">2023.05.09 시행</button></li>
-									<li><button type="button" class="item-link">2022.01.01 시행</button></li>
-									<li><button type="button" class="item-link">2020.02.04 시행</button></li>
+					</div>
+				</div>
+				<div class="gnb-body">
+					<div class="gnb-menu">
+						<div class="menu-wrap">
+							<ul>
+								<li><a href="#mGnb-anchor1" class="gnb-main-trigger">법령정보별</a></li>
+								<li><a href="#mGnb-anchor2" class="gnb-main-trigger">생애주기별</a></li>
+								<li><a href="#mGnb-anchor3" class="gnb-main-trigger">주제별</a></li>
+								<li><a href="#mGnb-anchor4" class="gnb-main-trigger">입법예고</a></li>
+								<li><a href="#mGnb-anchor5" class="gnb-main-trigger">법령지식</a></li>
+								<li><a href="#mGnb-anchor6" class="gnb-main-trigger">정보마당</a></li>
+							</ul>
+						</div>
+						<div class="submenu-wrap">
+							<div class="gnb-sub-list" id="mGnb-anchor1">
+								<h2 class="sub-title">법령정보별</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">세부메뉴1</a></li>
+									<li><a href="#" class="gnb-sub-trigger">세부메뉴2</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor2">
+								<h2 class="sub-title">생애주기별</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">영유아/아동</a></li>
+									<li><a href="#" class="gnb-sub-trigger">청소년/청년</a></li>
+									<li><a href="#" class="gnb-sub-trigger">중장년/노년</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor3">
+								<h2 class="sub-title">주제별</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">부동산/건축</a></li>
+									<li><a href="#" class="gnb-sub-trigger">조세/금융</a></li>
+									<li><a href="#" class="gnb-sub-trigger">노동/환경</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor4">
+								<h2 class="sub-title">입법예고</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">입법예고 목록</a></li>
+									<li><a href="#" class="gnb-sub-trigger">의견제출 현황</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor5">
+								<h2 class="sub-title">법령지식</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">법령용어</a></li>
+									<li><a href="#" class="gnb-sub-trigger">법령체계도</a></li>
+								</ul>
+							</div>
+							<div class="gnb-sub-list" id="mGnb-anchor6">
+								<h2 class="sub-title">정보마당</h2>
+								<ul>
+									<li><a href="#" class="gnb-sub-trigger">공지사항</a></li>
+									<li><a href="#" class="gnb-sub-trigger">자주묻는질문</a></li>
 								</ul>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- //법령 헤더 정보 -->
-
-		<!-- 탭 네비게이션 -->
-		<div class="lsw-law-tab-wrap">
-
-			<!-- 상단영역 토글 버튼 -->
-		<button type="button" class="btn-area-toggle" id="btn-area-toggle" aria-expanded="true" aria-label="상단영역 접기">
-			<i class="lsw-icon lsw-area-toggle-icon" data-lucide="chevrons-up-down"></i>
-			<span class="btn-area-toggle__label">상단영역닫기</span>
-		</button>
-		</div>
-		<!-- //탭 네비게이션 -->
-
-
-		<!-- 법령 본문 영역 -->
-		<div class="lsw-law-body">
-			<div class="inner">
-				<div class="tab-conts-wrap">
-
-					<!-- ===== 탭1: 법령 본문 ===== -->
-					<section id="panel_law_01" aria-labelledby="tab_law_01" class="tab-conts active"
-						data-quick-nav="false">
-						<div class="lsw-law-layout">
-
-							<!-- 목차 사이드바 (KRDS Side Navigation Refactor) -->
-							<aside class="lsw-law-toc" id="law-toc" aria-label="법령 목차">
-								<nav class="krds-side-navigation">
-									<h2 class="lnb-tit">목차</h2>
-									<!-- 뷰 선택 -->
-									<div class="lsw-toc-view-select">
-										<label for="law-view-select" class="lsw-toc-view-label">보기</label>
-										<select id="law-view-select" class="lsw-view-select" aria-label="법령 보기 선택">
-											<option value="panel_law_01" selected>법령명</option>
-											<option value="panel_law_02">법령본문</option>
-											<option value="panel_law_03">조문내용</option>
-											<option value="panel_law_04">조문제목</option>
-											<option value="panel_law_05">부칙</option>
-											<option value="panel_law_06">제정·개정문</option>
-										</select>
-									</div>
-									<ul class="lnb-list" role="menubar">
-										<li class="lnb-item active" role="none">
-											<button type="button" class="lnb-btn lnb-toggle active" role="menuitem"
-												aria-controls="lnbmenu-1" aria-expanded="true">제1편 총칙</button>
-											<div class="lnb-submenu">
-												<ul id="lnbmenu-1" role="menu">
-													<li class="lnb-subitem" role="none"><a href="#law-chapter-1"
-															class="lnb-btn lnb-link" role="menuitem">제1장 통칙</a></li>
-													<li class="lnb-subitem" role="none"><a href="#law-chapter-2"
-															class="lnb-btn lnb-link" role="menuitem">제2장 인</a></li>
-													<li class="lnb-subitem" role="none"><a href="#law-chapter-3"
-															class="lnb-btn lnb-link" role="menuitem">제3장 법인</a></li>
-													<li class="lnb-subitem" role="none"><a href="#law-chapter-4"
-															class="lnb-btn lnb-link" role="menuitem">제4장 물건</a></li>
-													<li class="lnb-subitem" role="none"><a href="#law-chapter-5"
-															class="lnb-btn lnb-link" role="menuitem">제5장 법률행위</a></li>
-												</ul>
-											</div>
-										</li>
-										<li class="lnb-item" role="none">
-											<button type="button" class="lnb-btn lnb-toggle" role="menuitem"
-												aria-controls="lnbmenu-2" aria-expanded="false">제2편 물권</button>
-											<div class="lnb-submenu">
-												<ul id="lnbmenu-2" role="menu">
-													<li class="lnb-subitem" role="none"><a href="#"
-															class="lnb-btn lnb-link" role="menuitem">제1장 총칙</a></li>
-												</ul>
-											</div>
-										</li>
-										<li class="lnb-item" role="none">
-											<button type="button" class="lnb-btn lnb-toggle" role="menuitem"
-												aria-controls="lnbmenu-3" aria-expanded="false">제3편 채권</button>
-										</li>
-										<li class="lnb-item" role="none">
-											<button type="button" class="lnb-btn lnb-toggle" role="menuitem"
-												aria-controls="lnbmenu-4" aria-expanded="false">제4편 친족</button>
-										</li>
-										<li class="lnb-item" role="none">
-											<button type="button" class="lnb-btn lnb-toggle" role="menuitem"
-												aria-controls="lnbmenu-5" aria-expanded="false">제5편 상속</button>
-										</li>
-									</ul>
-								</nav>
-							</aside>
-
-							<!-- 법령 본문 콘텐츠 -->
-							<div class="lsw-law-content" role="region" aria-label="법령 본문">
-
-								<!-- 본문 상단 도구 -->
-								<div class="lsw-law-content__toolbar">
-									<div class="lsw-law-content__toolbar-left">
-										<select class="krds-input lsw-article-select" title="조문선택">
-											<option>조문선택</option>
-											<option>제1조 법원</option>
-											<option>제2조 신의성실</option>
-											<option>제3조 권리능력의 존속기간</option>
-											<option>제4조 성년</option>
-											<option>제5조 미성년자의 능력</option>
-										</select>
-									</div>
-									<div class="lsw-law-content__toolbar-right">
-										<button type="button" class="krds-btn small border">화면내검색</button>
-										<button type="button" class="krds-btn small border" title="공유하기">
-											<i class="lsw-icon" data-lucide="share-2" aria-hidden="true"></i>
-										</button>
-										<button type="button" class="krds-btn small border" title="관심법령추가">
-											<i class="lsw-icon" data-lucide="bookmark" aria-hidden="true"></i>
-										</button>
-										<button type="button" class="krds-btn small border" title="한자">漢</button>
-										<button type="button" class="krds-btn small border" title="저장">
-											<i class="lsw-icon" data-lucide="download" aria-hidden="true"></i>
-										</button>
-										<button type="button" class="krds-btn small border" title="인쇄">
-											<i class="lsw-icon" data-lucide="printer" aria-hidden="true"></i>
-										</button>
-									</div>
-								</div>
-
-								<!-- 본문 필터 아이콘 -->
-								<div class="lsw-law-content__filters">
-									<label class="lsw-filter-icon" title="판례">
-										<input type="checkbox" checked> <span
-											class="lsw-filter-icon__badge lsw-filter--pan">판</span> 판례
-									</label>
-									<label class="lsw-filter-icon" title="연혁">
-										<input type="checkbox" checked> <span
-											class="lsw-filter-icon__badge lsw-filter--yeon">연</span> 연혁
-									</label>
-									<label class="lsw-filter-icon" title="위임행정규칙">
-										<input type="checkbox"> <span
-											class="lsw-filter-icon__badge lsw-filter--wi">위</span> 위임행정규칙
-									</label>
-									<label class="lsw-filter-icon" title="규제">
-										<input type="checkbox"> <span
-											class="lsw-filter-icon__badge lsw-filter--gyu">규</span> 규제
-									</label>
-									<label class="lsw-filter-icon" title="생활법령">
-										<input type="checkbox" checked> <span
-											class="lsw-filter-icon__badge lsw-filter--saeng">생</span> 생활법령
-									</label>
-									<label class="lsw-filter-icon" title="한눈보기">
-										<input type="checkbox"> <span
-											class="lsw-filter-icon__badge lsw-filter--han">한</span> 한눈보기
-									</label>
-								</div>
-								<!-- 법령 제목 -->
-								<div class="lsw-law-article-title">
-									<h3>민법</h3>
-									<p class="lsw-law-article-title__num">
-										[시행 2026. 1. 1.] [법률 제20432호, 2024. 9. 20., 일부개정]
-									</p>
-									<p class="lsw-law-article-title__ministry">
-										법무부(법무심의관실), 02-2110-3164
-									</p>
-								</div>
-
-								<!-- 법령 본문 -->
-								<article class="lsw-law-article">
-
-									<section id="law-part-1" aria-labelledby="law-part-1-heading">
-										<h4 id="law-part-1-heading" class="lsw-law-article__part">제1편 총칙</h4>
-
-										<section id="law-chapter-1" aria-labelledby="law-chapter-1-heading">
-											<h5 id="law-chapter-1-heading" class="lsw-law-article__chapter">제1장 통칙</h5>
-
-											<div class="lsw-law-article__item" id="article-1">
-												<div class="lsw-law-article__item-header">
-													<div class="lsw-law-article__item-left">
-														<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-														<span class="lsw-ref-icon lsw-ref--saeng" title="생활법령">생</span>
-														<input type="checkbox" class="lsw-article-check" title="조문 선택">
-														<span class="lsw-law-article__num">제1조(법원)</span>
-													</div>
-												</div>
-												<div class="lsw-law-article__body">
-													<p>민사에 관하여 법률에 규정이 없으면 관습법에 의하고 관습법이 없으면 조리에 의한다.</p>
-												</div>
-											</div>
-
-											<div class="lsw-law-article__item" id="article-2">
-												<div class="lsw-law-article__item-header">
-													<div class="lsw-law-article__item-left">
-														<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-														<span class="lsw-ref-icon lsw-ref--saeng" title="생활법령">생</span>
-														<input type="checkbox" class="lsw-article-check" title="조문 선택">
-														<span class="lsw-law-article__num">제2조(신의성실)</span>
-													</div>
-												</div>
-												<div class="lsw-law-article__body">
-													<p>① 권리의 행사와 의무의 이행은 신의에 좇아 성실히 하여야 한다.</p>
-													<p>② 권리는 남용하지 못한다.</p>
-												</div>
-											</div>
-										</section>
-
-										<section id="law-chapter-2" aria-labelledby="law-chapter-2-heading">
-											<h5 id="law-chapter-2-heading" class="lsw-law-article__chapter">제2장 인</h5>
-
-											<section id="law-section-1" aria-labelledby="law-section-1-heading">
-												<h6 id="law-section-1-heading" class="lsw-law-article__section">제1절 능력
-												</h6>
-
-												<div class="lsw-law-article__item" id="article-3">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-															<span class="lsw-ref-icon lsw-ref--saeng"
-																title="생활법령">생</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제3조(권리능력의 존속기간)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>사람은 생존한 동안 권리와 의무의 주체가 된다.</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-4">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-															<span class="lsw-ref-icon lsw-ref--yeon" title="연혁">연</span>
-															<span class="lsw-ref-icon lsw-ref--saeng"
-																title="생활법령">생</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제4조(성년)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>사람은 19세로 성년에 이르게 된다.</p>
-														<p class="lsw-law-article__amendment">[전문개정 2011. 3. 7.]</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-5">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-															<span class="lsw-ref-icon lsw-ref--saeng"
-																title="생활법령">생</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제5조(미성년자의 능력)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>① 미성년자가 법률행위를 함에는 법정대리인의 동의를 얻어야 한다. 그러나 권리만을 얻거나 의무만을 면하는
-															행위는 그러하지 아니하다.</p>
-														<p>② 전항의 규정에 위반한 행위는 취소할 수 있다.</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-6">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-															<span class="lsw-ref-icon lsw-ref--saeng"
-																title="생활법령">생</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제6조(처분을 허락한 재산)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>법정대리인이 범위를 정하여 처분을 허락한 재산은 미성년자가 임의로 처분할 수 있다.</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-7">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제7조(동의와 허락의 취소)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>법정대리인은 미성년자가 아직 법률행위를 하기 전에는 전2조의 동의와 허락을 취소할 수 있다.</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-8">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-															<span class="lsw-ref-icon lsw-ref--saeng"
-																title="생활법령">생</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제8조(영업의 허락)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>① 법정대리인으로부터 허락을 얻은 특정한 영업에 관하여는 미성년자가 성년자와 동일한 행위능력이 있다.</p>
-														<p>② 법정대리인은 전항의 허락을 취소 또는 제한할 수 있다. 그러나 선의의 제삼자에게 대항하지 못한다.</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-9">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--saeng"
-																title="생활법령">생</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제9조(성년후견개시의 심판)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>① 가정법원은 질병, 장애, 노령, 그 밖의 사유로 인한 정신적 제약으로 사무를 처리할 능력이 지속적으로
-															결여된 사람에 대하여 본인, 배우자, 4촌 이내의 친족, 미성년후견인,
-															한정후견인, 특정후견인, 임의후견인, 한정후견감독인, 특정후견감독인, 임의후견감독인, 검사 또는
-															지방자치단체의 장의 청구에 의하여 성년후견개시의 심판을 한다.</p>
-														<p>② 가정법원은 성년후견개시의 심판을 할 때 본인의 의사를 고려하여야 한다.</p>
-														<p class="lsw-law-article__amendment">[전문개정 2011. 3. 7.]</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-10">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-															<span class="lsw-ref-icon lsw-ref--saeng"
-																title="생활법령">생</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제10조(피성년후견인의 행위와
-																취소)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>① 피성년후견인의 법률행위는 취소할 수 있다.</p>
-														<p>② 제1항에도 불구하고 일용품의 구입 등 일상생활에 필요하고 그 대가가 과도하지 아니한 법률행위는 성년후견인이
-															취소할 수 없다.</p>
-														<p class="lsw-law-article__amendment">[전문개정 2011. 3. 7.]</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-11">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제11조(성년후견종료의 심판)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>성년후견개시의 원인이 소멸된 경우에는 가정법원은 본인, 배우자, 4촌 이내의 친족, 성년후견인,
-															성년후견감독인, 검사 또는 지방자치단체의 장의 청구에 의하여 성년후견종료의 심판을
-															한다.</p>
-														<p class="lsw-law-article__amendment">[전문개정 2011. 3. 7.]</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-12">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--saeng"
-																title="생활법령">생</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제12조(한정후견개시의 심판)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>① 가정법원은 질병, 장애, 노령, 그 밖의 사유로 인한 정신적 제약으로 사무를 처리할 능력이 부족한 사람에
-															대하여 한정후견개시의 심판을 한다.</p>
-														<p>② 한정후견개시의 경우에 제9조제2항을 준용한다.</p>
-														<p class="lsw-law-article__amendment">[전문개정 2011. 3. 7.]</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-13">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제13조(피한정후견인의 행위와
-																동의)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>① 가정법원은 피한정후견인이 한정후견인의 동의를 받아야 하는 행위의 범위를 정할 수 있다.</p>
-														<p>② 한정후견인의 동의가 필요한 법률행위를 피한정후견인이 한정후견인의 동의 없이 하였을 때에는 그 법률행위를
-															취소할 수 있다.</p>
-														<p class="lsw-law-article__amendment">[전문개정 2011. 3. 7.]</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-14">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제14조(한정후견종료의 심판)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>한정후견개시의 원인이 소멸된 경우에는 가정법원은 한정후견종료의 심판을 한다.</p>
-														<p class="lsw-law-article__amendment">[전문개정 2011. 3. 7.]</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-15">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--saeng"
-																title="생활법령">생</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제15조(제한능력자의 상대방의 확답을 촉구할
-																권리)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>① 제한능력자의 상대방은 제한능력자가 능력자가 된 후에 그에게 1개월 이상의 기간을 정하여 그 취소할 수 있는
-															행위를 추인할 것인지 여부의 확답을 촉구할 수 있다.</p>
-														<p>② 제한능력자가 아직 능력자가 되지 못한 때에는 그의 법정대리인에게 제1항의 촉구를 할 수 있다.</p>
-														<p class="lsw-law-article__amendment">[전문개정 2011. 3. 7.]</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-16">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제16조(제한능력자의 상대방의 철회권과
-																거절권)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>① 제한능력자가 맺은 계약은 추인이 있을 때까지 상대방이 그 의사표시를 철회할 수 있다.</p>
-														<p>② 제한능력자의 단독행위는 추인이 있을 때까지 상대방이 거절할 수 있다.</p>
-														<p class="lsw-law-article__amendment">[전문개정 2011. 3. 7.]</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-17">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-															<span class="lsw-ref-icon lsw-ref--saeng"
-																title="생활법령">생</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제17조(제한능력자의 속임수)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>① 제한능력자가 속임수로써 자기를 능력자로 믿게 한 때에는 그 행위를 취소할 수 없다.</p>
-														<p>② 미성년자나 피한정후견인이 속임수로써 법정대리인의 동의가 있는 것으로 믿게 한 때에도 제1항과 같다.</p>
-														<p class="lsw-law-article__amendment">[전문개정 2011. 3. 7.]</p>
-													</div>
-												</div>
-											</section>
-
-											<section id="law-section-2" aria-labelledby="law-section-2-heading">
-												<h6 id="law-section-2-heading" class="lsw-law-article__section">제2절 주소
-												</h6>
-
-												<div class="lsw-law-article__item" id="article-18">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-															<span class="lsw-ref-icon lsw-ref--saeng"
-																title="생활법령">생</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제18조(주소)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>① 생활의 근거가 되는 곳을 주소로 한다.</p>
-														<p>② 주소는 동시에 두 곳 이상 있을 수 있다.</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-19">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제19조(거소)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>주소를 알 수 없는 경우에는 거소를 주소로 본다.</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-20">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<span class="lsw-ref-icon lsw-ref--pan" title="판례">판</span>
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제20조(거소)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>국내에 주소가 없는 자에 대하여는 국내에 있는 거소를 주소로 본다.</p>
-													</div>
-												</div>
-
-												<div class="lsw-law-article__item" id="article-21">
-													<div class="lsw-law-article__item-header">
-														<div class="lsw-law-article__item-left">
-															<input type="checkbox" class="lsw-article-check"
-																title="조문 선택">
-															<span class="lsw-law-article__num">제21조(가주소)</span>
-														</div>
-													</div>
-													<div class="lsw-law-article__body">
-														<p>어떤 행위에 관하여 가주소를 정한 때에는 그 행위에 관하여는 이를 주소로 본다.</p>
-													</div>
-												</div>
-											</section>
-										</section>
-									</section>
-								</article>
-								<div class="lsw-law-content__nav">
-									<div class="lsw-law-content__nav-prev">
-										<a href="#" class="krds-btn medium border">
-											<i class="lsw-icon" data-lucide="chevron-left" aria-hidden="true"></i> 제17조
-										</a>
-										<span class="lsw-law-content__nav-label">이전 조문</span>
-									</div>
-									<div class="lsw-law-content__nav-top">
-										<a href="#main-content" class="krds-btn medium border">맨 위로</a>
-									</div>
-									<div class="lsw-law-content__nav-next">
-										<span class="lsw-law-content__nav-label">다음 조문</span>
-										<a href="#" class="krds-btn medium border">
-											제19조 <i class="lsw-icon" data-lucide="chevron-right" aria-hidden="true"></i>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-
-
-					<!-- ===== 탭2: 조문별 보기 ===== -->
-					<section id="panel_law_02" aria-labelledby="tab_law_02" class="tab-conts" data-quick-nav="false">
-						<div class="lsw-law-layout lsw-law-layout--article">
-							<div class="lsw-article-list">
-								<h3 class="sr-only">조문 목록</h3>
-								<div class="krds-accordion">
-									<div class="accordion-item">
-										<h4 class="accordion-header">
-											<button type="button" id="acc-part-1" class="btn-accordion"
-												aria-controls="acc-collapse-part-1">
-												제1편 총칙
-											</button>
-										</h4>
-										<div id="acc-collapse-part-1" class="accordion-collapse collapse show"
-											aria-labelledby="acc-part-1">
-											<div class="accordion-body">
-												<div class="krds-accordion">
-													<div class="accordion-item">
-														<h5 class="accordion-header">
-															<button type="button" id="acc-chapter-1"
-																class="btn-accordion"
-																aria-controls="acc-collapse-chapter-1">
-																제1장 통칙
-															</button>
-														</h5>
-														<div id="acc-collapse-chapter-1"
-															class="accordion-collapse collapse show"
-															aria-labelledby="acc-chapter-1">
-															<div class="accordion-body">
-																<ul class="lsw-article-links">
-																	<li><a href="#article-1">제1조 (법원)</a></li>
-																	<li><a href="#article-2">제2조 (신의성실)</a></li>
-																	<li><a href="#article-3">제3조 (권리능력의 존속기간)</a></li>
-																</ul>
-															</div>
-														</div>
-													</div>
-													<div class="accordion-item">
-														<h5 class="accordion-header">
-															<button type="button" id="acc-chapter-2"
-																class="btn-accordion"
-																aria-controls="acc-collapse-chapter-2">
-																제2장 인
-															</button>
-														</h5>
-														<div id="acc-collapse-chapter-2"
-															class="accordion-collapse collapse"
-															aria-labelledby="acc-chapter-2">
-															<div class="accordion-body">
-																<ul class="lsw-article-links">
-																	<li><a href="#article-4">제4조 (성년)</a></li>
-																	<li><a href="#article-5">제5조 (미성년자의 능력)</a></li>
-																	<li><a href="#article-6">제6조 (처분을 허락한 재산)</a></li>
-																	<li><a href="#article-7">제7조 (동의와 허락의 취소)</a></li>
-																	<li><a href="#article-18">제18조 (주소)</a></li>
-																</ul>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="accordion-item">
-										<h4 class="accordion-header">
-											<button type="button" id="acc-part-2" class="btn-accordion"
-												aria-controls="acc-collapse-part-2">
-												제2편 물권
-											</button>
-										</h4>
-										<div id="acc-collapse-part-2" class="accordion-collapse collapse"
-											aria-labelledby="acc-part-2">
-											<div class="accordion-body">
-												<p class="lsw-article-links__hint">제185조 ~ 제372조</p>
-											</div>
-										</div>
-									</div>
-									<div class="accordion-item">
-										<h4 class="accordion-header">
-											<button type="button" id="acc-part-3" class="btn-accordion"
-												aria-controls="acc-collapse-part-3">
-												제3편 채권
-											</button>
-										</h4>
-										<div id="acc-collapse-part-3" class="accordion-collapse collapse"
-											aria-labelledby="acc-part-3">
-											<div class="accordion-body">
-												<p class="lsw-article-links__hint">제373조 ~ 제766조</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-
-					<!-- ===== 탭3: 연혁 ===== -->
-					<section id="panel_law_03" aria-labelledby="tab_law_03" class="tab-conts" data-quick-nav="false">
-						<div class="lsw-history">
-							<h3 class="sr-only">법령 연혁</h3>
-							<table class="krds-table">
-								<caption>민법 연혁 목록</caption>
-								<colgroup>
-									<col style="width: 20%">
-									<col style="width: 20%">
-									<col style="width: 25%">
-									<col style="width: 20%">
-									<col style="width: 15%">
-								</colgroup>
-								<thead>
-									<tr>
-										<th scope="col">공포일</th>
-										<th scope="col">시행일</th>
-										<th scope="col">법령번호</th>
-										<th scope="col">개정구분</th>
-										<th scope="col">본문보기</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="lsw-history__current">
-										<td>2024.12.31</td>
-										<td>2025.03.01</td>
-										<td>법률 제20624호</td>
-										<td><span class="krds-badge bg-light-primary">일부개정</span></td>
-										<td><a href="#" class="krds-btn small text">보기</a></td>
-									</tr>
-									<tr>
-										<td>2023.04.11</td>
-										<td>2023.05.09</td>
-										<td>법률 제19403호</td>
-										<td><span class="krds-badge outline-gray">일부개정</span></td>
-										<td><a href="#" class="krds-btn small text">보기</a></td>
-									</tr>
-									<tr>
-										<td>2021.12.21</td>
-										<td>2022.01.01</td>
-										<td>법률 제18668호</td>
-										<td><span class="krds-badge outline-gray">일부개정</span></td>
-										<td><a href="#" class="krds-btn small text">보기</a></td>
-									</tr>
-									<tr>
-										<td>2019.12.10</td>
-										<td>2020.02.04</td>
-										<td>법률 제16723호</td>
-										<td><span class="krds-badge outline-gray">일부개정</span></td>
-										<td><a href="#" class="krds-btn small text">보기</a></td>
-									</tr>
-									<tr>
-										<td>2017.10.31</td>
-										<td>2017.10.31</td>
-										<td>법률 제15022호</td>
-										<td><span class="krds-badge outline-gray">일부개정</span></td>
-										<td><a href="#" class="krds-btn small text">보기</a></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</section>
-
-					<!-- ===== 탭4: 별표·서식 ===== -->
-					<section id="panel_law_04" aria-labelledby="tab_law_04" class="tab-conts" data-quick-nav="false">
-						<div class="lsw-no-content">
-							<i class="lsw-icon" data-lucide="info" aria-hidden="true"></i>
-							<p>별표·서식이 없는 법령입니다.</p>
-						</div>
-					</section>
-
-					<!-- ===== 탭5: 관련정보 ===== -->
-					<section id="panel_law_05" aria-labelledby="tab_law_05" class="tab-conts" data-quick-nav="false">
-						<div class="lsw-related-info">
-							<h3 class="lsw-related-info__title">관련 법령</h3>
-							<ul class="lsw-related-list">
-								<li>
-									<a href="#" class="lsw-related-list__item">
-										<span class="krds-badge bg-light-primary">법률</span>
-										<span class="lsw-related-list__name">상법</span>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="lsw-related-list__item">
-										<span class="krds-badge bg-light-primary">법률</span>
-										<span class="lsw-related-list__name">가족관계의 등록 등에 관한 법률</span>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="lsw-related-list__item">
-										<span class="krds-badge bg-light-secondary">대통령령</span>
-										<span class="lsw-related-list__name">민법 시행령</span>
-									</a>
-								</li>
-							</ul>
-
-							<h3 class="lsw-related-info__title">관련 판례</h3>
-							<ul class="lsw-related-list">
-								<li>
-									<a href="#" class="lsw-related-list__item">
-										<span class="krds-badge outline-gray">대법원</span>
-										<span class="lsw-related-list__name">2022다12345 – 신의칙 위반에 관한 판례</span>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="lsw-related-list__item">
-										<span class="krds-badge outline-gray">대법원</span>
-										<span class="lsw-related-list__name">2021다98765 – 미성년자 법률행위에 관한 판례</span>
-									</a>
-								</li>
-							</ul>
-
-							<h3 class="lsw-related-info__title">법령해석례</h3>
-							<ul class="lsw-related-list">
-								<li>
-									<a href="#" class="lsw-related-list__item">
-										<span class="krds-badge bg-light-information">해석례</span>
-										<span class="lsw-related-list__name">민법 제5조 관련 법령해석 (법제처 23-0012)</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</section>
-
-				</div>
-			</div>
-		</div>
-		<!-- //법령 본문 영역 -->
-
-	</main>
-	<!-- //main -->
-
-	<!-- ============================================================
-		 법령상세정보 패널 (우측 고정 패널)
-	============================================================ -->
-	<aside class="lsw-law-info-panel is-open" id="law-info-panel" aria-label="법령상세정보 패널">
-		<div class="lsw-law-info-panel__inner">
-
-			<!-- 패널 헤더 -->
-			<div class="lsw-law-info-panel__hd">
-				<h2 class="lsw-law-info-panel__title">법령상세정보</h2>
-				<button type="button" class="lsw-law-info-panel__close" id="btn-panel-close" aria-label="패널 닫기">
-					<i class="lsw-icon" data-lucide="x"></i>
-				</button>
-			</div>
-
-			<!-- 검색 -->
-			<div class="lsw-law-info-panel__search">
-				<input type="text" class="lsw-panel-search__input" placeholder="조문 검색" aria-label="조문 검색">
-				<button type="button" class="lsw-panel-search__btn" aria-label="검색">검색</button>
-			</div>
-
-			<!-- 마스터-디테일 패널 뷰 -->
-			<div class="lsw-panel-views" id="panel-views">
-
-				<!-- 마스터: 네비게이션 목록 -->
-				<nav class="lsw-panel-view lsw-panel-nav-view lsw-law-info-panel__nav" aria-label="법령 상세 메뉴">
-					<ul class="lsw-info-nav__list">
-						<li>
-							<button type="button" class="lsw-info-nav__btn is-active" data-nav="content">
-								<span class="lsw-info-nav__num">1</span>
-								<span class="lsw-info-nav__label">본문</span>
-								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
-							</button>
-						</li>
-						<li>
-							<button type="button" class="lsw-info-nav__btn" data-nav="reason">
-								<span class="lsw-info-nav__num">2</span>
-								<span class="lsw-info-nav__label">제정·개정이유</span>
-								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
-							</button>
-						</li>
-						<li>
-							<button type="button" class="lsw-info-nav__btn" data-nav="history">
-								<span class="lsw-info-nav__num">3</span>
-								<span class="lsw-info-nav__label">연혁</span>
-								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
-							</button>
-						</li>
-						<li>
-							<button type="button" class="lsw-info-nav__btn" data-nav="3step">
-								<span class="lsw-info-nav__num">4</span>
-								<span class="lsw-info-nav__label">3단비교</span>
-								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
-							</button>
-						</li>
-						<li>
-							<button type="button" class="lsw-info-nav__btn" data-nav="newold">
-								<span class="lsw-info-nav__num">5</span>
-								<span class="lsw-info-nav__label">신구법비교</span>
-								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
-							</button>
-						</li>
-						<li>
-							<button type="button" class="lsw-info-nav__btn" data-nav="system">
-								<span class="lsw-info-nav__num">6</span>
-								<span class="lsw-info-nav__label">법령체계도</span>
-								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
-							</button>
-						</li>
-						<li>
-							<button type="button" class="lsw-info-nav__btn lsw-info-nav__btn--compare" data-nav="compare" id="btn-nav-compare">
-								<span class="lsw-info-nav__num">7</span>
-								<span class="lsw-info-nav__label">법령비교</span>
-								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
-							</button>
-						</li>
-						<li>
-							<button type="button" class="lsw-info-nav__btn" data-nav="audio">
-								<span class="lsw-info-nav__num">8</span>
-								<span class="lsw-info-nav__label">음성지원</span>
-								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
-							</button>
-						</li>
-						<li>
-							<button type="button" class="lsw-info-nav__btn" data-nav="braille">
-								<span class="lsw-info-nav__num">9</span>
-								<span class="lsw-info-nav__label">점자뷰어</span>
-								<i class="lsw-icon lsw-info-nav__arrow" data-lucide="chevron-right"></i>
-							</button>
-						</li>
-					</ul>
-				</nav>
-
-				<!-- 디테일: 콘텐츠 영역 -->
-				<div class="lsw-panel-view lsw-panel-detail-view" id="panel-detail-view" aria-live="polite">
-					<div class="lsw-panel-detail-hd">
-						<button type="button" class="lsw-panel-back" id="btn-panel-back" aria-label="목록으로 돌아가기">
-							<i class="lsw-icon" data-lucide="chevron-left"></i>
-						</button>
-						<span class="lsw-panel-detail-label" id="panel-detail-label">본문</span>
-					</div>
-					<div class="lsw-panel-detail-body" id="panel-detail-body">
-						<!-- 콘텐츠가 여기에 주입됩니다 -->
-					</div>
-				</div>
-
-			</div>
-
-
-			<!-- 패널 하단 액션 -->
-			<div class="lsw-law-info-panel__ft">
-				<button type="button" class="lsw-panel-ft-btn" id="btn-interest-law">
-					<i class="lsw-icon" data-lucide="bookmark"></i>
-					<span>관심법령 등록</span>
+					</div></div>
+				<button type="button" class="krds-btn medium icon" id="close-nav">
+					<span class="sr-only">전체메뉴 닫기</span>
+					<i class="svg-icon ico-popup-close"></i>
 				</button>
 			</div>
 		</div>
-	</aside>
+		<!-- //메인메뉴 : 모바일 -->
+	</header>
+	<!-- header -->
 
-	<!-- 패널 열기 버튼 (패널 닫혔을 때 표시) -->
-	<button type="button" class="lsw-law-info-panel-open" id="btn-panel-open" aria-label="법령상세정보 열기" hidden>
-		<i class="lsw-icon" data-lucide="chevrons-up-down"></i>
-		<span>법령상세정보</span>
-	</button>
+	<button class="btn-open-lf" id="btn-open-lf">법령목록</button>
+	<div class="lf-backdrop" id="lf-backdrop"></div>
 
-	<!-- 플로팅 액션 버튼 -->
-	<div class="lsw-floating-actions" id="lsw-floating-actions">
-		<button type="button" class="lsw-fab lsw-fab--interest" id="btn-fab-interest">
-			<i class="lsw-icon" data-lucide="bookmark"></i>
-			<span>관심법령</span>
-		</button>
-		<button type="button" class="lsw-fab lsw-fab--compare" id="btn-fab-compare">
-			<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-				<path d="M2 4h5v8H2zM9 4h5v8H9z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-				<path d="M7 8h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-			</svg>
-			<span>비교하기</span>
-		</button>
+	<div class="mn">
+		<aside class="lf">
+			<div class="lh">
+				<select class="lhs" aria-label="검색 유형 선택">
+					<option value="name" selected>법령명</option>
+					<option value="body">법령본문</option>
+					<option value="article">조문내용</option>
+					<option value="title">조문제목</option>
+					<option value="appendix">부칙</option>
+					<option value="revision">제정·개정문</option>
+				</select>
+				<button class="btn-close-lf" id="btn-close-lf" aria-label="닫기">✕</button>
+			</div>
+			<ul class="ll">
+				<li class="li a"><span class="ln">1.</span>
+					<div class="lb">
+						<div class="ltt"><span class="lic ic-l">법</span> <span class="hl">인공지능</span> 발전과 신뢰 기반 조성 등에 관한
+							기본법</div>
+						<div class="lm">[시행 2026. 7. 21.] [법률 제21311호, 2026.…</div>
+					</div>
+				</li>
+				<li class="li"><span class="ln">2.</span>
+					<div class="lb">
+						<div class="ltt"><span class="lic ic-d">령</span> <span class="hl">인공지능</span> 발전과 신뢰 기반 조성 등에 관…
+						</div>
+						<div class="lm">[시행 2026. 1. 22.] [대통령령 제36053호, 20…</div>
+					</div>
+				</li>
+				<li class="li"><span class="ln">3.</span>
+					<div class="lb">
+						<div class="ltt"><span class="lic ic-l">법</span> <span class="hl">인공지능</span> 발전과 신뢰 기반 조성 등에 관한
+							기본법</div>
+						<div class="lm">[시행 2026. 1. 22.] [법률 제21311호, 2026.…</div>
+					</div>
+				</li>
+				<li class="li"><span class="ln">4.</span>
+					<div class="lb">
+						<div class="ltt"><span class="lic ic-l">법</span> 산업 디지털 전환 및 <span class="hl">인공지능</span> 활용 촉진에
+							관한 법률</div>
+						<div class="lm">[시행 2026. 7. 1.] [법률 제21250호, 2025.…</div>
+					</div>
+				</li>
+				<li class="li"><span class="ln">5.</span>
+					<div class="lb">
+						<div class="ltt"><span class="lic ic-l">법</span> <span class="hl">인공지능</span> 및 데이터 기반 행정 활성화에
+							관한 법률</div>
+						<div class="lm">[시행 2026. 8. 28.] [법률 제21392호, 2026.…</div>
+					</div>
+				</li>
+				<li class="li"><span class="ln">6.</span>
+					<div class="lb">
+						<div class="ltt"><span class="lic ic-d">령</span> <span class="hl">인공지능</span> 및 데이터 기반 행정 활성화에
+							관…</div>
+						<div class="lm">[시행 2027. 2. 28.] [법률 제1392호, 20…</div>
+					</div>
+				</li>
+				<li class="li"><span class="ln">7.</span>
+					<div class="lb">
+						<div class="ltt"><span class="lic ic-l">법</span> 데이터기반행정 활성화에 관한 법률</div>
+						<div class="lm">[시행 2023. 11. 17.] [법률 제19408호, 2023…</div>
+					</div>
+				</li>
+				<li class="li"><span class="ln">8.</span>
+					<div class="lb">
+						<div class="ltt"><span class="lic ic-l">법</span> 산업 디지털 전환 촉진법</div>
+						<div class="lm">[시행 2025. 10. 1.] [법률 제21065호, 2025.…</div>
+					</div>
+				</li>
+			</ul>
+			<div class="pg-w"><button class="pg">‹‹</button><button class="pg">‹</button><button
+					class="pg a">1</button><button class="pg">›</button><button class="pg">››</button></div>
+		</aside>
+
+		<main class="rt">
+			<div class="lta">
+				<h1 class="ltm">인공지능 발전과 신뢰 기반 조성 등에 관한 기본법 <small>( 약칭: 인공지능기본법 )</small></h1>
+				<div class="lti">[시행 2026. 7. 21.] [법률 제21311호, 2026. 1. 20., 일부개정] <span class="ltb">현재시행법령확인</span>
+				</div>
+				<div class="ltd">과학기술정보통신부(<span class="kw">인공지능</span>안전신뢰정책과), 044-202-6293</div>
+			</div>
+			<div class="ct">
+				<button class="cb p">본문</button><button class="cb">제정·개정이유</button><button class="cb">연혁</button><button
+					class="cb">신구법비교</button><button class="cb">법령체계도</button><button class="cb">법령비교</button><button
+					class="cb ac">음성지원</button><button class="cb ac">점자뷰어</button>
+				<div class="sp"></div><select class="cs" aria-label="조문선택">
+					<option>조문선택</option>
+				</select><button class="cb" style="font-size:11px">화면내검색</button>
+			</div>
+			<div class="csb"><a href="#">📋 판례</a><a href="#">📜 연혁</a><a href="#">📑 위임행정규칙</a><a href="#">⚖ 규제</a><a
+					href="#">📖 생활법령</a><a href="#">👁 한눈보기</a></div>
+			<!-- 법령 개요 -->
+			<div class="law-summary">
+				<div class="law-summary__header">
+					<span class="law-summary__icon">ⓘ</span>
+					<strong>법령 개요</strong>
+				</div>
+				<div class="law-summary__grid">
+					<div class="law-summary__item">
+						<span class="law-summary__label">소관부처</span>
+						<span class="law-summary__value">과학기술정보통신부</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">공포번호</span>
+						<span class="law-summary__value">제21311호</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">공포일 / 제정일</span>
+						<span class="law-summary__value">2026.01.20</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">시행일</span>
+						<span class="law-summary__value">2026.07.21</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">법령유형</span>
+						<span class="law-summary__value">법률</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">상위법률</span>
+						<span class="law-summary__value link">-</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">조문 수</span>
+						<span class="law-summary__value">50개 조문 (6장)</span>
+					</div>
+					<div class="law-summary__item">
+						<span class="law-summary__label">조회수</span>
+						<span class="law-summary__value">312,847회</span>
+					</div>
+				</div>
+			</div>
+			<!-- //법령 개요 -->
+			<div class="lbd">
+				<h2 class="ch">제1장 총칙</h2>
+				<div class="ar"><input type="checkbox" class="ack">
+					<div class="at"><button class="atb">📋</button><button class="atb">📜</button></div>
+					<div class="acc"><span class="an">제1조(목적)</span> 이 법은 <span class="kw">인공지능</span>의 건전한 발전과 신뢰 기반
+						조성에 필요한 기본적인 사항을 규정함으로써 국민의 권익과 존엄성을 보호하고 국민의 삶의 질 향상과 국가경쟁력을 강화하는 데 이바지함을 목적으로 한다.</div>
+				</div>
+				<div class="ar"><input type="checkbox" class="ack">
+					<div class="at"><button class="atb">📋</button><button class="atb">📜</button></div>
+					<div class="acc"><span class="an">제2조(정의)</span> 이 법에서 사용하는 용어의 뜻은 다음과 같다. <span class="arv">&lt;개정
+							2026. 1. 20.&gt;</span>
+						<div class="acl">1. "<span class="kw">인공지능</span>"이란 학습, 추론, 지각, 판단, 언어의 이해 등 인간이 가진 지적 능력을 전자적
+							방법으로 구현한 것을 말한다.</div>
+						<div class="acl">2. "<span class="kw">인공지능</span>시스템"이란 다양한 수준의 자율성과 적응성을 가지고 주어진 목표를 위하여 실제 및
+							가상환경에 영향을 미치는 예측, 추천, 결정 등의 결과물을 추론하는 <span class="kw">인공지능</span> 기반 시스템을 말한다.</div>
+						<div class="acl">3. "<span class="kw">인공지능</span>기술"이란 <span class="kw">인공지능</span>을 구현하기 위하여
+							필요한 하드웨어 · 소프트웨어 기술 또는 그 활용 기술을 말한다.</div>
+						<div class="acl">4. "고영향 <span class="kw">인공지능</span>"이란 사람의 생명, 신체의 안전 및 기본권에 중대한 영향을 미치거나 위험을
+							초래할 우려가 있는 <span class="kw">인공지능</span>시스템으로서 다음 각 목의 어느 하나의 영역에서 활용되는 것을 말한다.</div>
+						<div class="asb">가. 「에너지법」 제2조제1호에 따른 에너지의 공급</div>
+						<div class="asb">나. 「먹는물관리법」 제3조제1호에 따른 먹는물의 생산 공정</div>
+						<div class="asb">다. 「보건의료기본법」 제3조제1호에 따른 보건의료의 제공 및 이용체계의 구축 · 운영</div>
+						<div class="asb">라. 「의료기기법」 제2조제1항에 따른 의료기기 및 「디지털의료제품법」 제2조제2호에 따른 디지털의료기기의 개발 및 이용</div>
+					</div>
+				</div>
+				<div class="ar"><input type="checkbox" class="ack">
+					<div class="at"><button class="atb">📋</button></div>
+					<div class="acc"><span class="an">제3조(기본원칙)</span> <span class="kw">인공지능</span>에 관한 정책은 다음 각 호의
+						기본원칙에 따라 수립·시행되어야 한다.
+						<div class="acl">1. 인간의 존엄성과 개인의 자율성을 존중하고, <span class="kw">인공지능</span>이 인간을 위한 도구로서 기능하도록 할 것
+						</div>
+						<div class="acl">2. <span class="kw">인공지능</span>의 개발·이용 과정에서 공정성·투명성·안전성·책임성을 확보할 것</div>
+						<div class="acl">3. <span class="kw">인공지능</span>의 개발·이용 과정에서 사회적·윤리적 영향을 고려하고, 인간의 기본적 권리를 보호할 것
+						</div>
+						<div class="acl">4. <span class="kw">인공지능</span>의 발전과 활용을 저해하지 아니하면서 국민의 안전과 권익을 보호할 수 있는 최소한의
+							규제를 추구할 것</div>
+						<div class="acl">5. <span class="kw">인공지능</span>이 사회 전반에 포용적으로 활용될 수 있도록 할 것</div>
+					</div>
+				</div>
+				<div class="ar"><input type="checkbox" class="ack">
+					<div class="at"></div>
+					<div class="acc"><span class="an">제4조(국가와 지방자치단체의 책무)</span>
+						<div class="acl">① 국가와 지방자치단체는 <span class="kw">인공지능</span>의 건전한 발전을 위하여 <span
+								class="kw">인공지능</span> 관련 기술의 연구개발, 인재양성, 산업진흥 등에 필요한 시책을 마련하고 추진하여야 한다.</div>
+						<div class="acl">② 국가와 지방자치단체는 <span class="kw">인공지능</span>의 신뢰 기반 조성을 위하여 <span
+								class="kw">인공지능</span>의 안전성, 투명성, 공정성, 책임성 확보에 필요한 시책을 마련하여야 한다.</div>
+					</div>
+				</div>
+				<div class="ar"><input type="checkbox" class="ack">
+					<div class="at"></div>
+					<div class="acc"><span class="an">제5조(<span class="kw">인공지능</span>사업자의 책무)</span>
+						<div class="acl">① <span class="kw">인공지능</span>사업자는 <span class="kw">인공지능</span>의 개발·이용 과정에서 인간의
+							존엄성과 기본적 권리를 존중하고, <span class="kw">인공지능</span>으로 인한 위험을 예방·최소화하기 위하여 노력하여야 한다.</div>
+						<div class="acl">② <span class="kw">인공지능</span>사업자는 <span class="kw">인공지능</span>시스템의 투명성과 안전성을
+							확보하기 위하여 필요한 조치를 하여야 한다.</div>
+					</div>
+				</div>
+				<div class="ar"><input type="checkbox" class="ack">
+					<div class="at"></div>
+					<div class="acc"><span class="an">제6조(이용자의 책무)</span> 이용자는 <span class="kw">인공지능</span>을 이용함에 있어 다른
+						사람의 권리를 침해하거나 공공의 이익을 해치지 아니하도록 노력하여야 한다.</div>
+				</div>
+
+				<h2 class="ch">제2장 국가인공지능위원회</h2>
+				<div class="ar"><input type="checkbox" class="ack">
+					<div class="at"><button class="atb">📋</button></div>
+					<div class="acc"><span class="an">제7조(국가인공지능위원회의 설치)</span>
+						<div class="acl">① <span class="kw">인공지능</span>에 관한 주요 정책과 계획을 심의·조정하기 위하여 대통령 소속으로 국가<span
+								class="kw">인공지능</span>위원회(이하 "위원회"라 한다)를 둔다.</div>
+						<div class="acl">② 위원회는 다음 각 호의 사항을 심의·조정한다.</div>
+						<div class="asb">1. <span class="kw">인공지능</span> 기본계획 및 시행계획의 수립·변경에 관한 사항</div>
+						<div class="asb">2. <span class="kw">인공지능</span> 관련 법령·제도의 개선에 관한 사항</div>
+						<div class="asb">3. <span class="kw">인공지능</span>의 사회적·윤리적 영향에 관한 사항</div>
+						<div class="asb">4. 고영향 <span class="kw">인공지능</span>에 관한 사항</div>
+					</div>
+				</div>
+				<div class="ar"><input type="checkbox" class="ack">
+					<div class="at"></div>
+					<div class="acc"><span class="an">제8조(위원회의 기능)</span> 위원회는 <span class="kw">인공지능</span>에 관한 정부 정책의
+						종합·조정, 관계 부처 간 협력 강화, <span class="kw">인공지능</span> 기본계획의 수립·추진 상황 점검 등의 기능을 수행한다.</div>
+				</div>
+				<div class="ar"><input type="checkbox" class="ack">
+					<div class="at"></div>
+					<div class="acc"><span class="an">제9조(위원회의 구성)</span>
+						<div class="acl">① 위원회는 위원장 1명을 포함한 30명 이내의 위원으로 구성하며, 위원장은 대통령이 된다.</div>
+						<div class="acl">② 위원은 관계 중앙행정기관의 장과 <span class="kw">인공지능</span>에 관한 학식과 경험이 풍부한 사람 중에서 대통령이
+							임명하거나 위촉한다.</div>
+					</div>
+				</div>
+				<div class="ar"><input type="checkbox" class="ack">
+					<div class="at"></div>
+					<div class="acc"><span class="an">제10조(전문위원회)</span>
+						<div class="acl">① 위원회의 업무를 효율적으로 지원하기 위하여 위원회에 전문위원회를 둘 수 있다.</div>
+						<div class="acl">② 전문위원회는 50명 이상의 위원으로 구성하며, 효율적 업무 수행을 위해 5명의 위원으로 구성되는 소위원회를 둘 수 있다.</div>
+					</div>
+				</div>
+			</div>
+		</main>
 	</div>
 
-	<!-- ============================================================
-		 법령비교 오버레이
-	============================================================ -->
-	<div class="lsw-compare-overlay" id="compare-overlay" role="dialog" aria-modal="true" aria-label="법령비교" hidden>
-		<div class="lsw-compare-wrap">
-
-			<!-- 비교 헤더 -->
-			<div class="lsw-compare-hd">
-				<div class="lsw-compare-hd__left">
-					<h2 class="lsw-compare-title">법령비교</h2>
-					<p class="lsw-compare-desc">두 법령을 나란히 비교합니다.</p>
-				</div>
-				<div class="lsw-compare-hd__right">
-					<img src="../image/h_logo1.png" alt="국가법령정보센터" class="lsw-compare-logo">
-					<button type="button" class="lsw-compare-close" id="btn-compare-close" aria-label="법령비교 닫기">
-						<i class="lsw-icon" data-lucide="x"></i>
-					</button>
-				</div>
-			</div>
-
-			<!-- 모바일 전용 탭 -->
-			<div class="lsw-compare-mob-tabs" role="tablist" aria-label="비교 패널 선택">
-				<button class="lsw-compare-mob-tab is-active" role="tab" aria-selected="true" data-target="left">현행 법령</button>
-				<button class="lsw-compare-mob-tab" role="tab" aria-selected="false" data-target="right">비교 법령</button>
-			</div>
-
-			<!-- 비교 본문 (2컬럼 / 모바일 슬라이드) -->
-			<div class="lsw-compare-body">
-
-				<!-- 좌측 패널 -->
-				<div class="lsw-compare-panel lsw-compare-panel--left">
-					<div class="lsw-compare-panel__search-area">
-						<div class="lsw-compare-filter">
-							<span class="lsw-compare-filter__label">법령선택</span>
-							<label class="lsw-compare-radio"><input type="radio" name="law-type-left" checked> 법령</label>
-							<label class="lsw-compare-radio"><input type="radio" name="law-type-left"> 행정규칙</label>
-							<label class="lsw-compare-radio"><input type="radio" name="law-type-left"> 자치법규</label>
-							<span class="lsw-compare-filter__sep"></span>
-							<span class="lsw-compare-filter__label">현행선택</span>
-							<label class="lsw-compare-radio"><input type="radio" name="era-left" checked> 현행</label>
-							<label class="lsw-compare-radio"><input type="radio" name="era-left"> 연혁</label>
-						</div>
-						<div class="lsw-compare-search">
-							<span class="lsw-compare-search__label">법령명</span>
-							<input type="text" class="lsw-compare-search__input" value="10·27법난 피해자의 명예회복 등에 관한 법률" aria-label="법령명 입력">
-							<button type="button" class="lsw-compare-search__btn">검색</button>
-						</div>
-						<div class="lsw-compare-result-info">총 <strong>2</strong>건</div>
-						<div class="lsw-compare-list">
-							<table class="lsw-compare-table">
-								<caption class="sr-only">좌측 법령 목록</caption>
-								<thead>
-									<tr>
-										<th>법령명</th>
-										<th>공포번호</th>
-										<th>공포일자</th>
-										<th>시행일자</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="is-selected">
-										<td><a href="#">10·27법난 피해자의 명예회복 등에 관한 법률 시행령</a></td>
-										<td>제35811호</td>
-										<td>2025. 10. 1.</td>
-										<td>2025. 10. 1.</td>
-									</tr>
-									<tr>
-										<td><a href="#">10·27법난 피해자의 명예회복 등에 관한 법률</a></td>
-										<td>제19592호</td>
-										<td>2023. 8. 8.</td>
-										<td>2023. 8. 8.</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-					<div class="lsw-compare-panel__text">
-						<div class="lsw-compare-panel__text-inner">
-							<div class="lsw-compare-law-meta">
-								<p><span class="lsw-ref-icon lsw-ref--pan">판</span> <span class="lsw-ref-icon lsw-ref--yeon">연</span> <span class="lsw-ref-icon lsw-ref--wi">위</span> <span class="lsw-ref-icon lsw-ref--gyu">규</span> <span class="lsw-ref-icon lsw-ref--saeng">생</span> 한눈보기</p>
-							</div>
-							<h3 class="lsw-compare-law-title">10·27법난 피해자의 명예회복 등에 관한 법률 <span class="lsw-compare-law-abbr">(약칭: 10·27법난법)</span></h3>
-							<p class="lsw-compare-law-notice">[시행 2023. 8. 8.] [법률 제19592호, 2023. 8. 8., 타법개정]</p>
-							<p class="lsw-compare-law-dept">문화체육관광부(종무1담당관), 044-203-2314</p>
-							<div class="lsw-compare-law-body">
-								<p class="lsw-compare-law-article"><strong>제1조(목적)</strong> 이 법은 10·27법난과 관련하여 피해를 입은 사람과 불교계의 명예를 회복시켜줌으로써 인권신장과 국민화합에 이바지함을 목적으로 한다. &lt;개정 2023. 8. 8.&gt;</p>
-								<p class="lsw-compare-law-article"><strong>제2조(정의)</strong> 이 법에서 사용하는 용어의 정의는 다음과 같다. &lt;개정 2023. 8. 8.&gt;</p>
-								<ol class="lsw-compare-law-ol">
-									<li>"10·27법난"이란 1980년 10월 계엄사령부의 합동수사본부 합동수사단이 불교계 정화를 명분으로 대한불교 조계종의 승려 및 불교 관련자들을 강제로 연행·수사하고, 포고령 위반 수배자 및 불순분자를 검거한다는 구실로 군·경 합동으로 전국의 사찰 및 암자 등을 수색한 사건을 말한다.</li>
-									<li>"피해자"란 10·27법난으로 인하여 사망한 사람 또는 부상 및 장애를 입은 사람을 말한다.</li>
-								</ol>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 구분선 -->
-				<div class="lsw-compare-divider" aria-hidden="true"></div>
-
-				<!-- 우측 패널 -->
-				<div class="lsw-compare-panel lsw-compare-panel--right">
-					<div class="lsw-compare-panel__search-area">
-						<div class="lsw-compare-filter">
-							<span class="lsw-compare-filter__label">법령선택</span>
-							<label class="lsw-compare-radio"><input type="radio" name="law-type-right" checked> 법령</label>
-							<label class="lsw-compare-radio"><input type="radio" name="law-type-right"> 행정규칙</label>
-							<label class="lsw-compare-radio"><input type="radio" name="law-type-right"> 자치법규</label>
-							<span class="lsw-compare-filter__sep"></span>
-							<span class="lsw-compare-filter__label">현행선택</span>
-							<label class="lsw-compare-radio"><input type="radio" name="era-right" checked> 현행</label>
-							<label class="lsw-compare-radio"><input type="radio" name="era-right"> 연혁</label>
-						</div>
-						<div class="lsw-compare-search">
-							<span class="lsw-compare-search__label">법령명</span>
-							<input type="text" class="lsw-compare-search__input" placeholder="법령명 검색" aria-label="법령명 입력">
-							<button type="button" class="lsw-compare-search__btn">검색</button>
-						</div>
-						<div class="lsw-compare-result-info">총 <strong>6,110</strong>건</div>
-						<div class="lsw-compare-list">
-							<table class="lsw-compare-table">
-								<caption class="sr-only">우측 법령 목록</caption>
-								<thead>
-									<tr>
-										<th>법령명</th>
-										<th>공포번호</th>
-										<th>공포일자</th>
-										<th>시행일자</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="is-new">
-										<td><a href="#">자유무역협정의 이행을 위한 관세법의 특례에 관한 법률 시행령</a></td>
-										<td>제36017호</td>
-										<td>2026. 1. 6.</td>
-										<td>미정</td>
-									</tr>
-									<tr class="is-new">
-										<td><a href="#">전기안전관리법 시행규칙</a></td>
-										<td>제415호</td>
-										<td>2021. 4. 1.</td>
-										<td>2028. 4. 1.</td>
-									</tr>
-									<tr class="is-new">
-										<td><a href="#">전기·전자제품 및 자동차의 자원순환에 관한 법률 시행령</a></td>
-										<td>제35467호</td>
-										<td>2025. 4. 22.</td>
-										<td>2028. 1. 1.</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-					<div class="lsw-compare-panel__text lsw-compare-panel__text--empty">
-						<div class="lsw-compare-empty">
-							<i class="lsw-icon" data-lucide="info" aria-hidden="true"></i>
-							<p>비교할 법령을 선택해 주세요.</p>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
+	<!-- footer -->
 	<footer id="krds-footer">
 		<div class="foot-quick">
 			<div class="inner">
@@ -1529,22 +572,20 @@
 		</div>
 		<div class="inner">
 			<div class="f-logo">
-				<img src="../image/h_logo1.png" alt="국가법령정보센터" class="lsw-footer-logo">
+				<img src="../image/h_logo1.png" alt="국가법령정보센터">
 			</div>
 			<div class="f-cnt">
 				<div class="f-info">
 					<p class="info-addr">(30102) 세종특별자치시 도움4로 13 법제처</p>
 					<ul class="info-cs">
-						<li><strong class="strong">대표전화 1899-0012</strong><span class="span">(평일 09시~18시)</span>
-						</li>
+						<li><strong class="strong">대표전화 1899-0012</strong><span class="span">(평일 09시~18시)</span></li>
 						<li><strong class="strong">법령 해석 문의 044-200-6802</strong></li>
 					</ul>
 				</div>
 				<div class="f-link">
 					<div class="link-go">
-						<a href="#" class="krds-btn medium text">법제처 소개 <i class="lsw-icon" data-lucide="chevron-right"></i></a>
-						<a href="#" class="krds-btn medium text">이용약관 <i class="lsw-icon" data-lucide="chevron-right"></i></a>
-						<a href="#" class="krds-btn medium text" target="_blank" title="새 창 열기">웹 접근성 안내 <i class="lsw-icon" data-lucide="external-link"></i></a>
+						<a href="#" class="krds-btn medium text">법제처 소개 <i class="svg-icon ico-angle right"></i></a>
+						<a href="#" class="krds-btn medium text">이용약관 <i class="svg-icon ico-angle right"></i></a>
 					</div>
 				</div>
 			</div>
@@ -1562,338 +603,69 @@
 	</footer>
 	<!-- //footer -->
 
+	<!-- Mode Toggles -->
+	<div class="mode-toggles">
+		<button type="button" class="mode-btn" id="btn-large-text" title="큰 글씨 모드">A+</button>
+		<button type="button" class="mode-btn" id="btn-dark-mode" title="다크 모드">🌙</button>
+	</div>
+
 	<script src="../assets/krds/js/component/ui-script.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/uikit@3/dist/js/uikit.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/uikit@3/dist/js/uikit-icons.min.js"></script>
-	<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 	<script>
-	document.addEventListener('DOMContentLoaded', function () {
+		document.querySelectorAll('.cb').forEach(b => { b.addEventListener('click', function () { this.parentElement.querySelectorAll('.cb').forEach(s => s.classList.remove('a', 'active', 'p')); this.classList.add('a', 'p') }) });
+		document.querySelectorAll('.li').forEach(i => { i.addEventListener('click', function () { document.querySelectorAll('.li').forEach(x => x.classList.remove('a')); this.classList.add('a') }) });
 
-		/* -------------------------------------------------------
-		   1. 목차 사이드바 토글
-		------------------------------------------------------- */
-		const tocToggleBtn = document.querySelector('.lsw-toc-toggle');
-		const lawToc = document.getElementById('law-toc');
-		if (tocToggleBtn && lawToc) {
-			tocToggleBtn.addEventListener('click', function () {
-				lawToc.classList.toggle('is-collapsed');
-				const isCollapsed = lawToc.classList.contains('is-collapsed');
-				tocToggleBtn.setAttribute('aria-expanded', !isCollapsed);
-				const spanText = tocToggleBtn.querySelector('.sr-only');
-				if (spanText) spanText.textContent = isCollapsed ? '목차 펼치기' : '목차 접기';
+		const lf = document.querySelector('.lf');
+		const btnOpenLf = document.getElementById('btn-open-lf');
+		const btnCloseLf = document.getElementById('btn-close-lf');
+		const lfBackdrop = document.getElementById('lf-backdrop');
+
+		if(btnOpenLf && btnCloseLf && lfBackdrop && lf) {
+			btnOpenLf.addEventListener('click', () => {
+				lf.classList.add('open');
+				lfBackdrop.classList.add('open');
+			});
+			btnCloseLf.addEventListener('click', () => {
+				lf.classList.remove('open');
+				lfBackdrop.classList.remove('open');
+			});
+			lfBackdrop.addEventListener('click', () => {
+				lf.classList.remove('open');
+				lfBackdrop.classList.remove('open');
 			});
 		}
 
-		/* -------------------------------------------------------
-		   1-b. 뷰 선택 select -> 탭 패널 전환
-		------------------------------------------------------- */
-		const lawViewSelect = document.getElementById("law-view-select");
-		const allTabPanels  = document.querySelectorAll(".tab-conts");
+		// Dark Mode & Large Text Mode Toggles
+		const btnDarkMode = document.getElementById('btn-dark-mode');
+		const btnLargeText = document.getElementById('btn-large-text');
+		const body = document.body;
 
-		function switchLawPanel(panelId) {
-			allTabPanels.forEach(function (panel) {
-				panel.classList.toggle("active", panel.id === panelId);
-			});
-			var toc = document.getElementById("law-toc");
-			if (toc) toc.style.display = (panelId === "panel_law_01") ? "" : "none";
-		}
-
-		if (lawViewSelect) {
-			lawViewSelect.addEventListener("change", function () {
-				switchLawPanel(this.value);
-			});
-		}
-
-		/* -------------------------------------------------------
-		   2. 상단영역 닫기 / 열기 토글
-		------------------------------------------------------- */
-		const btnAreaToggle = document.getElementById('btn-area-toggle');
-		const header = document.getElementById('krds-header');
-		const masthead = document.getElementById('krds-masthead');
-		if (btnAreaToggle) {
-			btnAreaToggle.addEventListener('click', function () {
-				const isExpanded = this.getAttribute('aria-expanded') === 'true';
-				const label = this.querySelector('.btn-area-toggle__label');
-				if (isExpanded) {
-					// 헤더 접기
-					if (header) header.classList.add('is-header-hidden');
-					if (masthead) masthead.classList.add('is-header-hidden');
-					document.documentElement.classList.add('header-collapsed');
-					this.setAttribute('aria-expanded', 'false');
-					this.setAttribute('aria-label', '상단영역 펼치기');
-					if (label) label.textContent = '상단영역열기';
+		if (btnDarkMode) {
+			btnDarkMode.addEventListener('click', () => {
+				body.classList.toggle('dark-mode');
+				btnDarkMode.classList.toggle('active');
+				if (body.classList.contains('dark-mode')) {
+					btnDarkMode.textContent = '☀️';
+					btnDarkMode.title = '라이트 모드';
 				} else {
-					// 헤더 펼치기
-					if (header) header.classList.remove('is-header-hidden');
-					if (masthead) masthead.classList.remove('is-header-hidden');
-					document.documentElement.classList.remove('header-collapsed');
-					this.setAttribute('aria-expanded', 'true');
-					this.setAttribute('aria-label', '상단영역 접기');
-					if (label) label.textContent = '상단영역닫기';
+					btnDarkMode.textContent = '🌙';
+					btnDarkMode.title = '다크 모드';
 				}
 			});
 		}
 
-		/* -------------------------------------------------------
-		   3. 법령상세정보 패널 열기 / 닫기
-		------------------------------------------------------- */
-		const infoPanel = document.getElementById('law-info-panel');
-		const btnPanelClose = document.getElementById('btn-panel-close');
-		const btnPanelOpen = document.getElementById('btn-panel-open');
-
-		function closeInfoPanel() {
-			if (!infoPanel) return;
-			infoPanel.classList.remove('is-open');
-			infoPanel.classList.add('is-closed');
-			document.documentElement.classList.remove('law-panel-open');
-			if (btnPanelOpen) btnPanelOpen.hidden = false;
-		}
-		function openInfoPanel() {
-			if (!infoPanel) return;
-			infoPanel.classList.add('is-open');
-			infoPanel.classList.remove('is-closed');
-			document.documentElement.classList.add('law-panel-open');
-			if (btnPanelOpen) btnPanelOpen.hidden = true;
-		}
-		if (btnPanelClose) btnPanelClose.addEventListener('click', closeInfoPanel);
-		if (btnPanelOpen) btnPanelOpen.addEventListener('click', openInfoPanel);
-
-		/* -------------------------------------------------------
-		   4. 패널 마스터-디테일 네비게이션
-		------------------------------------------------------- */
-		const panelViews      = document.getElementById('panel-views');
-		const panelDetailView = document.getElementById('panel-detail-view');
-		const panelDetailLabel= document.getElementById('panel-detail-label');
-		const panelDetailBody = document.getElementById('panel-detail-body');
-		const btnPanelBack    = document.getElementById('btn-panel-back');
-		const navBtns         = document.querySelectorAll('.lsw-info-nav__btn');
-
-		function getPanelContent(nav) {
-			const contents = {
-				content: `<p class="pa-panel-intro">현재 법령의 조문 본문입니다.</p>
-<ul class="pa-article-list">
-  <li><span class="pa-art-num">제1조</span><span class="pa-art-title">(목적)</span><p>이 법은 행정 절차를 규정함을 목적으로 한다.</p></li>
-  <li><span class="pa-art-num">제2조</span><span class="pa-art-title">(정의)</span><p>이 법에서 사용하는 용어의 뜻은 다음과 같다.</p></li>
-  <li><span class="pa-art-num">제3조</span><span class="pa-art-title">(적용 범위)</span><p>이 법은 모든 행정기관의 처분에 적용한다.</p></li>
-</ul>`,
-				reason: `<p class="pa-panel-intro">제정·개정이유를 확인합니다.</p>
-<div class="pa-reason-item">
-  <span class="pa-reason-date">2024.01.09</span>
-  <h4>일부개정</h4>
-  <p>디지털 전환에 따른 행정 효율화를 위해 관련 조항을 정비하고 신기술 적용 근거를 마련하였습니다.</p>
-</div>
-<div class="pa-reason-item">
-  <span class="pa-reason-date">2022.06.10</span>
-  <h4>전부개정</h4>
-  <p>법령 체계 정비 및 용어 통일을 위해 전부개정하였습니다.</p>
-</div>`,
-				history: `<p class="pa-panel-intro">법령 연혁 목록입니다.</p>
-<ul class="pa-history-list">
-  <li><span class="pa-history-date">2024.01.09</span><span class="pa-history-type amendment">일부개정</span></li>
-  <li><span class="pa-history-date">2022.06.10</span><span class="pa-history-type full">전부개정</span></li>
-  <li><span class="pa-history-date">2019.03.19</span><span class="pa-history-type amendment">일부개정</span></li>
-  <li><span class="pa-history-date">2015.07.24</span><span class="pa-history-type enact">제정</span></li>
-</ul>`,
-				'3step': `<p class="pa-panel-intro">구법·현행·개정안을 3단으로 비교합니다.</p>
-<div class="pa-3step-wrap">
-  <div class="pa-3step-col"><h5>구법</h5><p>제1조(목적) 이 법은 행정 절차를 규정함을 목적으로 한다.</p></div>
-  <div class="pa-3step-col pa-3step-col--cur"><h5>현행</h5><p>제1조(목적) 이 법은 행정 절차를 개선하고 규정함을 목적으로 한다.</p></div>
-  <div class="pa-3step-col pa-3step-col--new"><h5>개정안</h5><p>제1조(목적) 이 법은 디지털 전환을 지원하고 행정 절차를 규정함을 목적으로 한다.</p></div>
-</div>`,
-				newold: `<p class="pa-panel-intro">신·구 조문 대비표입니다.</p>
-<table class="pa-newold-table">
-  <thead><tr><th>현행</th><th>개정안</th></tr></thead>
-  <tbody>
-    <tr><td>제1조(목적) 이 법은 행정 절차를 규정함을 목적으로 한다.</td><td>제1조(목적) 이 법은 <ins>디지털 전환을 지원하고</ins> 행정 절차를 규정함을 목적으로 한다.</td></tr>
-    <tr><td>제2조(정의) 이 법에서 사용하는 용어의 뜻은 다음과 같다.</td><td>제2조(정의) 이 법에서 사용하는 용어의 뜻은 다음과 같다.</td></tr>
-  </tbody>
-</table>`,
-				system: `<p class="pa-panel-intro">법령 체계도입니다.</p>
-<div class="pa-system-tree">
-  <div class="pa-sys-node pa-sys-root">헌법</div>
-  <div class="pa-sys-children">
-    <div class="pa-sys-node pa-sys-law">현행 법령</div>
-    <div class="pa-sys-children">
-      <div class="pa-sys-node pa-sys-sub">시행령</div>
-      <div class="pa-sys-node pa-sys-sub">시행규칙</div>
-    </div>
-  </div>
-</div>`,
-				compare: `<p class="pa-panel-intro">법령비교 오버레이를 통해 다른 법령과 비교합니다.</p>
-<button type="button" class="pa-open-compare-btn" id="btn-detail-compare">법령비교 오버레이 열기</button>`,
-				audio: `<p class="pa-panel-intro">현재 법령의 음성 지원 서비스입니다.</p>
-<div class="pa-audio-player">
-  <div class="pa-audio-info"><span>법령 전체 낭독</span></div>
-  <div class="pa-audio-controls">
-    <button type="button" class="pa-audio-btn" aria-label="뒤로">&#9664;&#9664;</button>
-    <button type="button" class="pa-audio-btn pa-audio-btn--play" aria-label="재생">&#9654;</button>
-    <button type="button" class="pa-audio-btn" aria-label="앞으로">&#9654;&#9654;</button>
-  </div>
-  <div class="pa-audio-speed">
-    <span>재생속도</span>
-    <button type="button" class="pa-speed-btn is-active">1x</button>
-    <button type="button" class="pa-speed-btn">1.5x</button>
-    <button type="button" class="pa-speed-btn">2x</button>
-  </div>
-</div>`,
-				braille: `<p class="pa-panel-intro">점자 뷰어 서비스입니다.</p>
-<div class="pa-braille-wrap">
-  <div class="pa-braille-preview" aria-label="점자 미리보기">⠏⠗⠑⠧⠊⠑⠺ ⠃⠗⠁⠊⠇⠇⠑</div>
-  <div class="pa-braille-actions">
-    <button type="button" class="pa-braille-btn">점자 파일 다운로드</button>
-  </div>
-</div>`
-			};
-			return contents[nav] || '<p class="pa-panel-intro">준비 중입니다.</p>';
-		}
-
-		function showPanelDetail(nav, label) {
-			if (!panelViews || !panelDetailLabel || !panelDetailBody) return;
-			panelDetailLabel.textContent = label;
-			panelDetailBody.innerHTML = getPanelContent(nav);
-			panelViews.classList.add('show-detail');
-			// 법령비교 오버레이 버튼 연결
-			const btnDetailCompare = document.getElementById('btn-detail-compare');
-			if (btnDetailCompare) {
-				btnDetailCompare.addEventListener('click', function () {
-					if (typeof openCompare === 'function') openCompare();
-				});
-			}
-			// 음성 재생 버튼 토글
-			const playBtn = panelDetailBody.querySelector('.pa-audio-btn--play');
-			if (playBtn) {
-				playBtn.addEventListener('click', function () {
-					const isPlaying = this.textContent.trim() === '\u23F8';
-					this.textContent = isPlaying ? '\u25B6' : '\u23F8';
-					this.setAttribute('aria-label', isPlaying ? '재생' : '일시정지');
-				});
-			}
-			// 재생속도 버튼
-			const speedBtns = panelDetailBody.querySelectorAll('.pa-speed-btn');
-			speedBtns.forEach(function (sb) {
-				sb.addEventListener('click', function () {
-					speedBtns.forEach(function (x) { x.classList.remove('is-active'); });
-					this.classList.add('is-active');
-				});
-			});
-		}
-
-		function hidePanelDetail() {
-			if (!panelViews) return;
-			panelViews.classList.remove('show-detail');
-		}
-
-		navBtns.forEach(function (btn) {
-			btn.addEventListener('click', function () {
-				const nav   = this.dataset.nav;
-				const label = this.querySelector('.lsw-info-nav__label').textContent;
-				navBtns.forEach(function (b) { b.classList.remove('is-active'); });
-				this.classList.add('is-active');
-				showPanelDetail(nav, label);
-			});
-		});
-
-		if (btnPanelBack) {
-			btnPanelBack.addEventListener('click', hidePanelDetail);
-		}
-
-		/* -------------------------------------------------------
-		   5. 법령비교 오버레이 열기 / 닫기
-		------------------------------------------------------- */
-		const compareOverlay = document.getElementById('compare-overlay');
-		const btnNavCompare = document.getElementById('btn-nav-compare');
-		const btnFabCompare = document.getElementById('btn-fab-compare');
-		const btnCompareClose = document.getElementById('btn-compare-close');
-
-		function openCompare() {
-			if (!compareOverlay) return;
-			compareOverlay.hidden = false;
-			document.body.classList.add('compare-overlay-open');
-			btnCompareClose && btnCompareClose.focus();
-		}
-		function closeCompare() {
-			if (!compareOverlay) return;
-			compareOverlay.hidden = true;
-			document.body.classList.remove('compare-overlay-open');
-		}
-		if (btnNavCompare) btnNavCompare.addEventListener('click', openCompare);
-		if (btnFabCompare) btnFabCompare.addEventListener('click', openCompare);
-		if (btnCompareClose) btnCompareClose.addEventListener('click', closeCompare);
-
-		// ESC키로 닫기
-		document.addEventListener('keydown', function (e) {
-			if (e.key === 'Escape' && compareOverlay && !compareOverlay.hidden) closeCompare();
-		});
-
-		/* -------------------------------------------------------
-		   6. 플로팅 버튼 - 관심법령 토글
-		------------------------------------------------------- */
-		const btnFabInterest = document.getElementById('btn-fab-interest');
-		if (btnFabInterest) {
-			btnFabInterest.addEventListener('click', function () {
-				this.classList.toggle('is-active');
-				const label = this.querySelector('span');
-				if (this.classList.contains('is-active')) {
-					if (label) label.textContent = '관심법령 해제';
-					this.setAttribute('aria-label', '관심법령 해제');
+		if (btnLargeText) {
+			btnLargeText.addEventListener('click', () => {
+				body.classList.toggle('large-text-mode');
+				btnLargeText.classList.toggle('active');
+				if (body.classList.contains('large-text-mode')) {
+					btnLargeText.textContent = 'A-';
+					btnLargeText.title = '기본 글씨 모드';
 				} else {
-					if (label) label.textContent = '관심법령';
-					this.setAttribute('aria-label', '관심법령 등록');
+					btnLargeText.textContent = 'A+';
+					btnLargeText.title = '큰 글씨 모드';
 				}
 			});
 		}
-
-		/* -------------------------------------------------------
-		   7. 초기 상태: 패널 열림 상태로 시작 (모바일 제외)
-		------------------------------------------------------- */
-		if (window.innerWidth > 1024) {
-			document.documentElement.classList.add('law-panel-open');
-		}
-
-		/* -------------------------------------------------------
-		   8. 태블릿·모바일: 딤 배경 클릭 → 패널 닫기
-		------------------------------------------------------- */
-		document.body.addEventListener('click', function (e) {
-			if (
-				window.innerWidth <= 1024 &&
-				document.documentElement.classList.contains('law-panel-open') &&
-				infoPanel &&
-				!infoPanel.contains(e.target) &&
-				!e.target.closest('.lsw-law-info-panel-open')
-			) {
-				closeInfoPanel();
-			}
-		});
-
-		/* -------------------------------------------------------
-		   9. 모바일: 비교 오버레이 탭 전환
-		------------------------------------------------------- */
-		const compareMobTabs = document.querySelectorAll('.lsw-compare-mob-tab');
-		const panelLeft  = document.querySelector('.lsw-compare-panel--left');
-		const panelRight = document.querySelector('.lsw-compare-panel--right');
-
-		compareMobTabs.forEach(function (tab) {
-			tab.addEventListener('click', function () {
-				const target = this.dataset.target;
-				compareMobTabs.forEach(function (t) {
-					t.classList.remove('is-active');
-					t.setAttribute('aria-selected', 'false');
-				});
-				this.classList.add('is-active');
-				this.setAttribute('aria-selected', 'true');
-
-				if (target === 'right') {
-					panelLeft  && panelLeft.classList.add('is-mob-hidden');
-					panelRight && panelRight.classList.add('is-mob-active');
-				} else {
-					panelLeft  && panelLeft.classList.remove('is-mob-hidden');
-					panelRight && panelRight.classList.remove('is-mob-active');
-				}
-			});
-		});
-
-		lucide.createIcons();
-	});
 	</script>
 </body>
 
