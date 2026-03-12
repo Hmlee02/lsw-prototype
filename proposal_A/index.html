@@ -178,31 +178,49 @@
 							<div class="hero-news__slides" id="hero-news-slides">
 								<div class="hero-news__slide active">
 									<div class="hero-news__text">
+										<span class="hero-news__kicker">주요 정책 브리핑</span>
 										<strong class="hero-news__title">농업농촌 자발적 온실가스 감축사업</strong>
 										<p class="hero-news__desc">저탄소 농업기술 적용 농업경영체에 컨설팅, 교육지원 및 정부구매 지원</p>
+										<div class="hero-news__meta">
+											<span class="hero-news__tag">농업 · 환경</span>
+											<a href="./law-detail.html" class="hero-news__cta">자세히 보기</a>
+										</div>
 									</div>
 									<div class="hero-news__img">
-										<span class="hero-news__img-placeholder">🚛</span>
+										<img src="./img/hero-news-1.png" class="hero-news__thumb" alt="농업농촌 자발적 온실가스 감축사업 안내 썸네일" loading="eager" decoding="async">
 									</div>
 								</div>
 								<div class="hero-news__slide">
 									<div class="hero-news__text">
+										<span class="hero-news__kicker">올해의 법령 변화</span>
 										<strong class="hero-news__title">2026년 달라지는 법령 안내</strong>
 										<p class="hero-news__desc">올해부터 새롭게 시행되는 주요 법령 정보를 확인하세요.</p>
+										<div class="hero-news__meta">
+											<span class="hero-news__tag">연간 개편</span>
+											<a href="./law-detail.html" class="hero-news__cta">자세히 보기</a>
+										</div>
 									</div>
 									<div class="hero-news__img">
-										<span class="hero-news__img-placeholder">📋</span>
+										<img src="./img/hero-news-2.png" class="hero-news__thumb" alt="2026년 달라지는 법령 안내 썸네일" loading="lazy" decoding="async">
 									</div>
 								</div>
 								<div class="hero-news__slide">
 									<div class="hero-news__text">
+										<span class="hero-news__kicker">디지털 정부 혁신</span>
 										<strong class="hero-news__title">전자정부법 시행령 개정</strong>
 										<p class="hero-news__desc">디지털 정부혁신을 위한 전자정부법 시행령 주요 개정 내용을 확인하세요.</p>
+										<div class="hero-news__meta">
+											<span class="hero-news__tag">디지털 행정</span>
+											<a href="./law-detail.html" class="hero-news__cta">자세히 보기</a>
+										</div>
 									</div>
 									<div class="hero-news__img">
-										<span class="hero-news__img-placeholder">💻</span>
+										<img src="./img/hero-news-3.png" class="hero-news__thumb" alt="전자정부법 시행령 개정 안내 썸네일" loading="lazy" decoding="async">
 									</div>
 								</div>
+							</div>
+							<div class="hero-news__progress" aria-hidden="true">
+								<span class="hero-news__progress-fill" id="hero-news-progress-fill"></span>
 							</div>
 							<div class="hero-news__controls">
 								<span class="hero-news__page" id="hero-news-page">1 / 3</span>
@@ -546,12 +564,15 @@
 		/* ---- 뉴스 캐러셀 ---- */
 		const slides = document.querySelectorAll('.hero-news__slide');
 		const pageEl = document.getElementById('hero-news-page');
+		const progressFill = document.getElementById('hero-news-progress-fill');
 		let current = 0, paused = false;
 		function showSlide(i) {
+			if (!slides.length) return;
 			slides.forEach(s => s.classList.remove('active'));
 			current = ((i % slides.length) + slides.length) % slides.length;
 			slides[current].classList.add('active');
 			if(pageEl) pageEl.textContent = (current + 1) + ' / ' + slides.length;
+			if(progressFill) progressFill.style.width = (((current + 1) / slides.length) * 100) + '%';
 		}
 		const prevBtn = document.getElementById('hero-news-prev');
 		const nextBtn = document.getElementById('hero-news-next');
@@ -561,6 +582,7 @@
 		if(pauseBtn) pauseBtn.addEventListener('click', function() {
 			paused = !paused; this.textContent = paused ? '▶' : '⏸';
 		});
+		showSlide(current);
 		setInterval(() => { if(!paused && slides.length) showSlide(current + 1); }, 5000);
 
 		/* ---- 인기 검색어 ticker ---- */
