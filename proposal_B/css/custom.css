@@ -41,7 +41,7 @@
 
   /* Layout */
   --lsw-inner-max: 1280px;
-  --lsw-inner-pad: 0 24px;
+  --lsw-inner-pad: 0 16px;
 
   /* Shadow */
   --lsw-shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
@@ -1233,7 +1233,6 @@ a[title^="이동 경로:"]:focus-visible::after {
 /* 법령 본문 상단 제목 */
 .lsw-law-article-title {
   font-size: 26px;
-  font-weight: 700;
   color: var(--lsw-text);
   margin-bottom: 8px;
 }
@@ -2150,6 +2149,10 @@ a[title^="이동 경로:"]:focus-visible::after {
 
 #krds-header .header-container .logo a img {
   max-height: 100%;
+}
+
+.dark-mode #krds-header .header-container .logo a img {
+  filter: brightness(0) invert(1);
 }
 
 #krds-header .header-container .header-actions {
