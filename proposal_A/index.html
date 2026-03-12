@@ -165,13 +165,6 @@
 								<span class="hero-keywords__item">도로교통법</span>
 								<span class="hero-keywords__item">건축법</span>
 							</div>
-							<select class="hero-keywords__select" aria-label="인기 검색어 전체 보기">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
 						</div>
 						<!-- 뉴스 캐러셀 -->
 						<div class="hero-news">
@@ -224,7 +217,16 @@
 							</div>
 							<div class="hero-news__controls">
 								<span class="hero-news__page" id="hero-news-page">1 / 3</span>
-								<button type="button" class="hero-news__btn" id="hero-news-pause" aria-label="슬라이드 일시정지">⏸</button>
+								<button type="button" class="hero-news__btn" id="hero-news-pause" aria-label="슬라이드 일시정지" data-paused="false">
+									<span class="sr-only">슬라이드 일시정지</span>
+									<svg class="hero-news__icon hero-news__icon--pause" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+										<rect x="7" y="5" width="3.5" height="14" rx="1.2"></rect>
+										<rect x="13.5" y="5" width="3.5" height="14" rx="1.2"></rect>
+									</svg>
+									<svg class="hero-news__icon hero-news__icon--play" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false" hidden>
+										<path d="M8 6.5V17.5L17 12L8 6.5Z"></path>
+									</svg>
+								</button>
 								<button type="button" class="hero-news__btn" id="hero-news-prev" aria-label="이전 슬라이드">❮</button>
 								<button type="button" class="hero-news__btn" id="hero-news-next" aria-label="다음 슬라이드">❯</button>
 							</div>
@@ -233,7 +235,7 @@
 
 					<!-- 우측: 관심 법령 -->
 					<div class="hero-card hero-card--aside">
-						<div class="hero-aside__header" style="align-items:center;">
+						<div class="hero-aside__header">
 							<strong class="hero-aside__title">관심 법령 정보</strong>
 							<div class="dash-actions">
 								<button type="button" class="dash-btn dash-btn--black">미리보기</button>
@@ -267,13 +269,6 @@
 								</a>
 							</li>
 						</ul>
-						<div class="hero-aside__controls">
-							<span class="hero-aside__page">1 / 8</span>
-							<button type="button" class="hero-news__btn" aria-label="일시정지">⏸</button>
-							<button type="button" class="hero-news__btn" aria-label="이전">❮</button>
-							<button type="button" class="hero-news__btn" aria-label="다음">❯</button>
-							<button type="button" class="hero-news__btn" aria-label="더보기">+</button>
-						</div>
 					</div>
 
 				</div>
@@ -322,7 +317,7 @@
 								<span class="recent-item__badge badge--new">공포</span>
 								<div class="recent-item__body">
 									<strong class="recent-item__title">인공지능 기본법</strong>
-									<p class="recent-item__desc">인공지능 산업 육성 및 신뢰 기반 조성을 위한 기본법안이 국회를 통과하여 공포되었습니다.</p>
+									<p class="recent-item__desc">인공지능 산업 육성과 신뢰 기반 조성을 위한 기본 원칙, 국가 및 지자체의 책무, 안전성 검증 체계를 담은 기본법안이 국회를 통과해 공포되었습니다. 또한 고위험 인공지능 서비스의 사전 점검, 이용자 권리구제 절차, 공공부문 도입 시 투명성 확보 기준이 함께 제시되었습니다.</p>
 									<div class="recent-item__meta">
 										<span>2026.02.19</span>
 										<span>법률 제12345호</span>
@@ -333,7 +328,7 @@
 								<span class="recent-item__badge badge--update">개정</span>
 								<div class="recent-item__body">
 									<strong class="recent-item__title">개인정보 보호법 시행령</strong>
-									<p class="recent-item__desc">마이데이터 전송요구권 도입 및 개인정보 처리방침 평가제 구체화 등을 주요 내용으로...</p>
+									<p class="recent-item__desc">마이데이터 전송요구권 도입, 개인정보 처리방침 평가제 세부기준 마련, 자동화 의사결정 고지 의무 강화 등을 주요 내용으로 국민 권리보호 중심의 개정이 이루어졌습니다. 특히 민감정보 처리 과정의 기록관리 의무와 분기별 자체점검 항목이 구체화되어 기업과 기관의 책임 범위가 한층 명확해졌습니다.</p>
 									<div class="recent-item__meta">
 										<span>2026.02.15</span>
 										<span>대통령령 제34567호</span>
@@ -344,7 +339,7 @@
 								<span class="recent-item__badge badge--update">개정</span>
 								<div class="recent-item__body">
 									<strong class="recent-item__title">주택임대차보호법</strong>
-									<p class="recent-item__desc">임차인의 보증금 보호 강화 및 최우선변제금 범위 확대 등을 위한 개정안입니다.</p>
+									<p class="recent-item__desc">임차인의 보증금 보호를 강화하고 최우선변제금 범위를 확대하는 한편, 계약 갱신 과정의 분쟁을 줄이기 위한 절차와 고지 기준이 함께 정비되었습니다. 임대인의 정보제공 의무와 표준계약서 권고사항도 보완되어 갱신 요구권 행사 단계에서 발생하던 해석 차이를 줄이는 방향으로 개선되었습니다.</p>
 									<div class="recent-item__meta">
 										<span>2026.02.10</span>
 										<span>법률 제12300호</span>
@@ -577,11 +572,26 @@
 		const prevBtn = document.getElementById('hero-news-prev');
 		const nextBtn = document.getElementById('hero-news-next');
 		const pauseBtn = document.getElementById('hero-news-pause');
+		const pauseIcon = pauseBtn ? pauseBtn.querySelector('.hero-news__icon--pause') : null;
+		const playIcon = pauseBtn ? pauseBtn.querySelector('.hero-news__icon--play') : null;
+		const pauseLabel = pauseBtn ? pauseBtn.querySelector('.sr-only') : null;
+		function syncPauseButton() {
+			if (!pauseBtn) return;
+			pauseBtn.setAttribute('data-paused', paused ? 'true' : 'false');
+			pauseBtn.setAttribute('aria-label', paused ? '슬라이드 재생' : '슬라이드 일시정지');
+			if (pauseLabel) pauseLabel.textContent = paused ? '슬라이드 재생' : '슬라이드 일시정지';
+			if (pauseIcon && playIcon) {
+				pauseIcon.hidden = paused;
+				playIcon.hidden = !paused;
+			}
+		}
 		if(prevBtn) prevBtn.addEventListener('click', () => showSlide(current - 1));
 		if(nextBtn) nextBtn.addEventListener('click', () => showSlide(current + 1));
 		if(pauseBtn) pauseBtn.addEventListener('click', function() {
-			paused = !paused; this.textContent = paused ? '▶' : '⏸';
+			paused = !paused;
+			syncPauseButton();
 		});
+		syncPauseButton();
 		showSlide(current);
 		setInterval(() => { if(!paused && slides.length) showSlide(current + 1); }, 5000);
 
