@@ -2117,7 +2117,7 @@ body.dark-mode .site-footer__logo img {
    INDEX PAGE — SECTIONS
    ========================================================= */
 .section {
-    padding: 60px 0;
+    padding: 20px 0;
     transition: background-color .3s;
 }
 
