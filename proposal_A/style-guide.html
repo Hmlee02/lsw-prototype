@@ -1,0 +1,2100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>디자인 스타일 가이드 — 시안 A</title>
+	<link rel="stylesheet" href="../assets/krds/css/common/common.css">
+	<link rel="stylesheet" href="../assets/krds/css/component/component.css">
+	<link rel="stylesheet" href="./css/custom.css">
+	<style>
+		/* =============================================
+		   Style Guide Layout
+		   ============================================= */
+		.sg-wrap {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 60px 32px 120px;
+		}
+
+		/* Page Title */
+		.sg-page-title {
+			text-align: center;
+			margin-bottom: 80px;
+			padding-bottom: 40px;
+			border-bottom: 1px solid var(--surface-border);
+		}
+
+		.sg-page-title .sg-badge {
+			display: inline-block;
+			padding: 4px 14px;
+			background: var(--b5);
+			border: 1px solid var(--b20);
+			border-radius: 20px;
+			font-size: 13px;
+			font-weight: 600;
+			color: var(--b60);
+			letter-spacing: .02em;
+			margin-bottom: 16px;
+		}
+
+		.sg-page-title h1 {
+			font-size: 48px;
+			font-weight: 700;
+			color: var(--text-main);
+			letter-spacing: -.03em;
+			line-height: 1.2;
+			margin-bottom: 12px;
+		}
+
+		.sg-page-title p {
+			font-size: 17px;
+			color: var(--text-muted);
+			font-weight: 400;
+		}
+
+		/* Section */
+		.sg-section {
+			margin-bottom: 80px;
+		}
+
+		.sg-section-title {
+			font-size: 22px;
+			font-weight: 700;
+			color: var(--text-main);
+			letter-spacing: -.02em;
+			margin-bottom: 6px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.sg-section-title::after {
+			content: '';
+			flex: 1;
+			height: 1px;
+			background: var(--surface-border);
+		}
+
+		.sg-section-subtitle {
+			font-size: 14px;
+			color: var(--text-muted);
+			margin-bottom: 28px;
+			padding-left: 2px;
+		}
+
+		/* Subsection */
+		.sg-sub {
+			margin-bottom: 40px;
+		}
+
+		.sg-sub-label {
+			font-size: 13px;
+			font-weight: 600;
+			color: var(--text-light);
+			text-transform: uppercase;
+			letter-spacing: .08em;
+			margin-bottom: 14px;
+		}
+
+		/* Preview Block */
+		.sg-preview {
+			background: var(--surface-bg);
+			border: 1px solid var(--surface-border);
+			border-radius: 16px;
+			padding: 32px;
+			margin-bottom: 12px;
+		}
+
+		.sg-preview--dark {
+			background: var(--b70);
+			border-color: var(--b60);
+		}
+
+		.sg-preview--gray {
+			background: var(--body-bg);
+			border-color: var(--surface-border);
+		}
+
+		/* Code block */
+		.sg-code {
+			background: var(--g90);
+			color: var(--g10);
+			border-radius: 8px;
+			padding: 14px 18px;
+			font-size: 13px;
+			font-family: 'Consolas', 'Monaco', monospace;
+			overflow-x: auto;
+			margin-bottom: 8px;
+			line-height: 1.6;
+		}
+
+		body.dark-mode .sg-code {
+			background: var(--g15);
+			color: var(--g80);
+		}
+
+		/* =============================================
+		   Color System
+		   ============================================= */
+		.color-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+			gap: 12px;
+		}
+
+		.color-card {
+			border-radius: 12px;
+			overflow: hidden;
+			border: 1px solid var(--surface-border);
+		}
+
+		.color-swatch {
+			height: 80px;
+			width: 100%;
+		}
+
+		.color-info {
+			padding: 10px 12px;
+			background: var(--surface-bg);
+		}
+
+		.color-info .name {
+			font-size: 13px;
+			font-weight: 700;
+			color: var(--text-main);
+			margin-bottom: 2px;
+		}
+
+		.color-info .hex {
+			font-size: 12px;
+			color: var(--text-light);
+			font-family: 'Consolas', monospace;
+		}
+
+		.color-row {
+			display: flex;
+			gap: 6px;
+			margin-bottom: 12px;
+			flex-wrap: wrap;
+		}
+
+		.color-chip {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			padding: 6px 12px 6px 6px;
+			border: 1px solid var(--surface-border);
+			border-radius: 8px;
+			background: var(--surface-bg);
+		}
+
+		.color-chip .swatch {
+			width: 28px;
+			height: 28px;
+			border-radius: 6px;
+			flex-shrink: 0;
+		}
+
+		.color-chip .info .var {
+			font-size: 12px;
+			font-weight: 600;
+			color: var(--text-main);
+			font-family: 'Consolas', monospace;
+		}
+
+		.color-chip .info .val {
+			font-size: 11px;
+			color: var(--text-light);
+			font-family: 'Consolas', monospace;
+		}
+
+		/* Semantic Color Table */
+		.sg-table {
+			width: 100%;
+			border-collapse: collapse;
+			font-size: 14px;
+		}
+
+		.sg-table th {
+			text-align: left;
+			padding: 10px 14px;
+			background: var(--body-bg);
+			color: var(--text-muted);
+			font-weight: 600;
+			font-size: 13px;
+			border-bottom: 2px solid var(--surface-border);
+		}
+
+		.sg-table td {
+			padding: 12px 14px;
+			border-bottom: 1px solid var(--border-light);
+			color: var(--text-main);
+			vertical-align: middle;
+		}
+
+		.sg-table tr:last-child td {
+			border-bottom: none;
+		}
+
+		.sg-table .swatch-cell {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.sg-table .swatch-cell .dot {
+			width: 24px;
+			height: 24px;
+			border-radius: 6px;
+			border: 1px solid rgba(0, 0, 0, .07);
+			flex-shrink: 0;
+		}
+
+		.sg-table code {
+			background: var(--body-bg);
+			border: 1px solid var(--surface-border);
+			border-radius: 4px;
+			padding: 2px 8px;
+			font-family: 'Consolas', monospace;
+			font-size: 12px;
+			color: var(--b50);
+		}
+
+		/* =============================================
+		   Typography
+		   ============================================= */
+		.type-specimen {
+			margin-bottom: 24px;
+			padding-bottom: 24px;
+			border-bottom: 1px solid var(--border-light);
+		}
+
+		.type-specimen:last-child {
+			border-bottom: none;
+			margin-bottom: 0;
+		}
+
+		.type-meta {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			margin-top: 8px;
+		}
+
+		.type-meta span {
+			font-size: 12px;
+			color: var(--text-light);
+			font-family: 'Consolas', monospace;
+		}
+
+		.type-meta span + span::before {
+			content: '·';
+			margin-right: 8px;
+		}
+
+		/* =============================================
+		   Spacing & Radius
+		   ============================================= */
+		.spacing-row {
+			display: flex;
+			align-items: flex-end;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+
+		.spacing-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.spacing-block {
+			background: var(--b20);
+			border-radius: 4px;
+			width: 40px;
+		}
+
+		.spacing-label {
+			font-size: 12px;
+			color: var(--text-muted);
+			font-family: 'Consolas', monospace;
+			text-align: center;
+		}
+
+		.radius-row {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+
+		.radius-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.radius-block {
+			width: 80px;
+			height: 80px;
+			background: var(--b10);
+			border: 2px solid var(--b30);
+		}
+
+		.shadow-row {
+			display: flex;
+			gap: 24px;
+			flex-wrap: wrap;
+		}
+
+		.shadow-item {
+			padding: 24px 32px;
+			background: var(--surface-bg);
+			border-radius: 12px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.shadow-label {
+			font-size: 12px;
+			color: var(--text-muted);
+			font-family: 'Consolas', monospace;
+		}
+
+		/* =============================================
+		   Buttons
+		   ============================================= */
+		.btn-row {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			flex-wrap: wrap;
+			margin-bottom: 16px;
+		}
+
+		/* custom button styles (from index.html / law-detail) */
+		.dash-btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			padding: 8px 20px;
+			border-radius: 8px;
+			border: 1px solid transparent;
+			font-size: 14px;
+			font-weight: 600;
+			cursor: pointer;
+			text-decoration: none;
+			transition: all .2s cubic-bezier(0.16, 1, 0.3, 1);
+			font-family: inherit;
+		}
+
+		.dash-btn--primary {
+			background: var(--b60);
+			color: #fff;
+			border-color: var(--b60);
+		}
+
+		.dash-btn--primary:hover {
+			background: var(--b70);
+		}
+
+		.dash-btn--outline-green {
+			background: transparent;
+			color: var(--b60);
+			border-color: var(--b40);
+		}
+
+		.dash-btn--outline-green:hover {
+			background: var(--b5);
+		}
+
+		.dash-btn--black {
+			background: var(--g80);
+			color: #fff;
+			border-color: var(--g80);
+		}
+
+		.dash-btn--black:hover {
+			background: var(--g90);
+		}
+
+		/* =============================================
+		   Badges / Tags
+		   ============================================= */
+		.badge-row {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			flex-wrap: wrap;
+		}
+
+		.recent-item__badge {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-width: 44px;
+			height: 24px;
+			padding: 0 8px;
+			border-radius: 4px;
+			font-size: 12px;
+			font-weight: 700;
+			white-space: nowrap;
+		}
+
+		.badge--new {
+			background: var(--b60);
+			color: #fff;
+		}
+
+		.badge--update {
+			background: #E8F5E9;
+			color: #2E7D32;
+			border: 1px solid #A5D6A7;
+		}
+
+		.text-list__badge {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			padding: 2px 8px;
+			border-radius: 4px;
+			font-size: 12px;
+			font-weight: 700;
+			background: var(--b60);
+			color: #fff;
+			white-space: nowrap;
+		}
+
+		.text-list__badge--info {
+			background: #E3F2FD;
+			color: #1565C0;
+		}
+
+		.text-list__badge--hire {
+			background: #FFF8E1;
+			color: #F57F17;
+		}
+
+		/* =============================================
+		   Cards
+		   ============================================= */
+		.sg-card-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+			gap: 16px;
+		}
+
+		.sg-card {
+			background: var(--surface-bg);
+			border: 1px solid var(--surface-border);
+			border-radius: 16px;
+			padding: 24px;
+			transition: all .3s cubic-bezier(0.16, 1, 0.3, 1);
+		}
+
+		.sg-card:hover {
+			border-color: var(--b30);
+			box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+			transform: translateY(-2px);
+		}
+
+		.sg-card__icon {
+			font-size: 28px;
+			margin-bottom: 12px;
+			display: block;
+		}
+
+		.sg-card__title {
+			font-size: 16px;
+			font-weight: 700;
+			color: var(--text-main);
+			margin-bottom: 6px;
+		}
+
+		.sg-card__desc {
+			font-size: 14px;
+			color: var(--text-muted);
+			line-height: 1.6;
+		}
+
+		/* stat card */
+		.hero-stat-card {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 14px 18px;
+			background: var(--surface-bg);
+			border: 1px solid var(--surface-border);
+			border-radius: 12px;
+			text-decoration: none;
+			transition: all .2s;
+			margin-bottom: 8px;
+		}
+
+		.hero-stat-card:hover {
+			border-color: var(--b30);
+			background: var(--b5);
+		}
+
+		.hero-stat-card__name {
+			font-size: 15px;
+			color: var(--text-main);
+		}
+
+		.hero-stat-card__name strong {
+			color: var(--b60);
+		}
+
+		.hero-stat-card__arrow {
+			color: var(--b40);
+			font-size: 18px;
+		}
+
+		/* category card */
+		.category-card {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px 16px;
+			background: var(--surface-bg);
+			border: 1px solid var(--surface-border);
+			border-radius: 16px;
+			text-decoration: none;
+			transition: all .3s cubic-bezier(0.16, 1, 0.3, 1);
+			text-align: center;
+		}
+
+		.category-card:hover {
+			border-color: var(--b30);
+			box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+			transform: translateY(-2px);
+		}
+
+		.category-card__icon {
+			font-size: 28px;
+			margin-bottom: 8px;
+		}
+
+		.category-card__name {
+			font-size: 15px;
+			font-weight: 700;
+			color: var(--text-main);
+			display: block;
+			margin-bottom: 4px;
+		}
+
+		.category-card__desc {
+			font-size: 12px;
+			color: var(--text-muted);
+		}
+
+		/* =============================================
+		   Form Elements
+		   ============================================= */
+		.sg-form-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+		}
+
+		.sg-input {
+			width: 100%;
+			padding: 10px 14px;
+			border: 1px solid var(--surface-border);
+			border-radius: var(--r);
+			background: var(--surface-bg);
+			color: var(--text-main);
+			font-family: inherit;
+			font-size: 15px;
+			outline: none;
+			transition: border-color .15s;
+		}
+
+		.sg-input:focus {
+			border-color: var(--b40);
+		}
+
+		.sg-input::placeholder {
+			color: var(--text-light);
+		}
+
+		.sg-label {
+			display: block;
+			font-size: 13px;
+			font-weight: 600;
+			color: var(--text-muted);
+			margin-bottom: 6px;
+		}
+
+		/* Search bar */
+		.sg-search-wrap {
+			display: flex;
+			align-items: center;
+			background: var(--surface-bg);
+			border: 1px solid var(--surface-border);
+			border-radius: 10px;
+			padding: 4px 8px;
+			gap: 8px;
+			max-width: 480px;
+		}
+
+		.sg-search-wrap input {
+			flex: 1;
+			border: none;
+			outline: none;
+			background: transparent;
+			font-size: 16px;
+			color: var(--text-main);
+			font-family: inherit;
+		}
+
+		.sg-search-wrap input::placeholder {
+			color: var(--text-light);
+		}
+
+		.sg-search-btn {
+			background: var(--b60);
+			border: none;
+			border-radius: 8px;
+			color: #fff;
+			width: 38px;
+			height: 38px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			flex-shrink: 0;
+		}
+
+		/* =============================================
+		   Motion / Interaction
+		   ============================================= */
+		.motion-row {
+			display: flex;
+			gap: 16px;
+			flex-wrap: wrap;
+		}
+
+		.motion-card {
+			padding: 20px 28px;
+			border: 1px solid var(--surface-border);
+			border-radius: 12px;
+			background: var(--surface-bg);
+			cursor: pointer;
+			font-size: 14px;
+			font-weight: 600;
+			color: var(--text-main);
+			user-select: none;
+		}
+
+		.motion-card.hover-lift {
+			transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .3s cubic-bezier(0.16, 1, 0.3, 1), border-color .3s;
+		}
+
+		.motion-card.hover-lift:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 12px 28px rgba(0, 0, 0, .08);
+			border-color: var(--b30);
+		}
+
+		.motion-card.hover-fill {
+			transition: background .2s, color .2s;
+		}
+
+		.motion-card.hover-fill:hover {
+			background: var(--b60);
+			color: #fff;
+			border-color: var(--b60);
+		}
+
+		/* =============================================
+		   Dark Mode Preview
+		   ============================================= */
+		.sg-dark-preview {
+			background: #0F1115;
+			border-radius: 16px;
+			padding: 32px;
+			border: 1px solid #21242C;
+		}
+
+		.sg-dark-preview .dp-title {
+			color: #E2E6ED;
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: 8px;
+		}
+
+		.sg-dark-preview .dp-text {
+			color: #A4AEBE;
+			font-size: 14px;
+			line-height: 1.7;
+			margin-bottom: 16px;
+		}
+
+		.sg-dark-preview .dp-card {
+			background: #16181D;
+			border: 1px solid #21242C;
+			border-radius: 12px;
+			padding: 16px 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 8px;
+		}
+
+		.sg-dark-preview .dp-card:last-child {
+			margin-bottom: 0;
+		}
+
+		.sg-dark-preview .dp-card-name {
+			color: #D1D6DF;
+			font-size: 14px;
+			font-weight: 500;
+		}
+
+		.sg-dark-preview .dp-card-name strong {
+			color: #8DB2D9;
+		}
+
+		.sg-dark-preview .dp-card-arrow {
+			color: #596173;
+		}
+
+		.sg-dark-preview .dp-btn {
+			display: inline-block;
+			padding: 8px 20px;
+			background: #4876AB;
+			color: #fff;
+			border-radius: 8px;
+			font-size: 14px;
+			font-weight: 600;
+			border: none;
+			cursor: pointer;
+			margin-top: 16px;
+		}
+
+		/* =============================================
+		   Stats Showcase
+		   ============================================= */
+		.stats-preview {
+			background: var(--b70);
+			border-radius: 16px;
+			padding: 40px 32px;
+			display: flex;
+			gap: 40px;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		.stats-preview .sp-header h2 {
+			font-size: 32px;
+			font-weight: 800;
+			color: #fff;
+			letter-spacing: -.03em;
+			line-height: 1.2;
+		}
+
+		.stats-preview .sp-header p {
+			font-size: 14px;
+			color: rgba(255, 255, 255, .65);
+			margin-top: 8px;
+		}
+
+		.stats-preview .sp-items {
+			display: flex;
+			gap: 40px;
+			flex-wrap: wrap;
+		}
+
+		.stats-preview .sp-item {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.stats-preview .sp-count {
+			font-size: 36px;
+			font-weight: 800;
+			color: #fff;
+			letter-spacing: -.02em;
+			line-height: 1;
+		}
+
+		.stats-preview .sp-label {
+			font-size: 13px;
+			color: rgba(255, 255, 255, .6);
+			margin-top: 6px;
+		}
+
+		/* =============================================
+		   CTA Banner
+		   ============================================= */
+		.cta-banner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 28px 32px;
+			background: var(--primary-light);
+			border: 1px solid var(--b20);
+			border-radius: 16px;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+
+		.cta-banner__text h3 {
+			font-size: 18px;
+			font-weight: 700;
+			color: var(--b70);
+			margin-bottom: 4px;
+		}
+
+		.cta-banner__text p {
+			font-size: 14px;
+			color: var(--b50);
+		}
+
+		.cta-banner__actions {
+			display: flex;
+			gap: 10px;
+		}
+
+		/* =============================================
+		   Icon Badge (Law type)
+		   ============================================= */
+		.lic-row {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+		}
+
+		.lic-demo {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 6px 12px;
+			border: 1px solid var(--surface-border);
+			border-radius: 8px;
+			background: var(--surface-bg);
+			font-size: 14px;
+			color: var(--text-main);
+		}
+
+		/* =============================================
+		   Ministry Grid
+		   ============================================= */
+		.ministry-preview {
+			display: flex;
+			gap: 8px;
+			flex-wrap: wrap;
+		}
+
+		.ministry-item {
+			padding: 8px 18px;
+			background: var(--surface-bg);
+			border: 1px solid var(--surface-border);
+			border-radius: 8px;
+			font-size: 14px;
+			font-weight: 500;
+			color: var(--text-main);
+			text-decoration: none;
+			transition: all .2s;
+		}
+
+		.ministry-item:hover {
+			background: var(--b5);
+			border-color: var(--b30);
+			color: var(--b60);
+		}
+
+		/* =============================================
+		   Sticky Nav
+		   ============================================= */
+		.sg-sticky-nav {
+			position: sticky;
+			top: 0;
+			z-index: 100;
+			background: var(--surface-bg);
+			border-bottom: 1px solid var(--surface-border);
+			backdrop-filter: blur(8px);
+			-webkit-backdrop-filter: blur(8px);
+			margin-bottom: 60px;
+		}
+
+		.sg-sticky-nav .nav-inner {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 32px;
+			display: flex;
+			align-items: center;
+			gap: 4px;
+			overflow-x: auto;
+			scrollbar-width: none;
+		}
+
+		.sg-sticky-nav .nav-inner::-webkit-scrollbar {
+			display: none;
+		}
+
+		.sg-sticky-nav a {
+			display: inline-flex;
+			align-items: center;
+			padding: 14px 14px;
+			font-size: 14px;
+			font-weight: 500;
+			color: var(--text-muted);
+			text-decoration: none;
+			white-space: nowrap;
+			border-bottom: 2px solid transparent;
+			transition: color .15s, border-color .15s;
+		}
+
+		.sg-sticky-nav a:hover {
+			color: var(--b60);
+			border-bottom-color: var(--b40);
+		}
+
+		/* =============================================
+		   Hero keywords / ticker
+		   ============================================= */
+		.kw-preview {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			background: var(--surface-bg);
+			border: 1px solid var(--surface-border);
+			border-radius: 8px;
+			padding: 8px 14px;
+			width: fit-content;
+		}
+
+		.kw-preview .kw-label {
+			font-size: 13px;
+			font-weight: 600;
+			color: var(--text-muted);
+		}
+
+		.kw-preview .kw-rank {
+			font-size: 13px;
+			font-weight: 700;
+			color: var(--b50);
+			min-width: 16px;
+		}
+
+		.kw-preview .kw-item {
+			font-size: 14px;
+			font-weight: 500;
+			color: var(--text-main);
+		}
+
+		/* =============================================
+		   Progress bar showcase
+		   ============================================= */
+		.progress-showcase {
+			width: 100%;
+			height: 3px;
+			background: var(--g15);
+			border-radius: 999px;
+			overflow: hidden;
+			margin-top: 12px;
+		}
+
+		.progress-fill-demo {
+			height: 100%;
+			background: var(--b50);
+			border-radius: 999px;
+			width: 33%;
+		}
+
+		/* =============================================
+		   Responsive adjustment
+		   ============================================= */
+		@media (max-width: 768px) {
+			.sg-wrap { padding: 32px 16px 80px; }
+			.sg-page-title h1 { font-size: 32px; }
+			.sg-form-grid { grid-template-columns: 1fr; }
+			.color-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- 상단 네비게이션 -->
+	<div class="sg-sticky-nav">
+		<div class="nav-inner">
+			<a href="#colors">색상 시스템</a>
+			<a href="#typography">타이포그래피</a>
+			<a href="#spacing">여백 & 모서리</a>
+			<a href="#buttons">버튼</a>
+			<a href="#badges">배지 & 태그</a>
+			<a href="#cards">카드</a>
+			<a href="#forms">폼 요소</a>
+			<a href="#components">컴포넌트</a>
+			<a href="#motion">인터랙션</a>
+			<a href="#darkmode">다크 모드</a>
+		</div>
+	</div>
+
+	<!-- 페이지 타이틀 -->
+	<div class="sg-wrap">
+
+		<div class="sg-page-title">
+			<span class="sg-badge">Proposal A — Design System</span>
+			<h1>디자인 스타일 가이드</h1>
+			<p>국가법령정보센터 시안 A에 사용된 색상, 타이포그래피, 컴포넌트 규칙을 정의합니다.</p>
+		</div>
+
+
+		<!-- =============================================
+		     1. 색상 시스템
+		     ============================================= -->
+		<section class="sg-section" id="colors">
+			<h2 class="sg-section-title">색상 시스템</h2>
+			<p class="sg-section-subtitle">Charcoal Blue-Gray 팔레트 기반의 2-트랙 색상 변수 체계</p>
+
+			<!-- Blue Gray Scale -->
+			<div class="sg-sub">
+				<p class="sg-sub-label">Blue Scale (Primary)</p>
+				<div class="color-grid">
+					<div class="color-card">
+						<div class="color-swatch" style="background:#ECF1F8"></div>
+						<div class="color-info"><p class="name">B5</p><p class="hex">--b5 · #ECF1F8</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#D0DEEE"></div>
+						<div class="color-info"><p class="name">B10</p><p class="hex">--b10 · #D0DEEE</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#A4C1E0"></div>
+						<div class="color-info"><p class="name">B20</p><p class="hex">--b20 · #A4C1E0</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#7AA6CF"></div>
+						<div class="color-info"><p class="name">B30</p><p class="hex">--b30 · #7AA6CF</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#6287AB"></div>
+						<div class="color-info"><p class="name">B40</p><p class="hex">--b40 · #6287AB</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#3E5D7A"></div>
+						<div class="color-info"><p class="name">B50</p><p class="hex">--b50 · #3E5D7A</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#1E3850"></div>
+						<div class="color-info"><p class="name">B60 ★</p><p class="hex">--b60 · #1E3850</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#13283B"></div>
+						<div class="color-info"><p class="name">B70</p><p class="hex">--b70 · #13283B</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#0E1E2D"></div>
+						<div class="color-info"><p class="name">B80</p><p class="hex">--b80 · #0E1E2D</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#08121B"></div>
+						<div class="color-info"><p class="name">B90</p><p class="hex">--b90 · #08121B</p></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Gray Scale -->
+			<div class="sg-sub">
+				<p class="sg-sub-label">Gray Scale (Neutral)</p>
+				<div class="color-grid">
+					<div class="color-card">
+						<div class="color-swatch" style="background:#F7F8FA"></div>
+						<div class="color-info"><p class="name">G5</p><p class="hex">--g5 · #F7F8FA</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#F0F1F4"></div>
+						<div class="color-info"><p class="name">G10</p><p class="hex">--g10 · #F0F1F4</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#E5E7EC"></div>
+						<div class="color-info"><p class="name">G15</p><p class="hex">--g15 · #E5E7EC</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#D1D5DC"></div>
+						<div class="color-info"><p class="name">G20</p><p class="hex">--g20 · #D1D5DC</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#B0B6C0"></div>
+						<div class="color-info"><p class="name">G30</p><p class="hex">--g30 · #B0B6C0</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#8E95A2"></div>
+						<div class="color-info"><p class="name">G40</p><p class="hex">--g40 · #8E95A2</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#6B7280"></div>
+						<div class="color-info"><p class="name">G50</p><p class="hex">--g50 · #6B7280</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#545A66"></div>
+						<div class="color-info"><p class="name">G60</p><p class="hex">--g60 · #545A66</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#3E434D"></div>
+						<div class="color-info"><p class="name">G70</p><p class="hex">--g70 · #3E434D</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#2A2E36"></div>
+						<div class="color-info"><p class="name">G80</p><p class="hex">--g80 · #2A2E36</p></div>
+					</div>
+					<div class="color-card">
+						<div class="color-swatch" style="background:#1A1D24"></div>
+						<div class="color-info"><p class="name">G90</p><p class="hex">--g90 · #1A1D24</p></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Semantic Colors -->
+			<div class="sg-sub">
+				<p class="sg-sub-label">시맨틱 색상 변수</p>
+				<div class="sg-preview">
+					<table class="sg-table">
+						<thead>
+							<tr>
+								<th>변수명</th>
+								<th>참조값</th>
+								<th>실제 색상</th>
+								<th>용도</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>--body-bg</code></td>
+								<td><code>#F5F6F8</code></td>
+								<td><div class="swatch-cell"><div class="dot" style="background:#F5F6F8; border:1px solid #ddd"></div>배경</div></td>
+								<td>전체 페이지 배경색</td>
+							</tr>
+							<tr>
+								<td><code>--surface-bg</code></td>
+								<td><code>#fff</code></td>
+								<td><div class="swatch-cell"><div class="dot" style="background:#fff; border:1px solid #ddd"></div>흰색</div></td>
+								<td>카드, 패널 배경</td>
+							</tr>
+							<tr>
+								<td><code>--surface-border</code></td>
+								<td><code>--g15</code></td>
+								<td><div class="swatch-cell"><div class="dot" style="background:#E5E7EC"></div>#E5E7EC</div></td>
+								<td>카드, 컨테이너 테두리</td>
+							</tr>
+							<tr>
+								<td><code>--text-main</code></td>
+								<td><code>--g80</code></td>
+								<td><div class="swatch-cell"><div class="dot" style="background:#2A2E36"></div>#2A2E36</div></td>
+								<td>주요 본문 텍스트</td>
+							</tr>
+							<tr>
+								<td><code>--text-muted</code></td>
+								<td><code>--g50</code></td>
+								<td><div class="swatch-cell"><div class="dot" style="background:#6B7280"></div>#6B7280</div></td>
+								<td>부제목, 메타 텍스트</td>
+							</tr>
+							<tr>
+								<td><code>--text-light</code></td>
+								<td><code>--g40</code></td>
+								<td><div class="swatch-cell"><div class="dot" style="background:#8E95A2"></div>#8E95A2</div></td>
+								<td>보조 설명, 날짜 등</td>
+							</tr>
+							<tr>
+								<td><code>--primary</code></td>
+								<td><code>--b60</code></td>
+								<td><div class="swatch-cell"><div class="dot" style="background:#1E3850"></div>#1E3850</div></td>
+								<td>주요 CTA, 브랜드 색상</td>
+							</tr>
+							<tr>
+								<td><code>--primary-light</code></td>
+								<td><code>--b5</code></td>
+								<td><div class="swatch-cell"><div class="dot" style="background:#ECF1F8"></div>#ECF1F8</div></td>
+								<td>배경 강조, 호버 배경</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- Functional Colors -->
+			<div class="sg-sub">
+				<p class="sg-sub-label">기능성 색상 (상태 표현)</p>
+				<div class="sg-preview">
+					<div class="color-row">
+						<div class="color-chip">
+							<div class="swatch" style="background:#1E3850"></div>
+							<div class="info"><div class="var">공포 (New)</div><div class="val">#1E3850 흰 텍스트</div></div>
+						</div>
+						<div class="color-chip">
+							<div class="swatch" style="background:#E8F5E9; border:1px solid #A5D6A7"></div>
+							<div class="info"><div class="var">개정 (Update)</div><div class="val">#E8F5E9 · #2E7D32</div></div>
+						</div>
+						<div class="color-chip">
+							<div class="swatch" style="background:#E3F2FD"></div>
+							<div class="info"><div class="var">안내 (Info)</div><div class="val">#E3F2FD · #1565C0</div></div>
+						</div>
+						<div class="color-chip">
+							<div class="swatch" style="background:#FFF8E1"></div>
+							<div class="info"><div class="var">채용 (Notice)</div><div class="val">#FFF8E1 · #F57F17</div></div>
+						</div>
+						<div class="color-chip">
+							<div class="swatch" style="background:#FFF3E0; border:1px solid #FFCC80"></div>
+							<div class="info"><div class="var">본법 (Light)</div><div class="val">#FFF3E0 · #E65100</div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- =============================================
+		     2. 타이포그래피
+		     ============================================= -->
+		<section class="sg-section" id="typography">
+			<h2 class="sg-section-title">타이포그래피</h2>
+			<p class="sg-section-subtitle">서체: Pretendard Variable · 기준 폰트 크기: 17px (body) · 행간: 1.7</p>
+
+			<div class="sg-preview">
+
+				<div class="type-specimen">
+					<div style="font-size:48px; font-weight:700; color:var(--text-main); letter-spacing:-.03em; line-height:1.2">법령 정보 바로가기</div>
+					<div class="type-meta">
+						<span>48px</span><span>Weight 700</span><span>Letter-spacing -0.03em</span><span>Line-height 1.2</span>
+					</div>
+					<div class="sg-code">font-size: 48px; font-weight: 700; letter-spacing: -.03em; line-height: 1.2;</div>
+				</div>
+
+				<div class="type-specimen">
+					<div style="font-size:40px; font-weight:700; color:var(--text-main); letter-spacing:-.7px; line-height:1.4">인공지능 기본법</div>
+					<div class="type-meta">
+						<span>40px</span><span>Weight 700</span><span>Letter-spacing -0.7px</span><span>Line-height 1.4</span>
+					</div>
+					<div class="sg-code">font-size: calc(40px * var(--scale)); font-weight: 700; letter-spacing: -.7px;</div>
+				</div>
+
+				<div class="type-specimen">
+					<div style="font-size:22px; font-weight:700; color:var(--text-main); letter-spacing:-.02em">새로운 법령 소식</div>
+					<div class="type-meta">
+						<span>22px</span><span>Weight 700</span><span>Section Title</span>
+					</div>
+				</div>
+
+				<div class="type-specimen">
+					<div style="font-size:20px; font-weight:700; color:var(--text-main); letter-spacing:-.01em">법령 개요</div>
+					<div class="type-meta">
+						<span>20px</span><span>Weight 700</span><span>Card Header</span>
+					</div>
+				</div>
+
+				<div class="type-specimen">
+					<div style="font-size:18px; font-weight:600; color:var(--b60); letter-spacing:-.3px">제1장  총 칙</div>
+					<div class="type-meta">
+						<span>18px</span><span>Weight 600</span><span>Chapter Divider</span>
+					</div>
+				</div>
+
+				<div class="type-specimen">
+					<div style="font-size:17px; font-weight:500; color:var(--text-main); line-height:1.85">
+						① 이 법은 인공지능 기술의 발전과 산업 육성을 위한 기본적 사항을 정함으로써 국민의 삶의 질 향상과 국가 경쟁력 강화에 이바지함을 목적으로 한다.
+					</div>
+					<div class="type-meta">
+						<span>17px</span><span>Weight 500</span><span>Body (법령 본문)</span><span>Line-height 1.85</span>
+					</div>
+				</div>
+
+				<div class="type-specimen">
+					<div style="font-size:15px; color:var(--text-muted)">원하는 법령 정보를 법령 종류별로 쉽게 찾아보세요.</div>
+					<div class="type-meta">
+						<span>15px</span><span>Weight 400</span><span>Sub-description</span>
+					</div>
+				</div>
+
+				<div class="type-specimen" style="margin-bottom:0; border-bottom:none">
+					<div style="font-size:13px; color:var(--text-light); letter-spacing:.08em; text-transform:uppercase; font-weight:600">LABEL TEXT · 2026.02.19</div>
+					<div class="type-meta">
+						<span>13px</span><span>Weight 600</span><span>Meta / Label</span><span>Letter-spacing 0.08em</span>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+
+		<!-- =============================================
+		     3. 여백 & 모서리 & 그림자
+		     ============================================= -->
+		<section class="sg-section" id="spacing">
+			<h2 class="sg-section-title">여백 · 모서리 · 그림자</h2>
+			<p class="sg-section-subtitle">일관된 공간감과 레이어 표현 규칙</p>
+
+			<!-- Spacing -->
+			<div class="sg-sub">
+				<p class="sg-sub-label">간격 (Spacing)</p>
+				<div class="sg-preview--gray sg-preview">
+					<div class="spacing-row">
+						<div class="spacing-item">
+							<div class="spacing-block" style="height:4px"></div>
+							<span class="spacing-label">4px</span>
+						</div>
+						<div class="spacing-item">
+							<div class="spacing-block" style="height:6px"></div>
+							<span class="spacing-label">6px</span>
+						</div>
+						<div class="spacing-item">
+							<div class="spacing-block" style="height:8px"></div>
+							<span class="spacing-label">8px</span>
+						</div>
+						<div class="spacing-item">
+							<div class="spacing-block" style="height:12px"></div>
+							<span class="spacing-label">12px</span>
+						</div>
+						<div class="spacing-item">
+							<div class="spacing-block" style="height:14px"></div>
+							<span class="spacing-label">14px</span>
+						</div>
+						<div class="spacing-item">
+							<div class="spacing-block" style="height:16px"></div>
+							<span class="spacing-label">16px</span>
+						</div>
+						<div class="spacing-item">
+							<div class="spacing-block" style="height:20px"></div>
+							<span class="spacing-label">20px</span>
+						</div>
+						<div class="spacing-item">
+							<div class="spacing-block" style="height:24px"></div>
+							<span class="spacing-label">24px</span>
+						</div>
+						<div class="spacing-item">
+							<div class="spacing-block" style="height:28px"></div>
+							<span class="spacing-label">28px</span>
+						</div>
+						<div class="spacing-item">
+							<div class="spacing-block" style="height:32px"></div>
+							<span class="spacing-label">32px</span>
+						</div>
+						<div class="spacing-item">
+							<div class="spacing-block" style="height:40px"></div>
+							<span class="spacing-label">40px</span>
+						</div>
+						<div class="spacing-item">
+							<div class="spacing-block" style="height:48px"></div>
+							<span class="spacing-label">48px</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Radius -->
+			<div class="sg-sub">
+				<p class="sg-sub-label">모서리 반경 (Border Radius)</p>
+				<div class="sg-preview--gray sg-preview">
+					<div class="radius-row">
+						<div class="radius-item">
+							<div class="radius-block" style="border-radius:4px"></div>
+							<span class="spacing-label">4px<br>small</span>
+						</div>
+						<div class="radius-item">
+							<div class="radius-block" style="border-radius:6px"></div>
+							<span class="spacing-label">6px</span>
+						</div>
+						<div class="radius-item">
+							<div class="radius-block" style="border-radius:8px"></div>
+							<span class="spacing-label">8px<br>--r (기본)</span>
+						</div>
+						<div class="radius-item">
+							<div class="radius-block" style="border-radius:12px"></div>
+							<span class="spacing-label">12px</span>
+						</div>
+						<div class="radius-item">
+							<div class="radius-block" style="border-radius:16px"></div>
+							<span class="spacing-label">16px<br>Card</span>
+						</div>
+						<div class="radius-item">
+							<div class="radius-block" style="border-radius:20px"></div>
+							<span class="spacing-label">20px<br>Modal</span>
+						</div>
+						<div class="radius-item">
+							<div class="radius-block" style="border-radius:999px; width:80px; height:80px"></div>
+							<span class="spacing-label">Pill<br>Badge</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Shadow -->
+			<div class="sg-sub">
+				<p class="sg-sub-label">그림자 (Shadow)</p>
+				<div class="sg-preview--gray sg-preview">
+					<div class="shadow-row">
+						<div class="shadow-item" style="box-shadow: 0 2px 6px rgba(0,0,0,.04)">
+							<span class="shadow-label">XS</span>
+							<span class="shadow-label" style="font-size:11px">0 2px 6px rgba(0,0,0,.04)</span>
+						</div>
+						<div class="shadow-item" style="box-shadow: 0 4px 20px rgba(0,0,0,.05)">
+							<span class="shadow-label">S — --s (기본)</span>
+							<span class="shadow-label" style="font-size:11px">0 4px 20px rgba(0,0,0,.05)</span>
+						</div>
+						<div class="shadow-item" style="box-shadow: 0 8px 24px rgba(0,0,0,.06)">
+							<span class="shadow-label">M — Hover</span>
+							<span class="shadow-label" style="font-size:11px">0 8px 24px rgba(0,0,0,.06)</span>
+						</div>
+						<div class="shadow-item" style="box-shadow: 0 16px 40px rgba(0,0,0,.16)">
+							<span class="shadow-label">L — Modal</span>
+							<span class="shadow-label" style="font-size:11px">0 16px 40px rgba(0,0,0,.16)</span>
+						</div>
+						<div class="shadow-item" style="box-shadow: 0 0 24px rgba(0,0,0,.12)">
+							<span class="shadow-label">Panel — Slide-in</span>
+							<span class="shadow-label" style="font-size:11px">0 0 24px rgba(0,0,0,.12)</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- =============================================
+		     4. 버튼
+		     ============================================= -->
+		<section class="sg-section" id="buttons">
+			<h2 class="sg-section-title">버튼</h2>
+			<p class="sg-section-subtitle">주요 액션 버튼 3종 + KRDS 기본 버튼 확장</p>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">커스텀 대시보드 버튼 (dash-btn)</p>
+				<div class="sg-preview">
+					<div class="btn-row">
+						<button class="dash-btn dash-btn--primary">주 버튼 (Primary)</button>
+						<button class="dash-btn dash-btn--outline-green">외곽선 버튼 (Outline)</button>
+						<button class="dash-btn dash-btn--black">다크 버튼 (Black)</button>
+					</div>
+					<div class="sg-code">/* Primary */
+.dash-btn--primary { background: var(--b60); color: #fff; border-color: var(--b60); }
+.dash-btn--primary:hover { background: var(--b70); }
+
+/* Outline */
+.dash-btn--outline-green { background: transparent; color: var(--b60); border-color: var(--b40); }
+.dash-btn--outline-green:hover { background: var(--b5); }
+
+/* Black */
+.dash-btn--black { background: var(--g80); color: #fff; border-color: var(--g80); }</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">컨텐츠 탭 버튼 (cb)</p>
+				<div class="sg-preview">
+					<div class="btn-row">
+						<button class="cb">기본 탭</button>
+						<button class="cb p">활성 탭 (Primary)</button>
+						<button class="cb ac">강조 탭 (Accent)</button>
+					</div>
+					<div class="sg-code">/* 기본 */
+.cb { border: 1px solid var(--surface-border); border-radius: 6px; padding: 6px 12px; }
+/* Active */
+.cb.p { background: linear-gradient(180deg, #4A6E91 0%, var(--b60) 100%); color: #fff; }
+/* Accent (highlighted) */
+.cb.ac { background: #FFF8E1; color: #E65100; border-color: #FFD54F; }</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">페이지네이션 버튼 (pg)</p>
+				<div class="sg-preview">
+					<div style="display:flex; gap:4px; align-items:center">
+						<button class="pg">‹</button>
+						<button class="pg a">1</button>
+						<button class="pg">2</button>
+						<button class="pg">3</button>
+						<button class="pg">4</button>
+						<button class="pg">5</button>
+						<button class="pg">›</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">모달 비교 버튼 (cmp-btn-compare)</p>
+				<div class="sg-preview">
+					<div class="btn-row">
+						<button class="cmp-btn-compare" disabled>비교하기 (비활성)</button>
+						<button class="cmp-btn-compare">비교하기 (활성)</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- =============================================
+		     5. 배지 & 태그
+		     ============================================= -->
+		<section class="sg-section" id="badges">
+			<h2 class="sg-section-title">배지 & 태그</h2>
+			<p class="sg-section-subtitle">법령 상태, 공지 구분, 법령 유형 표현</p>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">법령 상태 배지 (recent-item__badge)</p>
+				<div class="sg-preview">
+					<div class="badge-row">
+						<span class="recent-item__badge badge--new">공포</span>
+						<span class="recent-item__badge badge--update">개정</span>
+					</div>
+					<div class="sg-code">/* 공포 */
+.badge--new { background: var(--b60); color: #fff; }
+/* 개정 */
+.badge--update { background: #E8F5E9; color: #2E7D32; border: 1px solid #A5D6A7; }</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">공지사항 배지 (text-list__badge)</p>
+				<div class="sg-preview">
+					<div class="badge-row">
+						<span class="text-list__badge">공지</span>
+						<span class="text-list__badge text-list__badge--info">안내</span>
+						<span class="text-list__badge text-list__badge--hire">채용</span>
+					</div>
+					<div class="sg-code">/* 공지 */
+.text-list__badge { background: var(--b60); color: #fff; }
+/* 안내 */
+.text-list__badge--info { background: #E3F2FD; color: #1565C0; }
+/* 채용 */
+.text-list__badge--hire { background: #FFF8E1; color: #F57F17; }</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">법령 본문 배지 (an) & 유형 칩 (lic)</p>
+				<div class="sg-preview">
+					<div class="btn-row" style="margin-bottom:12px">
+						<span class="an">제1조</span>
+						<span class="an" style="background:var(--b50)">제2조</span>
+					</div>
+					<div class="lic-row">
+						<div class="lic-demo">
+							<span class="lic ic-l">본법</span> 주택임대차보호법
+						</div>
+						<div class="lic-demo">
+							<span class="lic ic-d">현행</span> 인공지능 기본법
+						</div>
+					</div>
+					<div class="sg-code">/* 조문 배지 */
+.an { background: var(--b60); color: #fff; border-radius: 20px; padding: 4px 14px; font-weight: 600; }
+/* 본법 */
+.ic-l { background: #FFF3E0; color: #E65100; border: 1px solid #FFCC80; }
+/* 현행 */
+.ic-d { background: #E8F5E9; color: #2E7D32; border: 1px solid #A5D6A7; }</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">히어로 키워드 태그 & 뉴스 카테고리 태그</p>
+				<div class="sg-preview">
+					<div class="btn-row">
+						<div class="kw-preview">
+							<span class="kw-label">인기 검색어</span>
+							<span class="kw-rank">1</span>
+							<span class="kw-item">개인정보보호법</span>
+						</div>
+					</div>
+					<div class="btn-row" style="margin-top:12px">
+						<span style="display:inline-block; padding:4px 10px; background:rgba(255,255,255,.2); color:var(--b60); border-radius:6px; font-size:13px; font-weight:600; border:1px solid var(--b20)">농업 · 환경</span>
+						<span style="display:inline-block; padding:4px 10px; background:rgba(255,255,255,.2); color:var(--b60); border-radius:6px; font-size:13px; font-weight:600; border:1px solid var(--b20)">디지털 행정</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- =============================================
+		     6. 카드
+		     ============================================= -->
+		<section class="sg-section" id="cards">
+			<h2 class="sg-section-title">카드 컴포넌트</h2>
+			<p class="sg-section-subtitle">법령 정보, 통계, 카테고리, 요약 카드 패턴</p>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">기본 정보 카드 (일반 hover-lift)</p>
+				<div class="sg-preview--gray sg-preview">
+					<div class="sg-card-grid">
+						<div class="sg-card">
+							<span class="sg-card__icon">⚖️</span>
+							<p class="sg-card__title">법률</p>
+							<p class="sg-card__desc">국회에서 제정한 법률로 국민의 권리·의무에 관한 사항을 규율합니다.</p>
+						</div>
+						<div class="sg-card">
+							<span class="sg-card__icon">🏛️</span>
+							<p class="sg-card__title">대통령령</p>
+							<p class="sg-card__desc">법률의 시행을 위해 대통령이 발하는 명령입니다.</p>
+						</div>
+						<div class="sg-card">
+							<span class="sg-card__icon">📋</span>
+							<p class="sg-card__title">총리령·부령</p>
+							<p class="sg-card__desc">국무총리 또는 각 부처 장관이 발하는 시행규칙입니다.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">통계 카드 (hero-stat-card)</p>
+				<div class="sg-preview" style="max-width:320px">
+					<a href="#" class="hero-stat-card">
+						<span class="hero-stat-card__name">법률 <strong>1,872</strong>건</span>
+						<span class="hero-stat-card__arrow">→</span>
+					</a>
+					<a href="#" class="hero-stat-card">
+						<span class="hero-stat-card__name">대통령령 <strong>2,041</strong>건</span>
+						<span class="hero-stat-card__arrow">→</span>
+					</a>
+					<a href="#" class="hero-stat-card">
+						<span class="hero-stat-card__name">총리령/부령 <strong>1,523</strong>건</span>
+						<span class="hero-stat-card__arrow">→</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">요약 정보 카드 (law-summary__item)</p>
+				<div class="sg-preview--gray sg-preview">
+					<div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:16px">
+						<div class="law-summary__item">
+							<span class="law-summary__label">법령 유형</span>
+							<span class="law-summary__value">법률</span>
+						</div>
+						<div class="law-summary__item">
+							<span class="law-summary__label">공포 번호</span>
+							<span class="law-summary__value">법률 제12345호</span>
+						</div>
+						<div class="law-summary__item">
+							<span class="law-summary__label">공포일</span>
+							<span class="law-summary__value">2026.02.19</span>
+						</div>
+						<div class="law-summary__item">
+							<span class="law-summary__label">소관 부처</span>
+							<span class="law-summary__value link">과학기술정보통신부</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">통계 배너 (stats-banner 스타일)</p>
+				<div class="stats-preview">
+					<div class="sp-header">
+						<h2>DATA<br>STATISTICS</h2>
+						<p>대한민국 법령 정보의<br>현재를 보여드립니다.</p>
+					</div>
+					<div class="sp-items">
+						<div class="sp-item">
+							<span class="sp-count">128,926</span>
+							<span class="sp-label">현행 법령</span>
+						</div>
+						<div class="sp-item">
+							<span class="sp-count">5</span>
+							<span class="sp-label">오늘의 공포</span>
+						</div>
+						<div class="sp-item">
+							<span class="sp-count">47</span>
+							<span class="sp-label">진행중 입법예고</span>
+						</div>
+						<div class="sp-item">
+							<span class="sp-count">152,384</span>
+							<span class="sp-label">일일 방문자</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">CTA 배너 (cta-banner)</p>
+				<div class="cta-banner">
+					<div class="cta-banner__text">
+						<h3>법령 해석이나 자문이 필요하신가요?</h3>
+						<p>법제처 법령해석 서비스와 마을변호사가 도와드립니다.</p>
+					</div>
+					<div class="cta-banner__actions">
+						<button class="dash-btn dash-btn--primary">법령해석 신청</button>
+						<button class="dash-btn dash-btn--outline-green">마을변호사 찾기</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- =============================================
+		     7. 폼 요소
+		     ============================================= -->
+		<section class="sg-section" id="forms">
+			<h2 class="sg-section-title">폼 요소</h2>
+			<p class="sg-section-subtitle">검색창, 입력 필드, 셀렉트, 체크박스</p>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">히어로 통합 검색창</p>
+				<div class="sg-preview">
+					<div class="sg-search-wrap">
+						<input type="text" placeholder="키워드를 입력하세요">
+						<button class="sg-search-btn" aria-label="검색">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+							</svg>
+						</button>
+					</div>
+					<div class="sg-code">/* 검색창 래퍼 */
+border: 1px solid var(--surface-border); border-radius: 10px; padding: 4px 8px;
+/* 버튼 */
+background: var(--b60); border-radius: 8px; width: 38px; height: 38px;</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">기본 입력 필드</p>
+				<div class="sg-preview">
+					<div class="sg-form-grid">
+						<div>
+							<label class="sg-label">일반 입력</label>
+							<input class="sg-input" type="text" placeholder="텍스트를 입력하세요">
+						</div>
+						<div>
+							<label class="sg-label">포커스 상태</label>
+							<input class="sg-input" type="text" value="포커스됨" style="border-color:var(--b40)">
+						</div>
+					</div>
+					<div class="sg-code">/* Input */
+border: 1px solid var(--surface-border); border-radius: var(--r); padding: 10px 14px;
+/* Focus */
+border-color: var(--b40);</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">셀렉트 & 법령 검색 드롭다운</p>
+				<div class="sg-preview">
+					<div class="sg-form-grid">
+						<div>
+							<label class="sg-label">셀렉트</label>
+							<select class="cs" style="width:100%">
+								<option>시행 현행</option>
+								<option>시행 예정</option>
+								<option>폐지</option>
+							</select>
+						</div>
+						<div>
+							<label class="sg-label">비교 셀렉트 (cmp-sel)</label>
+							<select class="cmp-sel" style="width:100%">
+								<option>법령을 선택하세요</option>
+								<option>개인정보 보호법</option>
+								<option>인공지능 기본법</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">체크박스 (ack)</p>
+				<div class="sg-preview">
+					<div style="display:flex; gap:24px; align-items:center">
+						<label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:14px; color:var(--text-main)">
+							<input type="checkbox" class="ack" style="position:relative; top:auto; right:auto"> 기본 상태
+						</label>
+						<label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:14px; color:var(--text-main)">
+							<input type="checkbox" class="ack" checked style="position:relative; top:auto; right:auto"> 선택됨
+						</label>
+					</div>
+					<div class="sg-code">/* Checked */
+.ack:checked { background-color: var(--b50); border-color: var(--b50); }
+.ack:checked::after { /* 체크마크 */
+  border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg);
+}</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- =============================================
+		     8. 컴포넌트
+		     ============================================= -->
+		<section class="sg-section" id="components">
+			<h2 class="sg-section-title">컴포넌트</h2>
+			<p class="sg-section-subtitle">법령 정보 목록, 부처 태그, 진행 표시줄, 텍스트 목록</p>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">최신 법령 목록 아이템 (recent-item)</p>
+				<div class="sg-preview">
+					<a href="#" class="recent-item" style="display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--border-light); text-decoration:none">
+						<span class="recent-item__badge badge--new">공포</span>
+						<div class="recent-item__body">
+							<strong class="recent-item__title" style="font-size:17px; font-weight:700; color:var(--text-main); display:block; margin-bottom:6px">인공지능 기본법</strong>
+							<p class="recent-item__desc" style="font-size:14px; color:var(--text-muted); line-height:1.7">인공지능 산업 육성과 신뢰 기반 조성을 위한 기본 원칙, 국가 및 지자체의 책무, 안전성 검증 체계를 담은 기본법안이 국회를 통과해 공포되었습니다.</p>
+							<div style="display:flex; gap:12px; margin-top:8px; font-size:13px; color:var(--text-light); align-items:center">
+								<span>2026.02.19</span>
+								<span>법률 제12345호</span>
+								<span style="color:var(--b50); font-weight:600">상세 바로가기 →</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">텍스트 목록 (text-list)</p>
+				<div class="sg-preview" style="max-width:360px">
+					<ul class="text-list" style="list-style:none; padding:0; margin:0">
+						<li style="padding:10px 0; border-bottom:1px solid var(--border-light)">
+							<a href="#" style="display:flex; justify-content:space-between; text-decoration:none; align-items:flex-start; gap:12px">
+								<p style="font-size:14px; color:var(--text-main); margin:0">건축법 시행령 일부개정령안 입법예고</p>
+								<span style="font-size:12px; color:var(--text-light); white-space:nowrap; margin-top:2px">02.10 ~ 03.20</span>
+							</a>
+						</li>
+						<li style="padding:10px 0; border-bottom:1px solid var(--border-light)">
+							<a href="#" style="display:flex; gap:8px; text-decoration:none; align-items:flex-start">
+								<span class="text-list__badge">공지</span>
+								<p style="font-size:14px; color:var(--text-main); margin:0">2026년도 국가법령정보센터 서비스 개편 안내</p>
+							</a>
+						</li>
+						<li style="padding:10px 0">
+							<a href="#" style="display:flex; gap:8px; text-decoration:none; align-items:flex-start">
+								<span class="text-list__badge text-list__badge--info">안내</span>
+								<p style="font-size:14px; color:var(--text-main); margin:0">설 연휴 기간 시스템 점검 안내</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">부처 태그 (ministry-item)</p>
+				<div class="sg-preview--gray sg-preview">
+					<div class="ministry-preview">
+						<a href="#" class="ministry-item">법무부</a>
+						<a href="#" class="ministry-item">고용노동부</a>
+						<a href="#" class="ministry-item">보건복지부</a>
+						<a href="#" class="ministry-item">환경부</a>
+						<a href="#" class="ministry-item">국토교통부</a>
+						<a href="#" class="ministry-item">교육부</a>
+						<a href="#" class="ministry-item">기획재정부</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">진행 표시줄 & 슬라이드 컨트롤</p>
+				<div class="sg-preview">
+					<div style="font-size:13px; color:var(--text-muted); margin-bottom:6px">슬라이드 진행 (1/3)</div>
+					<div class="progress-showcase">
+						<div class="progress-fill-demo"></div>
+					</div>
+					<div style="display:flex; align-items:center; gap:8px; margin-top:12px">
+						<span style="font-size:13px; color:var(--text-muted)">1 / 3</span>
+						<button style="width:28px; height:28px; border:1px solid var(--surface-border); border-radius:6px; background:var(--surface-bg); cursor:pointer; font-size:14px; color:var(--text-muted)">■</button>
+						<button style="width:28px; height:28px; border:1px solid var(--surface-border); border-radius:6px; background:var(--surface-bg); cursor:pointer; font-size:14px; color:var(--text-muted)">❮</button>
+						<button style="width:28px; height:28px; border:1px solid var(--surface-border); border-radius:6px; background:var(--surface-bg); cursor:pointer; font-size:14px; color:var(--text-muted)">❯</button>
+					</div>
+					<div class="sg-code">/* 진행 바 */
+height: 3px; background: var(--g15); border-radius: 999px;
+/* fill */
+background: var(--b50); transition: width .3s ease;</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">챕터 구분선 (ch)</p>
+				<div class="sg-preview">
+					<div class="ch">제1장</div>
+					<div class="ch">제2장</div>
+					<div class="sg-code">.ch { font-size: 18px; font-weight: 600; color: var(--b60); }
+.ch::before, .ch::after { content: ''; flex: 1; height: 1px; background: var(--surface-border); }</div>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">슬라이드인 패널 (lf)</p>
+				<div class="sg-preview" style="background:var(--body-bg)">
+					<div style="background:var(--surface-bg); border-radius:12px; max-width:260px; overflow:hidden; box-shadow:0 0 24px rgba(0,0,0,.12)">
+						<div style="padding:12px 14px; background:var(--body-bg); border-bottom:1px solid var(--surface-border); font-size:13px; color:var(--text-muted); font-weight:600">목차 패널</div>
+						<div style="padding:0">
+							<div class="li a">
+								<span class="ln">1</span>
+								<div class="lb">
+									<span class="ltt">제1조(목적)</span>
+									<div class="lm">인공지능 기본법 제1조</div>
+								</div>
+							</div>
+							<div class="li">
+								<span class="ln">2</span>
+								<div class="lb">
+									<span class="ltt">제2조(정의)</span>
+									<div class="lm">인공지능 기본법 제2조</div>
+								</div>
+							</div>
+							<div class="li">
+								<span class="ln">3</span>
+								<div class="lb">
+									<span class="ltt">제3조(기본원칙)</span>
+									<div class="lm">인공지능 기본법 제3조</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="margin-top:12px; font-size:13px; color:var(--text-muted)">활성 항목: <code style="background:var(--b5); color:var(--b60); padding:2px 6px; border-radius:4px; border:1px solid var(--b20)">.li.a { background: var(--b5); border-left: 3px solid var(--b50); }</code></div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- =============================================
+		     9. 인터랙션 & 애니메이션
+		     ============================================= -->
+		<section class="sg-section" id="motion">
+			<h2 class="sg-section-title">인터랙션 & 애니메이션</h2>
+			<p class="sg-section-subtitle">전환 함수와 호버 패턴 — 호버하여 확인하세요</p>
+
+			<div class="sg-preview--gray sg-preview">
+				<div class="motion-row">
+					<div class="motion-card hover-lift">
+						Hover Lift
+						<div style="font-size:12px; color:var(--text-light); margin-top:4px; font-weight:400">translateY(-4px) + shadow</div>
+					</div>
+					<div class="motion-card hover-fill">
+						Hover Fill
+						<div style="font-size:12px; margin-top:4px; font-weight:400">background + color 전환</div>
+					</div>
+					<div class="motion-card" style="transition:border-color .2s; cursor:pointer" onmouseover="this.style.borderColor='var(--b30)'" onmouseout="this.style.borderColor='var(--surface-border)'">
+						Border Accent
+						<div style="font-size:12px; color:var(--text-light); margin-top:4px; font-weight:400">border-color 전환</div>
+					</div>
+				</div>
+
+				<div style="margin-top:24px">
+					<p class="sg-sub-label">이징 함수 (Easing)</p>
+					<table class="sg-table">
+						<thead>
+							<tr><th>용도</th><th>Easing</th><th>Duration</th></tr>
+						</thead>
+						<tbody>
+							<tr><td>카드 호버, 버튼 전환</td><td><code>cubic-bezier(0.16, 1, 0.3, 1)</code></td><td>200–300ms</td></tr>
+							<tr><td>슬라이드인 패널</td><td><code>cubic-bezier(0.16, 1, 0.3, 1)</code></td><td>400ms</td></tr>
+							<tr><td>색상 전환 (다크모드 등)</td><td><code>ease</code></td><td>300ms</td></tr>
+							<tr><td>바텀시트</td><td><code>cubic-bezier(0.16, 1, 0.3, 1)</code></td><td>400ms</td></tr>
+							<tr><td>카운트업 애니메이션</td><td><code>1 - Math.pow(1-p, 3)</code></td><td>1500ms</td></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- =============================================
+		     10. 다크 모드
+		     ============================================= -->
+		<section class="sg-section" id="darkmode">
+			<h2 class="sg-section-title">다크 모드</h2>
+			<p class="sg-section-subtitle">body.dark-mode 클래스 토글 방식 · CSS 변수 오버라이드</p>
+
+			<div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px">
+				<!-- Light -->
+				<div>
+					<p class="sg-sub-label" style="margin-bottom:14px">Light Mode</p>
+					<div class="sg-preview" style="padding:24px">
+						<div style="font-size:18px; font-weight:700; color:#2A2E36; margin-bottom:6px">법령 정보 카드</div>
+						<div style="font-size:14px; color:#6B7280; margin-bottom:16px">부제목 · 보조 텍스트</div>
+						<div style="background:#F5F6F8; border:1px solid #E5E7EC; border-radius:12px; padding:14px 18px; display:flex; justify-content:space-between; align-items:center; margin-bottom:8px">
+							<span style="color:#2A2E36; font-size:14px">법률 <strong style="color:#1E3850">1,872</strong>건</span>
+							<span style="color:#6287AB">→</span>
+						</div>
+						<button style="padding:8px 20px; background:#1E3850; color:#fff; border:none; border-radius:8px; font-size:14px; font-weight:600; cursor:pointer">상세 보기</button>
+					</div>
+				</div>
+				<!-- Dark -->
+				<div>
+					<p class="sg-sub-label" style="margin-bottom:14px">Dark Mode</p>
+					<div class="sg-dark-preview">
+						<div class="dp-title">법령 정보 카드</div>
+						<div class="dp-text">부제목 · 보조 텍스트</div>
+						<div class="dp-card">
+							<span class="dp-card-name">법률 <strong>1,872</strong>건</span>
+							<span class="dp-card-arrow">→</span>
+						</div>
+						<button class="dp-btn">상세 보기</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="sg-sub" style="margin-top:28px">
+				<p class="sg-sub-label">다크 모드 주요 변수 대응표</p>
+				<div class="sg-preview">
+					<table class="sg-table">
+						<thead>
+							<tr><th>변수명</th><th>Light</th><th>Dark</th></tr>
+						</thead>
+						<tbody>
+							<tr><td><code>--body-bg</code></td><td>#F5F6F8</td><td>#0F1115</td></tr>
+							<tr><td><code>--surface-bg</code></td><td>#ffffff</td><td>#16181D</td></tr>
+							<tr><td><code>--surface-border</code></td><td>#E5E7EC</td><td>#21242C</td></tr>
+							<tr><td><code>--text-main</code></td><td>#2A2E36</td><td>#E2E6ED</td></tr>
+							<tr><td><code>--text-muted</code></td><td>#6B7280</td><td>#A4AEBE</td></tr>
+							<tr><td><code>--primary (--b60)</code></td><td>#1E3850</td><td>#4876AB</td></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="sg-sub">
+				<p class="sg-sub-label">접근성 — 큰 글씨 모드 (Large Text Mode)</p>
+				<div class="sg-preview">
+					<div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap">
+						<div>
+							<div style="font-size:17px; color:var(--text-main); font-weight:500">기본 글씨 크기 (17px)</div>
+							<div style="font-size:12px; color:var(--text-light); margin-top:4px"><code>--scale: 1</code> · font-size: calc(17px * 1)</div>
+						</div>
+						<div>
+							<div style="font-size:21.25px; color:var(--text-main); font-weight:500">큰 글씨 모드 (17px × 1.25)</div>
+							<div style="font-size:12px; color:var(--text-light); margin-top:4px"><code>--scale: 1.25</code> · font-size: calc(17px * 1.25)</div>
+						</div>
+					</div>
+					<div class="sg-code" style="margin-top:16px">body.large-text-mode { --scale: 1.25; }
+/* 사용 예 */
+font-size: calc(16px * var(--scale));</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+	<!-- //sg-wrap -->
+
+	<!-- Mode Toggles -->
+	<div class="mode-toggles">
+		<button type="button" class="mode-btn" id="btn-large-text" title="큰 글씨 모드">A+</button>
+		<button type="button" class="mode-btn" id="btn-dark-mode" title="다크 모드">🌙</button>
+	</div>
+
+	<script>
+		(function () {
+			const btnDarkMode = document.getElementById('btn-dark-mode');
+			if (btnDarkMode) {
+				btnDarkMode.addEventListener('click', () => {
+					document.body.classList.toggle('dark-mode');
+					btnDarkMode.classList.toggle('active');
+					btnDarkMode.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+				});
+			}
+
+			const btnLargeText = document.getElementById('btn-large-text');
+			if (btnLargeText) {
+				btnLargeText.addEventListener('click', () => {
+					document.body.classList.toggle('large-text-mode');
+					btnLargeText.classList.toggle('active');
+					btnLargeText.textContent = document.body.classList.contains('large-text-mode') ? 'A-' : 'A+';
+				});
+			}
+		})();
+	</script>
+
+</body>
+</html>
